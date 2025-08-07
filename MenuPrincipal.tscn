@@ -1,16 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://baob1qp6nkk4f"]
+[gd_scene load_steps=4 format=3 uid="uid://baob1qp6nkk4f"]
 
 [ext_resource type="PackedScene" uid="uid://bssqawwwua627" path="res://MeuBotaoCustomizado.tscn" id="1_0oe1n"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ba235"]
 font_size = 83
-font_color = Color(0.174796, 0.48385, 0.853734, 1)
+font_color = Color(0.0100667, 0.563775, 0.505609, 1)
 outline_size = 6
 outline_color = Color(0.137574, 0.108797, 0.0136854, 1)
 shadow_size = 13
 shadow_color = Color(0.31369, 0.367413, 0.749232, 0)
 
-[node name="ColorReact" type="ColorRect"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0oe1n"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+bg_color = Color(0.898267, 0.409757, 0.602193, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 1
+shadow_offset = Vector2(5, 5)
+
+[node name="ColorRect" type="ColorRect"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -34,19 +47,25 @@ size_flags_vertical = 0
 text = "Historiando"
 label_settings = SubResource("LabelSettings_ba235")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_0oe1n")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 25
 
-[node name="Button" parent="MarginContainer/VBoxContainer" instance=ExtResource("1_0oe1n")]
+[node name="Button" parent="MarginContainer/PanelContainer/VBoxContainer" instance=ExtResource("1_0oe1n")]
 layout_mode = 2
 
-[node name="Button2" parent="MarginContainer/VBoxContainer" instance=ExtResource("1_0oe1n")]
+[node name="Button2" parent="MarginContainer/PanelContainer/VBoxContainer" instance=ExtResource("1_0oe1n")]
 layout_mode = 2
 text = "Sair"
 
-[node name="Button3" parent="MarginContainer/VBoxContainer" instance=ExtResource("1_0oe1n")]
+[node name="Button3" parent="MarginContainer/PanelContainer/VBoxContainer" instance=ExtResource("1_0oe1n")]
 layout_mode = 2
 text = "Opções"
