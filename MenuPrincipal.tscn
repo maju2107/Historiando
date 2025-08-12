@@ -1,16 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://baob1qp6nkk4f"]
 
 [ext_resource type="PackedScene" uid="uid://bssqawwwua627" path="res://MeuBotaoCustomizado.tscn" id="1_0oe1n"]
+[ext_resource type="Texture2D" uid="uid://jcikeyt4pxj1" path="res://logo.png" id="1_pi62y"]
 [ext_resource type="AudioStream" uid="uid://bb8jtkqh66spj" path="res://BeepBox-Song.mp3" id="2_5dpk2"]
 [ext_resource type="Script" uid="uid://bu3bqdrtowpfs" path="res://audio_stream_player.gd" id="3_pi62y"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_ba235"]
-font_size = 83
-font_color = Color(0.0100667, 0.563775, 0.505609, 1)
-outline_size = 6
-outline_color = Color(0.137574, 0.108797, 0.0136854, 1)
-shadow_size = 13
-shadow_color = Color(0.31369, 0.367413, 0.749232, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0oe1n"]
 content_margin_left = 15.0
@@ -31,7 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.333333, 0.0980392, 0.254902, 1)
+color = Color(0.333333, 0.847059, 0.513726, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -42,12 +35,9 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_top = 25
 
-[node name="Label" type="Label" parent="MarginContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
-text = "Historiando Super Legal"
-label_settings = SubResource("LabelSettings_ba235")
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer"]
+position = Vector2(1017, 142)
+texture = ExtResource("1_pi62y")
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
 layout_mode = 2
