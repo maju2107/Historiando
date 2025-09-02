@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://baob1qp6nkk4f"]
 
-[ext_resource type="PackedScene" uid="uid://bssqawwwua627" path="res://MeuBotaoCustomizado.tscn" id="1_0oe1n"]
-[ext_resource type="Texture2D" uid="uid://jcikeyt4pxj1" path="res://logo.png" id="1_pi62y"]
+[ext_resource type="PackedScene" uid="uid://bssqawwwua627" path="res://scenes/MeuBotaoCustomizado.tscn" id="1_0oe1n"]
+[ext_resource type="Texture2D" uid="uid://caugyn0rceqbw" path="res://assets/logo.png" id="1_cjknc"]
 [ext_resource type="AudioStream" uid="uid://bb8jtkqh66spj" path="res://BeepBox-Song.mp3" id="2_5dpk2"]
 [ext_resource type="Script" uid="uid://bu3bqdrtowpfs" path="res://audio_stream_player.gd" id="3_pi62y"]
 
@@ -10,7 +10,7 @@ content_margin_left = 15.0
 content_margin_top = 15.0
 content_margin_right = 15.0
 content_margin_bottom = 15.0
-bg_color = Color(0.898267, 0.409757, 0.602193, 1)
+bg_color = Color(3.65794e-06, 0.659958, 0.845116, 1)
 corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
@@ -24,7 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.333333, 0.847059, 0.513726, 1)
+color = Color(0.535113, 0.744397, 1, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -37,7 +37,7 @@ theme_override_constants/margin_top = 25
 
 [node name="Sprite2D" type="Sprite2D" parent="MarginContainer"]
 position = Vector2(1017, 142)
-texture = ExtResource("1_pi62y")
+texture = ExtResource("1_cjknc")
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -53,6 +53,7 @@ theme_override_constants/separation = 25
 
 [node name="Button" parent="MarginContainer/PanelContainer/VBoxContainer" instance=ExtResource("1_0oe1n")]
 layout_mode = 2
+text = "Login"
 
 [node name="Button2" parent="MarginContainer/PanelContainer/VBoxContainer" instance=ExtResource("1_0oe1n")]
 layout_mode = 2
