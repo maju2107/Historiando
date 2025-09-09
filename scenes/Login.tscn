@@ -125,3 +125,10 @@ grow_horizontal = 0
 grow_vertical = 0
 theme_override_font_sizes/font_size = 23
 text = "Primeiro Acesso"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_font_sizes/font_size = 31
+text = "Voltar"
