@@ -23,7 +23,7 @@ position = Vector2(1017, 142)
 scale = Vector2(0.927, 0.9)
 texture = ExtResource("1_5bpgs")
 
-[node name="Label" type="Label" parent="."]
+[node name="Email" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.315
@@ -53,7 +53,7 @@ offset_bottom = 0.359955
 grow_horizontal = 0
 grow_vertical = 2
 
-[node name="Label2" type="Label" parent="."]
+[node name="Senha" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.317
@@ -81,7 +81,7 @@ offset_top = 0.440002
 offset_right = 0.439941
 offset_bottom = 0.239929
 
-[node name="Button" type="Button" parent="."]
+[node name="Cadastrar" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.394
@@ -97,7 +97,7 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 40
 text = "CADASTRAR"
 
-[node name="Label3" type="Label" parent="."]
+[node name="ConfirmarSenha" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.314

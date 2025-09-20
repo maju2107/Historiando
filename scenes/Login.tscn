@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c3cmjph0ffieq"]
+[gd_scene load_steps=3 format=3 uid="uid://c3cmjph0ffieq"]
 
 [ext_resource type="Texture2D" uid="uid://caugyn0rceqbw" path="res://assets/logo.png" id="1_1hxp7"]
+[ext_resource type="Script" uid="uid://djqkdsje8lcwj" path="res://scenes/Login.gd" id="1_brlkh"]
 
 [node name="ColorRect" type="ColorRect"]
 anchors_preset = 15
@@ -11,6 +12,7 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 color = Color(0, 0.50101, 0.990795, 0.890196)
+script = ExtResource("1_brlkh")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -25,7 +27,7 @@ position = Vector2(1017, 142)
 scale = Vector2(0.927, 0.9)
 texture = ExtResource("1_1hxp7")
 
-[node name="Label" type="Label" parent="."]
+[node name="Usuario" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.299
@@ -55,7 +57,7 @@ offset_bottom = 1.0
 grow_horizontal = 0
 grow_vertical = 2
 
-[node name="Label2" type="Label" parent="."]
+[node name="Senha" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.302
@@ -83,7 +85,7 @@ offset_top = -0.480042
 offset_right = 0.559937
 offset_bottom = 0.399963
 
-[node name="Label" type="Label" parent="LineEdit2"]
+[node name="Esqueci a senha" type="Label" parent="LineEdit2"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -96,7 +98,7 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 23
 text = "Esqueci a senha!"
 
-[node name="Button" type="Button" parent="."]
+[node name="Logar" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.394
@@ -112,7 +114,7 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 40
 text = "LOGAR"
 
-[node name="Label" type="Label" parent="Button"]
+[node name="PrimeiroAcesso" type="Label" parent="Logar"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.287
@@ -126,7 +128,7 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 23
 text = "Primeiro Acesso"
 
-[node name="Button2" type="Button" parent="."]
+[node name="VoltarMP" type="Button" parent="."]
 layout_mode = 1
 offset_right = 8.0
 offset_bottom = 8.0

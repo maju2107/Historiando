@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://baob1qp6nkk4f"]
+[gd_scene load_steps=7 format=3 uid="uid://baob1qp6nkk4f"]
 
 [ext_resource type="PackedScene" uid="uid://bssqawwwua627" path="res://scenes/MeuBotaoCustomizado.tscn" id="1_0oe1n"]
 [ext_resource type="Texture2D" uid="uid://caugyn0rceqbw" path="res://assets/logo.png" id="1_cjknc"]
+[ext_resource type="Script" uid="uid://44wiv53aj6lj" path="res://scenes/MenuPrincipal.gd" id="1_f5jwn"]
 [ext_resource type="AudioStream" uid="uid://bb8jtkqh66spj" path="res://BeepBox-Song.mp3" id="2_5dpk2"]
 [ext_resource type="Script" uid="uid://bu3bqdrtowpfs" path="res://audio_stream_player.gd" id="3_pi62y"]
 
@@ -25,6 +26,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.293503, 0.621222, 0.999997, 1)
+script = ExtResource("1_f5jwn")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -53,15 +55,15 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 25
 
-[node name="Button" parent="MarginContainer/PanelContainer/VBoxContainer" instance=ExtResource("1_0oe1n")]
+[node name="Login" parent="MarginContainer/PanelContainer/VBoxContainer" instance=ExtResource("1_0oe1n")]
 layout_mode = 2
 text = "Login"
 
-[node name="Button2" parent="MarginContainer/PanelContainer/VBoxContainer" instance=ExtResource("1_0oe1n")]
+[node name="Sair" parent="MarginContainer/PanelContainer/VBoxContainer" instance=ExtResource("1_0oe1n")]
 layout_mode = 2
 text = "Sair"
 
-[node name="Button3" parent="MarginContainer/PanelContainer/VBoxContainer" instance=ExtResource("1_0oe1n")]
+[node name="Opcoes" parent="MarginContainer/PanelContainer/VBoxContainer" instance=ExtResource("1_0oe1n")]
 layout_mode = 2
 text = "Opções"
 
