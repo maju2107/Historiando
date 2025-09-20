@@ -19,7 +19,7 @@ corner_radius_bottom_left = 15
 shadow_size = 1
 shadow_offset = Vector2(5, 5)
 
-[node name="ColorRect" type="ColorRect"]
+[node name="MenuPrincipal" type="ColorRect"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -72,3 +72,5 @@ stream = ExtResource("2_5dpk2")
 volume_db = -0.594
 autoplay = true
 script = ExtResource("3_pi62y")
+
+[connection signal="pressed" from="MarginContainer/PanelContainer/VBoxContainer/Login" to="." method="_on_login_pressed"]
