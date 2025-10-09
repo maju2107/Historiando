@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Novo Projeto de Jogo"
+config/name="historiando"
 run/main_scene="uid://baob1qp6nkk4f"
 config/features=PackedStringArray("4.5", "Forward Plus")
 
