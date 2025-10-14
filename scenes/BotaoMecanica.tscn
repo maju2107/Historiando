@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://cqk3hfm64qwbb"]
+
+[node name="Button" type="Button"]
+theme_override_font_sizes/font_size = 43
+text = "Mecânica 1"

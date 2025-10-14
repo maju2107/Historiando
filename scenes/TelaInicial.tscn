@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://c3cmjph0ffieq"]
+[gd_scene load_steps=7 format=3 uid="uid://c3cmjph0ffieq"]
 
 [ext_resource type="Script" uid="uid://djqkdsje8lcwj" path="res://scenes/TelaInicial.gd" id="1_6ybww"]
 [ext_resource type="PackedScene" uid="uid://baob1qp6nkk4f" path="res://scenes/MenuPrincipal.tscn" id="2_1exgo"]
+[ext_resource type="PackedScene" uid="uid://b6ugxxidsn47d" path="res://scenes/Mecanica1Carta.tscn" id="3_fkycc"]
 [ext_resource type="Texture2D" uid="uid://caugyn0rceqbw" path="res://assets/logo.png" id="3_hgyjh"]
 [ext_resource type="Texture2D" uid="uid://bdk5fhxst7lch" path="res://assets/setaVoltar.png" id="4_fkycc"]
+[ext_resource type="PackedScene" uid="uid://cqk3hfm64qwbb" path="res://scenes/BotaoMecanica.tscn" id="5_1exgo"]
 
 [node name="TelaInicial" type="ColorRect"]
 anchors_preset = 15
@@ -16,6 +18,7 @@ size_flags_vertical = 4
 color = Color(0, 0.50101, 0.990795, 0.890196)
 script = ExtResource("1_6ybww")
 menu_principal = ExtResource("2_1exgo")
+mecanica1 = ExtResource("3_fkycc")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -30,106 +33,6 @@ position = Vector2(1017, 142)
 scale = Vector2(0.927, 0.9)
 texture = ExtResource("3_hgyjh")
 
-[node name="Usuario" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.299
-anchor_top = 0.389
-anchor_right = 0.362
-anchor_bottom = 0.428
-offset_left = -0.0800781
-offset_top = -0.120026
-offset_right = -0.0400391
-offset_bottom = -0.240021
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 30
-text = "Usuário:"
-
-[node name="LineEdit" type="LineEdit" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.295
-anchor_top = 0.436
-anchor_right = 0.682
-anchor_bottom = 0.5
-offset_left = 0.599976
-offset_top = 0.119965
-offset_right = 0.559937
-offset_bottom = 1.0
-
-[node name="Senha" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.302
-anchor_top = 0.536
-anchor_right = 0.348
-anchor_bottom = 0.575
-offset_left = -0.840027
-offset_top = 0.119995
-offset_right = -0.160034
-offset_bottom = -6.10352e-05
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 30
-text = "Senha:"
-
-[node name="LineEdit2" type="LineEdit" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.295
-anchor_top = 0.581
-anchor_right = 0.682
-anchor_bottom = 0.645
-offset_left = 0.599976
-offset_top = -0.480042
-offset_right = 0.559937
-offset_bottom = 0.399963
-secret = true
-
-[node name="Esqueci a senha" type="Label" parent="LineEdit2"]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 14.0
-offset_top = 5.0
-offset_right = 196.0
-offset_bottom = 37.0
-grow_vertical = 0
-theme_override_font_sizes/font_size = 23
-text = "Esqueci a senha!"
-
-[node name="Logar" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.394
-anchor_top = 0.765
-anchor_right = 0.582
-anchor_bottom = 0.839
-offset_left = -0.480042
-offset_top = -0.200073
-offset_right = 0.559937
-offset_bottom = -0.120056
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 40
-text = "LOGAR"
-
-[node name="PrimeiroAcesso" type="Label" parent="Logar"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.287
-anchor_top = 1.25
-anchor_right = 0.779
-anchor_bottom = 1.65
-offset_left = 0.106003
-offset_right = 0.00198364
-grow_horizontal = 0
-grow_vertical = 0
-theme_override_font_sizes/font_size = 23
-text = "Primeiro Acesso"
-
 [node name="VoltarMP" type="Button" parent="."]
 layout_mode = 1
 offset_left = 3.0
@@ -140,4 +43,32 @@ theme_override_font_sizes/font_size = 26
 icon = ExtResource("4_fkycc")
 flat = true
 
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -440.0
+offset_top = -65.0
+offset_right = 440.0
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 80
+
+[node name="ButtonMec1" parent="BoxContainer" instance=ExtResource("5_1exgo")]
+layout_mode = 2
+theme_override_constants/h_separation = 4
+
+[node name="ButtonMec2" parent="BoxContainer" instance=ExtResource("5_1exgo")]
+layout_mode = 2
+text = "Mecânica 2"
+
+[node name="ButtonMec3" parent="BoxContainer" instance=ExtResource("5_1exgo")]
+layout_mode = 2
+text = "Mecânica 3"
+
 [connection signal="pressed" from="VoltarMP" to="." method="_on_BotaoVoltar_pressed"]
+[connection signal="pressed" from="BoxContainer/ButtonMec2" to="." method="_on_button_mec_2_pressed"]
