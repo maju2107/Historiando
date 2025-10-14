@@ -1,3 +1,43 @@
-[gd_scene format=3 uid="uid://b6ugxxidsn47d"]
+[gd_scene load_steps=7 format=3 uid="uid://b6ugxxidsn47d"]
+
+[ext_resource type="Texture2D" uid="uid://cmxtx6n5rdloy" path="res://assets/fundo.jpg" id="1_m8ruk"]
+[ext_resource type="Texture2D" uid="uid://caugyn0rceqbw" path="res://assets/logo.png" id="2_7i0ks"]
+[ext_resource type="PackedScene" uid="uid://dbr5814e2q258" path="res://Bloco1.tscn" id="3_d0cn7"]
+
+[sub_resource type="Gradient" id="Gradient_7i0ks"]
+offsets = PackedFloat32Array(0, 0.32258064, 0.7060932, 0.97849464, 0.98207885, 0.98566306, 0.9892473, 0.9928315, 0.9964158, 1)
+colors = PackedColorArray(0.8685619, 0.6689408, 0.13896242, 1, 0.91728073, 0.71891016, 0.3095048, 1, 0.9794435, 0.78266853, 0.5271083, 1, 0.9891614, 0.8684315, 0.7159766, 1, 0.9906118, 0.88123196, 0.7441659, 1, 0.9989231, 0.9545815, 0.905697, 1, 0.9902973, 0.79380095, 0.5651026, 1, 0.99523085, 0.79886115, 0.58237267, 1, 0.9966993, 0.916, 0.6796851, 1, 1, 1, 0.7529412, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_d0cn7"]
+gradient = SubResource("Gradient_7i0ks")
+width = 110
+height = 138
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_80nrn"]
+size = Vector2(83.28124, 18.011114)
 
 [node name="Mecanica1Carta" type="Node2D"]
+
+[node name="fundo" type="Sprite2D" parent="."]
+position = Vector2(959.99994, 540)
+scale = Vector2(6.4000006, 6.4285717)
+texture = ExtResource("1_m8ruk")
+
+[node name="carta" type="Sprite2D" parent="fundo"]
+texture = SubResource("GradientTexture2D_d0cn7")
+
+[node name="lacuna1" type="Area2D" parent="fundo/carta"]
+position = Vector2(5, -10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fundo/carta/lacuna1"]
+position = Vector2(-0.15623903, -0.11111379)
+shape = SubResource("RectangleShape2D_80nrn")
+debug_color = Color(0.85135406, 0.3590989, 0.26750845, 0.41960785)
+
+[node name="Sprite2D" type="Sprite2D" parent="fundo/carta"]
+position = Vector2(3.7929652, -24.966667)
+scale = Vector2(0.06160943, 0.053516828)
+texture = ExtResource("2_7i0ks")
+
+[node name="Node2D" parent="." instance=ExtResource("3_d0cn7")]
+position = Vector2(632, 38)
