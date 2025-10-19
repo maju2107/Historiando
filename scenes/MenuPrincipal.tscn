@@ -3,9 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://bssqawwwua627" path="res://scenes/MeuBotaoCustomizado.tscn" id="1_0oe1n"]
 [ext_resource type="Texture2D" uid="uid://caugyn0rceqbw" path="res://assets/logo.png" id="1_cjknc"]
 [ext_resource type="Script" uid="uid://44wiv53aj6lj" path="res://scenes/MenuPrincipal.gd" id="1_f5jwn"]
-[ext_resource type="AudioStream" uid="uid://bb8jtkqh66spj" path="res://BeepBox-Song.mp3" id="2_5dpk2"]
 [ext_resource type="Script" uid="uid://bu3bqdrtowpfs" path="res://audio_stream_player.gd" id="3_pi62y"]
 [ext_resource type="StyleBox" uid="uid://dnsgdxjl1eer6" path="res://new_style_box_flat.tres" id="4_4o3yp"]
+[ext_resource type="AudioStream" uid="uid://b4ytf6j1c84l7" path="res://empty-moon-ian-aisling-main-version-24985-03-59.mp3" id="5_4o3yp"]
 
 [sub_resource type="Gradient" id="Gradient_8ytrl"]
 offsets = PackedFloat32Array(0, 0.71684587, 1)
@@ -71,7 +71,7 @@ theme_override_styles/normal = ExtResource("4_4o3yp")
 text = "JOGAR"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_5dpk2")
+stream = ExtResource("5_4o3yp")
 volume_db = -0.594
 autoplay = true
 script = ExtResource("3_pi62y")
