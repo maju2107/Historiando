@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kna5n6ncjovb"
-path="res://.godot/imported/cartaMegafauna.png-4349ec0b9e5596b99d0e6056667b7e34.ctex"
+uid="uid://mbhmrucdxjnm"
+path="res://.godot/imported/cartaMegaFauna.png-cd9652db96bc551a3cad93b1b831c2b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cartaMegafauna.png"
-dest_files=["res://.godot/imported/cartaMegafauna.png-4349ec0b9e5596b99d0e6056667b7e34.ctex"]
+source_file="res://assets/cartaMegaFauna.png"
+dest_files=["res://.godot/imported/cartaMegaFauna.png-cd9652db96bc551a3cad93b1b831c2b7.ctex"]
 
 [params]
 
