@@ -62,7 +62,7 @@ shape = SubResource("RectangleShape2D_p153e")
 debug_color = Color(0.85135406, 0.3590989, 0.26750845, 0.41960785)
 
 [node name="Bloco1" parent="." instance=ExtResource("3_d0cn7")]
-position = Vector2(-24, 1)
+position = Vector2(-568, -50)
 
 [node name="Bloco2" parent="." instance=ExtResource("4_80nrn")]
-position = Vector2(-329, 225)
+position = Vector2(-736, -129)
