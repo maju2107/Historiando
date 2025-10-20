@@ -2,7 +2,7 @@ extends Area2D
 
 var dragging := false
 var offset := Vector2.ZERO
-var target_slot_name := "lacuna1"  # Nome da lacuna onde esse bloco deve encaixar
+var target_slot_name := "lacuna2"  # Nome da lacuna onde esse bloco deve encaixar
 
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:

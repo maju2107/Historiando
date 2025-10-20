@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://dtwxtfrqa3h0"]
+
+[ext_resource type="Script" uid="uid://cvthb4sjuarh3" path="res://Bloco_2.gd" id="1_0xfnt"]
+[ext_resource type="Texture2D" uid="uid://vvki4uc10rjf" path="res://assets/fundoBloco.png" id="2_sq62n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lgva7"]
+size = Vector2(284, 31)
+
+[sub_resource type="SystemFont" id="SystemFont_42lso"]
+resource_local_to_scene = true
+font_names = PackedStringArray("Serif")
+
+[sub_resource type="LabelSettings" id="LabelSettings_7k0si"]
+font = SubResource("SystemFont_42lso")
+font_size = 19
+font_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
+stacked_outline_count = 1
+stacked_outline_0/size = 1
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Bloco2" type="Area2D" parent="."]
+position = Vector2(1667, 326)
+script = ExtResource("1_0xfnt")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bloco2"]
+position = Vector2(7.9998913, 1.500008)
+scale = Vector2(0.35903916, 0.22302142)
+texture = ExtResource("2_sq62n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloco2"]
+position = Vector2(8, 1.5)
+shape = SubResource("RectangleShape2D_lgva7")
+
+[node name="Control" type="Control" parent="Bloco2"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1667.0
+offset_top = -326.0
+offset_right = -1627.0
+offset_bottom = -286.0
+
+[node name="Label" type="Label" parent="Bloco2/Control"]
+layout_mode = 0
+offset_left = 1615.0
+offset_top = 317.0
+offset_right = 1756.0
+offset_bottom = 339.0
+accessibility_name = "Pleistoceno"
+accessibility_live = 1
+text = "preguiças gigantes"
+label_settings = SubResource("LabelSettings_7k0si")
