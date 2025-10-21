@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vvki4uc10rjf"
-path="res://.godot/imported/fundoBloco.png-69345f3a59a16007f1a3d3ee64cf6711.ctex"
+uid="uid://c82xsbar458m2"
+path="res://.godot/imported/blocoMegafauna.png-83114c5f8bb61627ff0664e4543dccab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fundoBloco.png"
-dest_files=["res://.godot/imported/fundoBloco.png-69345f3a59a16007f1a3d3ee64cf6711.ctex"]
+source_file="res://assets/blocoMegafauna.png"
+dest_files=["res://.godot/imported/blocoMegafauna.png-83114c5f8bb61627ff0664e4543dccab.ctex"]
 
 [params]
 
