@@ -1,0 +1,68 @@
+[gd_scene load_steps=9 format=3 uid="uid://b6ugxxidsn47d"]
+
+[ext_resource type="Texture2D" uid="uid://c1aphjruwmx8k" path="res://assets/fundoC.png" id="1_d0cn7"]
+[ext_resource type="Texture2D" uid="uid://kna5n6ncjovb" path="res://assets/cartaMegafauna.png" id="2_7i0ks"]
+[ext_resource type="PackedScene" uid="uid://dbr5814e2q258" path="res://Bloco1.tscn" id="3_d0cn7"]
+[ext_resource type="PackedScene" uid="uid://dtwxtfrqa3h0" path="res://Bloco2.tscn" id="4_80nrn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d0cn7"]
+size = Vector2(267.1655, 23.533768)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_80nrn"]
+size = Vector2(270.09064, 25.673223)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_olljx"]
+size = Vector2(461.20123, 56.69508)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p153e"]
+size = Vector2(270.57825, 27.812645)
+
+[node name="Mecanica1Carta" type="Node2D"]
+
+[node name="fundo" type="Sprite2D" parent="."]
+position = Vector2(959.99994, 540)
+scale = Vector2(6.4000006, 6.4285717)
+texture = ExtResource("1_d0cn7")
+
+[node name="carta" type="Sprite2D" parent="fundo"]
+position = Vector2(-84.999985, -10.111113)
+scale = Vector2(0.16024715, 0.14541744)
+texture = ExtResource("2_7i0ks")
+
+[node name="lacuna1" type="Area2D" parent="fundo/carta"]
+position = Vector2(111.156425, -290.9631)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fundo/carta/lacuna1"]
+position = Vector2(6.8253174, -1.0697174)
+shape = SubResource("RectangleShape2D_d0cn7")
+debug_color = Color(0.85135406, 0.3590989, 0.26750845, 0.41960785)
+
+[node name="lacuna2" type="Area2D" parent="fundo/carta"]
+position = Vector2(75.079346, -162.59702)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fundo/carta/lacuna2"]
+position = Vector2(7.3129272, 1.0697327)
+shape = SubResource("RectangleShape2D_80nrn")
+debug_color = Color(0.85135406, 0.3590989, 0.26750845, 0.41960785)
+
+[node name="lacuna3" type="Area2D" parent="fundo/carta"]
+position = Vector2(-14.6258545, -27.812653)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fundo/carta/lacuna3"]
+position = Vector2(4.38797, 1.6044312)
+shape = SubResource("RectangleShape2D_olljx")
+debug_color = Color(0.85135406, 0.3590989, 0.26750845, 0.41960785)
+
+[node name="lacuna4" type="Area2D" parent="fundo/carta"]
+position = Vector2(-94.580444, 164.73645)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fundo/carta/lacuna4"]
+position = Vector2(-5.8503265, 1.0697174)
+shape = SubResource("RectangleShape2D_p153e")
+debug_color = Color(0.85135406, 0.3590989, 0.26750845, 0.41960785)
+
+[node name="Bloco1" parent="." instance=ExtResource("3_d0cn7")]
+position = Vector2(-568, -50)
+
+[node name="Bloco2" parent="." instance=ExtResource("4_80nrn")]
+position = Vector2(-736, -129)

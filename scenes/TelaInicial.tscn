@@ -1,0 +1,74 @@
+[gd_scene load_steps=7 format=3 uid="uid://c3cmjph0ffieq"]
+
+[ext_resource type="Script" uid="uid://djqkdsje8lcwj" path="res://scenes/TelaInicial.gd" id="1_6ybww"]
+[ext_resource type="PackedScene" uid="uid://baob1qp6nkk4f" path="res://scenes/MenuPrincipal.tscn" id="2_1exgo"]
+[ext_resource type="PackedScene" uid="uid://b6ugxxidsn47d" path="res://scenes/Mecanica1Carta.tscn" id="3_fkycc"]
+[ext_resource type="Texture2D" uid="uid://caugyn0rceqbw" path="res://assets/logo.png" id="3_hgyjh"]
+[ext_resource type="Texture2D" uid="uid://bdk5fhxst7lch" path="res://assets/setaVoltar.png" id="4_fkycc"]
+[ext_resource type="PackedScene" uid="uid://cqk3hfm64qwbb" path="res://scenes/BotaoMecanica.tscn" id="5_1exgo"]
+
+[node name="TelaInicial" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0, 0.50101, 0.990795, 0.890196)
+script = ExtResource("1_6ybww")
+menu_principal = ExtResource("2_1exgo")
+mecanica1 = ExtResource("3_fkycc")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer"]
+position = Vector2(1017, 142)
+scale = Vector2(0.927, 0.9)
+texture = ExtResource("3_hgyjh")
+
+[node name="VoltarMP" type="Button" parent="."]
+layout_mode = 1
+offset_left = 3.0
+offset_top = 14.0
+offset_right = 139.0
+offset_bottom = 189.0
+theme_override_font_sizes/font_size = 26
+icon = ExtResource("4_fkycc")
+flat = true
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -440.0
+offset_top = -65.0
+offset_right = 440.0
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 80
+
+[node name="ButtonMec1" parent="BoxContainer" instance=ExtResource("5_1exgo")]
+layout_mode = 2
+theme_override_constants/h_separation = 4
+
+[node name="ButtonMec2" parent="BoxContainer" instance=ExtResource("5_1exgo")]
+layout_mode = 2
+text = "Mecânica 2"
+
+[node name="ButtonMec3" parent="BoxContainer" instance=ExtResource("5_1exgo")]
+layout_mode = 2
+text = "Mecânica 3"
+
+[connection signal="pressed" from="VoltarMP" to="." method="_on_BotaoVoltar_pressed"]
+[connection signal="pressed" from="BoxContainer/ButtonMec2" to="." method="_on_button_mec_2_pressed"]

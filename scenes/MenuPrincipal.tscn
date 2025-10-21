@@ -1,30 +1,35 @@
-[gd_scene load_steps=6 format=3 uid="uid://baob1qp6nkk4f"]
+[gd_scene load_steps=9 format=3 uid="uid://baob1qp6nkk4f"]
 
 [ext_resource type="PackedScene" uid="uid://bssqawwwua627" path="res://scenes/MeuBotaoCustomizado.tscn" id="1_0oe1n"]
 [ext_resource type="Texture2D" uid="uid://caugyn0rceqbw" path="res://assets/logo.png" id="1_cjknc"]
-[ext_resource type="AudioStream" uid="uid://bb8jtkqh66spj" path="res://BeepBox-Song.mp3" id="2_5dpk2"]
+[ext_resource type="Script" uid="uid://44wiv53aj6lj" path="res://scenes/MenuPrincipal.gd" id="1_f5jwn"]
 [ext_resource type="Script" uid="uid://bu3bqdrtowpfs" path="res://audio_stream_player.gd" id="3_pi62y"]
+[ext_resource type="StyleBox" uid="uid://dnsgdxjl1eer6" path="res://new_style_box_flat.tres" id="4_4o3yp"]
+[ext_resource type="AudioStream" uid="uid://b4ytf6j1c84l7" path="res://empty-moon-ian-aisling-main-version-24985-03-59.mp3" id="5_4o3yp"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0oe1n"]
-content_margin_left = 15.0
-content_margin_top = 15.0
-content_margin_right = 15.0
-content_margin_bottom = 15.0
-bg_color = Color(3.65794e-06, 0.659958, 0.845116, 1)
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-shadow_size = 1
-shadow_offset = Vector2(5, 5)
+[sub_resource type="Gradient" id="Gradient_8ytrl"]
+offsets = PackedFloat32Array(0, 0.71684587, 1)
+colors = PackedColorArray(0.09057734, 0.17385435, 0.49496967, 1, 0.0026487336, 0.53788275, 0.85489035, 1, 0, 0.54509807, 0.8627451, 1)
 
-[node name="ColorRect" type="ColorRect"]
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4togl"]
+gradient = SubResource("Gradient_8ytrl")
+
+[node name="MenuPrincipal" type="ColorRect"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.293503, 0.621222, 0.999997, 1)
+script = ExtResource("1_f5jwn")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_4togl")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -35,38 +40,40 @@ offset_top = 1.0
 offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_top = 25
+theme_override_constants/margin_top = 60
 
 [node name="Sprite2D" type="Sprite2D" parent="MarginContainer"]
 position = Vector2(1017, 142)
 texture = ExtResource("1_cjknc")
 
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_styles/panel = SubResource("StyleBoxFlat_0oe1n")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/separation = 25
-
-[node name="Button" parent="MarginContainer/PanelContainer/VBoxContainer" instance=ExtResource("1_0oe1n")]
-layout_mode = 2
-text = "Login"
-
-[node name="Button2" parent="MarginContainer/PanelContainer/VBoxContainer" instance=ExtResource("1_0oe1n")]
-layout_mode = 2
-text = "Sair"
-
-[node name="Button3" parent="MarginContainer/PanelContainer/VBoxContainer" instance=ExtResource("1_0oe1n")]
-layout_mode = 2
-text = "Opções"
+[node name="Jogar" parent="." instance=ExtResource("1_0oe1n")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -117.5
+offset_top = -54.5
+offset_right = 157.5
+offset_bottom = 65.5
+grow_horizontal = 2
+grow_vertical = 2
+accessibility_name = "Botão de Jogar"
+accessibility_description = "Aperte este botão para iniciar o jogo"
+accessibility_live = 1
+theme_override_colors/font_color = Color(0.02745098, 0.16862746, 0.34901962, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 4
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 73
+theme_override_styles/normal = ExtResource("4_4o3yp")
+text = "JOGAR"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_5dpk2")
+stream = ExtResource("5_4o3yp")
 volume_db = -0.594
 autoplay = true
 script = ExtResource("3_pi62y")
+
+[connection signal="pressed" from="Jogar" to="." method="_on_login_pressed"]
