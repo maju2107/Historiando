@@ -1,11 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://b6ugxxidsn47d"]
+[gd_scene load_steps=12 format=3 uid="uid://b6ugxxidsn47d"]
 
 [ext_resource type="Texture2D" uid="uid://c1aphjruwmx8k" path="res://assets/fundoC.png" id="1_uru5i"]
-[ext_resource type="Texture2D" uid="uid://ygppqor58m5r" path="res://assets/cartaMegaFauna.png" id="2_sxjlt"]
+[ext_resource type="Texture2D" uid="uid://dvibasbfgu2uo" path="res://assets/cartaMegaFauna.png" id="2_sxjlt"]
 [ext_resource type="PackedScene" uid="uid://dbr5814e2q258" path="res://scenes/mecanica2/Bloco1.tscn" id="3_o1i5e"]
 [ext_resource type="PackedScene" uid="uid://dtwxtfrqa3h0" path="res://scenes/mecanica2/Bloco2.tscn" id="4_lh50h"]
 [ext_resource type="PackedScene" uid="uid://d8aojkj7rv7y" path="res://scenes/mecanica2/Bloco3.tscn" id="5_o1i5e"]
 [ext_resource type="PackedScene" uid="uid://cgn852xqvoers" path="res://scenes/mecanica2/Bloco4.tscn" id="6_lh50h"]
+[ext_resource type="Texture2D" uid="uid://cey41p4lm38h0" path="res://assets/gato.png" id="7_lh50h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d0cn7"]
 size = Vector2(270.09012, 24.06863)
@@ -22,8 +23,8 @@ size = Vector2(234.98856, 24.603521)
 [node name="Mecanica1Carta" type="Node2D"]
 
 [node name="fundo" type="Sprite2D" parent="."]
-position = Vector2(962.00006, 542.5)
-scale = Vector2(6.3999996, 6.4583335)
+position = Vector2(960.99994, 542.5)
+scale = Vector2(6.4066668, 6.4583335)
 texture = ExtResource("1_uru5i")
 
 [node name="cartaMegaFauna" type="TextureRect" parent="fundo"]
@@ -127,6 +128,11 @@ position = Vector2(-2, -1)
 [node name="Label" parent="Bloco4/Bloco4/Control" index="0"]
 offset_left = 1552.0001
 offset_right = 1768.0001
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1849, 1018)
+scale = Vector2(0.3310001, 0.282)
+texture = ExtResource("7_lh50h")
 
 [editable path="Bloco1"]
 [editable path="Bloco2"]
