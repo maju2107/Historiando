@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://c3cmjph0ffieq"]
 
-[ext_resource type="Script" uid="uid://djqkdsje8lcwj" path="res://scenes/TelaInicial.gd" id="1_6ybww"]
-[ext_resource type="PackedScene" uid="uid://baob1qp6nkk4f" path="res://scenes/MenuPrincipal.tscn" id="2_1exgo"]
-[ext_resource type="PackedScene" uid="uid://b6ugxxidsn47d" path="res://scenes/Mecanica1Carta.tscn" id="3_fkycc"]
+[ext_resource type="Script" uid="uid://djqkdsje8lcwj" path="res://scenes/telaInicial/TelaInicial.gd" id="1_6ybww"]
+[ext_resource type="PackedScene" uid="uid://baob1qp6nkk4f" path="res://scenes/menuPrincipal/MenuPrincipal.tscn" id="2_1exgo"]
+[ext_resource type="PackedScene" uid="uid://b6ugxxidsn47d" path="res://scenes/mecanica2/Mecanica1Carta.tscn" id="3_fkycc"]
 [ext_resource type="Texture2D" uid="uid://caugyn0rceqbw" path="res://assets/logo.png" id="3_hgyjh"]
 [ext_resource type="Texture2D" uid="uid://bdk5fhxst7lch" path="res://assets/setaVoltar.png" id="4_fkycc"]
-[ext_resource type="PackedScene" uid="uid://cqk3hfm64qwbb" path="res://scenes/BotaoMecanica.tscn" id="5_1exgo"]
+[ext_resource type="PackedScene" uid="uid://cqk3hfm64qwbb" path="res://scenes/menuPrincipal/BotaoMecanica.tscn" id="5_1exgo"]
 
 [node name="TelaInicial" type="ColorRect"]
 anchors_preset = 15

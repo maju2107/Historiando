@@ -1,0 +1,134 @@
+[gd_scene load_steps=11 format=3 uid="uid://b6ugxxidsn47d"]
+
+[ext_resource type="Texture2D" uid="uid://c1aphjruwmx8k" path="res://assets/fundoC.png" id="1_uru5i"]
+[ext_resource type="Texture2D" uid="uid://ygppqor58m5r" path="res://assets/cartaMegaFauna.png" id="2_sxjlt"]
+[ext_resource type="PackedScene" uid="uid://dbr5814e2q258" path="res://scenes/mecanica2/Bloco1.tscn" id="3_o1i5e"]
+[ext_resource type="PackedScene" uid="uid://dtwxtfrqa3h0" path="res://scenes/mecanica2/Bloco2.tscn" id="4_lh50h"]
+[ext_resource type="PackedScene" uid="uid://d8aojkj7rv7y" path="res://scenes/mecanica2/Bloco3.tscn" id="5_o1i5e"]
+[ext_resource type="PackedScene" uid="uid://cgn852xqvoers" path="res://scenes/mecanica2/Bloco4.tscn" id="6_lh50h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d0cn7"]
+size = Vector2(270.09012, 24.06863)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_80nrn"]
+size = Vector2(267.16547, 35.478115)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_olljx"]
+size = Vector2(455.35123, 68.9968)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p153e"]
+size = Vector2(234.98856, 24.603521)
+
+[node name="Mecanica1Carta" type="Node2D"]
+
+[node name="fundo" type="Sprite2D" parent="."]
+position = Vector2(962.00006, 542.5)
+scale = Vector2(6.3999996, 6.4583335)
+texture = ExtResource("1_uru5i")
+
+[node name="cartaMegaFauna" type="TextureRect" parent="fundo"]
+offset_left = -125.93748
+offset_top = -68.13333
+offset_right = -23.124985
+offset_bottom = 59.888885
+texture = ExtResource("2_sxjlt")
+expand_mode = 3
+
+[node name="lacuna1" type="Area2D" parent="fundo/cartaMegaFauna"]
+position = Vector2(58.75, 22.399998)
+scale = Vector2(0.16024715, 0.14541744)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fundo/cartaMegaFauna/lacuna1"]
+position = Vector2(7.3129272, -0.26742554)
+scale = Vector2(0.99999994, 1)
+shape = SubResource("RectangleShape2D_d0cn7")
+debug_color = Color(0.85135406, 0.3590989, 0.26750845, 0.41960785)
+
+[node name="lacuna2" type="Area2D" parent="fundo/cartaMegaFauna"]
+position = Vector2(28.90625, 43.088886)
+scale = Vector2(0.16024715, 0.14541744)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fundo/cartaMegaFauna/lacuna2"]
+position = Vector2(4.8750916, 0.6235962)
+scale = Vector2(0.9999998, 1)
+shape = SubResource("RectangleShape2D_80nrn")
+debug_color = Color(0.85135406, 0.3590989, 0.26750845, 0.41960785)
+
+[node name="lacuna3" type="Area2D" parent="fundo/cartaMegaFauna"]
+position = Vector2(45, 62.222218)
+scale = Vector2(0.16024715, 0.14541744)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fundo/cartaMegaFauna/lacuna3"]
+position = Vector2(-1.4625854, 0.26739502)
+shape = SubResource("RectangleShape2D_olljx")
+debug_color = Color(0.85135406, 0.3590989, 0.26750845, 0.41960785)
+
+[node name="lacuna4" type="Area2D" parent="fundo/cartaMegaFauna"]
+position = Vector2(75.46874, 85.711105)
+scale = Vector2(0.16024715, 0.14541744)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fundo/cartaMegaFauna/lacuna4"]
+position = Vector2(0.48754883, -0.5348511)
+shape = SubResource("RectangleShape2D_p153e")
+debug_color = Color(0.85135406, 0.3590989, 0.26750845, 0.41960785)
+
+[node name="Bloco1" parent="." instance=ExtResource("3_o1i5e")]
+position = Vector2(1577, 677)
+
+[node name="Bloco1" parent="Bloco1" index="0"]
+position = Vector2(-3, 2)
+
+[node name="Bloco2" parent="." instance=ExtResource("4_lh50h")]
+position = Vector2(1181, 464)
+
+[node name="Bloco2" parent="Bloco2" index="0"]
+position = Vector2(4, 6)
+
+[node name="Sprite2D" parent="Bloco2/Bloco2" index="0"]
+position = Vector2(0.5000042, -0.4999709)
+scale = Vector2(0.36536035, 0.36690655)
+
+[node name="CollisionShape2D" parent="Bloco2/Bloco2" index="1"]
+position = Vector2(0.5, -1)
+
+[node name="Label" parent="Bloco2/Bloco2/Control" index="0"]
+offset_top = 306.0
+offset_bottom = 338.0
+
+[node name="Bloco3" parent="." instance=ExtResource("5_o1i5e")]
+
+[node name="Bloco3" parent="Bloco3" index="0"]
+position = Vector2(1268, 908)
+
+[node name="Sprite2D" parent="Bloco3/Bloco3" index="0"]
+position = Vector2(-6.50006, 1.250037)
+scale = Vector2(0.6080911, 0.56474745)
+
+[node name="CollisionShape2D" parent="Bloco3/Bloco3" index="1"]
+position = Vector2(-6, 1.5)
+
+[node name="Label" parent="Bloco3/Bloco3/Control" index="0"]
+offset_left = 1460.0001
+offset_top = 303.00003
+offset_right = 1927.0001
+offset_bottom = 370.00003
+text = "alcançar até 3 m de comprimento e pesar
+cerca de 300 kg"
+
+[node name="Bloco4" parent="." instance=ExtResource("6_lh50h")]
+
+[node name="Sprite2D" parent="Bloco4/Bloco4" index="0"]
+position = Vector2(0.9999943, -3.0517578e-05)
+scale = Vector2(0.32616958, 0.1807555)
+
+[node name="CollisionShape2D" parent="Bloco4/Bloco4" index="1"]
+position = Vector2(-2, -1)
+
+[node name="Label" parent="Bloco4/Bloco4/Control" index="0"]
+offset_left = 1552.0001
+offset_right = 1768.0001
+
+[editable path="Bloco1"]
+[editable path="Bloco2"]
+[editable path="Bloco3"]
+[editable path="Bloco4"]

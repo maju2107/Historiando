@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://baob1qp6nkk4f"]
 
-[ext_resource type="PackedScene" uid="uid://bssqawwwua627" path="res://scenes/MeuBotaoCustomizado.tscn" id="1_0oe1n"]
+[ext_resource type="PackedScene" uid="uid://bssqawwwua627" path="res://scenes/menuPrincipal/MeuBotaoCustomizado.tscn" id="1_0oe1n"]
 [ext_resource type="Texture2D" uid="uid://caugyn0rceqbw" path="res://assets/logo.png" id="1_cjknc"]
-[ext_resource type="Script" uid="uid://44wiv53aj6lj" path="res://scenes/MenuPrincipal.gd" id="1_f5jwn"]
+[ext_resource type="Script" uid="uid://44wiv53aj6lj" path="res://scenes/menuPrincipal/MenuPrincipal.gd" id="1_f5jwn"]
 [ext_resource type="Script" uid="uid://bu3bqdrtowpfs" path="res://audio_stream_player.gd" id="3_pi62y"]
 [ext_resource type="StyleBox" uid="uid://dnsgdxjl1eer6" path="res://new_style_box_flat.tres" id="4_4o3yp"]
 [ext_resource type="AudioStream" uid="uid://b4ytf6j1c84l7" path="res://empty-moon-ian-aisling-main-version-24985-03-59.mp3" id="5_4o3yp"]
@@ -76,4 +76,4 @@ volume_db = -0.594
 autoplay = true
 script = ExtResource("3_pi62y")
 
-[connection signal="pressed" from="Jogar" to="." method="_on_login_pressed"]
+[connection signal="pressed" from="Jogar" to="." method="_on_jogar_pressed"]
