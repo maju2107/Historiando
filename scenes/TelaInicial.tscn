@@ -19,6 +19,7 @@ color = Color(0, 0.50101, 0.990795, 0.890196)
 script = ExtResource("1_6ybww")
 menu_principal = ExtResource("2_1exgo")
 mecanica1 = ExtResource("3_fkycc")
+metadata/_edit_group_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

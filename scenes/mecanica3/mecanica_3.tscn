@@ -1,8 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://3au4wjuqp06l"]
+[gd_scene load_steps=11 format=3 uid="uid://3au4wjuqp06l"]
 
-[ext_resource type="Script" uid="uid://cpvad1mcil67q" path="res://scenes/mecanica3/view.gd" id="1_4ewuc"]
 [ext_resource type="Environment" uid="uid://db68r5ch3eg8r" path="res://scenes/mecanica3/word-environment.tres" id="1_kp8mu"]
-[ext_resource type="Script" uid="uid://wllu4o67n62p" path="res://scenes/mecanica3/player.gd" id="2_8sjc8"]
+[ext_resource type="Script" uid="uid://d1xcky3tclroh" path="res://scenes/mecanica3/player.tres.gd" id="2_sslmt"]
 [ext_resource type="PackedScene" uid="uid://kod0awm1ha4o" path="res://characters/addons/gdquest_gobot/model/gobot.glb" id="3_sslmt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kp8mu"]
@@ -22,24 +21,16 @@ albedo_color = Color(0.16078432, 0.5058824, 1, 0.44705883)
 
 [sub_resource type="BoxMesh" id="BoxMesh_x3ycy"]
 material = SubResource("StandardMaterial3D_4ewuc")
+size = Vector3(5, 0.5, 5)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_2l1ys"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_dw35o"]
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_lpn5e"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_sslmt"]
+data = PackedVector3Array(-2.5, 0.25, 2.5, 2.5, 0.25, 2.5, -2.5, -0.25, 2.5, 2.5, 0.25, 2.5, 2.5, -0.25, 2.5, -2.5, -0.25, 2.5, 2.5, 0.25, -2.5, -2.5, 0.25, -2.5, 2.5, -0.25, -2.5, -2.5, 0.25, -2.5, -2.5, -0.25, -2.5, 2.5, -0.25, -2.5, 2.5, 0.25, 2.5, 2.5, 0.25, -2.5, 2.5, -0.25, 2.5, 2.5, 0.25, -2.5, 2.5, -0.25, -2.5, 2.5, -0.25, 2.5, -2.5, 0.25, -2.5, -2.5, 0.25, 2.5, -2.5, -0.25, -2.5, -2.5, 0.25, 2.5, -2.5, -0.25, 2.5, -2.5, -0.25, -2.5, 2.5, 0.25, 2.5, -2.5, 0.25, 2.5, 2.5, 0.25, -2.5, -2.5, 0.25, 2.5, -2.5, 0.25, -2.5, 2.5, 0.25, -2.5, -2.5, -0.25, 2.5, 2.5, -0.25, 2.5, -2.5, -0.25, -2.5, 2.5, -0.25, 2.5, 2.5, -0.25, -2.5, -2.5, -0.25, -2.5)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sslmt"]
-radius = 0.2265625
-height = 1.4113617
+radius = 0.24804688
+height = 1.3850802
 
 [node name="mecanica3" type="Node3D"]
-
-[node name="camera_pivo" type="Node3D" parent="." node_paths=PackedStringArray("target")]
-script = ExtResource("1_4ewuc")
-target = NodePath("../player")
-
-[node name="Camera" type="Camera3D" parent="camera_pivo"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("1_kp8mu")
@@ -49,7 +40,7 @@ transform = Transform3D(1, 0, 0, 0, 0.89518344, 0.44569793, 0, -0.44569793, 0.89
 shadow_enabled = true
 
 [node name="ground" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0402081, 1.6164458, 0.0050284564)
+transform = Transform3D(1, 0, 0, 0, 0.53074014, 0, 0, 0, 1, -0.0402081, -0.29873538, 0.0050284863)
 mesh = SubResource("BoxMesh_ts12v")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ground"]
@@ -57,46 +48,30 @@ mesh = SubResource("BoxMesh_ts12v")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ground/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_8sjc8")
 
-[node name="wall" type="StaticBody3D" parent="."]
-metadata/_edit_group_ = true
-
-[node name="box" type="MeshInstance3D" parent="wall"]
-transform = Transform3D(-0.01411923, 0, -0.99990034, 0, 1, 0, 0.99990034, 0, -0.01411923, -0.03319764, 2.374084, -0.032464504)
+[node name="wall" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 0.53074014, 0, 1, 0, -4.371139e-08, 0.009798586, 0.63839555, -4.9878454)
 mesh = SubResource("BoxMesh_x3ycy")
-skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="wall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.033, 2.374, -0.032)
-shape = SubResource("BoxShape3D_2l1ys")
+[node name="StaticBody3D" type="StaticBody3D" parent="wall"]
 
-[node name="ball" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1548737, 3.7903903, 0)
-metadata/_edit_group_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="ball"]
-mesh = SubResource("SphereMesh_dw35o")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ball"]
-shape = SubResource("SphereShape3D_lpn5e")
-
-[node name="ball2" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.102490306, 3.7903903, 1.0990024)
-metadata/_edit_group_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="ball2"]
-mesh = SubResource("SphereMesh_dw35o")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ball2"]
-shape = SubResource("SphereShape3D_lpn5e")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_sslmt")
 
 [node name="player" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5983305, 0)
-script = ExtResource("2_8sjc8")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.061077595, 0)
+script = ExtResource("2_sslmt")
 metadata/_edit_group_ = true
 
 [node name="gobot" parent="player" instance=ExtResource("3_sslmt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.55562, 1.271578, -1.6420877)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="colision" type="CollisionShape3D" parent="player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5435717, 1.8941784, -1.6694158)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.003081739, 0.69261974, 0.0012799501)
 shape = SubResource("CapsuleShape3D_sslmt")
+debug_color = Color(0.9817615, 0, 0.37233552, 1)
+
+[node name="camera_pivo" type="Node3D" parent="player"]
+transform = Transform3D(1, 0, 0, 0, 0.9620229, 0.27296874, 0, -0.27296874, 0.9620229, 0, 1.2858493, 0)
+
+[node name="camera" type="Camera3D" parent="player/camera_pivo"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.5)
