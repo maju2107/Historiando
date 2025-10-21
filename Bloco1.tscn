@@ -9,6 +9,7 @@ size = Vector2(289, 31)
 [sub_resource type="SystemFont" id="SystemFont_fwfl7"]
 resource_local_to_scene = true
 font_names = PackedStringArray("Serif")
+subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_x2drc"]
 font = SubResource("SystemFont_fwfl7")

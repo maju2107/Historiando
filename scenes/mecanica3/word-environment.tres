@@ -1,0 +1,25 @@
+[gd_resource type="Environment" load_steps=4 format=3 uid="uid://db68r5ch3eg8r"]
+
+[ext_resource type="Texture2D" uid="uid://6agfyfu0nqrg" path="res://assets/citrus_orchard_road_puresky.webp" id="1_qifcq"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tqr4o"]
+panorama = ExtResource("1_qifcq")
+
+[sub_resource type="Sky" id="Sky_30rha"]
+sky_material = SubResource("PanoramaSkyMaterial_tqr4o")
+
+[resource]
+background_mode = 2
+background_energy_multiplier = 1.31
+sky = SubResource("Sky_30rha")
+tonemap_mode = 2
+ssao_radius = 0.01
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.5179158, 0.5526029, 0.9013065, 1)
+fog_sun_scatter = 0.2
+fog_density = 0.994
+fog_sky_affect = 0.145
+fog_depth_curve = 0.435273
+fog_depth_begin = 2676.7
+fog_depth_end = 3967.0
