@@ -14,6 +14,8 @@ var mouse_sensitivity: float = 0.15
 var camera_rotation: Vector2 = Vector2.ZERO
 var last_moviment_dir := Vector3.BACK
 var is_jumping
+# Sensibilidade do analógico
+var joystick_sensitivity = 2.5
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -35,6 +37,16 @@ func  _input(_event: InputEvent) -> void:
 
 func _physics_process(delta: float) -> void:
 	# rotação da camera
+	
+	# Leitura do analógico direito
+	var joy_x = Input.get_joy_axis(0, JOY_AXIS_RIGHT_X) # eixo horizontal
+	var joy_y = Input.get_joy_axis(0, JOY_AXIS_RIGHT_Y) # eixo vertical
+
+	# Atualiza rotação da câmera com joystick
+	camera_rotation.x += joy_x * joystick_sensitivity
+	camera_rotation.y += joy_y * joystick_sensitivity
+	
+	#rotação com o mouse
 	camera_pivo.rotation.x += camera_rotation.y * delta
 	camera_pivo.rotation.x = clamp(camera_pivo.rotation.x, deg_to_rad(-75), deg_to_rad(20))
 	camera_pivo.rotation.y -= camera_rotation.x * delta
