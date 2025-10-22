@@ -3,7 +3,7 @@ extends Area3D
 const  ROTATION_SPEED := 40.0
 
 var start_pos := position.y
-var end_pos:= position.y + 0.3
+var end_pos:= position.y + 0.5
 
 func _ready():
 	var gear_tween := create_tween().set_loops().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)

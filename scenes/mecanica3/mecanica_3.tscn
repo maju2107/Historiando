@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://3au4wjuqp06l"]
+[gd_scene load_steps=10 format=3 uid="uid://3au4wjuqp06l"]
 
 [ext_resource type="Environment" uid="uid://db68r5ch3eg8r" path="res://scenes/mecanica3/word-environment.tres" id="1_kp8mu"]
 [ext_resource type="Script" uid="uid://d1xcky3tclroh" path="res://scenes/mecanica3/player.tres.gd" id="2_sslmt"]
@@ -19,6 +19,8 @@ data = PackedVector3Array(-2.5, 0.25, 2.5, 2.5, 0.25, 2.5, -2.5, -0.25, 2.5, 2.5
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sslmt"]
 radius = 0.24804688
 height = 1.3850802
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4ewuc"]
 
 [node name="mecanica3" type="Node3D"]
 
@@ -43,10 +45,13 @@ metadata/_edit_group_ = true
 shape = SubResource("ConcavePolygonShape3D_8sjc8")
 
 [node name="plataform2" type="MeshInstance3D" parent="parkour"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9229708, 1.4595265, -6.239334)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.923, 1.5, -6.239)
 mesh = SubResource("BoxMesh_ts12v")
 skeleton = NodePath("../..")
 metadata/_edit_group_ = true
+
+[node name="gear" parent="parkour/plataform2" instance=ExtResource("4_4ewuc")]
+transform = Transform3D(0.65, 0, 0, 0, -4.859199e-09, -1.2247046, 0, 0.059, -2.84124e-08, 0, 1.2000002, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="parkour/plataform2"]
 
@@ -58,6 +63,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6815376, 2.3843734, -12.58
 mesh = SubResource("BoxMesh_ts12v")
 skeleton = NodePath("../..")
 metadata/_edit_group_ = true
+
+[node name="gear2" parent="parkour/plataform3" instance=ExtResource("4_4ewuc")]
+transform = Transform3D(0.65, 0, 0, 0, -4.859199e-09, -1.2247046, 0, 0.059, -2.84124e-08, 0.141, 1, 0.016)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="parkour/plataform3"]
 
@@ -75,11 +83,17 @@ metadata/_edit_group_ = true
 [node name="CollisionShape3D" type="CollisionShape3D" parent="parkour/plataform4/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_8sjc8")
 
+[node name="gear3" parent="parkour/plataform4" instance=ExtResource("4_4ewuc")]
+transform = Transform3D(0.65, 0, 0, 0, -4.859199e-09, -1.2247046, 0, 0.059, -2.84124e-08, 0, 1, 0.136)
+
 [node name="plataform5" type="MeshInstance3D" parent="parkour"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.47745514, -1.5853852, -24.281147)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.477, -1.6, -24.281)
 mesh = SubResource("BoxMesh_ts12v")
 skeleton = NodePath("../..")
 metadata/_edit_group_ = true
+
+[node name="gear4" parent="parkour/plataform5" instance=ExtResource("4_4ewuc")]
+transform = Transform3D(0.65, 0, 0, 0, -4.859199e-09, -1.2247046, 0, 0.059, -2.84124e-08, 0.026, 1, 0.03)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="parkour/plataform5"]
 
@@ -97,6 +111,9 @@ metadata/_edit_group_ = true
 [node name="CollisionShape3D" type="CollisionShape3D" parent="parkour/plataform6/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_8sjc8")
 
+[node name="gear5" parent="parkour/plataform6" instance=ExtResource("4_4ewuc")]
+transform = Transform3D(0.65, 0, 0, 0, -4.859199e-09, -1.2247046, 0, 0.059, -2.84124e-08, 0.067, 1, -0.003)
+
 [node name="plataform7" type="MeshInstance3D" parent="parkour"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0083523, 0.8754475, -36.810837)
 mesh = SubResource("BoxMesh_ts12v")
@@ -108,6 +125,9 @@ metadata/_edit_group_ = true
 [node name="CollisionShape3D" type="CollisionShape3D" parent="parkour/plataform7/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_8sjc8")
 
+[node name="gear6" parent="parkour/plataform7" instance=ExtResource("4_4ewuc")]
+transform = Transform3D(0.65, 0, 0, 0, -4.859199e-09, -1.2247046, 0, 0.059, -2.84124e-08, 0.106, 1, 0.007)
+
 [node name="plataform8" type="MeshInstance3D" parent="parkour"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4751472, 2.2143826, -43.13283)
 mesh = SubResource("BoxMesh_ts12v")
@@ -118,6 +138,9 @@ metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="parkour/plataform8/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_8sjc8")
+
+[node name="gear7" parent="parkour/plataform8" instance=ExtResource("4_4ewuc")]
+transform = Transform3D(0.65, 0, 0, 0, -4.859199e-09, -1.2247046, 0, 0.059, -2.84124e-08, 0.031, 1, 0.097)
 
 [node name="EndPlataform" type="Node3D" parent="parkour"]
 transform = Transform3D(2.5286622, 0, 0, 0, 15.980513, 0, 0, 0, 0.060842708, -2.3172064, 6.8095374, -55.41469)
@@ -177,13 +200,15 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0
 [node name="colision" type="CollisionShape3D" parent="player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.003081739, 0.69261974, 0.0012799501)
 shape = SubResource("CapsuleShape3D_sslmt")
-debug_color = Color(0.9817615, 0, 0.37233552, 1)
+debug_color = Color(0.9647059, 0, 0.49803922, 1)
+
+[node name="head_colision" type="CollisionShape3D" parent="player"]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0.9218304, 0)
+shape = SubResource("SphereShape3D_4ewuc")
+debug_color = Color(0.9647059, 0, 0.49803922, 1)
 
 [node name="camera_pivo" type="Node3D" parent="player"]
 transform = Transform3D(1, 0, 0, 0, 0.9620229, 0.27296874, 0, -0.27296874, 0.9620229, 0, 1.2858493, 0)
 
 [node name="camera" type="Camera3D" parent="player/camera_pivo"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.5)
-
-[node name="gear" parent="." instance=ExtResource("4_4ewuc")]
-transform = Transform3D(0.65, 0, 0, 0, -2.578972e-09, -0.6499999, 0, 0.059, -2.84124e-08, 0, 0.32892007, -1.2202427)
