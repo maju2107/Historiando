@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://3au4wjuqp06l"]
+[gd_scene load_steps=18 format=3 uid="uid://3au4wjuqp06l"]
 
 [ext_resource type="Environment" uid="uid://db68r5ch3eg8r" path="res://scenes/mecanica3/word-environment.tres" id="1_kp8mu"]
 [ext_resource type="Script" uid="uid://d1xcky3tclroh" path="res://scenes/mecanica3/player.tres.gd" id="2_sslmt"]
 [ext_resource type="PackedScene" uid="uid://kod0awm1ha4o" path="res://characters/addons/gdquest_gobot/model/gobot.glb" id="3_sslmt"]
+[ext_resource type="PackedScene" uid="uid://16iu10wxub40" path="res://characters/addons/gdquest_sophia/model/sophia.glb" id="4_2l1ys"]
 [ext_resource type="PackedScene" uid="uid://ctm3b455bgoou" path="res://scenes/mecanica3/gear.tscn" id="4_4ewuc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kp8mu"]
@@ -15,6 +16,160 @@ size = Vector3(5, 0.5, 5)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_8sjc8"]
 data = PackedVector3Array(-2.5, 0.25, 2.5, 2.5, 0.25, 2.5, -2.5, -0.25, 2.5, 2.5, 0.25, 2.5, 2.5, -0.25, 2.5, -2.5, -0.25, 2.5, 2.5, 0.25, -2.5, -2.5, 0.25, -2.5, 2.5, -0.25, -2.5, -2.5, 0.25, -2.5, -2.5, -0.25, -2.5, 2.5, -0.25, -2.5, 2.5, 0.25, 2.5, 2.5, 0.25, -2.5, 2.5, -0.25, 2.5, 2.5, 0.25, -2.5, 2.5, -0.25, -2.5, 2.5, -0.25, 2.5, -2.5, 0.25, -2.5, -2.5, 0.25, 2.5, -2.5, -0.25, -2.5, -2.5, 0.25, 2.5, -2.5, -0.25, 2.5, -2.5, -0.25, -2.5, 2.5, 0.25, 2.5, -2.5, 0.25, 2.5, 2.5, 0.25, -2.5, -2.5, 0.25, 2.5, -2.5, 0.25, -2.5, 2.5, 0.25, -2.5, -2.5, -0.25, 2.5, 2.5, -0.25, 2.5, -2.5, -0.25, -2.5, 2.5, -0.25, 2.5, 2.5, -0.25, -2.5, -2.5, -0.25, -2.5)
+
+[sub_resource type="GDScript" id="GDScript_2l1ys"]
+script/source = "extends Area3D
+
+const  ROTATION_SPEED := 40.0
+
+var start_pos := position.y
+var end_pos:= position.y + 0.5
+
+func _ready():
+	var gear_tween := create_tween().set_loops().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
+	gear_tween.tween_property(self, \"position:y\", end_pos, 1.0).from(start_pos)
+	gear_tween.tween_property(self, \"position:y\", start_pos, 1.0).from(end_pos)
+
+func _process(delta):
+	rotate_y(deg_to_rad(ROTATION_SPEED * delta))
+
+
+func _on_body_entered(body: Node3D) -> void:
+	if body.name == \"player\":
+		queue_free()
+"
+
+[sub_resource type="GDScript" id="GDScript_dw35o"]
+script/source = "extends Area3D
+
+const  ROTATION_SPEED := 40.0
+
+var start_pos := position.y
+var end_pos:= position.y + 0.5
+
+func _ready():
+	var gear_tween := create_tween().set_loops().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
+	gear_tween.tween_property(self, \"position:y\", end_pos, 1.0).from(start_pos)
+	gear_tween.tween_property(self, \"position:y\", start_pos, 1.0).from(end_pos)
+
+func _process(delta):
+	rotate_y(deg_to_rad(ROTATION_SPEED * delta))
+
+
+func _on_body_entered(body: Node3D) -> void:
+	if body.name == \"player\":
+		queue_free()
+"
+
+[sub_resource type="GDScript" id="GDScript_lpn5e"]
+script/source = "extends Area3D
+
+const  ROTATION_SPEED := 40.0
+
+var start_pos := position.y
+var end_pos:= position.y + 0.5
+
+func _ready():
+	var gear_tween := create_tween().set_loops().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
+	gear_tween.tween_property(self, \"position:y\", end_pos, 1.0).from(start_pos)
+	gear_tween.tween_property(self, \"position:y\", start_pos, 1.0).from(end_pos)
+
+func _process(delta):
+	rotate_y(deg_to_rad(ROTATION_SPEED * delta))
+
+
+func _on_body_entered(body: Node3D) -> void:
+	if body.name == \"player\":
+		queue_free()
+"
+
+[sub_resource type="GDScript" id="GDScript_5wl5n"]
+script/source = "extends Area3D
+
+const  ROTATION_SPEED := 40.0
+
+var start_pos := position.y
+var end_pos:= position.y + 0.5
+
+func _ready():
+	var gear_tween := create_tween().set_loops().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
+	gear_tween.tween_property(self, \"position:y\", end_pos, 1.0).from(start_pos)
+	gear_tween.tween_property(self, \"position:y\", start_pos, 1.0).from(end_pos)
+
+func _process(delta):
+	rotate_y(deg_to_rad(ROTATION_SPEED * delta))
+
+
+func _on_body_entered(body: Node3D) -> void:
+	if body.name == \"player\":
+		queue_free()
+"
+
+[sub_resource type="GDScript" id="GDScript_a1e0q"]
+script/source = "extends Area3D
+
+const  ROTATION_SPEED := 40.0
+
+var start_pos := position.y
+var end_pos:= position.y + 0.5
+
+func _ready():
+	var gear_tween := create_tween().set_loops().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
+	gear_tween.tween_property(self, \"position:y\", end_pos, 1.0).from(start_pos)
+	gear_tween.tween_property(self, \"position:y\", start_pos, 1.0).from(end_pos)
+
+func _process(delta):
+	rotate_y(deg_to_rad(ROTATION_SPEED * delta))
+
+
+func _on_body_entered(body: Node3D) -> void:
+	if body.name == \"player\":
+		queue_free()
+"
+
+[sub_resource type="GDScript" id="GDScript_vqjq5"]
+script/source = "extends Area3D
+
+const  ROTATION_SPEED := 40.0
+
+var start_pos := position.y
+var end_pos:= position.y + 0.5
+
+func _ready():
+	var gear_tween := create_tween().set_loops().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
+	gear_tween.tween_property(self, \"position:y\", end_pos, 1.0).from(start_pos)
+	gear_tween.tween_property(self, \"position:y\", start_pos, 1.0).from(end_pos)
+
+func _process(delta):
+	rotate_y(deg_to_rad(ROTATION_SPEED * delta))
+
+
+func _on_body_entered(body: Node3D) -> void:
+	if body.name == \"player\":
+		queue_free()
+"
+
+[sub_resource type="GDScript" id="GDScript_n571a"]
+script/source = "extends Area3D
+
+const  ROTATION_SPEED := 40.0
+
+var start_pos := position.y
+var end_pos:= position.y + 0.5
+
+func _ready():
+	var gear_tween := create_tween().set_loops().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
+	gear_tween.tween_property(self, \"position:y\", end_pos, 1.0).from(start_pos)
+	gear_tween.tween_property(self, \"position:y\", start_pos, 1.0).from(end_pos)
+
+func _process(delta):
+	rotate_y(deg_to_rad(ROTATION_SPEED * delta))
+
+
+func _on_body_entered(body: Node3D) -> void:
+	if body.name == \"player\":
+		queue_free()
+"
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sslmt"]
 radius = 0.24804688
@@ -51,7 +206,8 @@ skeleton = NodePath("../..")
 metadata/_edit_group_ = true
 
 [node name="gear" parent="parkour/plataform2" instance=ExtResource("4_4ewuc")]
-transform = Transform3D(0.65, 0, 0, 0, -4.859199e-09, -1.2247046, 0, 0.059, -2.84124e-08, 0, 1.2000002, 0)
+transform = Transform3D(0.65, 0, 0, 0, -4.859199e-09, -1.2247046, 0, 0.059, -2.84124e-08, 0, 1, 0)
+script = SubResource("GDScript_2l1ys")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="parkour/plataform2"]
 
@@ -65,7 +221,8 @@ skeleton = NodePath("../..")
 metadata/_edit_group_ = true
 
 [node name="gear2" parent="parkour/plataform3" instance=ExtResource("4_4ewuc")]
-transform = Transform3D(0.65, 0, 0, 0, -4.859199e-09, -1.2247046, 0, 0.059, -2.84124e-08, 0.141, 1, 0.016)
+transform = Transform3D(0.65, 0, 0, 0, -4.859199e-09, -1.2247046, 0, 0.059, -2.84124e-08, 0, 1, 0)
+script = SubResource("GDScript_dw35o")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="parkour/plataform3"]
 
@@ -84,7 +241,8 @@ metadata/_edit_group_ = true
 shape = SubResource("ConcavePolygonShape3D_8sjc8")
 
 [node name="gear3" parent="parkour/plataform4" instance=ExtResource("4_4ewuc")]
-transform = Transform3D(0.65, 0, 0, 0, -4.859199e-09, -1.2247046, 0, 0.059, -2.84124e-08, 0, 1, 0.136)
+transform = Transform3D(0.65, 0, 0, 0, -4.859199e-09, -1.2247046, 0, 0.059, -2.84124e-08, 0, 1, 0)
+script = SubResource("GDScript_lpn5e")
 
 [node name="plataform5" type="MeshInstance3D" parent="parkour"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.477, -1.6, -24.281)
@@ -93,7 +251,8 @@ skeleton = NodePath("../..")
 metadata/_edit_group_ = true
 
 [node name="gear4" parent="parkour/plataform5" instance=ExtResource("4_4ewuc")]
-transform = Transform3D(0.65, 0, 0, 0, -4.859199e-09, -1.2247046, 0, 0.059, -2.84124e-08, 0.026, 1, 0.03)
+transform = Transform3D(0.65, 0, 0, 0, -4.859199e-09, -1.2247046, 0, 0.059, -2.84124e-08, 0, 1, 0)
+script = SubResource("GDScript_5wl5n")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="parkour/plataform5"]
 
@@ -112,7 +271,8 @@ metadata/_edit_group_ = true
 shape = SubResource("ConcavePolygonShape3D_8sjc8")
 
 [node name="gear5" parent="parkour/plataform6" instance=ExtResource("4_4ewuc")]
-transform = Transform3D(0.65, 0, 0, 0, -4.859199e-09, -1.2247046, 0, 0.059, -2.84124e-08, 0.067, 1, -0.003)
+transform = Transform3D(0.65, 0, 0, 0, -4.859199e-09, -1.2247046, 0, 0.059, -2.84124e-08, 0, 1, 0)
+script = SubResource("GDScript_a1e0q")
 
 [node name="plataform7" type="MeshInstance3D" parent="parkour"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0083523, 0.8754475, -36.810837)
@@ -126,7 +286,8 @@ metadata/_edit_group_ = true
 shape = SubResource("ConcavePolygonShape3D_8sjc8")
 
 [node name="gear6" parent="parkour/plataform7" instance=ExtResource("4_4ewuc")]
-transform = Transform3D(0.65, 0, 0, 0, -4.859199e-09, -1.2247046, 0, 0.059, -2.84124e-08, 0.106, 1, 0.007)
+transform = Transform3D(0.65, 0, 0, 0, -4.859199e-09, -1.2247046, 0, 0.059, -2.84124e-08, 0, 1, 0)
+script = SubResource("GDScript_vqjq5")
 
 [node name="plataform8" type="MeshInstance3D" parent="parkour"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4751472, 2.2143826, -43.13283)
@@ -140,7 +301,8 @@ metadata/_edit_group_ = true
 shape = SubResource("ConcavePolygonShape3D_8sjc8")
 
 [node name="gear7" parent="parkour/plataform8" instance=ExtResource("4_4ewuc")]
-transform = Transform3D(0.65, 0, 0, 0, -4.859199e-09, -1.2247046, 0, 0.059, -2.84124e-08, 0.031, 1, 0.097)
+transform = Transform3D(0.65, 0, 0, 0, -4.859199e-09, -1.2247046, 0, 0.059, -2.84124e-08, 0, 1, 0)
+script = SubResource("GDScript_n571a")
 
 [node name="EndPlataform" type="Node3D" parent="parkour"]
 transform = Transform3D(2.5286622, 0, 0, 0, 15.980513, 0, 0, 0, 0.060842708, -2.3172064, 6.8095374, -55.41469)
@@ -193,6 +355,10 @@ shape = SubResource("ConcavePolygonShape3D_8sjc8")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.061077595, 0)
 script = ExtResource("2_sslmt")
 metadata/_edit_group_ = true
+
+[node name="sophia" parent="player" instance=ExtResource("4_2l1ys")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+visible = false
 
 [node name="gobot" parent="player" instance=ExtResource("3_sslmt")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
