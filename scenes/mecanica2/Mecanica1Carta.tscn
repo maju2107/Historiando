@@ -148,7 +148,38 @@ theme_override_styles/normal = ExtResource("8_ga02k")
 icon = ExtResource("8_irty3")
 flat = true
 
+[node name="Popup" type="Popup" parent="."]
+oversampling_override = 1.0
+mode = 3
+title = "Preencha as lacunas com os fragmentos corretos!"
+size = Vector2i(420, 80)
+visible = true
+always_on_top = true
+extend_to_title = true
+
+[node name="ColorRect" type="ColorRect" parent="Popup"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Popup"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.008100095, 0.07403616, 0.107057445, 1)
+text = "
+Preencha as lacunas com os fragmentos corretos!"
+
+[node name="Fechar" type="Button" parent="Popup"]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_styles/normal = ExtResource("8_ga02k")
+text = "❌"
+flat = true
+
 [connection signal="pressed" from="VoltarTI" to="." method="VoltarParaTelaInicial_on_button_pressed"]
+[connection signal="pressed" from="Popup/Fechar" to="." method="_on_fechar_pressed"]
 
 [editable path="Bloco1"]
 [editable path="Bloco2"]
