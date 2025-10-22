@@ -1,12 +1,15 @@
-[gd_scene load_steps=12 format=3 uid="uid://b6ugxxidsn47d"]
+[gd_scene load_steps=15 format=3 uid="uid://b6ugxxidsn47d"]
 
+[ext_resource type="Script" uid="uid://icif0jyb2lh0" path="res://scenes/mecanica2/Mecanica_1_carta.gd" id="1_o6dv1"]
 [ext_resource type="Texture2D" uid="uid://c1aphjruwmx8k" path="res://assets/fundoC.png" id="1_uru5i"]
 [ext_resource type="Texture2D" uid="uid://dvibasbfgu2uo" path="res://assets/cartaMegaFauna.png" id="2_sxjlt"]
 [ext_resource type="PackedScene" uid="uid://dbr5814e2q258" path="res://scenes/mecanica2/Bloco1.tscn" id="3_o1i5e"]
 [ext_resource type="PackedScene" uid="uid://dtwxtfrqa3h0" path="res://scenes/mecanica2/Bloco2.tscn" id="4_lh50h"]
 [ext_resource type="PackedScene" uid="uid://d8aojkj7rv7y" path="res://scenes/mecanica2/Bloco3.tscn" id="5_o1i5e"]
 [ext_resource type="PackedScene" uid="uid://cgn852xqvoers" path="res://scenes/mecanica2/Bloco4.tscn" id="6_lh50h"]
-[ext_resource type="Texture2D" uid="uid://cey41p4lm38h0" path="res://assets/gato.png" id="7_lh50h"]
+[ext_resource type="Texture2D" uid="uid://8kpp5vfv4xog" path="res://assets/Group 8.png" id="8_8apre"]
+[ext_resource type="StyleBox" uid="uid://dnsgdxjl1eer6" path="res://new_style_box_flat.tres" id="8_ga02k"]
+[ext_resource type="Texture2D" uid="uid://bdk5fhxst7lch" path="res://assets/setaVoltar.png" id="8_irty3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d0cn7"]
 size = Vector2(270.09012, 24.06863)
@@ -21,6 +24,7 @@ size = Vector2(455.35123, 68.9968)
 size = Vector2(234.98856, 24.603521)
 
 [node name="Mecanica1Carta" type="Node2D"]
+script = ExtResource("1_o6dv1")
 
 [node name="fundo" type="Sprite2D" parent="."]
 position = Vector2(960.99994, 542.5)
@@ -102,11 +106,11 @@ offset_bottom = 338.0
 position = Vector2(1268, 908)
 
 [node name="Sprite2D" parent="Bloco3/Bloco3" index="0"]
-position = Vector2(-6.50006, 1.250037)
-scale = Vector2(0.6080911, 0.56474745)
+position = Vector2(-3.5000598, 1.250037)
+scale = Vector2(0.61567646, 0.56474745)
 
 [node name="CollisionShape2D" parent="Bloco3/Bloco3" index="1"]
-position = Vector2(-6, 1.5)
+position = Vector2(-2, 1.5)
 
 [node name="Label" parent="Bloco3/Bloco3/Control" index="0"]
 offset_left = 1460.0001
@@ -117,6 +121,9 @@ text = "alcançar até 3 m de comprimento e pesar
 cerca de 300 kg"
 
 [node name="Bloco4" parent="." instance=ExtResource("6_lh50h")]
+
+[node name="Bloco4" parent="Bloco4" index="0"]
+position = Vector2(1449, 326)
 
 [node name="Sprite2D" parent="Bloco4/Bloco4" index="0"]
 position = Vector2(0.9999943, -3.0517578e-05)
@@ -130,9 +137,18 @@ offset_left = 1552.0001
 offset_right = 1768.0001
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1849, 1018)
-scale = Vector2(0.3310001, 0.282)
-texture = ExtResource("7_lh50h")
+position = Vector2(963.49994, 543.5)
+scale = Vector2(1.0057291, 1.0027776)
+texture = ExtResource("8_8apre")
+
+[node name="VoltarTI" type="Button" parent="."]
+offset_right = 136.0
+offset_bottom = 175.0
+theme_override_styles/normal = ExtResource("8_ga02k")
+icon = ExtResource("8_irty3")
+flat = true
+
+[connection signal="pressed" from="VoltarTI" to="." method="VoltarParaTelaInicial_on_button_pressed"]
 
 [editable path="Bloco1"]
 [editable path="Bloco2"]

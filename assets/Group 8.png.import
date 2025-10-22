@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cey41p4lm38h0"
-path="res://.godot/imported/gato.png-81f1e372a81e2fda738b8a7571a4d14d.ctex"
+uid="uid://8kpp5vfv4xog"
+path="res://.godot/imported/Group 8.png-55fc2a01bfe7df5fdec077dcf9645d51.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gato.png"
-dest_files=["res://.godot/imported/gato.png-81f1e372a81e2fda738b8a7571a4d14d.ctex"]
+source_file="res://assets/Group 8.png"
+dest_files=["res://.godot/imported/Group 8.png-55fc2a01bfe7df5fdec077dcf9645d51.ctex"]
 
 [params]
 

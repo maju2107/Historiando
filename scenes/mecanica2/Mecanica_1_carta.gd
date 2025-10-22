@@ -11,6 +11,5 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_lacuna_1_area_entered(area: Area2D) -> void:
-	if area.name == "Bloco1" :
-		print("Correto")
+func VoltarParaTelaInicial_on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/telaInicial/TelaInicial.tscn")
