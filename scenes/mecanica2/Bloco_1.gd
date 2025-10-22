@@ -4,6 +4,8 @@ var dragging := false
 var offset := Vector2.ZERO
 var target_slot_name := "lacuna1"  # Nome da lacuna onde esse bloco deve encaixar
 
+@onready var popup := get_node("/root/Mecanica2Carta/PopupCorreto")
+
 func _input_event(viewport, event, shape_idx): # _input_event é usado em contextos locais
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
@@ -22,6 +24,9 @@ func verificar_encaixe():
 		if area.name == target_slot_name:
 			global_position = area.global_position
 			set_process_input(true)  # trava o bloco se for false
+			popup.popup_centered() 
+			await get_tree().create_timer(2.0).timeout
+			popup.hide()
 			print("✅ Encaixe correto em %s!" % target_slot_name)
 			return
 	print("❌ Encaixe incorreto.")

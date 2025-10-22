@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8frtum6c2tge"]
+
+[sub_resource type="SystemFont" id="SystemFont_flf4y"]
+font_names = PackedStringArray("Calibri")
+
+[sub_resource type="LabelSettings" id="LabelSettings_qap0q"]
+font_size = 39
+font_color = Color(0.01439443, 0.004794367, 0.112674214, 1)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Popup" type="Popup" parent="."]
+oversampling_override = 1.0
+size = Vector2i(382, 66)
+visible = true
+
+[node name="ColorRect" type="ColorRect" parent="Popup"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 6.0
+offset_right = -7.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+accessibility_name = "Aviso de instrução"
+accessibility_description = "Preeencha as lacunas com os fragmentos corretos!"
+accessibility_live = 1
+color = Color(0.7346442, 0.7729904, 0.9921146, 1)
+
+[node name="Label" type="Label" parent="Popup"]
+offset_left = 113.0
+offset_top = 17.0
+offset_right = 246.0
+offset_bottom = 60.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.008100095, 0.07403616, 0.107057445, 1)
+theme_override_fonts/font = SubResource("SystemFont_flf4y")
+text = "Correto!"
+label_settings = SubResource("LabelSettings_qap0q")
