@@ -129,23 +129,30 @@ func collect_gear():
 	gears += 1
 	gear_container.update_gear(gears)
 	
+
 func respawn_player() -> void:
 	if health > 1:
 		health -= 1
 		transform.origin = player_start_position
 		velocity = Vector3.ZERO
-		#desativa movimento por 0.5s
+
 		can_move = false
 		anim_player.play("Idle", 0.0)
 		await get_tree().create_timer(0.5).timeout
-		#reativa o movimento
 		can_move = true
+
 		gear_container.update_life(health)
+
 	elif health == 1:
 		health -= 1
-		is_dead = true 
-		get_parent().get_node("GameOver").visible = true
+		is_dead = true
+
+		# Em vez de pausar o jogo, desativa os controles e mostra o menu
+		can_move = false
+		set_physics_process(false)  # desativa física do player
+
+		var game_over_ui = get_parent().get_node("GameOver")
+		game_over_ui.visible = true
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		get_tree().paused = true
 
 	

@@ -8,4 +8,4 @@ func _on_retry_btn_pressed() -> void:
 
 
 func _on_comeback_btn_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/telaInicial/TelaInicial.tscn")
+	Transicao.transicionar_para("res://scenes/telaInicial/TelaInicial.tscn")
