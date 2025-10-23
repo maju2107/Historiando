@@ -3,8 +3,11 @@ extends Area2D
 var dragging := false
 var offset := Vector2.ZERO
 var target_slot_name := "lacuna1"  # Nome da lacuna onde esse bloco deve encaixar
+var lacuna2 := "lacuna2"
+var lacuna3 := "lacuna3"
+var lacuna4 := "lacuna4"
 
-@onready var popup := get_node("/root/Mecanica2Carta/PopupCorreto")
+#@onready var popup := get_node("/root/Mecanica2Carta/PopupCorreto")
 
 func _input_event(viewport, event, shape_idx): # _input_event é usado em contextos locais
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -24,9 +27,13 @@ func verificar_encaixe():
 		if area.name == target_slot_name:
 			global_position = area.global_position
 			set_process_input(true)  # trava o bloco se for false
-			popup.popup_centered() 
+			$Popup1.popup_centered() 
 			await get_tree().create_timer(2.0).timeout
-			popup.hide()
+			$Popup1.hide()
 			print("✅ Encaixe correto em %s!" % target_slot_name)
 			return
-	print("❌ Encaixe incorreto.")
+		if area.name == lacuna2 or area.name == lacuna3 or area.name == lacuna4 :
+			print("❌ Encaixe incorreto.")
+			$Popup2.popup_centered() 
+			await get_tree().create_timer(2.0).timeout
+			$Popup2.hide()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cgn852xqvoers"]
+[gd_scene load_steps=8 format=3 uid="uid://cgn852xqvoers"]
 
 [ext_resource type="Script" uid="uid://bbuceirxuivnc" path="res://scenes/mecanica2/Bloco_4.gd" id="1_v4bsa"]
 [ext_resource type="FontFile" uid="uid://bywotcf64xby" path="res://fonts/IndieFlower-Regular.ttf" id="2_ttxoe"]
@@ -15,6 +15,13 @@ font_size = 21
 font_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
 stacked_outline_count = 1
 stacked_outline_0/size = 1
+
+[sub_resource type="SystemFont" id="SystemFont_v4bsa"]
+font_names = PackedStringArray("Calibri")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ttxoe"]
+font_size = 39
+font_color = Color(0.01439443, 0.004794367, 0.112674214, 1)
 
 [node name="Node2D" type="Node2D"]
 
@@ -49,3 +56,67 @@ accessibility_name = "Pleistoceno"
 accessibility_live = 1
 text = "o aquecimento do clima"
 label_settings = SubResource("LabelSettings_t70ks")
+
+[node name="Popup1" type="Popup" parent="Bloco4"]
+oversampling_override = 1.0
+mode = 3
+initial_position = 1
+size = Vector2i(382, 66)
+visible = true
+
+[node name="ColorRect" type="ColorRect" parent="Bloco4/Popup1"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.0
+offset_right = 1.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+accessibility_name = "Aviso de instrução"
+accessibility_description = "Preeencha as lacunas com os fragmentos corretos!"
+accessibility_live = 1
+color = Color(0.7346442, 0.7729904, 0.9921146, 1)
+
+[node name="Label" type="Label" parent="Bloco4/Popup1"]
+offset_left = 113.0
+offset_top = 17.0
+offset_right = 246.0
+offset_bottom = 60.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.008100095, 0.07403616, 0.107057445, 1)
+theme_override_fonts/font = SubResource("SystemFont_v4bsa")
+text = "Correto!"
+label_settings = SubResource("LabelSettings_ttxoe")
+
+[node name="Popup2" type="Popup" parent="Bloco4"]
+oversampling_override = 1.0
+mode = 3
+initial_position = 1
+size = Vector2i(438, 66)
+visible = true
+
+[node name="ColorRect" type="ColorRect" parent="Bloco4/Popup2"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.0
+offset_right = 1.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+accessibility_name = "Aviso de instrução"
+accessibility_description = "Preeencha as lacunas com os fragmentos corretos!"
+accessibility_live = 1
+color = Color(0.7346442, 0.7729904, 0.9921146, 1)
+
+[node name="Label" type="Label" parent="Bloco4/Popup2"]
+offset_left = 64.0
+offset_top = 16.0
+offset_right = 389.0
+offset_bottom = 59.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.008100095, 0.07403616, 0.107057445, 1)
+theme_override_fonts/font = SubResource("SystemFont_v4bsa")
+text = "Hum...tente de novo"
+label_settings = SubResource("LabelSettings_ttxoe")

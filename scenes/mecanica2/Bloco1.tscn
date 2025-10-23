@@ -57,20 +57,20 @@ accessibility_live = 1
 text = "Pleistoceno"
 label_settings = SubResource("LabelSettings_x2drc")
 
-[node name="Popup" type="Popup" parent="."]
+[node name="Popup1" type="Popup" parent="Bloco1"]
 oversampling_override = 1.0
 mode = 3
 initial_position = 1
 size = Vector2i(382, 66)
 visible = true
 
-[node name="ColorRect" type="ColorRect" parent="Popup"]
+[node name="ColorRect" type="ColorRect" parent="Bloco1/Popup1"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 6.0
-offset_right = -7.0
-offset_bottom = -5.0
+offset_top = -3.0
+offset_right = 1.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 accessibility_name = "Aviso de instrução"
@@ -78,7 +78,7 @@ accessibility_description = "Preeencha as lacunas com os fragmentos corretos!"
 accessibility_live = 1
 color = Color(0.7346442, 0.7729904, 0.9921146, 1)
 
-[node name="Label" type="Label" parent="Popup"]
+[node name="Label" type="Label" parent="Bloco1/Popup1"]
 offset_left = 113.0
 offset_top = 17.0
 offset_right = 246.0
@@ -87,4 +87,36 @@ size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.008100095, 0.07403616, 0.107057445, 1)
 theme_override_fonts/font = SubResource("SystemFont_eu065")
 text = "Correto!"
+label_settings = SubResource("LabelSettings_1yn8g")
+
+[node name="Popup2" type="Popup" parent="Bloco1"]
+oversampling_override = 1.0
+mode = 3
+initial_position = 1
+size = Vector2i(438, 66)
+visible = true
+
+[node name="ColorRect" type="ColorRect" parent="Bloco1/Popup2"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.0
+offset_right = 1.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+accessibility_name = "Aviso de instrução"
+accessibility_description = "Preeencha as lacunas com os fragmentos corretos!"
+accessibility_live = 1
+color = Color(0.7346442, 0.7729904, 0.9921146, 1)
+
+[node name="Label" type="Label" parent="Bloco1/Popup2"]
+offset_left = 64.0
+offset_top = 16.0
+offset_right = 389.0
+offset_bottom = 59.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.008100095, 0.07403616, 0.107057445, 1)
+theme_override_fonts/font = SubResource("SystemFont_eu065")
+text = "Hum...tente de novo"
 label_settings = SubResource("LabelSettings_1yn8g")

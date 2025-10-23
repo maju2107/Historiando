@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://c37m8iu11piln"]
+
+[ext_resource type="Script" uid="uid://yjp7bdfmeg0b" path="res://scenes/Botao_global.gd" id="1_ch5ku"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_ch5ku")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -34.0
+offset_bottom = 41.0
+grow_horizontal = 0
+size_flags_horizontal = 8
+text = "x"
+
+[connection signal="pressed" from="Button" to="." method="BotaoGlobal_on_button_pressed"]

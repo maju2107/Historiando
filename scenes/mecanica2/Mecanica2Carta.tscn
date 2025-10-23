@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://icif0jyb2lh0" path="res://scenes/mecanica2/Mecanica_2_carta.gd" id="1_o6dv1"]
 [ext_resource type="Texture2D" uid="uid://c1aphjruwmx8k" path="res://assets/fundoC.png" id="1_uru5i"]
-[ext_resource type="Texture2D" uid="uid://dvibasbfgu2uo" path="res://assets/cartaMegaFauna.png" id="2_sxjlt"]
+[ext_resource type="Texture2D" uid="uid://dvibasbfgu2uo" path="res://assets/cartaMegafauna.png" id="2_sxjlt"]
 [ext_resource type="PackedScene" uid="uid://dbr5814e2q258" path="res://scenes/mecanica2/Bloco1.tscn" id="3_o1i5e"]
 [ext_resource type="PackedScene" uid="uid://dtwxtfrqa3h0" path="res://scenes/mecanica2/Bloco2.tscn" id="4_lh50h"]
 [ext_resource type="PackedScene" uid="uid://d8aojkj7rv7y" path="res://scenes/mecanica2/Bloco3.tscn" id="5_o1i5e"]
@@ -25,12 +25,13 @@ size = Vector2(234.98856, 24.603521)
 
 [sub_resource type="SystemFont" id="SystemFont_ga02k"]
 font_names = PackedStringArray("Calibri")
+subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_ga02k"]
 font_size = 19
 font_color = Color(0.01439443, 0.004794367, 0.112674214, 1)
 
-[node name="Mecanica1Carta" type="Node2D"]
+[node name="Mecanica2Carta" type="Node2D"]
 script = ExtResource("1_o6dv1")
 
 [node name="fundo" type="Sprite2D" parent="."]

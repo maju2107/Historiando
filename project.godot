@@ -21,6 +21,7 @@ buses/default_bus_layout=""
 [autoload]
 
 MusicaGlobal="*res://scenes/music/MusicaGlobal.tscn"
+BotaoGlobal="*res://scenes/BotaoGlobal.tscn"
 
 [display]
 
