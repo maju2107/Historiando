@@ -1,10 +1,42 @@
-[gd_scene load_steps=2 format=3 uid="uid://bv6d54r65jle0"]
+[gd_scene load_steps=3 format=3 uid="uid://bv6d54r65jle0"]
 
 [ext_resource type="Texture2D" uid="uid://c1aphjruwmx8k" path="res://assets/fundoC.png" id="1_5dmab"]
+[ext_resource type="Script" uid="uid://bglwa3ybcl25l" path="res://scenes/mecanica1/Mecanica_1_questionario.gd" id="1_nyd3v"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_nyd3v")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(960.99994, 540)
 scale = Vector2(6.3999987, 6.4166665)
 texture = ExtResource("1_5dmab")
+
+[node name="ColorRect" type="ColorRect" parent="Sprite2D"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -238.75
+offset_top = -85.402596
+offset_right = -57.81247
+offset_bottom = 81.50649
+grow_horizontal = 2
+color = Color(0.7816087, 0.8752568, 0.99076706, 1)
+
+[node name="Label" type="Label" parent="Sprite2D/ColorRect"]
+layout_mode = 0
+offset_right = 178.75003
+offset_bottom = 83.68831
+
+[node name="OptionButton" type="OptionButton" parent="Sprite2D/ColorRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -87.031265
+offset_top = -84.623375
+offset_right = 83.593765
+offset_bottom = -4.51947
+grow_horizontal = 2
+grow_vertical = 0
