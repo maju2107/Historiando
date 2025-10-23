@@ -1,22 +1,31 @@
 extends CharacterBody3D
 
-
+#constantes
 const SPEED = 15.0
 const JUMP_VELOCITY = 6.0
 const ACCELERATION = 2.0
 
+#acesso a camera_pivo e camera para visão presa ao player
 @onready var camera_pivo: Node3D = $camera_pivo
 @onready var camera: Camera3D = $camera_pivo/camera
+
+#acesso ao modelo e à animação
 @onready var gobot: Node3D = $gobot
 @onready var anim_player: AnimationPlayer = gobot.get_node("AnimationPlayer")
+
+#acesso ao label para a contagem do hub
+@onready var gear_container: HBoxContainer = $HUD/gear_container
+var gears := 0
 
 var mouse_sensitivity: float = 0.15
 var camera_rotation: Vector2 = Vector2.ZERO
 var last_moviment_dir := Vector3.BACK
 var is_jumping
-# Sensibilidade do analógico
+
+#sensibilidade do analógico
 var joystick_sensitivity = 2.5
 
+#funções
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	anim_player.play("Idle")
@@ -38,11 +47,11 @@ func  _input(_event: InputEvent) -> void:
 func _physics_process(delta: float) -> void:
 	# rotação da camera
 	
-	# Leitura do analógico direito
+	#leitura do analógico direito
 	var joy_x = Input.get_joy_axis(0, JOY_AXIS_RIGHT_X) # eixo horizontal
 	var joy_y = Input.get_joy_axis(0, JOY_AXIS_RIGHT_Y) # eixo vertical
 
-	# Atualiza rotação da câmera com joystick
+	#atualiza rotação da câmera com joystick
 	camera_rotation.x += joy_x * joystick_sensitivity
 	camera_rotation.y += joy_y * joystick_sensitivity
 	
@@ -53,18 +62,17 @@ func _physics_process(delta: float) -> void:
 	
 	camera_rotation = Vector2.ZERO
 	
-	# Add the gravity.
+	#gravidade
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 		
 	is_jumping = Input.is_action_just_pressed("ui_accept") and is_on_floor()
 
-	# Handle jump.
+	#pulo
 	if is_jumping:
 		velocity.y = JUMP_VELOCITY
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
+	#movimentação padrão
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var forward := camera.global_basis.z
 	var right := camera.global_basis.x
@@ -107,3 +115,8 @@ func _handle_animation():
 		else:
 			if anim_player.current_animation != "Idle":
 				anim_player.play("Idle", 0.2)
+
+
+func collect_gear():
+	gears += 1
+	gear_container.update_gear(gears)
