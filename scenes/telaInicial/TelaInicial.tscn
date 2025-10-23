@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://c3cmjph0ffieq"]
+[gd_scene load_steps=5 format=3 uid="uid://c3cmjph0ffieq"]
 
 [ext_resource type="Script" uid="uid://djqkdsje8lcwj" path="res://scenes/telaInicial/TelaInicial.gd" id="1_6ybww"]
-[ext_resource type="PackedScene" uid="uid://baob1qp6nkk4f" path="res://scenes/menuPrincipal/MenuPrincipal.tscn" id="2_1exgo"]
 [ext_resource type="Texture2D" uid="uid://caugyn0rceqbw" path="res://assets/logo.png" id="3_hgyjh"]
 [ext_resource type="Texture2D" uid="uid://bdk5fhxst7lch" path="res://assets/setaVoltar.png" id="4_fkycc"]
 [ext_resource type="PackedScene" uid="uid://cqk3hfm64qwbb" path="res://scenes/menuPrincipal/BotaoMecanica.tscn" id="5_1exgo"]
@@ -16,7 +15,6 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 color = Color(0, 0.50101, 0.990795, 0.890196)
 script = ExtResource("1_6ybww")
-menu_principal = ExtResource("2_1exgo")
 metadata/_edit_group_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -70,5 +68,6 @@ layout_mode = 2
 text = "Mecânica 3"
 
 [connection signal="pressed" from="VoltarMP" to="." method="_on_BotaoVoltar_pressed"]
+[connection signal="pressed" from="BoxContainer/ButtonMec1" to="." method="_on_button_mec_1_pressed"]
 [connection signal="pressed" from="BoxContainer/ButtonMec2" to="." method="_on_button_mec_2_pressed"]
 [connection signal="pressed" from="BoxContainer/ButtonMec3" to="." method="_on_button_mec_3_pressed"]
