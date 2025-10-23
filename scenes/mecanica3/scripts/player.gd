@@ -17,6 +17,15 @@ const ACCELERATION = 2.0
 @onready var gear_container: HBoxContainer = $HUD/gear_container
 var gears := 0
 
+#posição inicial
+@onready var player_start_position := global_transform.origin
+var can_move
+
+#sitema de vida
+var health := 3
+var is_dead := false 
+
+#sencibilidade do mouse/rotação da camera
 var mouse_sensitivity: float = 0.15
 var camera_rotation: Vector2 = Vector2.ZERO
 var last_moviment_dir := Vector3.BACK
@@ -116,7 +125,27 @@ func _handle_animation():
 			if anim_player.current_animation != "Idle":
 				anim_player.play("Idle", 0.2)
 
-
 func collect_gear():
 	gears += 1
 	gear_container.update_gear(gears)
+	
+func respawn_player() -> void:
+	if health > 1:
+		health -= 1
+		transform.origin = player_start_position
+		velocity = Vector3.ZERO
+		#desativa movimento por 0.5s
+		can_move = false
+		anim_player.play("Idle", 0.0)
+		await get_tree().create_timer(0.5).timeout
+		#reativa o movimento
+		can_move = true
+		gear_container.update_life(health)
+	elif health == 1:
+		health -= 1
+		is_dead = true 
+		get_parent().get_node("GameOver").visible = true
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		get_tree().paused = true
+
+	
