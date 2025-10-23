@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cqk3hfm64qwbb"]
+[gd_scene load_steps=0 format=3 uid="uid://cqk3hfm64qwbb"]
 
 [node name="Button" type="Button"]
 theme_override_font_sizes/font_size = 43
