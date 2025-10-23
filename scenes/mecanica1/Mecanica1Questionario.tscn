@@ -1,7 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://bv6d54r65jle0"]
+[gd_scene load_steps=5 format=3 uid="uid://bv6d54r65jle0"]
 
 [ext_resource type="Texture2D" uid="uid://c1aphjruwmx8k" path="res://assets/fundoC.png" id="1_5dmab"]
 [ext_resource type="Script" uid="uid://bglwa3ybcl25l" path="res://scenes/mecanica1/Mecanica_1_questionario.gd" id="1_nyd3v"]
+
+[sub_resource type="SystemFont" id="SystemFont_nyd3v"]
+font_names = PackedStringArray("Arial")
+subpixel_positioning = 0
+multichannel_signed_distance_field = true
+msdf_pixel_range = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nyd3v"]
+bg_color = Color(0.3784512, 0.71615803, 0.8854953, 1)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_nyd3v")
@@ -24,19 +33,49 @@ color = Color(0.7816087, 0.8752568, 0.99076706, 1)
 
 [node name="Label" type="Label" parent="Sprite2D/ColorRect"]
 layout_mode = 0
-offset_right = 178.75003
-offset_bottom = 83.68831
+offset_left = 0.78124046
+offset_top = 5.7662344
+offset_right = 176.56252
+offset_bottom = 288.76624
+theme_override_colors/font_color = Color(0.06053035, 0.06053035, 0.060530342, 1)
+theme_override_fonts/font = SubResource("SystemFont_nyd3v")
+theme_override_font_sizes/font_size = 7
+text = "O termo Megafauna é utilizado para se referir à diversidade de mamíferos gigantes que viveram no Pleistoceno (1,6 milhões de anos a 11.000 anos) e que atualmente encontram-se praticamente extintos. Sobre a extinção desses animais, escolha a alternativa correta:"
+horizontal_alignment = 1
+autowrap_mode = 3
 
-[node name="OptionButton" type="OptionButton" parent="Sprite2D/ColorRect"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -87.031265
-offset_top = -84.623375
-offset_right = 83.593765
-offset_bottom = -4.51947
-grow_horizontal = 2
-grow_vertical = 0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Button2" type="Button" parent="CanvasLayer"]
+offset_left = 517.0
+offset_top = 656.0
+offset_right = 1309.0
+offset_bottom = 749.0
+theme_override_font_sizes/font_size = 19
+text = "A extinção desses animais ocorreu devido a uma doença chamada Megafaunalite"
+
+[node name="Button3" type="Button" parent="CanvasLayer"]
+offset_left = 517.0
+offset_top = 774.0
+offset_right = 1313.0
+offset_bottom = 867.0
+theme_override_font_sizes/font_size = 19
+text = "A extinção desses animais ocorreu devido ao aquecimento do clima e
+ caça promovida pelos humanos"
+
+[node name="Button4" type="Button" parent="CanvasLayer"]
+offset_left = 523.0
+offset_top = 900.0
+offset_right = 1315.0
+offset_bottom = 993.0
+theme_override_font_sizes/font_size = 19
+text = "A extinção desses animais ocorreu devido a uma grande chuva toxica que os matou"
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 517.0
+offset_top = 533.0
+offset_right = 1309.0
+offset_bottom = 626.0
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxFlat_nyd3v")
+text = "A extinção da megafauna ocorreu devido a um grande meteoro que atingiu a Terra"
