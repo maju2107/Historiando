@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://3au4wjuqp06l"]
+[gd_scene load_steps=22 format=3 uid="uid://3au4wjuqp06l"]
 
 [ext_resource type="Environment" uid="uid://db68r5ch3eg8r" path="res://scenes/mecanica3/word-environment.tres" id="1_kp8mu"]
 [ext_resource type="Script" uid="uid://d1xcky3tclroh" path="res://scenes/mecanica3/scripts/player.gd" id="2_sslmt"]
@@ -9,7 +9,32 @@
 [ext_resource type="Texture2D" uid="uid://bvrp1285156vx" path="res://assets/life_player.png" id="6_a1e0q"]
 [ext_resource type="FontFile" uid="uid://dqf4ooggwn2qm" path="res://fonts/PermanentMarker-Regular.ttf" id="7_5wl5n"]
 [ext_resource type="PackedScene" uid="uid://derrjddag5wep" path="res://scenes/mecanica3/game_over.tscn" id="7_lpn5e"]
+[ext_resource type="PackedScene" uid="uid://41yb8cl8nbps" path="res://scenes/mecanica3/paused_game.tscn" id="9_n571a"]
 [ext_resource type="Script" uid="uid://dabdswxvk177p" path="res://scenes/mecanica3/scripts/death_zone.gd" id="10_vqjq5"]
+
+[sub_resource type="GDScript" id="GDScript_1lhk5"]
+resource_name = "Main"
+script/source = "extends Node3D
+
+
+var pause_menu_scene = preload(\"res://scenes/mecanica3/paused_game.tscn\")
+var pause_menu_instance: Node = null
+
+func _input(event):
+	if event.is_action_pressed(\"ui_cancel\"):
+		toggle_pause()
+
+func toggle_pause():
+	if get_tree().paused:
+		get_tree().paused = false
+		if pause_menu_instance:
+			pause_menu_instance.queue_free()
+			pause_menu_instance = null
+	else:
+		get_tree().paused = true
+		pause_menu_instance = pause_menu_scene.instantiate()
+		add_child(pause_menu_instance)
+"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kp8mu"]
 transparency = 1
@@ -93,6 +118,7 @@ _data = {
 size = Vector3(53.221565, 0.5, 93.36)
 
 [node name="mecanica3" type="Node3D"]
+script = SubResource("GDScript_1lhk5")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("1_kp8mu")
@@ -372,6 +398,8 @@ light_energy = 1.5
 transform = Transform3D(1, 0, 0, 0, 1, 3.552714e-15, 0, -3.552714e-15, 1, 0, 1.7763568e-15, 0.80413485)
 visible = false
 
+[node name="GameOver" parent="player/HUD/gear_container" instance=ExtResource("9_n571a")]
+
 [node name="gear_label" type="Label" parent="player/HUD/gear_container"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
@@ -382,6 +410,9 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="GameOver" parent="." instance=ExtResource("7_lpn5e")]
+visible = false
+
+[node name="PausedGame" parent="." instance=ExtResource("9_n571a")]
 visible = false
 
 [node name="death_zone" type="Area3D" parent="."]
