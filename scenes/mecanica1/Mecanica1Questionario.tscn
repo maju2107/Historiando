@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bv6d54r65jle0"]
+
+[ext_resource type="Texture2D" uid="uid://c1aphjruwmx8k" path="res://assets/fundoC.png" id="1_5dmab"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960.99994, 540)
+scale = Vector2(6.3999987, 6.4166665)
+texture = ExtResource("1_5dmab")

@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 
 
 func VoltarParaTelaInicial_on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/telaInicial/TelaInicial.tscn")
+	Transicao.transicionar_para("res://scenes/telaInicial/TelaInicial.tscn")
 
 
 func _on_fechar_pressed() -> void:
