@@ -55,10 +55,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -117.5
-offset_top = -54.5
-offset_right = 117.5
-offset_bottom = 54.5
+offset_left = -206.25
+offset_top = -56.5
+offset_right = 206.25
+offset_bottom = 56.5
 grow_horizontal = 2
 grow_vertical = 2
 accessibility_name = "Botão de Jogar"
@@ -71,6 +71,5 @@ theme_override_constants/line_spacing = 0
 theme_override_font_sizes/font_size = 73
 theme_override_styles/normal = ExtResource("4_4o3yp")
 text = "JOGAR"
-metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Jogar" to="." method="_on_jogar_pressed"]

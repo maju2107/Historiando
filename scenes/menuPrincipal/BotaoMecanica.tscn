@@ -1,5 +1,8 @@
-[gd_scene load_steps=0 format=3 uid="uid://cqk3hfm64qwbb"]
+[gd_scene load_steps=2 format=3 uid="uid://cqk3hfm64qwbb"]
+
+[sub_resource type="Theme" id="Theme_apjuq"]
 
 [node name="Button" type="Button"]
+theme = SubResource("Theme_apjuq")
 theme_override_font_sizes/font_size = 43
 text = "Mecânica 1"

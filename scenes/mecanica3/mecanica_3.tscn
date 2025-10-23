@@ -1,5 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://3au4wjuqp06l"]
 
+[ext_resource type="Script" uid="uid://v1lqr6nkyx6d" path="res://scenes/mecanica3/scripts/main.gd" id="1_1lhk5"]
 [ext_resource type="Environment" uid="uid://db68r5ch3eg8r" path="res://scenes/mecanica3/word-environment.tres" id="1_kp8mu"]
 [ext_resource type="Script" uid="uid://d1xcky3tclroh" path="res://scenes/mecanica3/scripts/player.gd" id="2_sslmt"]
 [ext_resource type="PackedScene" uid="uid://kod0awm1ha4o" path="res://characters/addons/gdquest_gobot/model/gobot.glb" id="3_sslmt"]
@@ -11,30 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://derrjddag5wep" path="res://scenes/mecanica3/game_over.tscn" id="7_lpn5e"]
 [ext_resource type="PackedScene" uid="uid://41yb8cl8nbps" path="res://scenes/mecanica3/paused_game.tscn" id="9_n571a"]
 [ext_resource type="Script" uid="uid://dabdswxvk177p" path="res://scenes/mecanica3/scripts/death_zone.gd" id="10_vqjq5"]
-
-[sub_resource type="GDScript" id="GDScript_1lhk5"]
-resource_name = "Main"
-script/source = "extends Node3D
-
-
-var pause_menu_scene = preload(\"res://scenes/mecanica3/paused_game.tscn\")
-var pause_menu_instance: Node = null
-
-func _input(event):
-	if event.is_action_pressed(\"ui_cancel\"):
-		toggle_pause()
-
-func toggle_pause():
-	if get_tree().paused:
-		get_tree().paused = false
-		if pause_menu_instance:
-			pause_menu_instance.queue_free()
-			pause_menu_instance = null
-	else:
-		get_tree().paused = true
-		pause_menu_instance = pause_menu_scene.instantiate()
-		add_child(pause_menu_instance)
-"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kp8mu"]
 transparency = 1
@@ -118,7 +95,7 @@ _data = {
 size = Vector3(53.221565, 0.5, 93.36)
 
 [node name="mecanica3" type="Node3D"]
-script = SubResource("GDScript_1lhk5")
+script = ExtResource("1_1lhk5")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("1_kp8mu")

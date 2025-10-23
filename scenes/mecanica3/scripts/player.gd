@@ -50,6 +50,7 @@ func  _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		
+		
 	if Input.is_action_just_pressed("left_click"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
@@ -144,7 +145,8 @@ func respawn_player() -> void:
 		gear_container.update_life(health)
 
 	elif health == 1:
-		health -= 1
+		health = 0
+		gear_container.update_life(health)
 		is_dead = true
 
 		# Em vez de pausar o jogo, desativa os controles e mostra o menu

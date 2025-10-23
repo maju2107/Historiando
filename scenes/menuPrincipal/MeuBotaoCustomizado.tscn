@@ -1,7 +1,13 @@
-[gd_scene format=3 uid="uid://bssqawwwua627"]
+[gd_scene load_steps=2 format=3 uid="uid://bssqawwwua627"]
+
+[ext_resource type="FontFile" uid="uid://dqf4ooggwn2qm" path="res://fonts/PermanentMarker-Regular.ttf" id="1_kopji"]
 
 [node name="Button" type="Button"]
-offset_right = 97.0
-offset_bottom = 58.0
+anchors_preset = -1
+anchor_right = 0.15208334
+anchor_bottom = 0.08796296
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_kopji")
 theme_override_font_sizes/font_size = 60
 text = "Jogar"
+metadata/_edit_use_anchors_ = true
