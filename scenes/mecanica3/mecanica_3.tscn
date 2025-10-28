@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://3au4wjuqp06l"]
+[gd_scene load_steps=23 format=3 uid="uid://3au4wjuqp06l"]
 
 [ext_resource type="Script" uid="uid://v1lqr6nkyx6d" path="res://scenes/mecanica3/scripts/main.gd" id="1_1lhk5"]
 [ext_resource type="Environment" uid="uid://db68r5ch3eg8r" path="res://scenes/mecanica3/word-environment.tres" id="1_kp8mu"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://kod0awm1ha4o" path="res://characters/addons/gdquest_gobot/model/gobot.glb" id="3_sslmt"]
 [ext_resource type="PackedScene" uid="uid://ctm3b455bgoou" path="res://scenes/mecanica3/gear.tscn" id="4_4ewuc"]
 [ext_resource type="PackedScene" uid="uid://d3brk8ygy1hu3" path="res://assets/items/gear1.glb" id="5_2l1ys"]
+[ext_resource type="PackedScene" uid="uid://16iu10wxub40" path="res://characters/addons/gdquest_sophia/model/sophia.glb" id="5_5l7j8"]
 [ext_resource type="Script" uid="uid://cmic71qvf6x65" path="res://scenes/mecanica3/scripts/gear_container.gd" id="5_dw35o"]
 [ext_resource type="Texture2D" uid="uid://bvrp1285156vx" path="res://assets/life_player.png" id="6_a1e0q"]
 [ext_resource type="FontFile" uid="uid://dqf4ooggwn2qm" path="res://fonts/PermanentMarker-Regular.ttf" id="7_5wl5n"]
@@ -266,6 +267,10 @@ shape = SubResource("ConcavePolygonShape3D_8sjc8")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.061077595, 0)
 script = ExtResource("2_sslmt")
 metadata/_edit_group_ = true
+
+[node name="sophia" parent="player" instance=ExtResource("5_5l7j8")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+visible = false
 
 [node name="gobot" parent="player" instance=ExtResource("3_sslmt")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
