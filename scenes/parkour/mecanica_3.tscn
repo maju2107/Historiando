@@ -1,0 +1,407 @@
+[gd_scene load_steps=23 format=3 uid="uid://3au4wjuqp06l"]
+
+[ext_resource type="Script" uid="uid://v1lqr6nkyx6d" path="res://scenes/parkour/scripts/main.gd" id="1_1lhk5"]
+[ext_resource type="Environment" uid="uid://db68r5ch3eg8r" path="res://scenes/parkour/word-environment.tres" id="1_kp8mu"]
+[ext_resource type="Script" uid="uid://d1xcky3tclroh" path="res://scenes/parkour/scripts/player.gd" id="2_sslmt"]
+[ext_resource type="PackedScene" uid="uid://kod0awm1ha4o" path="res://characters/addons/gdquest_gobot/model/gobot.glb" id="3_sslmt"]
+[ext_resource type="PackedScene" uid="uid://ctm3b455bgoou" path="res://scenes/parkour/gear.tscn" id="4_4ewuc"]
+[ext_resource type="PackedScene" uid="uid://d3brk8ygy1hu3" path="res://assets/items/gear1.glb" id="5_2l1ys"]
+[ext_resource type="PackedScene" uid="uid://16iu10wxub40" path="res://characters/addons/gdquest_sophia/model/sophia.glb" id="5_5l7j8"]
+[ext_resource type="Script" uid="uid://cmic71qvf6x65" path="res://scenes/parkour/scripts/gear_container.gd" id="5_dw35o"]
+[ext_resource type="Texture2D" uid="uid://bvrp1285156vx" path="res://assets/life_player.png" id="6_a1e0q"]
+[ext_resource type="FontFile" uid="uid://dqf4ooggwn2qm" path="res://fonts/PermanentMarker-Regular.ttf" id="7_5wl5n"]
+[ext_resource type="PackedScene" uid="uid://derrjddag5wep" path="res://scenes/parkour/game_over.tscn" id="7_lpn5e"]
+[ext_resource type="PackedScene" uid="uid://41yb8cl8nbps" path="res://scenes/parkour/paused_game.tscn" id="9_n571a"]
+[ext_resource type="Script" uid="uid://dabdswxvk177p" path="res://scenes/parkour/scripts/death_zone.gd" id="10_vqjq5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kp8mu"]
+transparency = 1
+albedo_color = Color(0.16078432, 0.5058824, 1, 0.44705883)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ts12v"]
+material = SubResource("StandardMaterial3D_kp8mu")
+size = Vector3(5, 0.5, 5)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_8sjc8"]
+data = PackedVector3Array(-2.5, 0.25, 2.5, 2.5, 0.25, 2.5, -2.5, -0.25, 2.5, 2.5, 0.25, 2.5, 2.5, -0.25, 2.5, -2.5, -0.25, 2.5, 2.5, 0.25, -2.5, -2.5, 0.25, -2.5, 2.5, -0.25, -2.5, -2.5, 0.25, -2.5, -2.5, -0.25, -2.5, 2.5, -0.25, -2.5, 2.5, 0.25, 2.5, 2.5, 0.25, -2.5, 2.5, -0.25, 2.5, 2.5, 0.25, -2.5, 2.5, -0.25, -2.5, 2.5, -0.25, 2.5, -2.5, 0.25, -2.5, -2.5, 0.25, 2.5, -2.5, -0.25, -2.5, -2.5, 0.25, 2.5, -2.5, -0.25, 2.5, -2.5, -0.25, -2.5, 2.5, 0.25, 2.5, -2.5, 0.25, 2.5, 2.5, 0.25, -2.5, -2.5, 0.25, 2.5, -2.5, 0.25, -2.5, 2.5, 0.25, -2.5, -2.5, -0.25, 2.5, 2.5, -0.25, 2.5, -2.5, -0.25, -2.5, 2.5, -0.25, 2.5, 2.5, -0.25, -2.5, -2.5, -0.25, -2.5)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sslmt"]
+radius = 0.24804688
+height = 1.3850802
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4ewuc"]
+
+[sub_resource type="Animation" id="Animation_dw35o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.5707964, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_2l1ys"]
+resource_name = "gear_rotate_anim"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(1.5707964, 0, 0), Vector3(1.5707964, 1.5707964, 0), Vector3(1.5707964, 3.1415927, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.03, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lpn5e"]
+_data = {
+&"RESET": SubResource("Animation_dw35o"),
+&"gear_rotate_anim": SubResource("Animation_2l1ys")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n571a"]
+size = Vector3(53.221565, 0.5, 93.36)
+
+[node name="mecanica3" type="Node3D"]
+script = ExtResource("1_1lhk5")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_kp8mu")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.89518344, 0.44569793, 0, -0.44569793, 0.89518344, 0, 4.7016683, 3.8490632)
+shadow_enabled = true
+
+[node name="parkour" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.53074014, 0, 0, 0, 1, -0.0402081, -0.29873538, 0.0050284863)
+
+[node name="InitialPlataform" type="MeshInstance3D" parent="parkour"]
+mesh = SubResource("BoxMesh_ts12v")
+skeleton = NodePath("../..")
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="parkour/InitialPlataform"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="parkour/InitialPlataform/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_8sjc8")
+
+[node name="plataform2" type="MeshInstance3D" parent="parkour"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.923, 1.5, -6.239)
+mesh = SubResource("BoxMesh_ts12v")
+skeleton = NodePath("../..")
+metadata/_edit_group_ = true
+
+[node name="gear" parent="parkour/plataform2" instance=ExtResource("4_4ewuc")]
+transform = Transform3D(0.65, 0, 0, 0, -4.859199e-09, -1.2247046, 0, 0.059, -2.84124e-08, 0, 1, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="parkour/plataform2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="parkour/plataform2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_8sjc8")
+
+[node name="plataform3" type="MeshInstance3D" parent="parkour"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6815376, 2.3843734, -12.58571)
+mesh = SubResource("BoxMesh_ts12v")
+skeleton = NodePath("../..")
+metadata/_edit_group_ = true
+
+[node name="gear2" parent="parkour/plataform3" instance=ExtResource("4_4ewuc")]
+transform = Transform3D(0.65, 0, 0, 0, -4.859199e-09, -1.2247046, 0, 0.059, -2.84124e-08, 0, 1, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="parkour/plataform3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="parkour/plataform3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_8sjc8")
+
+[node name="plataform4" type="MeshInstance3D" parent="parkour"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.233324, 0.3206359, -18.202585)
+mesh = SubResource("BoxMesh_ts12v")
+skeleton = NodePath("../..")
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="parkour/plataform4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="parkour/plataform4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_8sjc8")
+
+[node name="gear3" parent="parkour/plataform4" instance=ExtResource("4_4ewuc")]
+transform = Transform3D(0.65, 0, 0, 0, -4.859199e-09, -1.2247046, 0, 0.059, -2.84124e-08, 0, 1, 0)
+
+[node name="plataform5" type="MeshInstance3D" parent="parkour"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.477, -1.6, -24.281)
+mesh = SubResource("BoxMesh_ts12v")
+skeleton = NodePath("../..")
+metadata/_edit_group_ = true
+
+[node name="gear4" parent="parkour/plataform5" instance=ExtResource("4_4ewuc")]
+transform = Transform3D(0.65, 0, 0, 0, -4.859199e-09, -1.2247046, 0, 0.059, -2.84124e-08, 0, 1, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="parkour/plataform5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="parkour/plataform5/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_8sjc8")
+
+[node name="plataform6" type="MeshInstance3D" parent="parkour"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3640385, -0.04650092, -30.194725)
+mesh = SubResource("BoxMesh_ts12v")
+skeleton = NodePath("../..")
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="parkour/plataform6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="parkour/plataform6/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_8sjc8")
+
+[node name="gear5" parent="parkour/plataform6" instance=ExtResource("4_4ewuc")]
+transform = Transform3D(0.65, 0, 0, 0, -4.859199e-09, -1.2247046, 0, 0.059, -2.84124e-08, 0, 1, 0)
+
+[node name="plataform7" type="MeshInstance3D" parent="parkour"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0083523, 0.8754475, -36.810837)
+mesh = SubResource("BoxMesh_ts12v")
+skeleton = NodePath("../..")
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="parkour/plataform7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="parkour/plataform7/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_8sjc8")
+
+[node name="gear6" parent="parkour/plataform7" instance=ExtResource("4_4ewuc")]
+transform = Transform3D(0.65, 0, 0, 0, -4.859199e-09, -1.2247046, 0, 0.059, -2.84124e-08, 0, 1, 0)
+
+[node name="plataform8" type="MeshInstance3D" parent="parkour"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4751472, 2.2143826, -43.13283)
+mesh = SubResource("BoxMesh_ts12v")
+skeleton = NodePath("../..")
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="parkour/plataform8"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="parkour/plataform8/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_8sjc8")
+
+[node name="gear7" parent="parkour/plataform8" instance=ExtResource("4_4ewuc")]
+transform = Transform3D(0.65, 0, 0, 0, -4.859199e-09, -1.2247046, 0, 0.059, -2.84124e-08, 0, 1, 0)
+
+[node name="EndPlataform" type="Node3D" parent="parkour"]
+transform = Transform3D(2.5286622, 0, 0, 0, 15.980513, 0, 0, 0, 0.060842708, -2.3172064, 6.8095374, -55.41469)
+
+[node name="plataform9" type="MeshInstance3D" parent="parkour/EndPlataform"]
+transform = Transform3D(1, 0, 0, 0, 0.06257621, 0, 0, 0, 26.477499, 0, -0.2710107, 63.348145)
+mesh = SubResource("BoxMesh_ts12v")
+skeleton = NodePath("../../..")
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="parkour/EndPlataform/plataform9"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="parkour/EndPlataform/plataform9/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_8sjc8")
+
+[node name="muroFundo" type="MeshInstance3D" parent="parkour/EndPlataform"]
+transform = Transform3D(1, 0, 0, 0, 0.25940776, 0, 0, 0, 1, -0.012335062, -0.19186497, 0)
+mesh = SubResource("BoxMesh_ts12v")
+skeleton = NodePath("../../..")
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="parkour/EndPlataform/muroFundo"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="parkour/EndPlataform/muroFundo/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_8sjc8")
+
+[node name="muroDireita" type="MeshInstance3D" parent="parkour/EndPlataform"]
+transform = Transform3D(-2.6430143e-08, 0, 0.024061225, 0, 0.25940776, 0, -25.129694, 0, -4.3711392e-08, 2.430551, -0.19186497, 65.59387)
+mesh = SubResource("BoxMesh_ts12v")
+skeleton = NodePath("../../..")
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="parkour/EndPlataform/muroDireita"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="parkour/EndPlataform/muroDireita/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_8sjc8")
+
+[node name="muroEsqueda" type="MeshInstance3D" parent="parkour/EndPlataform"]
+transform = Transform3D(-2.6430143e-08, 0, 0.024061225, 0, 0.25940776, 0, -25.129694, 0, -4.3711392e-08, -2.4412131, -0.19186497, 65.59387)
+mesh = SubResource("BoxMesh_ts12v")
+skeleton = NodePath("../../..")
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="parkour/EndPlataform/muroEsqueda"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="parkour/EndPlataform/muroEsqueda/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_8sjc8")
+
+[node name="player" type="CharacterBody3D" parent="." groups=["player"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.061077595, 0)
+script = ExtResource("2_sslmt")
+metadata/_edit_group_ = true
+
+[node name="sophia" parent="player" instance=ExtResource("5_5l7j8")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+visible = false
+
+[node name="gobot" parent="player" instance=ExtResource("3_sslmt")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="body_colision" type="CollisionShape3D" parent="player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.003081739, 0.69261974, 0.0012799501)
+shape = SubResource("CapsuleShape3D_sslmt")
+debug_color = Color(0.9647059, 0, 0.49803922, 1)
+
+[node name="head_colision" type="CollisionShape3D" parent="player"]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0.9218304, 0)
+shape = SubResource("SphereShape3D_4ewuc")
+debug_color = Color(0.9647059, 0, 0.49803922, 1)
+
+[node name="camera_pivo" type="Node3D" parent="player"]
+transform = Transform3D(1, 0, 0, 0, 0.9620229, 0.27296874, 0, -0.27296874, 0.9620229, 0, 1.2858493, 0)
+
+[node name="camera" type="Camera3D" parent="player/camera_pivo"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.5)
+
+[node name="HUD" type="Control" parent="player"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="gear_container" type="HBoxContainer" parent="player/HUD"]
+custom_minimum_size = Vector2(1850, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.015625
+anchor_top = 0.010185185
+anchor_right = 0.9791667
+anchor_bottom = 0.10277778
+grow_horizontal = 2
+script = ExtResource("5_dw35o")
+metadata/_edit_use_anchors_ = true
+
+[node name="life_indicator" type="SubViewportContainer" parent="player/HUD/gear_container"]
+custom_minimum_size = Vector2(82, 82)
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="player/HUD/gear_container/life_indicator"]
+own_world_3d = true
+transparent_bg = true
+handle_input_locally = false
+gui_disable_input = true
+size = Vector2i(82, 100)
+render_target_update_mode = 4
+
+[node name="life_holder" type="Node3D" parent="player/HUD/gear_container/life_indicator/SubViewport"]
+
+[node name="life" type="Sprite3D" parent="player/HUD/gear_container/life_indicator/SubViewport/life_holder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -2, 0, 0, -0.3)
+texture = ExtResource("6_a1e0q")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="player/HUD/gear_container/life_indicator/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1853943, 0.7882159)
+light_energy = 1.5
+
+[node name="life_camera" type="Camera3D" parent="player/HUD/gear_container/life_indicator/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 3.552714e-15, 0, -3.552714e-15, 1, 0, 1.7763568e-15, 0.80413485)
+visible = false
+
+[node name="life_label" type="Label" parent="player/HUD/gear_container"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_5wl5n")
+theme_override_font_sizes/font_size = 59
+text = "3"
+vertical_alignment = 1
+
+[node name="gear_indicator" type="SubViewportContainer" parent="player/HUD/gear_container"]
+custom_minimum_size = Vector2(82, 82)
+layout_mode = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="player/HUD/gear_container/gear_indicator"]
+own_world_3d = true
+transparent_bg = true
+handle_input_locally = false
+gui_disable_input = true
+size = Vector2i(82, 100)
+render_target_update_mode = 4
+
+[node name="gear_holder" type="Node3D" parent="player/HUD/gear_container/gear_indicator/SubViewport"]
+
+[node name="gear1" parent="player/HUD/gear_container/gear_indicator/SubViewport/gear_holder" instance=ExtResource("5_2l1ys")]
+transform = Transform3D(0.3, 0, 0, 0, -1.3113417e-08, -0.3, 0, 0.3, -1.3113417e-08, 0, 0, 0)
+
+[node name="anim" type="AnimationPlayer" parent="player/HUD/gear_container/gear_indicator/SubViewport/gear_holder/gear1"]
+libraries = {
+&"": SubResource("AnimationLibrary_lpn5e")
+}
+autoplay = "gear_rotate_anim"
+speed_scale = 0.4
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="player/HUD/gear_container/gear_indicator/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1853943, 0.7882159)
+light_energy = 1.5
+
+[node name="gear_camera" type="Camera3D" parent="player/HUD/gear_container/gear_indicator/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 3.552714e-15, 0, -3.552714e-15, 1, 0, 1.7763568e-15, 0.80413485)
+visible = false
+
+[node name="GameOver" parent="player/HUD/gear_container" instance=ExtResource("9_n571a")]
+
+[node name="gear_label" type="Label" parent="player/HUD/gear_container"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_5wl5n")
+theme_override_font_sizes/font_size = 59
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameOver" parent="." instance=ExtResource("7_lpn5e")]
+visible = false
+
+[node name="PausedGame" parent="." instance=ExtResource("9_n571a")]
+visible = false
+
+[node name="death_zone" type="Area3D" parent="."]
+script = ExtResource("10_vqjq5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="death_zone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.588954, -1.7432642, -31.716595)
+shape = SubResource("BoxShape3D_n571a")
+
+[connection signal="body_entered" from="death_zone" to="death_zone" method="_on_body_entered"]

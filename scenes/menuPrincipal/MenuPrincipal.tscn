@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://baob1qp6nkk4f"]
+[gd_scene load_steps=8 format=3 uid="uid://baob1qp6nkk4f"]
 
 [ext_resource type="PackedScene" uid="uid://bssqawwwua627" path="res://scenes/menuPrincipal/MeuBotaoCustomizado.tscn" id="1_0oe1n"]
 [ext_resource type="Texture2D" uid="uid://caugyn0rceqbw" path="res://assets/logo.png" id="1_cjknc"]
 [ext_resource type="Script" uid="uid://44wiv53aj6lj" path="res://scenes/menuPrincipal/MenuPrincipal.gd" id="1_f5jwn"]
 [ext_resource type="StyleBox" uid="uid://dnsgdxjl1eer6" path="res://new_style_box_flat.tres" id="4_4o3yp"]
+[ext_resource type="FontFile" uid="uid://dqf4ooggwn2qm" path="res://fonts/PermanentMarker-Regular.ttf" id="5_1k3jv"]
 
 [sub_resource type="Gradient" id="Gradient_8ytrl"]
 offsets = PackedFloat32Array(0, 0.71684587, 1)
@@ -48,7 +49,7 @@ texture = ExtResource("1_cjknc")
 expand_mode = 2
 stretch_mode = 2
 
-[node name="Jogar" parent="." instance=ExtResource("1_0oe1n")]
+[node name="Começar" parent="." instance=ExtResource("1_0oe1n")]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -70,6 +71,23 @@ theme_override_constants/h_separation = 4
 theme_override_constants/line_spacing = 0
 theme_override_font_sizes/font_size = 73
 theme_override_styles/normal = ExtResource("4_4o3yp")
-text = "JOGAR"
+text = "começar"
 
-[connection signal="pressed" from="Jogar" to="." method="_on_jogar_pressed"]
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -375.5
+offset_top = -54.0
+offset_right = 375.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.02745098, 0.16862746, 0.34901962, 1)
+theme_override_fonts/font = ExtResource("5_1k3jv")
+theme_override_font_sizes/font_size = 37
+text = "Pressione qualquer tecla para começar..."
+
+[connection signal="pressed" from="Começar" to="." method="_on_comecar_pressed"]

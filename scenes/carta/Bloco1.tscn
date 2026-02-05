@@ -1,0 +1,122 @@
+[gd_scene load_steps=8 format=3 uid="uid://dbr5814e2q258"]
+
+[ext_resource type="Script" uid="uid://be2ux02gfea4d" path="res://scenes/carta/Bloco_1.gd" id="1_fwfl7"]
+[ext_resource type="FontFile" uid="uid://bywotcf64xby" path="res://fonts/IndieFlower-Regular.ttf" id="2_eu065"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_clb5g"]
+load_path = "res://.godot/imported/blocoMegafauna.png-83114c5f8bb61627ff0664e4543dccab.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eu065"]
+size = Vector2(289, 31)
+
+[sub_resource type="LabelSettings" id="LabelSettings_x2drc"]
+font = ExtResource("2_eu065")
+font_size = 21
+font_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
+stacked_outline_count = 1
+stacked_outline_0/size = 1
+
+[sub_resource type="SystemFont" id="SystemFont_eu065"]
+font_names = PackedStringArray("Calibri")
+
+[sub_resource type="LabelSettings" id="LabelSettings_1yn8g"]
+font_size = 39
+font_color = Color(0.01439443, 0.004794367, 0.112674214, 1)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Bloco1" type="Area2D" parent="."]
+position = Vector2(1667, 326)
+script = ExtResource("1_fwfl7")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bloco1"]
+position = Vector2(5.5, 1.5)
+scale = Vector2(0.36536002, 0.22302169)
+texture = SubResource("CompressedTexture2D_clb5g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloco1"]
+position = Vector2(5.5, 1.5)
+shape = SubResource("RectangleShape2D_eu065")
+
+[node name="Control" type="Control" parent="Bloco1"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1667.0001
+offset_top = -326.00003
+offset_right = -1627.0001
+offset_bottom = -286.00003
+
+[node name="Label" type="Label" parent="Bloco1/Control"]
+layout_mode = 0
+offset_left = 1616.0001
+offset_top = 313.00003
+offset_right = 1714.0001
+offset_bottom = 345.00003
+accessibility_name = "Pleistoceno"
+accessibility_live = 1
+text = "Pleistoceno"
+label_settings = SubResource("LabelSettings_x2drc")
+
+[node name="Popup1" type="Popup" parent="Bloco1"]
+oversampling_override = 1.0
+mode = 3
+initial_position = 1
+size = Vector2i(382, 66)
+visible = true
+
+[node name="ColorRect" type="ColorRect" parent="Bloco1/Popup1"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.0
+offset_right = 1.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+accessibility_name = "Aviso de instrução"
+accessibility_description = "Preeencha as lacunas com os fragmentos corretos!"
+accessibility_live = 1
+color = Color(0.7346442, 0.7729904, 0.9921146, 1)
+
+[node name="Label" type="Label" parent="Bloco1/Popup1"]
+offset_left = 113.0
+offset_top = 17.0
+offset_right = 246.0
+offset_bottom = 60.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.008100095, 0.07403616, 0.107057445, 1)
+theme_override_fonts/font = SubResource("SystemFont_eu065")
+text = "Correto!"
+label_settings = SubResource("LabelSettings_1yn8g")
+
+[node name="Popup2" type="Popup" parent="Bloco1"]
+oversampling_override = 1.0
+mode = 3
+initial_position = 1
+size = Vector2i(438, 66)
+visible = true
+
+[node name="ColorRect" type="ColorRect" parent="Bloco1/Popup2"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.0
+offset_right = 1.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+accessibility_name = "Aviso de instrução"
+accessibility_description = "Preeencha as lacunas com os fragmentos corretos!"
+accessibility_live = 1
+color = Color(0.7346442, 0.7729904, 0.9921146, 1)
+
+[node name="Label" type="Label" parent="Bloco1/Popup2"]
+offset_left = 64.0
+offset_top = 16.0
+offset_right = 389.0
+offset_bottom = 59.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.008100095, 0.07403616, 0.107057445, 1)
+theme_override_fonts/font = SubResource("SystemFont_eu065")
+text = "Hum...tente de novo"
+label_settings = SubResource("LabelSettings_1yn8g")
