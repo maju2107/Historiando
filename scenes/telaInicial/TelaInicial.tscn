@@ -41,6 +41,9 @@ offset_left = 3.0
 offset_top = 14.0
 offset_right = 139.0
 offset_bottom = 189.0
+accessibility_name = "Botão de voltar à tela anterior"
+accessibility_description = "Aperte esse botão para voltar à tela anterior"
+accessibility_live = 1
 theme_override_font_sizes/font_size = 26
 icon = ExtResource("4_fkycc")
 flat = true
@@ -66,6 +69,9 @@ vertical = true
 [node name="ButtonConfig" parent="BoxContainer" instance=ExtResource("5_1exgo")]
 layout_mode = 2
 size_flags_horizontal = 3
+accessibility_name = "Configurações"
+accessibility_description = "Aperte esse botão para acessar as configurações"
+accessibility_live = 1
 theme_override_constants/h_separation = 4
 theme_override_font_sizes/font_size = 55
 text = "Configurações"
@@ -73,18 +79,27 @@ text = "Configurações"
 [node name="ButtonSobre" parent="BoxContainer" instance=ExtResource("5_1exgo")]
 layout_mode = 2
 size_flags_horizontal = 3
+accessibility_name = "Sobre"
+accessibility_description = "Aperte esse botão para acessar sobre o jogo"
+accessibility_live = 1
 theme_override_font_sizes/font_size = 55
 text = "Sobre"
 
 [node name="ButtonJogar" parent="BoxContainer" instance=ExtResource("5_1exgo")]
 layout_mode = 2
 size_flags_horizontal = 3
+accessibility_name = "Jogar"
+accessibility_description = "Aperte esse botão para começar a jogar o jogo"
+accessibility_live = 1
 theme_override_font_sizes/font_size = 55
 text = "Jogar"
 
 [node name="ButtonSair" parent="BoxContainer" instance=ExtResource("5_1exgo")]
 layout_mode = 2
 size_flags_horizontal = 3
+accessibility_name = "Sair"
+accessibility_description = "Aperte esse botão paa sair do jogo"
+accessibility_live = 1
 theme_override_font_sizes/font_size = 50
 text = "Sair"
 

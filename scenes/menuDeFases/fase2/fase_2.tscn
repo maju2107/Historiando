@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://dumc7t1v0wktf"]
+
+[ext_resource type="Script" uid="uid://7krwmtq2qq0x" path="res://scenes/menuDeFases/fase2/scriptsF2/fase_2.gd" id="1_lib78"]
+[ext_resource type="Script" uid="uid://dc4aeua6tbx8f" path="res://scenes/menuDeFases/fase1/scriptsF1/character_body_2d.gd" id="2_14sg8"]
+[ext_resource type="Texture2D" uid="uid://b7varbgyhplna" path="res://assets/patito.png" id="3_vypxk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ub6bw"]
+size = Vector2(331.5, 288)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ua0bp"]
+radius = 143.26549
+
+[node name="Fase2" type="Node2D"]
+script = ExtResource("1_lib78")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("2_14sg8")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(467, 320)
+scale = Vector2(0.582, 0.522)
+texture = ExtResource("3_vypxk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(459.25, 314)
+shape = SubResource("RectangleShape2D_ub6bw")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1801, 211)
+shape = SubResource("CircleShape2D_ua0bp")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1841.0
+offset_top = 27.0
+offset_right = 1885.0
+offset_bottom = 50.0
+text = "Fase2"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
