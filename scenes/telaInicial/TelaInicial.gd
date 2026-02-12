@@ -10,3 +10,7 @@ func _on_BotaoVoltar_pressed() -> void:
 
 func _on_button_jogar_pressed() -> void:
 	Transicao.transicionar_para("res://scenes/menuDeFases/MenuDeFases.tscn") # Replace with function body.
+
+
+func _on_button_sair_pressed() -> void:
+	get_tree().quit()
