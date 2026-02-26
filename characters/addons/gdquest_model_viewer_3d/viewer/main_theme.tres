@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=8 format=3 uid="uid://dioqrbukc6tl0"]
+[gd_resource type="Theme" format=3 uid="uid://dioqrbukc6tl0"]
 
 [ext_resource type="Texture2D" uid="uid://b3hg20sllwpo" path="res://characters/addons/gdquest_model_viewer_3d/viewer/assets/textures/down_arrow_icon.png" id="1_8g03f"]
 
