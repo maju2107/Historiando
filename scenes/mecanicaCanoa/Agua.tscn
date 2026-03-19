@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b52oofk1knco8"]
+
+[ext_resource type="PackedScene" uid="uid://cdao7dww75lg8" path="res://scenes/mecanicaCanoa/Canoa.tscn" id="1_0l4s2"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_n2beu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rkpnk"]
+transparency = 1
+albedo_color = Color(0, 1, 1, 0.42745098)
+
+[node name="Agua" type="Node3D" unique_id=755324133]
+
+[node name="agua" type="MeshInstance3D" parent="." unique_id=2048259255]
+transform = Transform3D(13792.759, 0, 0, 0, 1.0000006, 0, 0, 0, 12543.756, 0, 0, 0)
+mesh = SubResource("PlaneMesh_n2beu")
+surface_material_override/0 = SubResource("StandardMaterial3D_rkpnk")
+
+[node name="Canoa" parent="." unique_id=1374434417 instance=ExtResource("1_0l4s2")]

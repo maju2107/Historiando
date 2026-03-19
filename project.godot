@@ -40,8 +40,8 @@ window/stretch/mode="canvas_items"
 [file_customization]
 
 folder_colors={
-"res://mundo1/": "purple",
 "res://scenes/carta/": "red",
+"res://scenes/mecanicaCanoa/": "blue",
 "res://scenes/parkour/": "red",
 "res://scenes/questionario/": "red"
 }
