@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c3cmjph0ffieq"]
+[gd_scene format=3 uid="uid://c3cmjph0ffieq"]
 
 [ext_resource type="Script" uid="uid://djqkdsje8lcwj" path="res://scenes/telaInicial/TelaInicial.gd" id="1_6ybww"]
 [ext_resource type="Texture2D" uid="uid://caugyn0rceqbw" path="res://assets/logo.png" id="3_hgyjh"]
@@ -10,7 +10,7 @@
 default_font = ExtResource("4_k6cfs")
 Button/fonts/font = ExtResource("4_k6cfs")
 
-[node name="TelaInicial" type="ColorRect"]
+[node name="TelaInicial" type="ColorRect" unique_id=390676888]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -22,7 +22,7 @@ color = Color(0, 0.50101, 0.990795, 0.890196)
 script = ExtResource("1_6ybww")
 metadata/_edit_group_ = true
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=243481949]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,12 +30,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="MarginContainer"]
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer" unique_id=1696652771]
 position = Vector2(1017, 142)
 scale = Vector2(0.927, 0.9)
 texture = ExtResource("3_hgyjh")
 
-[node name="VoltarMP" type="Button" parent="."]
+[node name="VoltarMP" type="Button" parent="." unique_id=1173972589]
 layout_mode = 1
 offset_left = 3.0
 offset_top = 14.0
@@ -48,7 +48,7 @@ theme_override_font_sizes/font_size = 26
 icon = ExtResource("4_fkycc")
 flat = true
 
-[node name="BoxContainer" type="BoxContainer" parent="."]
+[node name="BoxContainer" type="BoxContainer" parent="." unique_id=1177485283]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -66,7 +66,7 @@ theme_override_constants/separation = 12
 alignment = 1
 vertical = true
 
-[node name="ButtonConfig" parent="BoxContainer" instance=ExtResource("5_1exgo")]
+[node name="ButtonConfig" parent="BoxContainer" unique_id=1129307047 instance=ExtResource("5_1exgo")]
 layout_mode = 2
 size_flags_horizontal = 3
 accessibility_name = "Configurações"
@@ -76,7 +76,7 @@ theme_override_constants/h_separation = 4
 theme_override_font_sizes/font_size = 55
 text = "Configurações"
 
-[node name="ButtonSobre" parent="BoxContainer" instance=ExtResource("5_1exgo")]
+[node name="ButtonSobre" parent="BoxContainer" unique_id=2074044267 instance=ExtResource("5_1exgo")]
 layout_mode = 2
 size_flags_horizontal = 3
 accessibility_name = "Sobre"
@@ -85,7 +85,7 @@ accessibility_live = 1
 theme_override_font_sizes/font_size = 55
 text = "Sobre"
 
-[node name="ButtonJogar" parent="BoxContainer" instance=ExtResource("5_1exgo")]
+[node name="ButtonJogar" parent="BoxContainer" unique_id=1349018009 instance=ExtResource("5_1exgo")]
 layout_mode = 2
 size_flags_horizontal = 3
 accessibility_name = "Jogar"
@@ -94,7 +94,7 @@ accessibility_live = 1
 theme_override_font_sizes/font_size = 55
 text = "Jogar"
 
-[node name="ButtonSair" parent="BoxContainer" instance=ExtResource("5_1exgo")]
+[node name="ButtonSair" parent="BoxContainer" unique_id=1047981355 instance=ExtResource("5_1exgo")]
 layout_mode = 2
 size_flags_horizontal = 3
 accessibility_name = "Sair"
@@ -105,3 +105,4 @@ text = "Sair"
 
 [connection signal="pressed" from="VoltarMP" to="." method="_on_BotaoVoltar_pressed"]
 [connection signal="pressed" from="BoxContainer/ButtonJogar" to="." method="_on_button_jogar_pressed"]
+[connection signal="pressed" from="BoxContainer/ButtonSair" to="." method="_on_button_sair_pressed"]
