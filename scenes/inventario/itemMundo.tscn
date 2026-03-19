@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bpogtba0nttbc"]
+
+[ext_resource type="ArrayMesh" uid="uid://nukxmxj20lvj" path="res://characters/12190_Heart_v1_L3.obj" id="1_xt2m3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kxyy5"]
+size = Vector3(34.67433, 34.863342, 0.001)
+
+[node name="RigidBody3D" type="RigidBody3D" unique_id=1771246240]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1250437514]
+transform = Transform3D(0.05, 0, 0, 0, -2.1855695e-09, 0.05, 0, -0.05, -2.1855695e-09, -1.7946959, -2.1096153, -5.0379753)
+mesh = ExtResource("1_xt2m3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1321185630]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7357321, 15.320086, -14.566677)
+shape = SubResource("BoxShape3D_kxyy5")
