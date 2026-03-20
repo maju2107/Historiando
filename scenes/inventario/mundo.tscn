@@ -56,19 +56,20 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer/inventario/MarginContainer" unique_id=366391459]
+[node name="InventarioGridContainer" type="GridContainer" parent="CanvasLayer/inventario/MarginContainer" unique_id=366391459]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/h_separation = 5
 theme_override_constants/v_separation = 5
 columns = 8
 
-[node name="espacoInv" type="Panel" parent="CanvasLayer/inventario/MarginContainer/GridContainer" unique_id=1945112740]
+[node name="espacoInv" type="Panel" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer" unique_id=1945112740]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 script = ExtResource("1_a2ps7")
 item = ExtResource("3_jaeu2")
 
-[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/GridContainer/espacoInv" unique_id=184427808]
+[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer/espacoInv" unique_id=184427808]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -84,13 +85,13 @@ grow_vertical = 2
 texture = ExtResource("2_0vka0")
 metadata/_edit_use_anchors_ = true
 
-[node name="espacoInv2" type="Panel" parent="CanvasLayer/inventario/MarginContainer/GridContainer" unique_id=447777341]
+[node name="espacoInv2" type="Panel" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer" unique_id=447777341]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 script = ExtResource("1_a2ps7")
 item = ExtResource("5_75jji")
 
-[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/GridContainer/espacoInv2" unique_id=105495799]
+[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer/espacoInv2" unique_id=105495799]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -106,12 +107,12 @@ grow_vertical = 2
 texture = ExtResource("3_0vka0")
 metadata/_edit_use_anchors_ = true
 
-[node name="espacoInv3" type="Panel" parent="CanvasLayer/inventario/MarginContainer/GridContainer" unique_id=416659095]
+[node name="espacoInv3" type="Panel" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer" unique_id=416659095]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 script = ExtResource("1_a2ps7")
 
-[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/GridContainer/espacoInv3" unique_id=1935995033]
+[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer/espacoInv3" unique_id=1935995033]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -126,12 +127,12 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="espacoInv4" type="Panel" parent="CanvasLayer/inventario/MarginContainer/GridContainer" unique_id=271911537]
+[node name="espacoInv4" type="Panel" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer" unique_id=271911537]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 script = ExtResource("1_a2ps7")
 
-[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/GridContainer/espacoInv4" unique_id=1960012087]
+[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer/espacoInv4" unique_id=1960012087]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -146,12 +147,12 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="espacoInv5" type="Panel" parent="CanvasLayer/inventario/MarginContainer/GridContainer" unique_id=926680882]
+[node name="espacoInv5" type="Panel" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer" unique_id=926680882]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 script = ExtResource("1_a2ps7")
 
-[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/GridContainer/espacoInv5" unique_id=1491558877]
+[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer/espacoInv5" unique_id=1491558877]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -166,12 +167,12 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="espacoInv6" type="Panel" parent="CanvasLayer/inventario/MarginContainer/GridContainer" unique_id=1408495291]
+[node name="espacoInv6" type="Panel" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer" unique_id=1408495291]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 script = ExtResource("1_a2ps7")
 
-[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/GridContainer/espacoInv6" unique_id=524734162]
+[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer/espacoInv6" unique_id=524734162]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -186,12 +187,12 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="espacoInv7" type="Panel" parent="CanvasLayer/inventario/MarginContainer/GridContainer" unique_id=453749948]
+[node name="espacoInv7" type="Panel" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer" unique_id=453749948]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 script = ExtResource("1_a2ps7")
 
-[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/GridContainer/espacoInv7" unique_id=878717706]
+[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer/espacoInv7" unique_id=878717706]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -206,12 +207,12 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="espacoInv8" type="Panel" parent="CanvasLayer/inventario/MarginContainer/GridContainer" unique_id=713156150]
+[node name="espacoInv8" type="Panel" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer" unique_id=713156150]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 script = ExtResource("1_a2ps7")
 
-[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/GridContainer/espacoInv8" unique_id=1301333653]
+[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer/espacoInv8" unique_id=1301333653]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -226,12 +227,12 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="espacoInv9" type="Panel" parent="CanvasLayer/inventario/MarginContainer/GridContainer" unique_id=1188463023]
+[node name="espacoInv9" type="Panel" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer" unique_id=1188463023]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 script = ExtResource("1_a2ps7")
 
-[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/GridContainer/espacoInv9" unique_id=1074682224]
+[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer/espacoInv9" unique_id=1074682224]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -246,12 +247,12 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="espacoInv10" type="Panel" parent="CanvasLayer/inventario/MarginContainer/GridContainer" unique_id=688260070]
+[node name="espacoInv10" type="Panel" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer" unique_id=688260070]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 script = ExtResource("1_a2ps7")
 
-[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/GridContainer/espacoInv10" unique_id=1415440775]
+[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer/espacoInv10" unique_id=1415440775]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -266,12 +267,12 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="espacoInv11" type="Panel" parent="CanvasLayer/inventario/MarginContainer/GridContainer" unique_id=330817597]
+[node name="espacoInv11" type="Panel" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer" unique_id=330817597]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 script = ExtResource("1_a2ps7")
 
-[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/GridContainer/espacoInv11" unique_id=17623434]
+[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer/espacoInv11" unique_id=17623434]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -286,12 +287,12 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="espacoInv12" type="Panel" parent="CanvasLayer/inventario/MarginContainer/GridContainer" unique_id=1674270]
+[node name="espacoInv12" type="Panel" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer" unique_id=1674270]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 script = ExtResource("1_a2ps7")
 
-[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/GridContainer/espacoInv12" unique_id=599681462]
+[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer/espacoInv12" unique_id=599681462]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -306,12 +307,12 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="espacoInv13" type="Panel" parent="CanvasLayer/inventario/MarginContainer/GridContainer" unique_id=495900382]
+[node name="espacoInv13" type="Panel" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer" unique_id=495900382]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 script = ExtResource("1_a2ps7")
 
-[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/GridContainer/espacoInv13" unique_id=1146330067]
+[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer/espacoInv13" unique_id=1146330067]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -326,12 +327,12 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="espacoInv14" type="Panel" parent="CanvasLayer/inventario/MarginContainer/GridContainer" unique_id=1088035773]
+[node name="espacoInv14" type="Panel" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer" unique_id=1088035773]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 script = ExtResource("1_a2ps7")
 
-[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/GridContainer/espacoInv14" unique_id=381284414]
+[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer/espacoInv14" unique_id=381284414]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -346,12 +347,12 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="espacoInv15" type="Panel" parent="CanvasLayer/inventario/MarginContainer/GridContainer" unique_id=1164380214]
+[node name="espacoInv15" type="Panel" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer" unique_id=1164380214]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 script = ExtResource("1_a2ps7")
 
-[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/GridContainer/espacoInv15" unique_id=319604178]
+[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer/espacoInv15" unique_id=319604178]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -366,12 +367,12 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="espacoInv16" type="Panel" parent="CanvasLayer/inventario/MarginContainer/GridContainer" unique_id=1193542618]
+[node name="espacoInv16" type="Panel" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer" unique_id=1193542618]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 script = ExtResource("1_a2ps7")
 
-[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/GridContainer/espacoInv16" unique_id=682699884]
+[node name="icone" type="TextureRect" parent="CanvasLayer/inventario/MarginContainer/InventarioGridContainer/espacoInv16" unique_id=682699884]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
