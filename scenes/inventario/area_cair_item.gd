@@ -38,6 +38,10 @@ func _unhandled_input(event: InputEvent) -> void:
 			var ray := espaco.intersect_ray(parametro)
 			if ray and ray["collider"] is RigidBody3D:
 				var mundo_item = ray["collider"]
+				if mundo_item.get_meta("pegando"):
+					return
+		
+				mundo_item.set_meta("pegando", true)
 				for espacoInv in %InventarioGridContainer.get_children():
 					if espacoInv.item: continue
 					

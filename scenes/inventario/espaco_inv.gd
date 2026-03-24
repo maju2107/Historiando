@@ -17,6 +17,7 @@ func update_ui() -> void:
 		return
 		
 	icone.texture = item.icone
+	icone.show()
 	tooltip_text = item.item_nome 
 	
 	
