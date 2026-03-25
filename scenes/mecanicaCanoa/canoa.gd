@@ -18,3 +18,19 @@ func _physics_process(delta):
 		if $H/V.rotation_degrees.x >= 0:
 			$H/V.rotation_degrees.x = 0
 		mouse_movement = Vector2()
+	if Input.is_action_just_pressed("w"):
+		add_constant_central_force(global_transform.basis.xform(Vector3.FORWARD*20))
+		if Input.is_action_just_pressed("a"):
+			add_constant_torque(Vector3(0,1,0))
+		if Input.is_action_just_pressed("s"):
+			add_constant_torque(Vector3(0,-1,0))
+	elif Input.is_action_just_pressed("s"):
+		add_constant_central_force(global_transform.basis.xform(Vector3.BACK*20))
+		if Input.is_action_just_pressed("a"):
+			add_constant_torque(Vector3(0,1,0))
+		if Input.is_action_just_pressed("s"):
+			add_constant_torque(Vector3(0,-1,0))
+		
+	
+		
+		

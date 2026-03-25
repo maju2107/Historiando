@@ -11,6 +11,9 @@ albedo_color = Color(1, 0, 0, 1)
 points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
 
 [node name="Canoa" type="RigidBody3D" unique_id=1374434417]
+mass = 50.0
+linear_damp = 0.96
+angular_damp = 0.98
 script = ExtResource("1_iydkj")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1394003248]
