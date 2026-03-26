@@ -31,3 +31,15 @@ shape = SubResource("ConvexPolygonShape3D_8wdj0")
 
 [node name="Camera3D" type="Camera3D" parent="H/V" unique_id=851438096]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.6015525)
+
+[node name="floaty" type="Node3D" parent="." unique_id=145331402]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8055079, 0, 1.9569407)
+
+[node name="floaty2" type="Node3D" parent="." unique_id=1722535341]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7960427, 0, 1.9569407)
+
+[node name="floaty3" type="Node3D" parent="." unique_id=2125767302]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8055079, 0, -1.8634)
+
+[node name="floaty4" type="Node3D" parent="." unique_id=425845151]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8874248, 0, -1.8634)

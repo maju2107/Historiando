@@ -8,6 +8,15 @@
 transparency = 1
 albedo_color = Color(0, 1, 1, 0.42745098)
 
+[sub_resource type="Environment" id="Environment_0l4s2"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_n2beu"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0l4s2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n2beu"]
+albedo_color = Color(0.4392157, 0.13333334, 0.09019608, 1)
+
 [node name="Agua" type="Node3D" unique_id=755324133]
 
 [node name="agua" type="MeshInstance3D" parent="." unique_id=2048259255]
@@ -16,3 +25,103 @@ mesh = SubResource("PlaneMesh_n2beu")
 surface_material_override/0 = SubResource("StandardMaterial3D_rkpnk")
 
 [node name="Canoa" parent="." unique_id=1374434417 instance=ExtResource("1_0l4s2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5561397, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1838540280]
+environment = SubResource("Environment_0l4s2")
+camera_attributes = SubResource("CameraAttributesPractical_n2beu")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1113390297]
+transform = Transform3D(1, 0, 0, 0, 0.7075386, 0.7066747, 0, -0.7066747, 0.7075386, 0, 37.663963, 79.98189)
+
+[node name="caixas" type="Node3D" parent="." unique_id=1315487333]
+
+[node name="caixa" type="MeshInstance3D" parent="caixas" unique_id=927662528]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -11.700762, -1.9073486e-06, -5.771155)
+mesh = SubResource("BoxMesh_0l4s2")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_n2beu")
+
+[node name="caixa2" type="MeshInstance3D" parent="caixas" unique_id=1517558412]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.444871, 0, 6.8265476)
+mesh = SubResource("BoxMesh_0l4s2")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_n2beu")
+
+[node name="caixa3" type="MeshInstance3D" parent="caixas" unique_id=1420787711]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8.864928, 0, -3.7813134)
+mesh = SubResource("BoxMesh_0l4s2")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_n2beu")
+
+[node name="caixa4" type="MeshInstance3D" parent="caixas" unique_id=1521909320]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4.2215424, 0, -6.7284813)
+mesh = SubResource("BoxMesh_0l4s2")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_n2beu")
+
+[node name="caixa5" type="MeshInstance3D" parent="caixas" unique_id=40414141]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 16.904804, 3.8146973e-06, 1.4586716)
+mesh = SubResource("BoxMesh_0l4s2")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_n2beu")
+
+[node name="caixa6" type="MeshInstance3D" parent="caixas" unique_id=2144520990]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -11.296045, -1.9073486e-06, -27.082804)
+mesh = SubResource("BoxMesh_0l4s2")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_n2beu")
+
+[node name="caixa7" type="MeshInstance3D" parent="caixas" unique_id=149415363]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.849587, 0, -14.485102)
+mesh = SubResource("BoxMesh_0l4s2")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_n2beu")
+
+[node name="caixa8" type="MeshInstance3D" parent="caixas" unique_id=382153300]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 9.269644, 0, -25.092962)
+mesh = SubResource("BoxMesh_0l4s2")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_n2beu")
+
+[node name="caixa9" type="MeshInstance3D" parent="caixas" unique_id=1187727694]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -3.8168263, 0, -28.04013)
+mesh = SubResource("BoxMesh_0l4s2")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_n2beu")
+
+[node name="caixa10" type="MeshInstance3D" parent="caixas" unique_id=991042108]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 17.30952, 3.8146973e-06, -19.852978)
+mesh = SubResource("BoxMesh_0l4s2")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_n2beu")
+
+[node name="caixa11" type="MeshInstance3D" parent="caixas" unique_id=728348697]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -13.193342, -1.9073486e-06, 22.158224)
+mesh = SubResource("BoxMesh_0l4s2")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_n2beu")
+
+[node name="caixa12" type="MeshInstance3D" parent="caixas" unique_id=1516399769]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 3.95229, 0, 34.755928)
+mesh = SubResource("BoxMesh_0l4s2")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_n2beu")
+
+[node name="caixa13" type="MeshInstance3D" parent="caixas" unique_id=1283436756]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.3723474, 0, 24.148066)
+mesh = SubResource("BoxMesh_0l4s2")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_n2beu")
+
+[node name="caixa14" type="MeshInstance3D" parent="caixas" unique_id=1009663377]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5.7141232, 0, 21.200897)
+mesh = SubResource("BoxMesh_0l4s2")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_n2beu")
+
+[node name="caixa15" type="MeshInstance3D" parent="caixas" unique_id=1183041412]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 15.412224, 3.8146973e-06, 29.38805)
+mesh = SubResource("BoxMesh_0l4s2")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_n2beu")
