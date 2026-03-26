@@ -12,17 +12,20 @@ points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 
 
 [node name="Canoa" type="RigidBody3D" unique_id=1374434417]
 mass = 50.0
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, -50, 0)
 linear_damp = 0.96
 angular_damp = 0.98
 script = ExtResource("1_iydkj")
+center_of_mass_offset = -0.8
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1394003248]
-transform = Transform3D(2, 0, 0, 0, 0.25, 0, 0, 0, 4, 0, 0, 0)
+transform = Transform3D(2, 0, 0, 0, 0.5, 0, 0, 0, 4, 0, 0, 0)
 mesh = SubResource("BoxMesh_4ljex")
 surface_material_override/0 = SubResource("StandardMaterial3D_jyaax")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2096951438]
-transform = Transform3D(2, 0, 0, 0, 0.25, 0, 0, 0, 4, 0, 0, 0)
+transform = Transform3D(2, 0, 0, 0, 0.5, 0, 0, 0, 4, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_8wdj0")
 
 [node name="H" type="Node3D" parent="." unique_id=1833549994]
@@ -33,13 +36,13 @@ shape = SubResource("ConvexPolygonShape3D_8wdj0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.6015525)
 
 [node name="floaty" type="Node3D" parent="." unique_id=145331402]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8055079, 0, 1.9569407)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8055079, -0.23761207, 1.9569407)
 
 [node name="floaty2" type="Node3D" parent="." unique_id=1722535341]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7960427, 0, 1.9569407)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7960427, -0.24849328, 1.9569407)
 
 [node name="floaty3" type="Node3D" parent="." unique_id=2125767302]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8055079, 0, -1.8634)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8055079, -0.2473805, -1.8634)
 
 [node name="floaty4" type="Node3D" parent="." unique_id=425845151]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8874248, 0, -1.8634)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8874248, -0.21624574, -1.8634)
