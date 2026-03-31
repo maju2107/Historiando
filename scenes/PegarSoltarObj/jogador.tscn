@@ -20,7 +20,7 @@ mesh = SubResource("CapsuleMesh_b2mh8")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0210478, 0)
 shape = SubResource("ConvexPolygonShape3D_cvunv")
 
-[node name="cabeça" type="Node3D" parent="." unique_id=590631395]
+[node name="cabeca" type="Node3D" parent="." unique_id=590631395]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.051136494, 1.8054246, -0.07814336)
 
-[node name="Camera3D" type="Camera3D" parent="cabeça" unique_id=162900771]
+[node name="Camera3D" type="Camera3D" parent="cabeca" unique_id=162900771]
