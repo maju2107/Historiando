@@ -6,8 +6,7 @@
 size = Vector3(1.0566711, 1.0249176, 1)
 
 [node name="RigidBody3D" type="RigidBody3D" unique_id=1761421113 groups=["objetos"]]
-collision_layer = 3
-collision_mask = 3
+collision_layer = 2
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2130530598]
 mesh = SubResource("BoxMesh_t1x6l")
