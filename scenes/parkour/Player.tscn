@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://3b0d4ln4lei4"]
+
+[ext_resource type="Script" uid="uid://c6s5jst30uky6" path="res://scenes/parkour/player.gd" id="1_wagyn"]
+[ext_resource type="PackedScene" uid="uid://kod0awm1ha4o" path="res://characters/addons/gdquest_gobot/model/gobot.glb" id="2_pas6u"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5bjwj"]
+radius = 0.24804688
+height = 1.3850802
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_hijyl"]
+
+[node name="Player" type="CharacterBody3D" unique_id=821986429]
+script = ExtResource("1_wagyn")
+
+[node name="gobot" parent="." unique_id=1962218719 instance=ExtResource("2_pas6u")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="body_colision" type="CollisionShape3D" parent="." unique_id=1898988873]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.003081739, 0.69261974, 0.0012799501)
+shape = SubResource("CapsuleShape3D_5bjwj")
+debug_color = Color(0.9647059, 0, 0.49803922, 1)
+
+[node name="head_colision" type="CollisionShape3D" parent="." unique_id=493655389]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0.9218304, 0)
+shape = SubResource("SphereShape3D_hijyl")
+debug_color = Color(0.9647059, 0, 0.49803922, 1)
+
+[node name="camera_pivo" type="Node3D" parent="." unique_id=1424319402]
+transform = Transform3D(1, 0, 0, 0, 0.9620229, 0.27296874, 0, -0.27296874, 0.9620229, 0, 1.2858493, 0)
+
+[node name="camera" type="Camera3D" parent="camera_pivo" unique_id=314590229]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.5)
