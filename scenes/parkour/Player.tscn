@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://3b0d4ln4lei4"]
+[gd_scene format=3 uid="uid://crhwfju5ub5ji"]
 
-[ext_resource type="Script" uid="uid://c6s5jst30uky6" path="res://scenes/parkour/player.gd" id="1_wagyn"]
+[ext_resource type="Script" path="res://scenes/parkour/player.gd" id="1_wagyn"]
 [ext_resource type="PackedScene" uid="uid://kod0awm1ha4o" path="res://characters/addons/gdquest_gobot/model/gobot.glb" id="2_pas6u"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5bjwj"]

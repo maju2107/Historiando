@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://daqqhd5fswnjj"]
 
 [ext_resource type="Script" uid="uid://dq4yr4fkqcukb" path="res://scenes/PegarSoltarObj/mundo.gd" id="1_hmpp6"]
-[ext_resource type="PackedScene" uid="uid://dehqd4jdrcs6q" path="res://scenes/PegarSoltarObj/jogador.tscn" id="1_wlaxh"]
+[ext_resource type="PackedScene" uid="uid://crhwfju5ub5ji" path="res://scenes/parkour/Player.tscn" id="2_hmpp6"]
+[ext_resource type="Script" uid="uid://ch25b4ukyfkig" path="res://scenes/PegarSoltarObj/jogadorPegar.gd" id="3_ru2pd"]
+[ext_resource type="PackedScene" uid="uid://d0a3bpcjv0snm" path="res://scenes/PegarSoltarObj/caixa.tscn" id="4_hgrkj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wlaxh"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -40,4 +42,18 @@ mesh = SubResource("PlaneMesh_6p8vf")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=602147868]
 shape = SubResource("ConcavePolygonShape3D_wlaxh")
 
-[node name="jogador" parent="." unique_id=1493121000 instance=ExtResource("1_wlaxh")]
+[node name="RigidBody3D" parent="." unique_id=1761421113 instance=ExtResource("4_hgrkj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9307029, 1.9310212)
+
+[node name="Player" parent="." unique_id=821986429 instance=ExtResource("2_hmpp6")]
+script = ExtResource("3_ru2pd")
+
+[node name="raycast" type="RayCast3D" parent="Player/camera_pivo/camera" parent_id_path=PackedInt32Array(821986429, 314590229) index="0" unique_id=774563375]
+target_position = Vector3(0, 0, -4)
+collision_mask = 2
+debug_shape_custom_color = Color(0.03529412, 0, 0, 1)
+
+[node name="hold_point" type="Marker3D" parent="Player/camera_pivo/camera" parent_id_path=PackedInt32Array(821986429, 314590229) index="1" unique_id=561992934]
+
+[editable path="RigidBody3D"]
+[editable path="Player"]
