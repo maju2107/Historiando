@@ -24,7 +24,7 @@ buses/default_bus_layout=""
 
 [autoload]
 
-MusicaGlobal="*res://scenes/music/MusicaGlobal.tscn"
+MusicaGlobal="*res://assets/music/MusicaGlobal.tscn"
 Transicao="*res://scenes/Transicao.tscn"
 BotaoGlobal="*res://scenes/BotaoGlobal.tscn"
 FaseCore="*res://scenes/menuDeFases/scripts/FaseCore.gd"
@@ -44,10 +44,11 @@ project/assembly_name="historiando"
 [file_customization]
 
 folder_colors={
-"res://mundo1/": "purple",
-"res://scenes/carta/": "red",
-"res://scenes/parkour/": "red",
-"res://scenes/questionario/": "red"
+"res://_testes/carta/": "red",
+"res://_testes/parkour/": "red",
+"res://_testes/questionario/": "red",
+"res://godot-4-3D-Characters-main/": "gray",
+"res://mundo1/": "purple"
 }
 
 [filesystem]

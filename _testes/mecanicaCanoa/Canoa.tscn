@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://cdao7dww75lg8"]
+
+[ext_resource type="Script" uid="uid://dm73fpybnm0jp" path="res://_testes/mecanicaCanoa/canoa.gd" id="1_iydkj"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_4ljex"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jyaax"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8wdj0"]
+points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
+
+[node name="Canoa" type="RigidBody3D" unique_id=1374434417]
+mass = 50.0
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, -50, 0)
+linear_damp = 0.96
+angular_damp = 0.98
+script = ExtResource("1_iydkj")
+center_of_mass_offset = -0.8
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1394003248]
+transform = Transform3D(2, 0, 0, 0, 0.5, 0, 0, 0, 4, 0, 0, 0)
+mesh = SubResource("BoxMesh_4ljex")
+surface_material_override/0 = SubResource("StandardMaterial3D_jyaax")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2096951438]
+transform = Transform3D(2, 0, 0, 0, 0.5, 0, 0, 0, 4, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_8wdj0")
+
+[node name="H" type="Node3D" parent="." unique_id=1833549994]
+
+[node name="V" type="Node3D" parent="H" unique_id=330073295]
+
+[node name="Camera3D" type="Camera3D" parent="H/V" unique_id=851438096]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.6015525)
+
+[node name="floaty" type="Node3D" parent="." unique_id=145331402]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8055079, -0.23761207, 1.9569407)
+
+[node name="floaty2" type="Node3D" parent="." unique_id=1722535341]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7960427, -0.24849328, 1.9569407)
+
+[node name="floaty3" type="Node3D" parent="." unique_id=2125767302]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8055079, -0.2473805, -1.8634)
+
+[node name="floaty4" type="Node3D" parent="." unique_id=425845151]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8874248, -0.21624574, -1.8634)

@@ -1,0 +1,364 @@
+[gd_scene format=3 uid="uid://dpdi11mlq1clu"]
+
+[ext_resource type="Script" uid="uid://564t72iw1f4v" path="res://_testes/inventario/inventario_panel.gd" id="1_8vkcf"]
+[ext_resource type="Script" uid="uid://coaokc14q5fp4" path="res://_testes/inventario/espaco_inv.gd" id="2_cduc0"]
+[ext_resource type="Resource" uid="uid://ccqfofnsq5eh7" path="res://_testes/inventario/estrela.tres" id="3_hff4w"]
+[ext_resource type="Texture2D" uid="uid://ckccjykbv0utt" path="res://assets/texture/estrelaItem.png" id="4_cab0r"]
+[ext_resource type="Resource" uid="uid://cn85etocs0lr3" path="res://_testes/inventario/coracao.tres" id="5_edter"]
+[ext_resource type="Texture2D" uid="uid://bci5m71hn4brn" path="res://assets/texture/coracao.png" id="6_4n821"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1523103371]
+
+[node name="inventario" type="Panel" parent="." unique_id=1152970668]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -222.5
+offset_top = -57.5
+offset_right = 222.5
+offset_bottom = 57.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8vkcf")
+
+[node name="MarginContainer" type="MarginContainer" parent="inventario" unique_id=307120909]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="InventarioGridContainer" type="GridContainer" parent="inventario/MarginContainer" unique_id=519853521]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 8
+
+[node name="espacoInv" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=661931775]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("2_cduc0")
+item = ExtResource("3_hff4w")
+
+[node name="icone" type="TextureRect" parent="inventario/MarginContainer/InventarioGridContainer/espacoInv" unique_id=2019713360]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_cab0r")
+metadata/_edit_use_anchors_ = true
+
+[node name="espacoInv2" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=263067877]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("2_cduc0")
+item = ExtResource("5_edter")
+
+[node name="icone" type="TextureRect" parent="inventario/MarginContainer/InventarioGridContainer/espacoInv2" unique_id=1217899279]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_4n821")
+metadata/_edit_use_anchors_ = true
+
+[node name="espacoInv3" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=315334350]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("2_cduc0")
+
+[node name="icone" type="TextureRect" parent="inventario/MarginContainer/InventarioGridContainer/espacoInv3" unique_id=558656504]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="espacoInv4" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=716656726]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("2_cduc0")
+
+[node name="icone" type="TextureRect" parent="inventario/MarginContainer/InventarioGridContainer/espacoInv4" unique_id=572234821]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="espacoInv5" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=657811816]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("2_cduc0")
+
+[node name="icone" type="TextureRect" parent="inventario/MarginContainer/InventarioGridContainer/espacoInv5" unique_id=2076911566]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="espacoInv6" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=944108854]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("2_cduc0")
+
+[node name="icone" type="TextureRect" parent="inventario/MarginContainer/InventarioGridContainer/espacoInv6" unique_id=993443096]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="espacoInv7" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=1016976068]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("2_cduc0")
+
+[node name="icone" type="TextureRect" parent="inventario/MarginContainer/InventarioGridContainer/espacoInv7" unique_id=77260010]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="espacoInv8" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=1529879288]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("2_cduc0")
+
+[node name="icone" type="TextureRect" parent="inventario/MarginContainer/InventarioGridContainer/espacoInv8" unique_id=343287177]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="espacoInv9" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=1125794706]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("2_cduc0")
+
+[node name="icone" type="TextureRect" parent="inventario/MarginContainer/InventarioGridContainer/espacoInv9" unique_id=1533088937]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="espacoInv10" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=726280619]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("2_cduc0")
+
+[node name="icone" type="TextureRect" parent="inventario/MarginContainer/InventarioGridContainer/espacoInv10" unique_id=2096066749]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="espacoInv11" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=1547496358]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("2_cduc0")
+
+[node name="icone" type="TextureRect" parent="inventario/MarginContainer/InventarioGridContainer/espacoInv11" unique_id=1220861306]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="espacoInv12" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=1526034602]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("2_cduc0")
+
+[node name="icone" type="TextureRect" parent="inventario/MarginContainer/InventarioGridContainer/espacoInv12" unique_id=1430531986]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="espacoInv13" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=1583764399]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("2_cduc0")
+
+[node name="icone" type="TextureRect" parent="inventario/MarginContainer/InventarioGridContainer/espacoInv13" unique_id=327508774]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="espacoInv14" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=724017931]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("2_cduc0")
+
+[node name="icone" type="TextureRect" parent="inventario/MarginContainer/InventarioGridContainer/espacoInv14" unique_id=2095460241]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="espacoInv15" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=1237319640]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("2_cduc0")
+
+[node name="icone" type="TextureRect" parent="inventario/MarginContainer/InventarioGridContainer/espacoInv15" unique_id=1701876185]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="espacoInv16" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=1715780111]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("2_cduc0")
+
+[node name="icone" type="TextureRect" parent="inventario/MarginContainer/InventarioGridContainer/espacoInv16" unique_id=493645401]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true

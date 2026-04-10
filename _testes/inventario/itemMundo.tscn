@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bpogtba0nttbc"]
+
+[ext_resource type="ArrayMesh" uid="uid://nukxmxj20lvj" path="res://common/characters/12190_Heart_v1_L3.obj" id="1_xt2m3"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_xt2m3"]
+radius = 13.394184
+
+[node name="RigidBody3D" type="RigidBody3D" unique_id=1771246240]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1250437514]
+transform = Transform3D(0.05, 0, 0, 0, -2.1855695e-09, 0.05, 0, -0.05, -2.1855695e-09, 0, 0, 0)
+mesh = ExtResource("1_xt2m3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1339432282]
+transform = Transform3D(0.05, 0, 0, 0, -2.1855695e-09, 0.05, 0, -0.05, -2.1855695e-09, 0, 0.5273745, 0)
+shape = SubResource("SphereShape3D_xt2m3")

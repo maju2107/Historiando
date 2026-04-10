@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://xt20vth7cftm"]
+[gd_scene format=3 uid="uid://xt20vth7cftm"]
 
-[ext_resource type="Texture2D" uid="uid://caugyn0rceqbw" path="res://assets/logo.png" id="1_5bpgs"]
+[ext_resource type="Texture2D" uid="uid://caugyn0rceqbw" path="res://assets/texture/logo.png" id="1_5bpgs"]
 
 [node name="ColorReact" type="ColorRect"]
 visible = false

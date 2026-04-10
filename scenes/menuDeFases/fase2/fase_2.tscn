@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dumc7t1v0wktf"]
+[gd_scene format=3 uid="uid://dumc7t1v0wktf"]
 
 [ext_resource type="Script" uid="uid://7krwmtq2qq0x" path="res://scenes/menuDeFases/fase2/scriptsF2/fase_2.gd" id="1_lib78"]
 [ext_resource type="Script" uid="uid://dc4aeua6tbx8f" path="res://scenes/menuDeFases/fase1/scriptsF1/character_body_2d.gd" id="2_14sg8"]
-[ext_resource type="Texture2D" uid="uid://b7varbgyhplna" path="res://assets/patito.png" id="3_vypxk"]
+[ext_resource type="Texture2D" uid="uid://b7varbgyhplna" path="res://assets/texture/patito.png" id="3_vypxk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ub6bw"]
 size = Vector2(331.5, 288)

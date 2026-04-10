@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://c3cmjph0ffieq"]
 
 [ext_resource type="Script" uid="uid://djqkdsje8lcwj" path="res://scenes/telaInicial/TelaInicial.gd" id="1_6ybww"]
-[ext_resource type="Texture2D" uid="uid://caugyn0rceqbw" path="res://assets/logo.png" id="3_hgyjh"]
-[ext_resource type="Texture2D" uid="uid://bdk5fhxst7lch" path="res://assets/setaVoltar.png" id="4_fkycc"]
-[ext_resource type="FontFile" uid="uid://dqf4ooggwn2qm" path="res://fonts/PermanentMarker-Regular.ttf" id="4_k6cfs"]
+[ext_resource type="Texture2D" uid="uid://caugyn0rceqbw" path="res://assets/texture/logo.png" id="3_hgyjh"]
+[ext_resource type="Texture2D" uid="uid://bdk5fhxst7lch" path="res://assets/texture/setaVoltar.png" id="4_fkycc"]
+[ext_resource type="FontFile" uid="uid://dqf4ooggwn2qm" path="res://common/fonts/PermanentMarker-Regular.ttf" id="4_k6cfs"]
 [ext_resource type="PackedScene" uid="uid://cqk3hfm64qwbb" path="res://scenes/menuPrincipal/BotaoMecanica.tscn" id="5_1exgo"]
 
 [sub_resource type="Theme" id="Theme_aee4m"]

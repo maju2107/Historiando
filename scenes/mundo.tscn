@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://b4mksev37tgp2"]
 
-[ext_resource type="Script" uid="uid://coaokc14q5fp4" path="res://scenes/inventario/espaco_inv.gd" id="1_a2ps7"]
-[ext_resource type="Script" uid="uid://564t72iw1f4v" path="res://scenes/inventario/inventario_panel.gd" id="1_yi5ae"]
-[ext_resource type="Texture2D" uid="uid://ckccjykbv0utt" path="res://assets/estrelaItem.png" id="2_0vka0"]
-[ext_resource type="Texture2D" uid="uid://bci5m71hn4brn" path="res://assets/coracao.png" id="3_0vka0"]
-[ext_resource type="Resource" uid="uid://ccqfofnsq5eh7" path="res://scenes/inventario/estrela.tres" id="3_jaeu2"]
-[ext_resource type="Resource" uid="uid://cn85etocs0lr3" path="res://scenes/inventario/coracao.tres" id="5_75jji"]
-[ext_resource type="Script" uid="uid://dep1sc1ha8e0f" path="res://scenes/inventario/area_cair_item.gd" id="7_75jji"]
+[ext_resource type="Script" uid="uid://coaokc14q5fp4" path="res://_testes/inventario/espaco_inv.gd" id="1_a2ps7"]
+[ext_resource type="Script" uid="uid://564t72iw1f4v" path="res://_testes/inventario/inventario_panel.gd" id="1_yi5ae"]
+[ext_resource type="Texture2D" uid="uid://ckccjykbv0utt" path="res://assets/texture/estrelaItem.png" id="2_0vka0"]
+[ext_resource type="Texture2D" uid="uid://bci5m71hn4brn" path="res://assets/texture/coracao.png" id="3_0vka0"]
+[ext_resource type="Resource" uid="uid://ccqfofnsq5eh7" path="res://_testes/inventario/estrela.tres" id="3_jaeu2"]
+[ext_resource type="Resource" uid="uid://cn85etocs0lr3" path="res://_testes/inventario/coracao.tres" id="5_75jji"]
+[ext_resource type="Script" uid="uid://dep1sc1ha8e0f" path="res://_testes/inventario/area_cair_item.gd" id="7_75jji"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jaeu2"]
 sky_horizon_color = Color(0.6658678, 0.64727545, 0.6583877, 1)

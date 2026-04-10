@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bssqawwwua627"]
+[gd_scene format=3 uid="uid://bssqawwwua627"]
 
-[ext_resource type="FontFile" uid="uid://dqf4ooggwn2qm" path="res://fonts/PermanentMarker-Regular.ttf" id="1_kopji"]
+[ext_resource type="FontFile" uid="uid://dqf4ooggwn2qm" path="res://common/fonts/PermanentMarker-Regular.ttf" id="1_kopji"]
 
 [node name="Button" type="Button"]
 anchors_preset = -1

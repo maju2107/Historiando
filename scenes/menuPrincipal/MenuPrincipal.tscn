@@ -1,10 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://baob1qp6nkk4f"]
+[gd_scene format=3 uid="uid://baob1qp6nkk4f"]
 
 [ext_resource type="PackedScene" uid="uid://bssqawwwua627" path="res://scenes/menuPrincipal/MeuBotaoCustomizado.tscn" id="1_0oe1n"]
-[ext_resource type="Texture2D" uid="uid://caugyn0rceqbw" path="res://assets/logo.png" id="1_cjknc"]
+[ext_resource type="Texture2D" uid="uid://caugyn0rceqbw" path="res://assets/texture/logo.png" id="1_cjknc"]
 [ext_resource type="Script" uid="uid://44wiv53aj6lj" path="res://scenes/menuPrincipal/MenuPrincipal.gd" id="1_f5jwn"]
-[ext_resource type="StyleBox" uid="uid://dnsgdxjl1eer6" path="res://new_style_box_flat.tres" id="4_4o3yp"]
-[ext_resource type="FontFile" uid="uid://dqf4ooggwn2qm" path="res://fonts/PermanentMarker-Regular.ttf" id="5_1k3jv"]
+[ext_resource type="StyleBox" uid="uid://dnsgdxjl1eer6" path="res://common/shaders/new_style_box_flat.tres" id="4_4o3yp"]
+[ext_resource type="FontFile" uid="uid://dqf4ooggwn2qm" path="res://common/fonts/PermanentMarker-Regular.ttf" id="5_1k3jv"]
 
 [sub_resource type="Gradient" id="Gradient_8ytrl"]
 offsets = PackedFloat32Array(0, 0.71684587, 1)
@@ -13,7 +13,7 @@ colors = PackedColorArray(0.09057734, 0.17385435, 0.49496967, 1, 0.0026487336, 0
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_4togl"]
 gradient = SubResource("Gradient_8ytrl")
 
-[node name="MenuPrincipal" type="ColorRect"]
+[node name="MenuPrincipal" type="ColorRect" unique_id=2050498818]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -22,7 +22,7 @@ grow_vertical = 2
 script = ExtResource("1_f5jwn")
 metadata/_edit_group_ = true
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1696350827]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -31,7 +31,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_4togl")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1984700669]
 layout_mode = 1
 anchors_preset = 13
 anchor_left = 0.5
@@ -43,13 +43,13 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_top = 60
 
-[node name="historiando" type="TextureRect" parent="MarginContainer"]
+[node name="historiando" type="TextureRect" parent="MarginContainer" unique_id=1909082383]
 layout_mode = 2
 texture = ExtResource("1_cjknc")
 expand_mode = 2
 stretch_mode = 2
 
-[node name="Começar" parent="." instance=ExtResource("1_0oe1n")]
+[node name="Começar" parent="." unique_id=447869649 instance=ExtResource("1_0oe1n")]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -73,7 +73,7 @@ theme_override_font_sizes/font_size = 73
 theme_override_styles/normal = ExtResource("4_4o3yp")
 text = "começar"
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1529348177]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5

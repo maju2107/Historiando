@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ccqfofnsq5eh7"]
+
+[ext_resource type="Texture2D" uid="uid://ckccjykbv0utt" path="res://assets/texture/estrelaItem.png" id="1_kgdua"]
+[ext_resource type="Script" uid="uid://df53xbo8r8dam" path="res://_testes/inventario/item_data.gd" id="1_p1g4s"]
+[ext_resource type="ArrayMesh" uid="uid://1ufd6mfvrg70" path="res://common/characters/21327_Star_v1.obj" id="2_kd7yf"]
+
+[resource]
+script = ExtResource("1_p1g4s")
+item_nome = "estrela"
+icone = ExtResource("1_kgdua")
+mesh = ExtResource("2_kd7yf")
+metadata/_custom_type_script = "uid://df53xbo8r8dam"
