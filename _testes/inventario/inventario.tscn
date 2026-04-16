@@ -1,19 +1,15 @@
 [gd_scene format=3 uid="uid://dpdi11mlq1clu"]
 
 [ext_resource type="Script" uid="uid://564t72iw1f4v" path="res://_testes/inventario/inventario_panel.gd" id="1_8vkcf"]
+[ext_resource type="Texture2D" uid="uid://bkjmelvy8pqax" path="res://assets/texture/inventarioSF.png" id="1_orlmx"]
 [ext_resource type="Script" uid="uid://coaokc14q5fp4" path="res://_testes/inventario/espaco_inv.gd" id="2_cduc0"]
 [ext_resource type="Resource" uid="uid://ccqfofnsq5eh7" path="res://_testes/inventario/estrela.tres" id="3_hff4w"]
 [ext_resource type="Texture2D" uid="uid://ckccjykbv0utt" path="res://assets/texture/estrelaItem.png" id="4_cab0r"]
 [ext_resource type="Resource" uid="uid://cn85etocs0lr3" path="res://_testes/inventario/coracao.tres" id="5_edter"]
 [ext_resource type="Texture2D" uid="uid://bci5m71hn4brn" path="res://assets/texture/coracao.png" id="6_4n821"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mnnl5"]
-bg_color = Color(0.4130639, 0.59932274, 0.910984, 1)
-corner_radius_top_left = 100
-corner_radius_top_right = 100
-corner_radius_bottom_right = 100
-corner_radius_bottom_left = 100
-corner_detail = 20
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eyc66"]
+texture = ExtResource("1_orlmx")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_orlmx"]
 bg_color = Color(0.17254902, 0.29411766, 0.5176471, 1)
@@ -46,12 +42,12 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -187.75
+offset_left = -301.0
 offset_top = -94.25
-offset_bottom = 94.25
+offset_bottom = 121.0
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_mnnl5")
+theme_override_styles/panel = SubResource("StyleBoxTexture_eyc66")
 script = ExtResource("1_8vkcf")
 
 [node name="MarginContainer" type="MarginContainer" parent="inventario" unique_id=307120909]
@@ -61,10 +57,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -89.99998
-offset_top = -100.20003
-offset_right = 34.285736
-offset_bottom = 37.799973
+offset_left = -181.50003
+offset_top = -77.374985
+offset_right = 67.07138
+offset_bottom = 72.625015
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.4, 1.4)
@@ -83,6 +79,7 @@ size_flags_vertical = 4
 size_flags_stretch_ratio = 3.37
 theme_override_constants/h_separation = 42
 theme_override_constants/v_separation = 23
+columns = 2
 
 [node name="espacoInv" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=661931775]
 custom_minimum_size = Vector2(55, 55)
