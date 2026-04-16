@@ -42,7 +42,7 @@ func _unhandled_input(event: InputEvent) -> void:
 					return
 		
 				mundo_item.set_meta("pegando", true)
-				for espacoInv in %InventarioGridContainer.get_children():
+				for espacoInv in $CanvasLayer/inventario/MarginContainer/InventarioGridContainer.get_children():
 					if espacoInv.item: continue
 					
 					# pega o primeiro espacoInv vazio

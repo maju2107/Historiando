@@ -26,8 +26,6 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=932859598]
 environment = SubResource("Environment_kxyy5")
 
-[node name="CanvasLayer" parent="." unique_id=1523103371 instance=ExtResource("1_lqx1x")]
-
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1339449078]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.359482, 0.8697417, 13.537399)
 
@@ -44,3 +42,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("7_75jji")
+
+[node name="CanvasLayer" parent="AreaCairItem" unique_id=1523103371 instance=ExtResource("1_lqx1x")]
+
+[editable path="AreaCairItem/CanvasLayer"]
