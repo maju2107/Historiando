@@ -2,6 +2,7 @@ extends CanvasLayer
 
 @onready var popupMenu = $Popup
 
+
 func BotaoGlobal_on_button_pressed() -> void:
 	get_tree().quit()
 	
@@ -11,6 +12,7 @@ func _input(_event: InputEvent) -> void:
 			popupMenu.hide()
 		else:
 			popupMenu.popup_centered()
+			popupMenu.popup_window = false
 			
 func _on_popup_visibility_changed() -> void:
 	var popup = get_node("Popup")
