@@ -59,6 +59,7 @@ import/blender/enabled=false
 
 player=""
 objetos=""
+gameplay="Apenas scenes jogáveis, sem interface"
 
 [input]
 

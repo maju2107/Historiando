@@ -1,7 +1,7 @@
 extends Node3D
 
 
-var pause_menu_scene = preload("res://scenes/parkour/paused_game.tscn")
+var pause_menu_scene = preload("res://_testes/parkour/paused_game.tscn")
 var pause_menu_instance: Node = null
 
 func _ready() -> void:

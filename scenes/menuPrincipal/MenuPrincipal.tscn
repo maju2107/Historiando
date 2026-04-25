@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://djqkdsje8lcwj" path="res://scenes/menuPrincipal/MenuPrincipal.gd" id="1_1dj63"]
 [ext_resource type="Texture2D" uid="uid://r3npacga7dn7" path="res://assets/texture/historiando.png" id="2_0rf76"]
+[ext_resource type="Texture2D" uid="uid://bv6vf24s22lx4" path="res://assets/texture/Group 17.png" id="2_1k3jv"]
 [ext_resource type="FontFile" uid="uid://dqf4ooggwn2qm" path="res://common/fonts/PermanentMarker-Regular.ttf" id="3_3ry0c"]
 [ext_resource type="PackedScene" uid="uid://cqk3hfm64qwbb" path="res://scenes/telaInicial/BotaoMecanica.tscn" id="4_eb7qe"]
 
@@ -13,21 +14,41 @@ Button/fonts/font = ExtResource("3_3ry0c")
 transparent_bg = true
 oversampling_override = 1.0
 initial_position = 1
-size = Vector2i(900, 800)
+size = Vector2i(1920, 1080)
 visible = true
+transparent = true
 
 [node name="MenuPrincipal" type="ColorRect" parent="." unique_id=390676888]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_bottom = -4.0
+anchors_preset = -1
+anchor_left = -0.563
+anchor_top = -0.17
+anchor_right = 1.577
+anchor_bottom = 1.1650001
+offset_left = -0.29992676
+offset_right = -0.30029297
+offset_bottom = -0.00012207031
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-color = Color(0.20392157, 0.003921569, 0.45490196, 0.8901961)
+color = Color(0.20392157, 0.003921569, 0.45490196, 0)
 script = ExtResource("1_1dj63")
 metadata/_edit_group_ = true
+
+[node name="TextureRect" type="TextureRect" parent="MenuPrincipal" unique_id=1949432814]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -387.0
+offset_top = -353.0
+offset_right = 387.0
+offset_bottom = 353.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_1k3jv")
 
 [node name="MarginContainer" type="MarginContainer" parent="MenuPrincipal" unique_id=243481949]
 visible = false
@@ -38,8 +59,8 @@ anchor_top = 0.017592592
 anchor_right = 1.075512
 anchor_bottom = 1.1524801
 offset_left = 100.67374
-offset_right = -14.744385
-offset_bottom = -107.229065
+offset_right = 54.506348
+offset_bottom = -45.395508
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
@@ -89,6 +110,7 @@ theme_override_font_sizes/font_size = 55
 text = "Sobre"
 
 [node name="ButtonContinuar" parent="MenuPrincipal/BoxContainer" unique_id=1349018009 instance=ExtResource("4_eb7qe")]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 accessibility_name = "Jogar"
@@ -104,6 +126,6 @@ accessibility_name = "Sair"
 accessibility_description = "Aperte esse botão paa sair do jogo"
 accessibility_live = 1
 theme_override_font_sizes/font_size = 50
-text = "Sair"
+text = "Sair do jogo"
 
 [connection signal="pressed" from="MenuPrincipal/BoxContainer/ButtonSair" to="MenuPrincipal" method="_on_button_sair_pressed"]
