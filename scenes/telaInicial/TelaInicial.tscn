@@ -1,93 +1,93 @@
-[gd_scene format=3 uid="uid://c3cmjph0ffieq"]
+[gd_scene format=3 uid="uid://baob1qp6nkk4f"]
 
-[ext_resource type="Script" uid="uid://djqkdsje8lcwj" path="res://scenes/telaInicial/TelaInicial.gd" id="1_6ybww"]
-[ext_resource type="Texture2D" uid="uid://caugyn0rceqbw" path="res://assets/texture/logo.png" id="3_hgyjh"]
+[ext_resource type="Script" uid="uid://44wiv53aj6lj" path="res://scenes/telaInicial/TelaInicial.gd" id="1_k6cfs"]
+[ext_resource type="Texture2D" uid="uid://r3npacga7dn7" path="res://assets/texture/historiando.png" id="2_k6cfs"]
+[ext_resource type="PackedScene" uid="uid://bssqawwwua627" path="res://scenes/telaInicial/MeuBotaoCustomizado.tscn" id="3_aee4m"]
 [ext_resource type="FontFile" uid="uid://dqf4ooggwn2qm" path="res://common/fonts/PermanentMarker-Regular.ttf" id="4_k6cfs"]
-[ext_resource type="PackedScene" uid="uid://cqk3hfm64qwbb" path="res://scenes/menuPrincipal/BotaoMecanica.tscn" id="5_1exgo"]
+[ext_resource type="StyleBox" uid="uid://dnsgdxjl1eer6" path="res://common/shaders/new_style_box_flat.tres" id="4_pg7na"]
 
-[sub_resource type="Theme" id="Theme_aee4m"]
-default_font = ExtResource("4_k6cfs")
-Button/fonts/font = ExtResource("4_k6cfs")
+[sub_resource type="Gradient" id="Gradient_8ytrl"]
+offsets = PackedFloat32Array(0, 0.71684587, 1)
+colors = PackedColorArray(0.09057734, 0.17385435, 0.49496967, 1, 0.0026487336, 0.53788275, 0.85489035, 1, 0, 0.54509807, 0.8627451, 1)
 
-[node name="MenuPrincipal" type="ColorRect" unique_id=390676888]
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4togl"]
+gradient = SubResource("Gradient_8ytrl")
+
+[node name="TelaInicial" type="ColorRect" unique_id=2050498818]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-color = Color(0, 0.50101, 0.990795, 0.890196)
-script = ExtResource("1_6ybww")
+script = ExtResource("1_k6cfs")
 metadata/_edit_group_ = true
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=243481949]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1696350827]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = SubResource("GradientTexture2D_4togl")
 
-[node name="Sprite2D" type="Sprite2D" parent="MarginContainer" unique_id=1696652771]
-position = Vector2(1017, 142)
-scale = Vector2(0.927, 0.9)
-texture = ExtResource("3_hgyjh")
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1984700669]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -510.0
+offset_right = 510.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 60
 
-[node name="BoxContainer" type="BoxContainer" parent="." unique_id=1177485283]
+[node name="historiando" type="TextureRect" parent="MarginContainer" unique_id=1909082383]
+layout_mode = 2
+texture = ExtResource("2_k6cfs")
+expand_mode = 2
+stretch_mode = 2
+
+[node name="Começar" parent="." unique_id=447869649 instance=ExtResource("3_aee4m")]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -267.0
-offset_top = -158.0
-offset_right = 267.0
-offset_bottom = 158.0
+offset_left = -206.25
+offset_top = -56.5
+offset_right = 206.25
+offset_bottom = 56.5
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_aee4m")
-theme_override_constants/separation = 12
-alignment = 1
-vertical = true
-
-[node name="ButtonConfig" parent="BoxContainer" unique_id=1129307047 instance=ExtResource("5_1exgo")]
-layout_mode = 2
-size_flags_horizontal = 3
-accessibility_name = "Configurações"
-accessibility_description = "Aperte esse botão para acessar as configurações"
+accessibility_name = "Botão de iniciar o jogo"
+accessibility_description = "Aperte este botão para iniciar o jogo"
 accessibility_live = 1
+theme_override_colors/font_color = Color(0.02745098, 0.16862746, 0.34901962, 1)
+theme_override_constants/outline_size = 0
 theme_override_constants/h_separation = 4
-theme_override_font_sizes/font_size = 55
-text = "Configurações"
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 73
+theme_override_styles/normal = ExtResource("4_pg7na")
+text = "começar"
 
-[node name="ButtonSobre" parent="BoxContainer" unique_id=2074044267 instance=ExtResource("5_1exgo")]
-layout_mode = 2
-size_flags_horizontal = 3
-accessibility_name = "Sobre"
-accessibility_description = "Aperte esse botão para acessar sobre o jogo"
-accessibility_live = 1
-theme_override_font_sizes/font_size = 55
-text = "Sobre"
+[node name="Label" type="Label" parent="." unique_id=1529348177]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -375.5
+offset_top = -54.0
+offset_right = 375.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.02745098, 0.16862746, 0.34901962, 1)
+theme_override_fonts/font = ExtResource("4_k6cfs")
+theme_override_font_sizes/font_size = 37
+text = "Pressione qualquer tecla para começar..."
 
-[node name="ButtonContinuar" parent="BoxContainer" unique_id=1349018009 instance=ExtResource("5_1exgo")]
-layout_mode = 2
-size_flags_horizontal = 3
-accessibility_name = "Jogar"
-accessibility_description = "Aperte esse botão para começar a jogar o jogo"
-accessibility_live = 1
-theme_override_font_sizes/font_size = 55
-text = "Continuar"
-
-[node name="ButtonSair" parent="BoxContainer" unique_id=1047981355 instance=ExtResource("5_1exgo")]
-layout_mode = 2
-size_flags_horizontal = 3
-accessibility_name = "Sair"
-accessibility_description = "Aperte esse botão paa sair do jogo"
-accessibility_live = 1
-theme_override_font_sizes/font_size = 50
-text = "Sair"
-
-[connection signal="pressed" from="BoxContainer/ButtonContinuar" to="." method="_on_button_jogar_pressed"]
-[connection signal="pressed" from="BoxContainer/ButtonSair" to="." method="_on_button_sair_pressed"]
+[connection signal="pressed" from="Começar" to="." method="_on_comecar_pressed"]

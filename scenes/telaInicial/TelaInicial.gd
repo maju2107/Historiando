@@ -1,7 +1,25 @@
 extends ColorRect
 
-func _ready() -> void:
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+var ja_iniciou := false
 
-func _on_button_sair_pressed() -> void:
-	get_tree().quit()
+func iniciar_jogo():
+	if ja_iniciou:
+		return
+	ja_iniciou = true
+	Transicao.transicionar_para("res://scenes/menuDeFases/MenuDeFases.tscn")
+	
+
+func _on_comecar_pressed() -> void:
+		iniciar_jogo()
+		
+		
+func _input(event):
+	
+	# teclado (pressionar qualquer tecla)
+	if event is InputEventKey and event.pressed and not event.echo:
+		if not Input.is_action_pressed("menu"):
+			iniciar_jogo()
+		
+
+	#if event.is_action_pressed("iniciar_jogo"): (usar quando implementar o input map (join stick))
+		#iniciar_jogo()

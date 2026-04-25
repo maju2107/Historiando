@@ -1,11 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://c37m8iu11piln"]
+[gd_scene format=3 uid="uid://c37m8iu11piln"]
 
 [ext_resource type="Script" uid="uid://yjp7bdfmeg0b" path="res://scenes/Botao_global.gd" id="1_ch5ku"]
+[ext_resource type="PackedScene" uid="uid://c3cmjph0ffieq" path="res://scenes/menuPrincipal/MenuPrincipal.tscn" id="2_fpapb"]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="CanvasLayer" type="CanvasLayer" unique_id=294903585]
+process_mode = 3
 script = ExtResource("1_ch5ku")
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=812770505]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -15,4 +17,9 @@ grow_horizontal = 0
 size_flags_horizontal = 8
 text = "x"
 
+[node name="Popup" parent="." unique_id=629559437 instance=ExtResource("2_fpapb")]
+
 [connection signal="pressed" from="Button" to="." method="BotaoGlobal_on_button_pressed"]
+[connection signal="visibility_changed" from="Popup" to="." method="_on_popup_visibility_changed"]
+
+[editable path="Popup"]

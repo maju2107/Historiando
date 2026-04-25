@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://caugyn0rceqbw"
-path="res://.godot/imported/logo.png-b4f6a9a257ed49c9a399903f9bbaee26.ctex"
+uid="uid://r3npacga7dn7"
+path="res://.godot/imported/historiando.png-44d1ca900defa3ff96de60eddc56f836.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/texture/logo.png"
-dest_files=["res://.godot/imported/logo.png-b4f6a9a257ed49c9a399903f9bbaee26.ctex"]
+source_file="res://assets/texture/historiando.png"
+dest_files=["res://.godot/imported/historiando.png-44d1ca900defa3ff96de60eddc56f836.ctex"]
 
 [params]
 
