@@ -6,7 +6,7 @@ func iniciar_jogo():
 	if ja_iniciou:
 		return
 	ja_iniciou = true
-	Transicao.transicionar_para("res://scenes/telaInicial/TelaInicial.tscn")
+	Transicao.transicionar_para("res://scenes/menuDeFases/MenuDeFases.tscn")
 	
 
 func _on_comecar_pressed() -> void:

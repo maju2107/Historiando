@@ -13,7 +13,7 @@ colors = PackedColorArray(0.09057734, 0.17385435, 0.49496967, 1, 0.0026487336, 0
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_4togl"]
 gradient = SubResource("Gradient_8ytrl")
 
-[node name="MenuPrincipal" type="ColorRect" unique_id=2050498818]
+[node name="TelaInicial" type="ColorRect" unique_id=2050498818]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
