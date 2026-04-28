@@ -12,27 +12,22 @@
 texture = ExtResource("1_orlmx")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_orlmx"]
-bg_color = Color(0.17254902, 0.29411766, 0.5176471, 1)
+bg_color = Color(0.17254902, 0.29411766, 0.5176471, 0)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-corner_radius_top_left = 26
-corner_radius_top_right = 26
-corner_radius_bottom_right = 26
-corner_radius_bottom_left = 26
+border_color = Color(0.8, 0.8, 0.8, 0.015686275)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eyc66"]
-bg_color = Color(0.1732859, 0.29583806, 0.5168873, 1)
+bg_color = Color(0.17254902, 0.29411766, 0.5176471, 0)
+draw_center = false
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.03839716, 0.038397178, 0.0383971, 1)
-corner_radius_top_left = 25
-corner_radius_top_right = 25
-corner_radius_bottom_right = 25
-corner_radius_bottom_left = 25
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_detail = 1
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1523103371]
 
@@ -42,9 +37,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -301.0
+offset_left = -337.0
 offset_top = -94.25
-offset_bottom = 121.0
+offset_right = 6.0
+offset_bottom = 161.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_eyc66")
@@ -57,10 +53,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -181.50003
-offset_top = -77.374985
-offset_right = 67.07138
-offset_bottom = 72.625015
+offset_left = -187.50003
+offset_top = -71.375
+offset_right = 76.07138
+offset_bottom = 64.339264
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.4, 1.4)
@@ -82,8 +78,11 @@ theme_override_constants/v_separation = 23
 columns = 2
 
 [node name="espacoInv" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=661931775]
-custom_minimum_size = Vector2(55, 55)
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_orlmx")
 script = ExtResource("2_cduc0")
 item = ExtResource("3_hff4w")
@@ -91,22 +90,19 @@ item = ExtResource("3_hff4w")
 [node name="icone" type="TextureRect" parent="inventario/MarginContainer/InventarioGridContainer/espacoInv" unique_id=2019713360]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.09
-anchor_top = 0.06
-anchor_right = 0.88
-anchor_bottom = 0.82
-offset_left = -2.0
-offset_top = -2.0
-offset_right = 2.0
-offset_bottom = 2.0
+anchor_left = 0.2035714
+anchor_top = 0.117647015
+anchor_right = 1.0662987
+anchor_bottom = 0.9503743
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_cab0r")
 metadata/_edit_use_anchors_ = true
 
 [node name="espacoInv2" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=263067877]
-custom_minimum_size = Vector2(50, 50)
+custom_minimum_size = Vector2(85, 85)
 layout_mode = 2
+size_flags_stretch_ratio = 0.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_eyc66")
 script = ExtResource("2_cduc0")
 item = ExtResource("5_edter")
@@ -114,10 +110,10 @@ item = ExtResource("5_edter")
 [node name="icone" type="TextureRect" parent="inventario/MarginContainer/InventarioGridContainer/espacoInv2" unique_id=1217899279]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.1142854
-anchor_top = 0.097142674
-anchor_right = 0.9142854
-anchor_bottom = 0.8971427
+anchor_left = -0.02689044
+anchor_top = -0.08571403
+anchor_right = 0.7731096
+anchor_bottom = 0.7142861
 offset_left = -2.0
 offset_top = -2.0
 offset_right = 2.0
