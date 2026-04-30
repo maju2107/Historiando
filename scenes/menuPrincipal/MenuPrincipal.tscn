@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c3cmjph0ffieq"]
 
 [ext_resource type="Script" uid="uid://djqkdsje8lcwj" path="res://scenes/menuPrincipal/MenuPrincipal.gd" id="1_1dj63"]
-[ext_resource type="Texture2D" uid="uid://r3npacga7dn7" path="res://assets/texture/historiando.png" id="2_0rf76"]
-[ext_resource type="Texture2D" uid="uid://bv6vf24s22lx4" path="res://assets/texture/Group 17.png" id="2_1k3jv"]
+[ext_resource type="Texture2D" uid="uid://bahjksfm0glh7" path="res://assets/fundoMenu.png" id="2_1k3jv"]
+[ext_resource type="Texture2D" uid="uid://bmrnive44c75b" path="res://assets/logo.png" id="3_1k3jv"]
 [ext_resource type="FontFile" uid="uid://dqf4ooggwn2qm" path="res://common/fonts/PermanentMarker-Regular.ttf" id="3_3ry0c"]
 [ext_resource type="PackedScene" uid="uid://cqk3hfm64qwbb" path="res://scenes/telaInicial/BotaoMecanica.tscn" id="4_eb7qe"]
 
@@ -42,35 +42,26 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -387.0
-offset_top = -353.0
-offset_right = 387.0
-offset_bottom = 353.0
+offset_left = -397.1399
+offset_top = -337.29996
+offset_right = 376.8601
+offset_bottom = 271.7
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_1k3jv")
 
-[node name="MarginContainer" type="MarginContainer" parent="MenuPrincipal" unique_id=243481949]
-visible = false
+[node name="MarginContainer" type="MarginContainer" parent="MenuPrincipal" unique_id=1003038724]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.078669086
-anchor_top = 0.017592592
-anchor_right = 1.075512
-anchor_bottom = 1.1524801
-offset_left = 100.67374
-offset_right = 54.506348
-offset_bottom = -45.395508
-grow_horizontal = 2
-grow_vertical = 2
+anchor_left = 0.44617894
+anchor_top = 0.3104453
+anchor_right = 0.54718167
+anchor_bottom = 0.34928563
 metadata/_edit_use_anchors_ = true
 
-[node name="historiando" type="TextureRect" parent="MenuPrincipal/MarginContainer" unique_id=1389357700]
-visible = false
+[node name="TextureRect" type="TextureRect" parent="MenuPrincipal/MarginContainer" unique_id=1822461684]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = ExtResource("2_0rf76")
+texture = ExtResource("3_1k3jv")
 
 [node name="BoxContainer" type="BoxContainer" parent="MenuPrincipal" unique_id=1177485283]
 layout_mode = 1
@@ -79,10 +70,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -226.5
-offset_top = -195.5
-offset_right = 228.5
-offset_bottom = 203.5
+offset_left = -269.1399
+offset_top = -137.29999
+offset_right = 242.8601
+offset_bottom = 142.70001
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_aee4m")
