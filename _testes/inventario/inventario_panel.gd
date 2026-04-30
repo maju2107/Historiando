@@ -1,7 +1,5 @@
 extends Panel
 
-
-
 func _process(delta: float) -> void: # tirar símbolo de bloqueio do mouse
 	if Input.get_current_cursor_shape() == CURSOR_FORBIDDEN:
 		DisplayServer.cursor_set_shape(DisplayServer.CURSOR_ARROW)
