@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dr5hxeucw5a2l"]
 
-[ext_resource type="PackedScene" uid="uid://dpdi11mlq1clu" path="res://_testes/inventario/inventario.tscn" id="1_lqx1x"]
-[ext_resource type="Script" uid="uid://dep1sc1ha8e0f" path="res://_testes/inventario/area_cair_item.gd" id="7_75jji"]
+[ext_resource type="PackedScene" uid="uid://c77ausikpwlie" path="res://_testes/inventario/area_cair_item.tscn" id="1_bkfor"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jaeu2"]
 sky_horizon_color = Color(0.6658678, 0.64727545, 0.6583877, 1)
@@ -34,15 +33,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.035074, 0)
 use_collision = true
 size = Vector3(40, 2, 40)
 
-[node name="AreaCairItem" type="Control" parent="." unique_id=754628011]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("7_75jji")
-
-[node name="CanvasLayer" parent="AreaCairItem" unique_id=1523103371 instance=ExtResource("1_lqx1x")]
-
-[editable path="AreaCairItem/CanvasLayer"]
+[node name="AreaCairItem" parent="." unique_id=1848491060 instance=ExtResource("1_bkfor")]

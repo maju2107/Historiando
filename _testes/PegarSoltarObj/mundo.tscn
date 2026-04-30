@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://crhwfju5ub5ji" path="res://_testes/parkour/Player.tscn" id="2_hmpp6"]
 [ext_resource type="Script" uid="uid://ch25b4ukyfkig" path="res://_testes/PegarSoltarObj/jogadorPegar.gd" id="3_ru2pd"]
 [ext_resource type="PackedScene" uid="uid://d0a3bpcjv0snm" path="res://_testes/PegarSoltarObj/caixa.tscn" id="4_hgrkj"]
-[ext_resource type="PackedScene" uid="uid://dpdi11mlq1clu" path="res://_testes/inventario/inventario.tscn" id="5_s62j4"]
+[ext_resource type="PackedScene" uid="uid://c77ausikpwlie" path="res://_testes/inventario/area_cair_item.tscn" id="5_cxyrl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wlaxh"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -56,9 +56,9 @@ debug_shape_custom_color = Color(0.03529412, 0, 0, 1)
 
 [node name="hold_point" type="Marker3D" parent="Player/camera_pivo/camera" parent_id_path=PackedInt32Array(821986429, 314590229) index="1" unique_id=561992934]
 
-[node name="CanvasLayer" parent="." unique_id=1523103371 instance=ExtResource("5_s62j4")]
-visible = false
+[node name="AreaCairItem" parent="." unique_id=1848491060 instance=ExtResource("5_cxyrl")]
 
 [editable path="RigidBody3D"]
 [editable path="Player"]
-[editable path="CanvasLayer"]
+[editable path="AreaCairItem"]
+[editable path="AreaCairItem/CanvasLayer"]

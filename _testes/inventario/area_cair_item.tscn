@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c77ausikpwlie"]
+
+[ext_resource type="Script" uid="uid://dep1sc1ha8e0f" path="res://_testes/inventario/area_cair_item.gd" id="1_herpe"]
+[ext_resource type="PackedScene" uid="uid://dpdi11mlq1clu" path="res://_testes/inventario/inventario.tscn" id="2_6bwgd"]
+
+[node name="AreaCairItem" type="Control" unique_id=1848491060]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_herpe")
+
+[node name="CanvasLayer" parent="." unique_id=1523103371 instance=ExtResource("2_6bwgd")]
+
+[editable path="CanvasLayer"]

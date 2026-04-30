@@ -2,6 +2,11 @@ extends Control
 
 const ITEM_MUNDO = preload("uid://bpogtba0nttbc")
 
+@onready var camera: Camera3D = $"../Player/camera_pivo/camera"
+
+func _ready() -> void:
+	mouse_filter = Control.MOUSE_FILTER_IGNORE
+
 func _can_drop_data(_at_position: Vector2, _data: Variant) -> bool:
 	return true
 		
@@ -24,11 +29,13 @@ func _notification(what: int) -> void:
 	
 	
 func _unhandled_input(event: InputEvent) -> void:
+	if Input.get_mouse_mode() != Input.MOUSE_MODE_VISIBLE:
+		return
+		
 	if event is InputEventMouseButton:
 		if event.pressed:
 			print("Item Pressionado")
 				
-			var camera := get_viewport().get_camera_3d()
 			var espaco := camera.get_world_3d().direct_space_state
 			
 			var parametro = PhysicsRayQueryParameters3D.new()
