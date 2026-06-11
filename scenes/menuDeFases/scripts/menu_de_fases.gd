@@ -40,7 +40,7 @@ func _ready() -> void:
 
 func _on_fase_1_pressed() -> void:
 	if FaseCore.fase1_concluida == false:
-		Transicao.transicionar_para("res://_testes/parkour/mecanica_3.tscn")
+		Transicao.transicionar_para("res://scenes/menuDeFases/fase1/fase_1.tscn")
 	else:
 		Transicao.transicionar_para("res://scenes/menuDeFases/fase1/fase_1.tscn")
 		
