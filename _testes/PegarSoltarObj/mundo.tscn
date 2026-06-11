@@ -1,10 +1,14 @@
 [gd_scene format=3 uid="uid://daqqhd5fswnjj"]
 
 [ext_resource type="Script" uid="uid://dq4yr4fkqcukb" path="res://_testes/PegarSoltarObj/mundo.gd" id="1_hmpp6"]
+[ext_resource type="Shader" uid="uid://bi3o8elbtqoni" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="2_7vyxf"]
 [ext_resource type="PackedScene" uid="uid://crhwfju5ub5ji" path="res://_testes/parkour/Player.tscn" id="2_hmpp6"]
+[ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="3_r7jj6"]
 [ext_resource type="Script" uid="uid://ch25b4ukyfkig" path="res://_testes/PegarSoltarObj/jogadorPegar.gd" id="3_ru2pd"]
+[ext_resource type="ArrayMesh" uid="uid://sptcpdx6wtm8" path="res://addons/simplegrasstextured/default_mesh.tres" id="4_b8qpe"]
 [ext_resource type="PackedScene" uid="uid://d0a3bpcjv0snm" path="res://_testes/PegarSoltarObj/caixa.tscn" id="4_hgrkj"]
 [ext_resource type="PackedScene" uid="uid://c77ausikpwlie" path="res://_testes/inventario/area_cair_item.tscn" id="5_cxyrl"]
+[ext_resource type="Script" uid="uid://2juaclm8gc1n" path="res://addons/simplegrasstextured/grass.gd" id="5_ld43o"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wlaxh"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -20,10 +24,42 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_6p8vf"]
-size = Vector2(100, 100)
+size = Vector2(10000, 10000)
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_wlaxh"]
-data = PackedVector3Array(5, 0, 5, -5, 0, 5, 5, 0, -5, -5, 0, 5, -5, 0, -5, 5, 0, -5)
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7vyxf"]
+data = PackedVector3Array(5000, 0, 5000, -5000, 0, 5000, 5000, 0, -5000, -5000, 0, 5000, -5000, 0, -5000, 5000, 0, -5000)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r7jj6"]
+render_priority = 0
+shader = ExtResource("2_7vyxf")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("3_r7jj6")
+shader_parameter/texture_frames = Vector2(1, 1)
+shader_parameter/light_mode = 1
+shader_parameter/alpha_scissor_threshold = 0.5
+shader_parameter/normal_scale = 1.0
+shader_parameter/metallic = 0.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/roughness = 1.0
+shader_parameter/roughness_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/scale_h = 1.0
+shader_parameter/scale_w = 1.0
+shader_parameter/scale_var = -0.25
+shader_parameter/grass_strength = 0.55
+shader_parameter/optimization_by_distance = false
+shader_parameter/optimization_level = 7.0
+shader_parameter/optimization_dist_min = 10.0
+shader_parameter/optimization_dist_max = 50.0
+shader_parameter/grass_size_y = 1.0
+shader_parameter/interactive_mode = true
+shader_parameter/interactive_level_xz = 3.0
+shader_parameter/interactive_level_y = 0.3
+metadata/SimpleGrassTexturedMaterial = "2.1.0"
+
+[sub_resource type="MultiMesh" id="MultiMesh_b8qpe"]
+transform_format = 1
+mesh = ExtResource("4_b8qpe")
 
 [node name="mundo" type="Node" unique_id=1388337351]
 script = ExtResource("1_hmpp6")
@@ -38,18 +74,50 @@ environment = SubResource("Environment_ru2pd")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1858632637]
 mesh = SubResource("PlaneMesh_6p8vf")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=1112288784]
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=806380788]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4608102, 0.29503417, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=602147868]
-transform = Transform3D(1101, 0, 0, 0, 1101, 0, 0, 0, 1101, -0.54429483, 0, -0.77688885)
-shape = SubResource("ConcavePolygonShape3D_wlaxh")
-debug_color = Color(0.97238356, 0.108102076, 0.32922974, 0.41960785)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=1426707596]
+shape = SubResource("ConcavePolygonShape3D_7vyxf")
+
+[node name="SimpleGrassTextured" type="MultiMeshInstance3D" parent="MeshInstance3D" unique_id=551784695]
+material_override = SubResource("ShaderMaterial_r7jj6")
+multimesh = SubResource("MultiMesh_b8qpe")
+script = ExtResource("5_ld43o")
+sgt_radius = 2.0
+sgt_density = 25
+sgt_scale = 1.0
+sgt_rotation = 0.0
+sgt_rotation_rand = 1.0
+sgt_dist_min = 0.25
+sgt_follow_normal = false
+sgt_slope = Vector2(0, 45)
+sgt_tool_shape = {
+"airbrush": 1,
+"eraser": 0,
+"pencil": 1
+}
+metadata/_custom_type_script = "uid://2juaclm8gc1n"
+metadata/SimpleGrassTextured = "2.0.5"
 
 [node name="RigidBody3D" parent="." unique_id=1761421113 instance=ExtResource("4_hgrkj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9307029, 1.9310212)
 
+[node name="MeshInstance3D" parent="RigidBody3D" index="0" unique_id=2130530598]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3876778, 0)
+
 [node name="Player" parent="." unique_id=821986429 instance=ExtResource("2_hmpp6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.30202043, 0)
 script = ExtResource("3_ru2pd")
+
+[node name="gobot" parent="Player" index="0" unique_id=1962218719]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.4066298, 0)
+
+[node name="body_colision" parent="Player" index="1" unique_id=1898988873]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.003081739, 0.15326363, 0.0012799501)
+
+[node name="head_colision" parent="Player" index="2" unique_id=493655389]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0.75098205, 0)
 
 [node name="raycast" type="RayCast3D" parent="Player/camera_pivo/camera" parent_id_path=PackedInt32Array(821986429, 314590229) index="0" unique_id=774563375]
 target_position = Vector3(0, 0, -4)
