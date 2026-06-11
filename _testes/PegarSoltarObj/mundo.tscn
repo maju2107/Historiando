@@ -20,7 +20,7 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_6p8vf"]
-size = Vector2(10, 10)
+size = Vector2(100, 100)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_wlaxh"]
 data = PackedVector3Array(5, 0, 5, -5, 0, 5, 5, 0, -5, -5, 0, 5, -5, 0, -5, 5, 0, -5)
@@ -41,7 +41,9 @@ mesh = SubResource("PlaneMesh_6p8vf")
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=1112288784]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=602147868]
+transform = Transform3D(1101, 0, 0, 0, 1101, 0, 0, 0, 1101, -0.54429483, 0, -0.77688885)
 shape = SubResource("ConcavePolygonShape3D_wlaxh")
+debug_color = Color(0.97238356, 0.108102076, 0.32922974, 0.41960785)
 
 [node name="RigidBody3D" parent="." unique_id=1761421113 instance=ExtResource("4_hgrkj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9307029, 1.9310212)
