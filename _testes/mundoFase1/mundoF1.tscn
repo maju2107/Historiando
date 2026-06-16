@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c56eywd3liu5l"]
+
+[sub_resource type="Environment" id="Environment_22sj0"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_22sj0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lui3q"]
+size = Vector3(115.48648, 0.28503418, 132.42743)
+
+[node name="MundoF1" type="Node" unique_id=89881924]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1959664601]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.006247759, 1.9264358, -0.0034132004)
+light_color = Color(1, 1, 0.52156866, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1421983308]
+environment = SubResource("Environment_22sj0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=815033807]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.2101002, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=989393491]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4391005, 1.275809, -9.435962)
+physics_material_override = SubResource("PhysicsMaterial_22sj0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=913293991]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.94815, -14.280454, -54.4397)
+shape = SubResource("BoxShape3D_lui3q")
