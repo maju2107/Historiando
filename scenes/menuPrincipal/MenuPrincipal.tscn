@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://c3cmjph0ffieq"]
 
 [ext_resource type="Script" uid="uid://djqkdsje8lcwj" path="res://scenes/menuPrincipal/MenuPrincipal.gd" id="1_1dj63"]
-[ext_resource type="Texture2D" uid="uid://bahjksfm0glh7" path="res://assets/fundoMenu.png" id="2_1k3jv"]
-[ext_resource type="Texture2D" uid="uid://bmrnive44c75b" path="res://assets/logo.png" id="3_1k3jv"]
+[ext_resource type="Texture2D" uid="uid://ikqwr3madtf" path="res://assets/texture/menu sem botoes.png" id="2_xn7c0"]
 [ext_resource type="FontFile" uid="uid://dqf4ooggwn2qm" path="res://common/fonts/PermanentMarker-Regular.ttf" id="3_3ry0c"]
 [ext_resource type="PackedScene" uid="uid://cqk3hfm64qwbb" path="res://scenes/telaInicial/BotaoMecanica.tscn" id="4_eb7qe"]
+[ext_resource type="Texture2D" uid="uid://blu7c8chrbnkb" path="res://assets/texture/configurações.png" id="5_cj7o2"]
+[ext_resource type="Texture2D" uid="uid://c4allxmiuymuv" path="res://assets/texture/sobre.png" id="6_qwpw4"]
+[ext_resource type="Texture2D" uid="uid://c4gfyxkyi6kqn" path="res://assets/texture/sair do jogo.png" id="7_c3wsh"]
 
 [sub_resource type="Theme" id="Theme_aee4m"]
 default_font = ExtResource("3_3ry0c")
@@ -20,13 +22,14 @@ transparent = true
 
 [node name="MenuPrincipal" type="ColorRect" parent="." unique_id=390676888]
 anchors_preset = -1
-anchor_left = -0.563
-anchor_top = -0.17
-anchor_right = 1.577
-anchor_bottom = 1.1650001
-offset_left = -0.29992676
-offset_right = -0.30029297
-offset_bottom = -0.00012207031
+anchor_left = 0.388
+anchor_top = 0.40800002
+anchor_right = 0.61200005
+anchor_bottom = 0.637
+offset_left = 215.03998
+offset_top = 99.359985
+offset_right = -215.04004
+offset_bottom = -147.96002
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -42,44 +45,25 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -397.1399
-offset_top = -337.29996
-offset_right = 376.8601
-offset_bottom = 271.7
+offset_left = -310.0
+offset_top = -304.5
+offset_right = 310.0
+offset_bottom = 304.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_1k3jv")
-
-[node name="MarginContainer" type="MarginContainer" parent="MenuPrincipal" unique_id=1003038724]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.44617894
-anchor_top = 0.3104453
-anchor_right = 0.54718167
-anchor_bottom = 0.34928563
-metadata/_edit_use_anchors_ = true
-
-[node name="TextureRect" type="TextureRect" parent="MenuPrincipal/MarginContainer" unique_id=1822461684]
-layout_mode = 2
-texture = ExtResource("3_1k3jv")
+texture = ExtResource("2_xn7c0")
 
 [node name="BoxContainer" type="BoxContainer" parent="MenuPrincipal" unique_id=1177485283]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -269.1399
-offset_top = -137.29999
-offset_right = 242.8601
-offset_bottom = 142.70001
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = -238.75
+offset_top = -147.0
+offset_right = 238.75
+offset_bottom = 147.0
 theme = SubResource("Theme_aee4m")
 theme_override_constants/separation = 12
 alignment = 1
 vertical = true
+metadata/_edit_use_anchors_ = true
 
 [node name="ButtonConfig" parent="MenuPrincipal/BoxContainer" unique_id=1129307047 instance=ExtResource("4_eb7qe")]
 layout_mode = 2
@@ -89,7 +73,8 @@ accessibility_description = "Aperte esse botão para acessar as configurações"
 accessibility_live = 1
 theme_override_constants/h_separation = 4
 theme_override_font_sizes/font_size = 55
-text = "Configurações"
+text = ""
+icon = ExtResource("5_cj7o2")
 
 [node name="ButtonSobre" parent="MenuPrincipal/BoxContainer" unique_id=2074044267 instance=ExtResource("4_eb7qe")]
 layout_mode = 2
@@ -98,7 +83,8 @@ accessibility_name = "Sobre"
 accessibility_description = "Aperte esse botão para acessar sobre o jogo"
 accessibility_live = 1
 theme_override_font_sizes/font_size = 55
-text = "Sobre"
+text = ""
+icon = ExtResource("6_qwpw4")
 
 [node name="ButtonContinuar" parent="MenuPrincipal/BoxContainer" unique_id=1349018009 instance=ExtResource("4_eb7qe")]
 visible = false
@@ -117,6 +103,7 @@ accessibility_name = "Sair"
 accessibility_description = "Aperte esse botão paa sair do jogo"
 accessibility_live = 1
 theme_override_font_sizes/font_size = 50
-text = "Sair do jogo"
+text = ""
+icon = ExtResource("7_c3wsh")
 
 [connection signal="pressed" from="MenuPrincipal/BoxContainer/ButtonSair" to="MenuPrincipal" method="_on_button_sair_pressed"]
