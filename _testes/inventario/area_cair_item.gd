@@ -2,16 +2,34 @@ extends Control
 
 const ITEM_MUNDO = preload("uid://bpogtba0nttbc")
 
-@onready var camera: Camera3D = $"../Player/camera_pivo/camera"
+@onready var camera: Camera3D = get_viewport().get_camera_3d()
+@onready var inventory_grid: GridContainer = _find_inventory_grid()
 
 func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
+	if not camera:
+		push_warning("Nenhuma Camera3D ativa foi encontrada para o inventário.")
+	if not inventory_grid:
+		push_warning("A grade do inventário não foi encontrada na cena.")
+
+func _find_inventory_grid() -> GridContainer:
+	var scene_root := get_tree().current_scene
+	if not scene_root:
+		return null
+
+	var grid := scene_root.find_child("InventarioGridContainer", true, false)
+	if not grid:
+		grid = scene_root.find_child("GridContainer", true, false)
+	return grid as GridContainer
 
 func _can_drop_data(_at_position: Vector2, _data: Variant) -> bool:
 	return true
 		
 		
 func _drop_data(_at_position: Vector2, data: Variant) -> void:
+	if not data or not data.item:
+		return
+
 	var node = ITEM_MUNDO.instantiate()
 	
 	node.set_meta("item_data", data.item)
@@ -19,6 +37,7 @@ func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	
 	get_tree().current_scene.add_child(node)
 	data.item = null
+	data.update_ui()
 	node.global_position = Vector3(randf(), 1, randf())
 	
 func _notification(what: int) -> void:
@@ -31,9 +50,11 @@ func _notification(what: int) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.get_mouse_mode() != Input.MOUSE_MODE_VISIBLE:
 		return
+	if not camera or not inventory_grid:
+		return
 		
 	if event is InputEventMouseButton:
-		if event.pressed:
+		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 			print("Item Pressionado")
 				
 			var espaco := camera.get_world_3d().direct_space_state
@@ -45,15 +66,20 @@ func _unhandled_input(event: InputEvent) -> void:
 			var ray := espaco.intersect_ray(parametro)
 			if ray and ray["collider"] is RigidBody3D:
 				var mundo_item = ray["collider"]
-				if mundo_item.get_meta("pegando"):
+				if mundo_item.get_meta("pegando", false):
 					return
 		
 				mundo_item.set_meta("pegando", true)
-				for espacoInv in $CanvasLayer/inventario/MarginContainer/InventarioGridContainer.get_children():
+				var item_guardado := false
+				for espacoInv in inventory_grid.get_children():
 					if espacoInv.item: continue
 					
 					# pega o primeiro espacoInv vazio
 					espacoInv.item = ray["collider"].get_meta("item_data")
 					espacoInv.update_ui()
 					mundo_item.queue_free()
-					break 
+					item_guardado = true
+					break
+
+				if not item_guardado:
+					mundo_item.set_meta("pegando", false)

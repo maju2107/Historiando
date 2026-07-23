@@ -4,8 +4,8 @@ extends HBoxContainer
 @onready var life_label: Label = $life_label
 
 func update_gear(amount: int):
-	gear_label.text = "%d" % amount
+	gear_label.text = "Itens: %d" % amount
 
 func update_life(health: int):
-	life_label.text = "%d" % health
+	life_label.text = "Vidas: %d" % health
 	
