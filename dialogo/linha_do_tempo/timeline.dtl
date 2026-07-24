@@ -1,6 +1,5 @@
 personagem_secundario: Ola!
 personagem_secundario: O que voce esta fazendo aqui?
-[wait time="2.0"]
 - Só passeando!
 	[end_timeline]
 - Queria comprar algo!
