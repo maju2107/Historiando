@@ -22,8 +22,10 @@ var gears := 0
 var can_move := true
 
 #sitema de vida
+@export var invulnerability_duration := 1.0
 var health := 3
-var is_dead := false 
+var is_dead := false
+var is_invulnerable := false
 
 #sencibilidade do mouse/rotação da camera
 var mouse_sensitivity: float = 0.15
@@ -40,6 +42,7 @@ func _ready() -> void:
 	anim_player.play("Idle")
 	if not gear_container:
 		push_warning("O HUD do jogador não foi encontrado; a contagem ficará desativada.")
+	_update_life_hud()
 
 func _unhandled_input(event: InputEvent) -> void:
 	var is_camera_motion := (
@@ -138,35 +141,50 @@ func collect_gear():
 		gear_container.update_gear(gears)
 	
 
+func take_damage(amount: int = 1) -> void:
+	if amount <= 0 or is_dead or is_invulnerable:
+		return
+
+	is_invulnerable = true
+	health = maxi(health - amount, 0)
+	_update_life_hud()
+
+	global_position = player_start_position
+	velocity = Vector3.ZERO
+	anim_player.play("Idle", 0.0)
+
+	if health == 0:
+		_die()
+		return
+
+	can_move = false
+
+	await get_tree().create_timer(0.5).timeout
+	can_move = true
+
+	var remaining_invulnerability := maxf(invulnerability_duration - 0.5, 0.0)
+	if remaining_invulnerability > 0.0:
+		await get_tree().create_timer(remaining_invulnerability).timeout
+	is_invulnerable = false
+
 func respawn_player() -> void:
-	if health > 1:
-		health -= 1
-		global_position = player_start_position
-		velocity = Vector3.ZERO
+	take_damage(1)
 
-		can_move = false
-		anim_player.play("Idle", 0.0)
-		await get_tree().create_timer(0.5).timeout
-		can_move = true
+func _update_life_hud() -> void:
+	if gear_container and gear_container.has_method("update_life"):
+		gear_container.update_life(health)
 
-		if gear_container and gear_container.has_method("update_life"):
-			gear_container.update_life(health)
+func _die() -> void:
+	is_dead = true
+	can_move = false
+	velocity = Vector3.ZERO
+	set_physics_process(false)
 
-	elif health == 1:
-		health = 0
-		if gear_container and gear_container.has_method("update_life"):
-			gear_container.update_life(health)
-		is_dead = true
-
-		# Em vez de pausar o jogo, desativa os controles e mostra o menu
-		can_move = false
-		set_physics_process(false)  # desativa física do player
-
-		var game_over_ui := get_parent().get_node_or_null("GameOver")
-		if game_over_ui:
-			game_over_ui.show()
-		else:
-			push_warning("A interface GameOver não foi encontrada na cena.")
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	var game_over_ui := get_parent().get_node_or_null("GameOver")
+	if game_over_ui:
+		game_over_ui.show()
+	else:
+		push_warning("A interface GameOver não foi encontrada na cena.")
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 	
