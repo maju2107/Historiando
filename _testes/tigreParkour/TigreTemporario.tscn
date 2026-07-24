@@ -14,6 +14,7 @@ radius = 1.15
 script = ExtResource("1_enemy")
 
 [node name="Model" parent="." instance=ExtResource("2_model")]
+rotation = Vector3(0, 3.1415927, 0)
 scale = Vector3(1.35, 1.35, 1.35)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

@@ -7,6 +7,12 @@ extends CharacterBody3D
 @export var damage := 1
 @export var damage_interval := 1.2
 
+@export_group("Desvio de obstáculos")
+@export var avoidance_distance := 3.5
+@export_range(30.0, 110.0, 1.0) var avoidance_angle := 70.0
+@export var avoidance_commit_duration := 0.85
+@export_flags_3d_physics var obstacle_collision_mask := 1
+
 @onready var target: CharacterBody3D = get_node_or_null(target_path) as CharacterBody3D
 @onready var animation_player: AnimationPlayer = find_child("AnimationPlayer", true, false) as AnimationPlayer
 
@@ -14,6 +20,8 @@ var player_in_hitbox: CharacterBody3D
 var damage_cooldown := 0.0
 var spawn_transform: Transform3D
 var is_attacking := false
+var preferred_avoidance_side := 1.0
+var avoidance_commit_remaining := 0.0
 
 func _ready() -> void:
 	spawn_transform = global_transform
@@ -30,6 +38,7 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	damage_cooldown = maxf(damage_cooldown - delta, 0.0)
+	avoidance_commit_remaining = maxf(avoidance_commit_remaining - delta, 0.0)
 	_try_damage_player()
 
 	if is_attacking:
@@ -53,12 +62,12 @@ func _physics_process(delta: float) -> void:
 	var distance := offset.length()
 
 	if distance > stopping_distance:
-		var direction := offset.normalized()
+		var desired_direction := offset.normalized()
+		var direction := _get_avoidance_direction(desired_direction)
 		velocity.x = move_toward(velocity.x, direction.x * chase_speed, acceleration * delta)
 		velocity.z = move_toward(velocity.z, direction.z * chase_speed, acceleration * delta)
 
-		var look_target := target.global_position
-		look_target.y = global_position.y
+		var look_target := global_position + direction
 		if global_position.distance_squared_to(look_target) > 0.001:
 			look_at(look_target, Vector3.UP)
 	else:
@@ -70,6 +79,55 @@ func _physics_process(delta: float) -> void:
 func _slow_down(delta: float) -> void:
 	velocity.x = move_toward(velocity.x, 0.0, acceleration * delta)
 	velocity.z = move_toward(velocity.z, 0.0, acceleration * delta)
+
+func _get_avoidance_direction(desired_direction: Vector3) -> Vector3:
+	if avoidance_distance <= 0.0:
+		return desired_direction
+
+	if avoidance_commit_remaining > 0.0:
+		return desired_direction.rotated(
+			Vector3.UP,
+			deg_to_rad(avoidance_angle * preferred_avoidance_side)
+		).normalized()
+
+	if _get_direction_clearance(desired_direction) >= 0.98:
+		return desired_direction
+
+	var left_direction := desired_direction.rotated(Vector3.UP, deg_to_rad(avoidance_angle)).normalized()
+	var right_direction := desired_direction.rotated(Vector3.UP, deg_to_rad(-avoidance_angle)).normalized()
+	var left_clearance := _get_direction_clearance(left_direction)
+	var right_clearance := _get_direction_clearance(right_direction)
+
+	if not is_equal_approx(left_clearance, right_clearance):
+		preferred_avoidance_side = 1.0 if left_clearance > right_clearance else -1.0
+
+	avoidance_commit_remaining = avoidance_commit_duration
+	return left_direction if preferred_avoidance_side > 0.0 else right_direction
+
+func _get_direction_clearance(direction: Vector3) -> float:
+	var space_state := get_world_3d().direct_space_state
+	var lowest_clearance := 1.0
+	var excluded_bodies: Array[RID] = [get_rid()]
+	if is_instance_valid(target):
+		excluded_bodies.append(target.get_rid())
+
+	for ray_height: float in [0.35, 1.0]:
+		var origin := global_position + Vector3.UP * ray_height
+		var destination := origin + direction * avoidance_distance
+		var query := PhysicsRayQueryParameters3D.create(
+			origin,
+			destination,
+			obstacle_collision_mask,
+			excluded_bodies
+		)
+		query.collide_with_areas = false
+		var collision := space_state.intersect_ray(query)
+		if collision:
+			var hit_position: Vector3 = collision["position"]
+			var clearance := origin.distance_to(hit_position) / avoidance_distance
+			lowest_clearance = minf(lowest_clearance, clearance)
+
+	return lowest_clearance
 
 func _on_hitbox_body_entered(body: Node3D) -> void:
 	if body is CharacterBody3D and body.is_in_group("player"):
@@ -115,6 +173,7 @@ func reset_to_spawn() -> void:
 	global_transform = spawn_transform
 	velocity = Vector3.ZERO
 	player_in_hitbox = null
+	avoidance_commit_remaining = 0.0
 
 func _update_movement_animation() -> void:
 	var horizontal_speed := Vector2(velocity.x, velocity.z).length()

@@ -53,25 +53,25 @@ size = Vector3(7.498596, 1.1025848, 4.273926)
 points = PackedVector3Array(-3.749298, -0.5512924, -2.136963, -3.749298, 0.5512924, -2.136963, 3.749298, -0.5512924, -2.136963, -3.749298, -0.5512924, 2.1365447, -3.749298, 0.5512924, 2.1365447, 3.749298, 0.5512924, -2.136963, 3.749298, -0.5512924, 2.1365447, 3.749298, 0.5512924, 2.1365447)
 
 [sub_resource type="BoxMesh" id="BoxMesh_dtb02"]
-size = Vector3(7.498596, 1.7279282, 4.273926)
+size = Vector3(7.498596, 1.5532951, 4.8773193)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_erd2c"]
 points = PackedVector3Array(-3.749298, -0.8639641, -2.136963, -3.749298, 0.86396396, -2.136963, 3.749298, -0.8639641, -2.136963, -3.749298, -0.8639641, 2.1365447, -3.749298, 0.86396396, 2.1365447, 3.749298, 0.86396396, -2.136963, 3.749298, -0.8639641, 2.1365447, 3.749298, 0.86396396, 2.1365447)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ke7jo"]
-size = Vector3(7.498596, 2.9235344, 4.273926)
+size = Vector3(7.498596, 2.3860836, 4.273926)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ty05p"]
 points = PackedVector3Array(-3.749298, -1.4617672, -2.136963, -3.749298, 1.4617672, -2.136963, 3.749298, -1.4617672, -2.136963, -3.749298, -1.4617672, 2.1365447, -3.749298, 1.4617672, 2.1365447, 3.749298, 1.4617672, -2.136963, 3.749298, -1.4617672, 2.1365447, 3.749298, 1.4617672, 2.1365447)
 
 [sub_resource type="BoxMesh" id="BoxMesh_msiwx"]
-size = Vector3(7.498596, 4.194189, 4.273926)
+size = Vector3(7.498596, 3.0242553, 4.273926)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_fyxpo"]
 points = PackedVector3Array(-3.749298, -2.0970945, -2.136963, -3.749298, 2.0970945, -2.136963, 3.749298, -2.0970945, -2.136963, -3.749298, -2.0970945, 2.1365447, -3.749298, 2.0970945, 2.1365447, 3.749298, 2.0970945, -2.136963, 3.749298, -2.0970945, 2.1365447, 3.749298, 2.0970945, 2.1365447)
 
 [sub_resource type="BoxMesh" id="BoxMesh_rjh7q"]
-size = Vector3(7.498596, 5.5308104, 4.273926)
+size = Vector3(7.498596, 3.7637696, 4.273926)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rlt3e"]
 points = PackedVector3Array(3.749298, 2.7654052, 2.1365447, 3.749298, 2.7654052, -2.136963, -3.749298, 2.7654052, 2.1365447, 3.749298, -2.7654052, 2.1365447, 3.749298, -2.7654052, -2.136963, -3.749298, 2.7654052, -2.136963, -3.749298, -2.7654052, 2.1365447, -3.749298, -2.7654052, -2.136963)
@@ -208,7 +208,7 @@ skeleton = NodePath("../..")
 shape = SubResource("ConvexPolygonShape3D_v145v")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="chao/Parkour" unique_id=1674089893]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91000366, 1.3037064, 36.387474)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91000366, 1.2163899, 36.68917)
 mesh = SubResource("BoxMesh_dtb02")
 skeleton = NodePath("../..")
 
@@ -218,7 +218,7 @@ skeleton = NodePath("../..")
 shape = SubResource("ConvexPolygonShape3D_erd2c")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="chao/Parkour" unique_id=1590058918]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91000366, 1.9015095, 30.823545)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91000366, 1.6327841, 30.823547)
 mesh = SubResource("BoxMesh_ke7jo")
 skeleton = NodePath("../..")
 
@@ -228,7 +228,7 @@ skeleton = NodePath("../..")
 shape = SubResource("ConvexPolygonShape3D_ty05p")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="chao/Parkour" unique_id=1573397523]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91000366, 2.5368369, 24.988644)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91000366, 1.95187, 25.614819)
 mesh = SubResource("BoxMesh_msiwx")
 skeleton = NodePath("../..")
 
@@ -238,7 +238,7 @@ skeleton = NodePath("../..")
 shape = SubResource("ConvexPolygonShape3D_fyxpo")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="chao/Parkour" unique_id=1285203756]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91000366, 3.2051475, 19.117615)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91000366, 2.3216271, 19.810402)
 mesh = SubResource("BoxMesh_rjh7q")
 skeleton = NodePath("../..")
 
