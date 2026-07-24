@@ -27,8 +27,8 @@ shape = SubResource("ConvexPolygonShape3D_wpec5")
 [node name="Player" parent="." unique_id=821986429 instance=ExtResource("1_2qitx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.515641, 4.54276)
 
-[node name="DialogueBubbleAnchor" type="Marker3D" parent="Player"]
-position = Vector3(0, 1.55, 0)
+[node name="DialogueBubbleAnchor" type="Marker3D" parent="Player" unique_id=95220420]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55, 0)
 
 [node name="gdbot" parent="." unique_id=1105269730 instance=ExtResource("2_g4rwm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.47284794, -2.6395326)
@@ -50,5 +50,5 @@ fixed_size = true
 text = "[ E ]
 Conversar"
 
-[node name="DialogueBubbleAnchor" type="Marker3D" parent="gdbot"]
-position = Vector3(0, 1.55, 0)
+[node name="DialogueBubbleAnchor" type="Marker3D" parent="gdbot" unique_id=1534913117]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55, 0)
