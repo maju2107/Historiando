@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://crhwfju5ub5ji" path="res://_testes/parkour/Player.tscn" id="1_52uiu"]
 [ext_resource type="Environment" uid="uid://db68r5ch3eg8r" path="res://_testes/parkour/word-environment.tres" id="1_v3o1u"]
-[ext_resource type="PackedScene" path="res://_testes/tigreParkour/TigreTemporario.tscn" id="2_enemy"]
+[ext_resource type="PackedScene" path="res://_testes/mecanica_de_fuga/TigreTemporario.tscn" id="2_enemy"]
 [ext_resource type="PackedScene" uid="uid://derrjddag5wep" path="res://_testes/parkour/game_over.tscn" id="3_game_over"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_p2adb"]

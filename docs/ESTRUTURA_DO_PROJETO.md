@@ -23,12 +23,12 @@ scenes/
   autoload/             estado global, transição e serviços
   ui/                   telas, HUD e componentes
   gameplay/
-    player/
-    interaction/
-    inventory/
-    missions/
+	player/
+	interaction/
+	inventory/
+	missions/
   acts/
-    megafauna/
+	megafauna/
 tests/                  testes automatizados futuros
 prototypes/             experimentos executáveis e descartáveis
 ```

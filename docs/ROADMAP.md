@@ -28,7 +28,7 @@ Fluxo jogável de 10 a 15 minutos:
 | Canoa | Protótipo | `_testes/mecanicaCanoa/` | adiar para “Rota das Canoas” |
 | Questionário/carta | Protótipos | `_testes/questionario/`, `_testes/carta/` | avaliar uso contextual, sem interromper o loop |
 | Missões/objetivos | Ausente | - | implementar objetivo ativo simples |
-| IA perseguidora | Ausente | - | protótipo do tigre em rota controlada |
+| IA perseguidora | Protótipo | - | aperfeiçoar a perseguição |
 | Sobrevivência | Ausente | - | adiar até o loop de exploração funcionar |
 
 ## Ordem recomendada
@@ -46,7 +46,7 @@ Fluxo jogável de 10 a 15 minutos:
 ### Marco 2 - Fuga jogável
 
 - [ ] Criar `Checkpoint3D` reutilizável.
-- [ ] Criar perseguidor simples com `NavigationAgent3D` ou rota scriptada.
+- [x] Criar perseguidor simples com `NavigationAgent3D` ou rota scriptada.
 - [ ] Adicionar gatilhos de início/fim da perseguição.
 - [ ] Exibir objetivo atual no HUD.
 - [ ] Reiniciar rapidamente no último checkpoint.

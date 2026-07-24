@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://bnmap1gs0am65"]
+
+[ext_resource type="PackedScene" uid="uid://crhwfju5ub5ji" path="res://_testes/parkour/Player.tscn" id="1_2qitx"]
+[ext_resource type="PackedScene" uid="uid://c4fba1hyqkstw" path="res://common/characters/addons/gdquest_gdbot/gdbot.glb" id="2_g4rwm"]
+[ext_resource type="Script" uid="uid://ctca1nw2f417n" path="res://common/characters/addons/gdquest_gdbot/gdbot.gd" id="3_v0v2p"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_p1mxy"]
+size = Vector3(15.028778, 1, 14.980347)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wpec5"]
+points = PackedVector3Array(-7.514389, -0.5, -7.4901733, -7.514389, 0.5, -7.4901733, 7.514389, -0.5, -7.4901733, -7.514389, -0.5, 7.4901733, -7.514389, 0.5, 7.4901733, 7.514389, 0.5, -7.4901733, 7.514389, -0.5, 7.4901733, 7.514389, 0.5, 7.4901733)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_interaction"]
+radius = 2.5
+
+[node name="MecanicaDialogo" type="Node3D" unique_id=1009635347]
+
+[node name="chao" type="MeshInstance3D" parent="." unique_id=1125452953]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0071258545, 0, -0.009338379)
+mesh = SubResource("BoxMesh_p1mxy")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="chao" unique_id=1698004104]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="chao/StaticBody3D" unique_id=1237758593]
+shape = SubResource("ConvexPolygonShape3D_wpec5")
+
+[node name="Player" parent="." unique_id=821986429 instance=ExtResource("1_2qitx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.515641, 4.54276)
+
+[node name="DialogueBubbleAnchor" type="Marker3D" parent="Player"]
+position = Vector3(0, 1.55, 0)
+
+[node name="gdbot" parent="." unique_id=1105269730 instance=ExtResource("2_g4rwm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.47284794, -2.6395326)
+script = ExtResource("3_v0v2p")
+
+[node name="InteractionArea" type="Area3D" parent="gdbot" unique_id=1400106281]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="gdbot/InteractionArea" unique_id=2109125526]
+shape = SubResource("SphereShape3D_interaction")
+
+[node name="InteractionPrompt" type="Label3D" parent="gdbot" unique_id=2048002313]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
+pixel_size = 0.0025
+billboard = 1
+no_depth_test = true
+fixed_size = true
+text = "[ E ]
+Conversar"
+
+[node name="DialogueBubbleAnchor" type="Marker3D" parent="gdbot"]
+position = Vector3(0, 1.55, 0)

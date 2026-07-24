@@ -1,0 +1,13 @@
+personagem_secundario: Ola!
+personagem_secundario: O que voce esta fazendo aqui?
+[wait time="2.0"]
+- Só passeando!
+	[end_timeline]
+- Queria comprar algo!
+	personagem_secundario: Que incrível! o que vc quer comprar?
+	- Comprar coração
+		player: Obrigado pelo coração!
+		[end_timeline]
+	- Comprar estrela
+		player: Obrigado pela estrela!
+		[end_timeline]
