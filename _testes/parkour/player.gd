@@ -5,6 +5,9 @@ const SPEED = 15.0
 const JUMP_VELOCITY = 6.0
 const ACCELERATION = 2.0
 
+@onready var raycast = $camera_pivo/camera/raycast
+
+
 #acesso a camera_pivo e camera para visão presa ao player
 @onready var camera_pivo: Node3D = $camera_pivo
 @onready var camera: Camera3D = $camera_pivo/camera
@@ -157,5 +160,25 @@ func respawn_player() -> void:
 		var game_over_ui = get_parent().get_node("GameOver")
 		game_over_ui.visible = true
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		
+		
+func verificar_npc():
+
+	if raycast.is_colliding():
+		print("colidiu")
+		var objeto = raycast.get_collider()
+		
+	else :
+		print("não colidiu")
+			
+
+func _process(delta: float) -> void:
+	if raycast.is_colliding():
+
+		var obj = raycast.get_collider()
+
+		print("Colidiu com:", obj.name)
+	else :
+		print("não...")
 
 	
