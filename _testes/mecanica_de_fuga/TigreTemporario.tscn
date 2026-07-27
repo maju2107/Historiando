@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://_testes/tigreParkour/tigre_temporario.gd" id="1_enemy"]
+[ext_resource type="PackedScene" path="res://common/characters/addons/gdquest_beetle_bot/model/beetle_bot_fused.glb" id="2_model"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape_enemy"]
+radius = 0.75
+height = 1.8
+
+[sub_resource type="SphereShape3D" id="SphereShape_hitbox"]
+radius = 1.15
+
+[node name="TigreTemporario" type="CharacterBody3D" groups=["enemy"]]
+script = ExtResource("1_enemy")
+
+[node name="Model" parent="." instance=ExtResource("2_model")]
+rotation = Vector3(0, 3.1415927, 0)
+scale = Vector3(1.35, 1.35, 1.35)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+position = Vector3(0, 0.9, 0)
+shape = SubResource("CapsuleShape_enemy")
+
+[node name="Hitbox" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 1
+monitoring = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hitbox"]
+position = Vector3(0, 0.9, 0)
+shape = SubResource("SphereShape_hitbox")
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="body_exited" from="Hitbox" to="." method="_on_hitbox_body_exited"]

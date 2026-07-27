@@ -4,7 +4,7 @@ var dragging := false
 var offset := Vector2.ZERO
 var target_slot_name := "lacuna4"  # Nome da lacuna onde esse bloco deve encaixar
 var lacuna1 := "lacuna1"
-var lacuna2 := "lacuna3"
+var lacuna2 := "lacuna2"
 var lacuna3 := "lacuna3"
 
 func _input_event(viewport, event, shape_idx): # _input_event é usado em contextos locais
@@ -24,7 +24,7 @@ func verificar_encaixe():
 	for area in get_overlapping_areas():
 		if area.name == target_slot_name:
 			global_position = area.global_position
-			set_process_input(true)  # trava o bloco se for false
+			input_pickable = false
 			$Popup1.popup_centered() 
 			await get_tree().create_timer(2.0).timeout
 			$Popup1.hide()

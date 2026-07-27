@@ -40,7 +40,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="historiando"
 run/main_scene="uid://baob1qp6nkk4f"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.7", "Forward Plus")
 
 [audio]
 
@@ -56,9 +56,21 @@ SimpleGrass="*uid://bfq0snth8sj3h"
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
-layout/style_directory={}
+directories/dch_directory={
+"personagem_secundario": "res://dialogo/personagens/personagem_secundario.dch",
+"player": "res://dialogo/personagens/player.dch"
+}
+directories/dtl_directory={
+"timeline": "res://dialogo/linha_do_tempo/timeline.dtl"
+}
+layout/style_directory={
+"": "res://dialogo/estilos/balao_de_fala.tres",
+"balao_de_fala": "res://dialogo/estilos/balao_de_fala.tres"
+}
+layout/style_list=["res://dialogo/estilos/balao_de_fala.tres"]
+layout/default_style="res://dialogo/estilos/balao_de_fala.tres"
+variables={}
+glossary/default_case_sensitive=true
 
 [display]
 
@@ -80,9 +92,9 @@ enabled=PackedStringArray("res://addons/simplegrasstextured/plugin.cfg")
 
 folder_colors={
 "res://_testes/carta/": "red",
-"res://_testes/parkour/": "red",
+"res://_testes/mecanica_de_fuga/": "purple",
+"res://_testes/mecanica_dialogo/": "purple",
 "res://_testes/questionario/": "red",
-"res://godot-4-3D-Characters-main/": "gray",
 "res://mundo1/": "purple"
 }
 

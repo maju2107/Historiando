@@ -17,22 +17,24 @@ const ACCELERATION = 2.0
 @onready var anim_player: AnimationPlayer = gobot.get_node("AnimationPlayer")
 
 #acesso ao label para a contagem do hub
-@onready var gear_container: HBoxContainer = $HUD/gear_container
+@onready var gear_container: HBoxContainer = get_node_or_null("HUD/gear_container")
 var gears := 0
 
 #posição inicial
 @onready var player_start_position := global_transform.origin
-var can_move
+var can_move := true
 
 #sitema de vida
+@export var invulnerability_duration := 1.0
 var health := 3
-var is_dead := false 
+var is_dead := false
+var is_invulnerable := false
 
 #sencibilidade do mouse/rotação da camera
 var mouse_sensitivity: float = 0.15
 var camera_rotation: Vector2 = Vector2.ZERO
 var last_moviment_dir := Vector3.BACK
-var is_jumping
+var is_jumping := false
 
 #sensibilidade do analógico
 var joystick_sensitivity = 2.5
@@ -41,13 +43,16 @@ var joystick_sensitivity = 2.5
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	anim_player.play("Idle")
+	if not gear_container:
+		push_warning("O HUD do jogador não foi encontrado; a contagem ficará desativada.")
+	_update_life_hud()
 
 func _unhandled_input(event: InputEvent) -> void:
 	var is_camera_motion := (
 		event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
 	)
 	if is_camera_motion:
-		camera_rotation = event.screen_relative * mouse_sensitivity
+		camera_rotation += event.screen_relative * mouse_sensitivity
 	
 
 func  _input(event: InputEvent) -> void:
@@ -59,6 +64,9 @@ func  _input(event: InputEvent) -> void:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _physics_process(delta: float) -> void:
+	if not can_move or is_dead:
+		return
+
 	# rotação da camera
 	
 	#leitura do analógico direito
@@ -132,34 +140,55 @@ func _handle_animation():
 
 func collect_gear():
 	gears += 1
-	gear_container.update_gear(gears)
+	if gear_container and gear_container.has_method("update_gear"):
+		gear_container.update_gear(gears)
 	
 
+func take_damage(amount: int = 1) -> void:
+	if amount <= 0 or is_dead or is_invulnerable:
+		return
+
+	is_invulnerable = true
+	health = maxi(health - amount, 0)
+	_update_life_hud()
+
+	global_position = player_start_position
+	velocity = Vector3.ZERO
+	anim_player.play("Idle", 0.0)
+
+	if health == 0:
+		_die()
+		return
+
+	can_move = false
+
+	await get_tree().create_timer(0.5).timeout
+	can_move = true
+
+	var remaining_invulnerability := maxf(invulnerability_duration - 0.5, 0.0)
+	if remaining_invulnerability > 0.0:
+		await get_tree().create_timer(remaining_invulnerability).timeout
+	is_invulnerable = false
+
 func respawn_player() -> void:
-	if health > 1:
-		health -= 1
-		transform.origin = player_start_position
-		velocity = Vector3.ZERO
+	take_damage(1)
 
-		can_move = false
-		anim_player.play("Idle", 0.0)
-		await get_tree().create_timer(0.5).timeout
-		can_move = true
-
+func _update_life_hud() -> void:
+	if gear_container and gear_container.has_method("update_life"):
 		gear_container.update_life(health)
 
-	elif health == 1:
-		health = 0
-		gear_container.update_life(health)
-		is_dead = true
+func _die() -> void:
+	is_dead = true
+	can_move = false
+	velocity = Vector3.ZERO
+	set_physics_process(false)
 
-		# Em vez de pausar o jogo, desativa os controles e mostra o menu
-		can_move = false
-		set_physics_process(false)  # desativa física do player
-
-		var game_over_ui = get_parent().get_node("GameOver")
-		game_over_ui.visible = true
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	var game_over_ui := get_parent().get_node_or_null("GameOver")
+	if game_over_ui:
+		game_over_ui.show()
+	else:
+		push_warning("A interface GameOver não foi encontrada na cena.")
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		
 		
 func verificar_npc():

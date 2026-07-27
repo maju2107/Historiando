@@ -14,49 +14,30 @@ extends Node2D
 func _ready() -> void:
 	fase_1.grab_focus()
 
-# FASE 1 CÓDIGO
-	if FaseCore.fase1_concluida == true:
-		fase_1_bloqueada.visible = false
-		cadeado.visible = false
-	if FaseCore.fase1_concluida == false:
-		fase_1_bloqueada.visible = true
-		cadeado.visible = true
-		
-# FASE 2 CÓDIGO
-	if FaseCore.fase2_concluida == true:
-		fase_2_bloqueada.visible = false
-		cadeado_2.visible = false
-	if FaseCore.fase2_concluida == false:
-		fase_2_bloqueada.visible = true
-		cadeado_2.visible = true
-		
-# FASE 3 CÓDIGO
-	if FaseCore.fase3_concluida == true:
-		fase_3_bloqueada.visible = false
-	if FaseCore.fase3_concluida == false:
-		fase_3_bloqueada.visible = true
-		
-		
+	var fase_2_desbloqueada: bool = FaseCore.fase1_concluida
+	var fase_3_desbloqueada: bool = FaseCore.fase2_concluida
+
+	# A primeira fase sempre fica disponível. As seguintes dependem da anterior.
+	fase_1_bloqueada.visible = not FaseCore.fase1_concluida
+	fase_2_bloqueada.visible = not FaseCore.fase2_concluida
+	fase_3_bloqueada.visible = not FaseCore.fase3_concluida
+	cadeado.visible = not fase_2_desbloqueada
+	cadeado_2.visible = not fase_3_desbloqueada
+	fase_1.disabled = false
+	fase_2.disabled = not fase_2_desbloqueada
+	fase_3.disabled = not fase_3_desbloqueada
 
 func _on_fase_1_pressed() -> void:
-	if FaseCore.fase1_concluida == false:
-		Transicao.transicionar_para("res://scenes/menuDeFases/fase1/fase_1.tscn")
-	else:
-		Transicao.transicionar_para("res://scenes/menuDeFases/fase1/fase_1.tscn")
-		
+	Transicao.transicionar_para("res://scenes/menuDeFases/fase1/fase_1.tscn")
 
 
 func _on_fase_2_pressed() -> void:
-	if FaseCore.fase1_concluida == false:
-		null
-	if FaseCore.fase1_concluida == true:
+	if FaseCore.fase1_concluida:
 		Transicao.transicionar_para("res://scenes/menuDeFases/fase2/fase_2.tscn")
 		
 
 func _on_fase_3_pressed() -> void:
-	if FaseCore.fase2_concluida == false:
-		null
-	if FaseCore.fase2_concluida == true:
+	if FaseCore.fase2_concluida:
 		Transicao.transicionar_para("res://scenes/menuDeFases/fase3/fase_3.tscn")
 
 

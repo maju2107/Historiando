@@ -24,7 +24,7 @@ func verificar_encaixe():
 	for area in get_overlapping_areas():
 		if area.name == target_slot_name:
 			global_position = area.global_position
-			set_process_input(true)  # trava o bloco se for false
+			input_pickable = false
 			$Popup1.popup_centered() 
 			await get_tree().create_timer(2.0).timeout
 			$Popup1.hide()
