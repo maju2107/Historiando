@@ -53,6 +53,7 @@ Transicao="*res://scenes/Transicao.tscn"
 BotaoGlobal="*res://scenes/BotaoGlobal.tscn"
 FaseCore="*res://scenes/menuDeFases/scripts/FaseCore.gd"
 SimpleGrass="*uid://bfq0snth8sj3h"
+Dialogic="*uid://ds2q0uclmolvu"
 
 [dialogic]
 
@@ -86,7 +87,7 @@ project/assembly_name="historiando"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/simplegrasstextured/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/simplegrasstextured/plugin.cfg")
 
 [file_customization]
 

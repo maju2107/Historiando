@@ -191,23 +191,6 @@ func _die() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		
 		
-func verificar_npc():
 
-	if raycast.is_colliding():
-		print("colidiu")
-		var objeto = raycast.get_collider()
-		
-	else :
-		print("não colidiu")
-			
-
-func _process(delta: float) -> void:
-	if raycast.is_colliding():
-
-		var obj = raycast.get_collider()
-
-		print("Colidiu com:", obj.name)
-	else :
-		print("não...")
 
 	

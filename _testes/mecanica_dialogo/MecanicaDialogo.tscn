@@ -52,3 +52,5 @@ Conversar"
 
 [node name="DialogueBubbleAnchor" type="Marker3D" parent="gdbot" unique_id=1534913117]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55, 0)
+
+[editable path="Player"]
