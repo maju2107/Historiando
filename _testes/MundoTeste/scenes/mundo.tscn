@@ -113,7 +113,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3876778, 0)
 [node name="CollisionShape3D" parent="RigidBody3D" index="1" unique_id=981071505]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.016231, -0.3890978, -0.03702879)
 
-[node name="Player" parent="." unique_id=821986429 groups=["player"] instance=ExtResource("2_hmpp6")]
+[node name="Player" parent="." unique_id=821986429 instance=ExtResource("2_hmpp6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5059824, 0)
 script = ExtResource("3_ru2pd")
 
@@ -141,7 +141,12 @@ collision_mask = 3
 [node name="Npc" parent="." unique_id=818927023 instance=ExtResource("9_h3xta")]
 
 [node name="CharacterBody3D" parent="Npc" index="0" unique_id=242818913 groups=["npc"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 28)
+transform = Transform3D(-0.97899073, 0, -0.20390469, 0, 1, 0, 0.20390469, 0, -0.97899073, 11.8873825, 0, 21.834694)
+
+[node name="ponto_A" type="Marker3D" parent="." unique_id=1480820708]
+
+[node name="ponto_B" type="Marker3D" parent="." unique_id=478086621]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
 
 [node name="AreaCairItem" parent="." unique_id=1848491060 instance=ExtResource("5_cxyrl")]
 
