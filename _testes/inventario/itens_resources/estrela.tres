@@ -1,12 +1,13 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ccqfofnsq5eh7"]
 
-[ext_resource type="Texture2D" uid="uid://ckccjykbv0utt" path="res://assets/texture/estrelaItem.png" id="1_kgdua"]
-[ext_resource type="Script" uid="uid://df53xbo8r8dam" path="res://_testes/inventario/scripts/item_data.gd" id="1_p1g4s"]
-[ext_resource type="ArrayMesh" uid="uid://1ufd6mfvrg70" path="res://common/characters/21327_Star_v1.obj" id="2_kd7yf"]
+[ext_resource type="Texture2D" uid="uid://ckccjykbv0utt" path="res://assets/texture/estrelaItem.png" id="1_acmob"]
+[ext_resource type="ArrayMesh" uid="uid://1ufd6mfvrg70" path="res://common/characters/21327_Star_v1.obj" id="2_j63wh"]
+[ext_resource type="Script" uid="uid://df53xbo8r8dam" path="res://_testes/inventario/scripts/item_data.gd" id="3_jn3cq"]
 
 [resource]
-script = ExtResource("1_p1g4s")
+script = ExtResource("3_jn3cq")
+item_id = 2
 item_nome = "estrela"
-icone = ExtResource("1_kgdua")
-mesh = ExtResource("2_kd7yf")
+icone = ExtResource("1_acmob")
+mesh = ExtResource("2_j63wh")
 metadata/_custom_type_script = "uid://df53xbo8r8dam"

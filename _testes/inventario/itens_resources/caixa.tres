@@ -1,10 +1,13 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dml2r6trvd3x1"]
 
-[ext_resource type="Texture2D" uid="uid://ckccjykbv0utt" path="res://assets/texture/estrelaItem.png" id="1_f5eao"]
-[ext_resource type="ArrayMesh" uid="uid://nukxmxj20lvj" path="res://common/characters/12190_Heart_v1_L3.obj" id="2_0rtrh"]
+[ext_resource type="Texture2D" uid="uid://b7varbgyhplna" path="res://assets/texture/patito.png" id="1_qn0r7"]
 [ext_resource type="Script" uid="uid://df53xbo8r8dam" path="res://_testes/inventario/scripts/item_data.gd" id="3_l81fv"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_h3xta"]
 
 [resource]
 script = ExtResource("3_l81fv")
-icone = ExtResource("1_f5eao")
-mesh = ExtResource("2_0rtrh")
+item_id = 3
+item_nome = "caixa"
+icone = ExtResource("1_qn0r7")
+mesh = SubResource("BoxMesh_h3xta")
