@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://dpdi11mlq1clu"]
 
-[ext_resource type="Script" uid="uid://564t72iw1f4v" path="res://_testes/inventario/inventario_panel.gd" id="1_8vkcf"]
+[ext_resource type="Script" uid="uid://564t72iw1f4v" path="res://_testes/inventario/scripts/inventario_panel.gd" id="1_8vkcf"]
 [ext_resource type="Texture2D" uid="uid://bkjmelvy8pqax" path="res://assets/texture/inventarioSF.png" id="1_orlmx"]
-[ext_resource type="Script" uid="uid://coaokc14q5fp4" path="res://_testes/inventario/espaco_inv.gd" id="2_cduc0"]
-[ext_resource type="Resource" uid="uid://ccqfofnsq5eh7" path="res://_testes/inventario/estrela.tres" id="3_hff4w"]
+[ext_resource type="Script" uid="uid://coaokc14q5fp4" path="res://_testes/inventario/scripts/espaco_inv.gd" id="2_cduc0"]
+[ext_resource type="Resource" uid="uid://ccqfofnsq5eh7" path="res://_testes/inventario/itens_resources/estrela.tres" id="3_hff4w"]
 [ext_resource type="Texture2D" uid="uid://ckccjykbv0utt" path="res://assets/texture/estrelaItem.png" id="4_cab0r"]
-[ext_resource type="Resource" uid="uid://cn85etocs0lr3" path="res://_testes/inventario/coracao.tres" id="5_edter"]
+[ext_resource type="Resource" uid="uid://cn85etocs0lr3" path="res://_testes/inventario/itens_resources/coracao.tres" id="5_edter"]
 [ext_resource type="Texture2D" uid="uid://bci5m71hn4brn" path="res://assets/texture/coracao.png" id="6_4n821"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eyc66"]

@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="3_r7jj6"]
 [ext_resource type="Script" uid="uid://ch25b4ukyfkig" path="res://_testes/MundoTeste/scripts/jogadorPegar.gd" id="3_ru2pd"]
 [ext_resource type="ArrayMesh" uid="uid://sptcpdx6wtm8" path="res://addons/simplegrasstextured/default_mesh.tres" id="4_b8qpe"]
-[ext_resource type="PackedScene" uid="uid://d0a3bpcjv0snm" path="res://_testes/MundoTeste/scenes/caixa.tscn" id="4_hgrkj"]
-[ext_resource type="PackedScene" uid="uid://c77ausikpwlie" path="res://_testes/inventario/area_cair_item.tscn" id="5_cxyrl"]
+[ext_resource type="PackedScene" uid="uid://d0a3bpcjv0snm" path="res://_testes/inventario/scenes/caixa.tscn" id="4_hgrkj"]
+[ext_resource type="PackedScene" uid="uid://c77ausikpwlie" path="res://_testes/inventario/scenes/area_cair_item.tscn" id="5_cxyrl"]
 [ext_resource type="Script" uid="uid://2juaclm8gc1n" path="res://addons/simplegrasstextured/grass.gd" id="5_ld43o"]
 [ext_resource type="PackedScene" uid="uid://xp3cnhaa7noe" path="res://_testes/MundoTeste/scenes/npc.tscn" id="9_h3xta"]
 
