@@ -1,9 +1,11 @@
 extends CharacterBody3D
 
 #constantes
-const SPEED = 15.0
-const JUMP_VELOCITY = 6.0
-const ACCELERATION = 2.0
+@export_category("Movimento")
+@export var walk_speed := 7.0
+@export var run_speed := 11.0
+@export var jump_velocity := 6.5
+@export var model_turn_speed := 10.0
 
 
 
@@ -91,27 +93,28 @@ func _physics_process(delta: float) -> void:
 
 	#pulo
 	if is_jumping:
-		velocity.y = JUMP_VELOCITY
+		velocity.y = jump_velocity
 
 	#movimentação padrão
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var forward := camera.global_basis.z
 	var right := camera.global_basis.x
-	var direction := (forward * input_dir.y + right * input_dir.x).normalized()
+	forward.y = 0.0
+	right.y = 0.0
+	forward = forward.normalized()
+	right = right.normalized()
+	var direction := forward * input_dir.y + right * input_dir.x
 	direction.y = 0.0
-	
-	var y_velocity = velocity.y
-	velocity.y = 0.0
+	direction = direction.normalized()
+
+	var is_running := Input.is_action_pressed("sprint")
+	var movement_speed := run_speed if is_running else walk_speed
 	
 	if is_on_floor():
-		if direction:
-			velocity = velocity.move_toward(direction * SPEED, ACCELERATION * delta)
-		else:
-			velocity = velocity.move_toward(Vector3.ZERO, ACCELERATION * delta)
+		velocity.x = direction.x * movement_speed
+		velocity.z = direction.z * movement_speed
 	
-	velocity.y = y_velocity
-	
-	_handle_animation()
+	_handle_animation(is_running)
 	move_and_slide()
 	
 	
@@ -119,9 +122,13 @@ func _physics_process(delta: float) -> void:
 		last_moviment_dir = direction
 	
 	var target_angle := Vector3.BACK.signed_angle_to(last_moviment_dir, Vector3.UP)
-	gobot.global_rotation.y = lerp_angle(gobot.global_rotation.y, target_angle, ACCELERATION * delta)
+	gobot.global_rotation.y = lerp_angle(
+		gobot.global_rotation.y,
+		target_angle,
+		minf(model_turn_speed * delta, 1.0)
+	)
 
-func _handle_animation():
+func _handle_animation(is_running: bool) -> void:
 	if not is_on_floor():
 		if velocity.y > 0.1:
 			if anim_player.current_animation != "Jump":
@@ -130,9 +137,11 @@ func _handle_animation():
 			if anim_player.current_animation != "Fall":
 				anim_player.play("Fall", 0.2)
 	else:
-		if velocity.length() > 0.1:
-			if anim_player.current_animation != "Run":
-				anim_player.play("Run", 0.2)
+		var is_moving := Vector2(velocity.x, velocity.z).length() > 0.1
+		if is_moving:
+			var movement_animation := "Run" if is_running else "Walk"
+			if anim_player.current_animation != movement_animation:
+				anim_player.play(movement_animation, 0.15)
 		else:
 			if anim_player.current_animation != "Idle":
 				anim_player.play("Idle", 0.2)
