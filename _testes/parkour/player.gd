@@ -5,7 +5,6 @@ const SPEED = 15.0
 const JUMP_VELOCITY = 6.0
 const ACCELERATION = 2.0
 
-@onready var raycast = $camera_pivo/camera/raycast
 
 
 #acesso a camera_pivo e camera para visão presa ao player

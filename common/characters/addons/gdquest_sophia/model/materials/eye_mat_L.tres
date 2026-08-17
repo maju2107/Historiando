@@ -1,7 +1,7 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://cal2s6wv6y3j"]
 
-[ext_resource type="Texture2D" path="res://addons/gdquest_sophia/model/sophia_eye_open_diffuse.png" id="1_puhan"]
-[ext_resource type="Texture2D" path="res://addons/gdquest_sophia/model/sophia_eye_open_normal.png" id="2_8lr5k"]
+[ext_resource type="Texture2D" path="res://common/characters/addons/gdquest_sophia/model/sophia_eye_open_diffuse.png" id="1_puhan"]
+[ext_resource type="Texture2D" path="res://common/characters/addons/gdquest_sophia/model/sophia_eye_open_normal.png" id="2_8lr5k"]
 
 [resource]
 resource_name = "eye_mat_L"

@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="ModelData" format=3 uid="uid://dc7wkocr2c2uv"]
 
-[ext_resource type="Script" path="res://addons/gdquest_model_viewer_3d/viewer/model_data_builder.gd" id="2_082r2"]
-[ext_resource type="Texture2D" path="res://resources/bee_bot_vignette.png" id="2_perqg"]
+[ext_resource type="Script" path="res://common/characters/addons/gdquest_model_viewer_3d/viewer/model_data_builder.gd" id="2_082r2"]
+[ext_resource type="Texture2D" path="res://common/characters/resources/bee_bot_vignette.png" id="2_perqg"]
 
 [resource]
 script = ExtResource("2_082r2")
 name = "Bee bot"
-scene_path = "res://addons/gdquest_bee_bot/bee_bot_skin.tscn"
+scene_path = "res://common/characters/addons/gdquest_bee_bot/bee_bot_skin.tscn"
 vignette = ExtResource("2_perqg")
 y_offset = 0.35
 camera_offset_y = 0.6

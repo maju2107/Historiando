@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://tyjgdu65yj3m"]
 
-[ext_resource type="PackedScene" path="res://addons/gdquest_round_bat/model/bat.glb" id="1_tt0gg"]
-[ext_resource type="Script" path="res://addons/gdquest_round_bat/round_bat_skin.gd" id="1_vbemd"]
-[ext_resource type="AnimationLibrary" path="res://addons/gdquest_round_bat/model/custom/custom_lib.res" id="2_er7fn"]
+[ext_resource type="PackedScene" path="res://common/characters/addons/gdquest_round_bat/model/bat.glb" id="1_tt0gg"]
+[ext_resource type="Script" path="res://common/characters/addons/gdquest_round_bat/round_bat_skin.gd" id="1_vbemd"]
+[ext_resource type="AnimationLibrary" path="res://common/characters/addons/gdquest_round_bat/model/custom/custom_lib.res" id="2_er7fn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u0xry"]
 render_priority = 1

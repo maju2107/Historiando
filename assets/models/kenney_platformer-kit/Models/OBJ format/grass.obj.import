@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://o0n4urup6wa0"
+path="res://.godot/imported/grass.obj-00d12dd01d977e0a628f8cedc8207863.mesh"
+
+[deps]
+
+files=["res://.godot/imported/grass.obj-00d12dd01d977e0a628f8cedc8207863.mesh"]
+
+source_file="res://assets/models/kenney_platformer-kit/Models/OBJ format/grass.obj"
+dest_files=["res://.godot/imported/grass.obj-00d12dd01d977e0a628f8cedc8207863.mesh", "res://.godot/imported/grass.obj-00d12dd01d977e0a628f8cedc8207863.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

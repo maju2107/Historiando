@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://482rxnrhe64v"]
 
-[ext_resource type="PackedScene" path="res://addons/gdquest_bee_bot/bee_bot.glb" id="1_ehj7o"]
-[ext_resource type="Script" path="res://addons/gdquest_bee_bot/bee_bot_skin.gd" id="1_vvvv8"]
-[ext_resource type="Material" path="res://addons/gdquest_bee_bot/materials/bee_bot_lights_mat.tres" id="3_7rf2o"]
-[ext_resource type="Material" path="res://addons/gdquest_bee_bot/materials/bee_bot_eyes_mat.tres" id="4_76kpj"]
-[ext_resource type="Material" path="res://addons/gdquest_bee_bot/materials/bee_bot_wings_mat.tres" id="5_uomwq"]
-[ext_resource type="AnimationLibrary" path="res://addons/gdquest_bee_bot/custom_animations/custom_lib.res" id="6_6725d"]
+[ext_resource type="PackedScene" path="res://common/characters/addons/gdquest_bee_bot/bee_bot.glb" id="1_ehj7o"]
+[ext_resource type="Script" path="res://common/characters/addons/gdquest_bee_bot/bee_bot_skin.gd" id="1_vvvv8"]
+[ext_resource type="Material" path="res://common/characters/addons/gdquest_bee_bot/materials/bee_bot_lights_mat.tres" id="3_7rf2o"]
+[ext_resource type="Material" path="res://common/characters/addons/gdquest_bee_bot/materials/bee_bot_eyes_mat.tres" id="4_76kpj"]
+[ext_resource type="Material" path="res://common/characters/addons/gdquest_bee_bot/materials/bee_bot_wings_mat.tres" id="5_uomwq"]
+[ext_resource type="AnimationLibrary" path="res://common/characters/addons/gdquest_bee_bot/custom_animations/custom_lib.res" id="6_6725d"]
 
 [sub_resource type="Animation" id="Animation_ookjt"]
 resource_name = "Idle"

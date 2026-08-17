@@ -124,7 +124,7 @@ var _default_mesh : Mesh = load("res://addons/simplegrasstextured/default_mesh.t
 var _buffer_add : Array[Transform3D] = []
 var _material := load("res://addons/simplegrasstextured/materials/grass.tres").duplicate() as ShaderMaterial
 var _force_update_multimesh := false
-var _properties = []
+var _properties: Array[Dictionary] = []
 var _node_height_map = null
 var _singleton = null
 
@@ -240,7 +240,7 @@ func _process(_delta : float):
 		_update_multimesh()
 
 
-func _get_property_list() -> Array:
+func _get_property_list() -> Array[Dictionary]:
 	if _properties == null:
 		return []
 	return _properties

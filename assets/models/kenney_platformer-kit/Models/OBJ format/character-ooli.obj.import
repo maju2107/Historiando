@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://jmtu72coi8nn"
+path="res://.godot/imported/character-ooli.obj-2c55d2bfb9aa290338e8a8f9dfd02b4f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/character-ooli.obj-2c55d2bfb9aa290338e8a8f9dfd02b4f.mesh"]
+
+source_file="res://assets/models/kenney_platformer-kit/Models/OBJ format/character-ooli.obj"
+dest_files=["res://.godot/imported/character-ooli.obj-2c55d2bfb9aa290338e8a8f9dfd02b4f.mesh", "res://.godot/imported/character-ooli.obj-2c55d2bfb9aa290338e8a8f9dfd02b4f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,7 +1,7 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://cdqqp1tvfod18"]
 
-[ext_resource type="Shader" path="res://addons/gdquest_models_shared/shaders/screen_shader.gdshader" id="1_e2dsf"]
-[ext_resource type="Texture2D" path="res://addons/gdquest_gdbot/texture/open.png" id="2_rkdwa"]
+[ext_resource type="Shader" path="res://common/characters/addons/gdquest_models_shared/shaders/screen_shader.gdshader" id="1_e2dsf"]
+[ext_resource type="Texture2D" path="res://common/characters/addons/gdquest_gdbot/texture/open.png" id="2_rkdwa"]
 
 [resource]
 render_priority = 0

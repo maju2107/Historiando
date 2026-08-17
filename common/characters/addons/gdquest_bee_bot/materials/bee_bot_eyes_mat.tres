@@ -1,7 +1,7 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://dx8xfrepk0a68"]
 
-[ext_resource type="Shader" path="res://addons/gdquest_models_shared/shaders/screen_shader.gdshader" id="1_itpnc"]
-[ext_resource type="Texture2D" path="res://addons/gdquest_models_shared/textures/eye_mask.png" id="2_acs8v"]
+[ext_resource type="Shader" path="res://common/characters/addons/gdquest_models_shared/shaders/screen_shader.gdshader" id="1_itpnc"]
+[ext_resource type="Texture2D" path="res://common/characters/addons/gdquest_models_shared/textures/eye_mask.png" id="2_acs8v"]
 
 [resource]
 render_priority = 0

@@ -39,7 +39,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="historiando"
-run/main_scene="uid://baob1qp6nkk4f"
+run/main_scene="res://scenes/telaInicial/TelaInicial.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 
 [audio]
@@ -87,7 +87,7 @@ project/assembly_name="historiando"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/easy_bag/plugin.cfg", "res://addons/rubonnek.inventory_manager/plugin.cfg", "res://addons/simplegrasstextured/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/rubonnek.inventory_manager/plugin.cfg", "res://addons/simplegrasstextured/plugin.cfg")
 
 [file_customization]
 

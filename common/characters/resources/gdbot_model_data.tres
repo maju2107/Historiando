@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="ModelData" format=3 uid="uid://cwp3yy3ku4f0p"]
 
-[ext_resource type="Script" path="res://addons/gdquest_model_viewer_3d/viewer/option_list_data_builder.gd" id="1_qi7lk"]
-[ext_resource type="Script" path="res://addons/gdquest_model_viewer_3d/viewer/model_data_builder.gd" id="2_mcau0"]
-[ext_resource type="Texture2D" path="res://resources/gdbot_vignette.png" id="3_0e4oe"]
+[ext_resource type="Script" path="res://common/characters/addons/gdquest_model_viewer_3d/viewer/option_list_data_builder.gd" id="1_qi7lk"]
+[ext_resource type="Script" path="res://common/characters/addons/gdquest_model_viewer_3d/viewer/model_data_builder.gd" id="2_mcau0"]
+[ext_resource type="Texture2D" path="res://common/characters/resources/gdbot_vignette.png" id="3_0e4oe"]
 
 [sub_resource type="Resource" id="Resource_00o35"]
 script = ExtResource("1_qi7lk")
@@ -14,7 +14,7 @@ options_values = PackedStringArray("Default:default", "Happy:happy", "Dizzy:dizz
 [resource]
 script = ExtResource("2_mcau0")
 name = "GDbot"
-scene_path = "res://addons/gdquest_gdbot/gdbot_skin.tscn"
+scene_path = "res://common/characters/addons/gdquest_gdbot/gdbot_skin.tscn"
 vignette = ExtResource("3_0e4oe")
 scale_compensation = 0.65
 camera_offset_y = 0.6

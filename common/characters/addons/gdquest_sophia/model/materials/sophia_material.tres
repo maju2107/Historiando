@@ -1,9 +1,9 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://bv3j2e7k6f5xf"]
 
-[ext_resource type="Texture2D" path="res://addons/gdquest_sophia/model/sophia_diffuse.png" id="1_m7hxq"]
-[ext_resource type="Texture2D" path="res://addons/gdquest_sophia/model/sophia_roughness.png" id="2_fbyat"]
-[ext_resource type="Texture2D" path="res://addons/gdquest_sophia/model/sophia_normal.png" id="3_tmo2m"]
-[ext_resource type="Texture2D" path="res://addons/gdquest_sophia/model/SSS.png" id="4_luinf"]
+[ext_resource type="Texture2D" path="res://common/characters/addons/gdquest_sophia/model/sophia_diffuse.png" id="1_m7hxq"]
+[ext_resource type="Texture2D" path="res://common/characters/addons/gdquest_sophia/model/sophia_roughness.png" id="2_fbyat"]
+[ext_resource type="Texture2D" path="res://common/characters/addons/gdquest_sophia/model/sophia_normal.png" id="3_tmo2m"]
+[ext_resource type="Texture2D" path="res://common/characters/addons/gdquest_sophia/model/SSS.png" id="4_luinf"]
 
 [resource]
 resource_name = "sophia_material"
