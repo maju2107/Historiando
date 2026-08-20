@@ -10,4 +10,5 @@ item_id = 2
 item_nome = "estrela"
 icone = ExtResource("1_acmob")
 mesh = ExtResource("2_j63wh")
+escala_mundo = Vector3(0.04, 0.04, 0.04)
 metadata/_custom_type_script = "uid://df53xbo8r8dam"

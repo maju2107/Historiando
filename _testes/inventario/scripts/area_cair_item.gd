@@ -56,8 +56,10 @@ func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	node.item_data = data.item
 	
 	# Define a aparência do objeto
-	node.get_node("MeshInstance3D").mesh = data.item.mesh
-	
+	var mesh_instance: MeshInstance3D = node.get_node("MeshInstance3D")
+
+	mesh_instance.mesh = data.item.mesh
+	mesh_instance.scale = data.item.escala_mundo
 	# Coloca o objeto no mundo
 	get_tree().current_scene.add_child(node)
 	

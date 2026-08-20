@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dml2r6trvd3x1"]
 
-[ext_resource type="Texture2D" uid="uid://b7varbgyhplna" path="res://assets/texture/patito.png" id="1_qn0r7"]
+[ext_resource type="Texture2D" uid="uid://bmtq577edghnn" path="res://assets/texture/caixa.png" id="1_qn0r7"]
 [ext_resource type="Script" uid="uid://df53xbo8r8dam" path="res://_testes/inventario/scripts/item_data.gd" id="3_l81fv"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_h3xta"]
@@ -11,3 +11,4 @@ item_id = 3
 item_nome = "caixa"
 icone = ExtResource("1_qn0r7")
 mesh = SubResource("BoxMesh_h3xta")
+escala_mundo = Vector3(0.6, 0.6, 0.6)

@@ -10,4 +10,5 @@ item_id = 1
 item_nome = "coração"
 icone = ExtResource("1_03kef")
 mesh = ExtResource("2_wb0o7")
+escala_mundo = Vector3(0.04, 0.04, 0.04)
 metadata/_custom_type_script = "uid://df53xbo8r8dam"
