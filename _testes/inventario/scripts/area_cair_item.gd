@@ -4,7 +4,7 @@ const ITEM_MUNDO = preload("uid://bpogtba0nttbc")
 
 @onready var camera: Camera3D = get_viewport().get_camera_3d()
 @onready var inventory_grid: GridContainer = _find_inventory_grid()
-
+@onready var player: CharacterBody3D = get_tree().current_scene.find_child("Player", true, false)
 
 func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -14,7 +14,9 @@ func _ready() -> void:
 	
 	if not inventory_grid:
 		push_warning("A grade do inventário não foi encontrada na cena.")
-
+	
+	if not player:
+		push_warning("O Player não foi encontrado na cena.")
 
 func _find_inventory_grid() -> GridContainer:
 	var scene_root := get_tree().current_scene
@@ -68,7 +70,13 @@ func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	data.update_ui()
 	
 	# Posição temporária
-	node.global_position = Vector3(randf(), 1, randf())
+	# Coloca o item na frente do Player,
+	# ignorando a inclinação vertical da câmera
+	var direcao = -camera.global_basis.z
+	direcao.y = 0.0
+	direcao = direcao.normalized()
+
+	node.global_position = player.global_position + direcao * 2.0
 
 
 # =========================================================
