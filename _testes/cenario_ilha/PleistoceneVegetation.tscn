@@ -1,0 +1,671 @@
+[gd_scene load_steps=32 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Trees01/Tree_010.fbx" id="1_araucaria"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Trees01/Tree_009.fbx" id="2_pinheiro"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Trees01/Tree_011.fbx" id="3_pinheiro_esguio"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Trees02/Tree_016.fbx" id="4_galeria"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Trees02/Tree_036.fbx" id="5_cerrado"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Trees02/Tree_031.fbx" id="6_cerrado_esguio"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Trees02/Tree_023.fbx" id="7_palmeira"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Trees02/Tree_010.fbx" id="8_arvore_jovem"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Plants01/Plane_010.fbx" id="9_capim"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Plants01/Plane_014.fbx" id="10_margem"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Plants01/Plane_018.fbx" id="11_samambaia"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Plants01/Plane_026.fbx" id="12_forracao"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Plants01/Spiral.fbx" id="13_broto_samambaia"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Plants02/Plant_010.fbx" id="14_folhagem_alta"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Plants02/Plant_027.fbx" id="15_folhas_largas"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Plants02/Plant_028.fbx" id="16_folhagem_baixa"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Plants02/Plant_030.fbx" id="17_broto"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Flowers/Flower017.fbx" id="18_flores_amarelas"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Flowers/Flower018.fbx" id="19_flores_rosa"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Flowers/Flower020.fbx" id="20_flor_alta"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Flowers/Flower022.fbx" id="21_espiga"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Mushrooms/Mushroom_013.fbx" id="22_cogumelos_baixos"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Mushrooms/Mushroom_019.fbx" id="23_cogumelos_grupo"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Rocks/Rock_001.fbx" id="24_pedra"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Rocks/Rock_009.fbx" id="25_pedra_longa"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Rocks/Rock_011.fbx" id="26_pedra_redonda"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Rocks/Rock_Formation_003.fbx" id="27_formacao_alta"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Rocks/Rock_Formation_005.fbx" id="28_formacao_media"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Rocks/Rock_Formation_010.fbx" id="29_formacao_baixa"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Rocks/Rock_Formation_013.fbx" id="30_monolito"]
+[ext_resource type="PackedScene" path="res://assets/models/creative_trio/Rocks/Rock_Formation_016.fbx" id="31_formacao_larga"]
+
+[node name="VegetacaoPleistocenica" type="Node3D"]
+
+[node name="CampoAberto" type="Node3D" parent="."]
+
+[node name="MataDeGaleria" type="Node3D" parent="."]
+
+[node name="FlorestaDeAltitude" type="Node3D" parent="."]
+
+[node name="EstratoBaixo" type="Node3D" parent="."]
+
+[node name="EstratoRibeirinho" type="Node3D" parent="."]
+
+[node name="FloresDoCampo" type="Node3D" parent="."]
+
+[node name="Fungos" type="Node3D" parent="."]
+
+[node name="Afloramentos" type="Node3D" parent="."]
+
+[node name="CopaOesteSul" parent="CampoAberto" instance=ExtResource("5_cerrado")]
+position = Vector3(2.011, 3.81, 45.535)
+rotation_degrees = Vector3(0, 18.0, 0)
+scale = Vector3(5.2, 5.2, 5.2)
+
+[node name="CopaLesteSul" parent="CampoAberto" instance=ExtResource("5_cerrado")]
+position = Vector3(15.468, 4.149, 57.799)
+rotation_degrees = Vector3(0, -28.0, 0)
+scale = Vector3(5.5, 5.5, 5.5)
+
+[node name="CopaOesteCentral" parent="CampoAberto" instance=ExtResource("5_cerrado")]
+position = Vector3(8.38, 4.04, 20.07)
+rotation_degrees = Vector3(0, 37.0, 0)
+scale = Vector3(4.8, 4.8, 4.8)
+
+[node name="CopaLesteCentral" parent="CampoAberto" instance=ExtResource("5_cerrado")]
+position = Vector3(30.498, 4.135, 34.992)
+rotation_degrees = Vector3(0, -12.0, 0)
+scale = Vector3(5.0, 5.0, 5.0)
+
+[node name="CopaOesteNorte" parent="CampoAberto" instance=ExtResource("5_cerrado")]
+position = Vector3(25.056, 4.036, -15.818)
+rotation_degrees = Vector3(0, 64.0, 0)
+scale = Vector3(5.4, 5.4, 5.4)
+
+[node name="CopaLesteNorte" parent="CampoAberto" instance=ExtResource("5_cerrado")]
+position = Vector3(-2.85, 4.13, 11.91)
+rotation_degrees = Vector3(0, -51.0, 0)
+scale = Vector3(4.8, 4.8, 4.8)
+
+[node name="ArvoreSulOeste" parent="CampoAberto" instance=ExtResource("6_cerrado_esguio")]
+position = Vector3(-1.147, 3.758, 49.032)
+rotation_degrees = Vector3(0, -12.0, 0)
+scale = Vector3(6.0, 6.0, 6.0)
+
+[node name="ArvoreSulLeste" parent="CampoAberto" instance=ExtResource("6_cerrado_esguio")]
+position = Vector3(33.439, 4.019, 37.551)
+rotation_degrees = Vector3(0, 33.0, 0)
+scale = Vector3(6.4, 6.4, 6.4)
+
+[node name="ArvoreLeste" parent="CampoAberto" instance=ExtResource("6_cerrado_esguio")]
+position = Vector3(21.819, 3.788, 36.401)
+rotation_degrees = Vector3(0, -40.0, 0)
+scale = Vector3(6.0, 6.0, 6.0)
+
+[node name="ArvoreJovemSul" parent="CampoAberto" instance=ExtResource("8_arvore_jovem")]
+position = Vector3(13.115, 4.0, 1.225)
+rotation_degrees = Vector3(0, 23.0, 0)
+scale = Vector3(5.2, 5.2, 5.2)
+
+[node name="ArvoreJovemNorte" parent="CampoAberto" instance=ExtResource("8_arvore_jovem")]
+position = Vector3(18.507, 3.71, -33.001)
+rotation_degrees = Vector3(0, -31.0, 0)
+scale = Vector3(5.5, 5.5, 5.5)
+
+[node name="PalmeiraLeste" parent="CampoAberto" instance=ExtResource("7_palmeira")]
+position = Vector3(42.729, 4.0, 10.626)
+rotation_degrees = Vector3(0, 14.0, 0)
+scale = Vector3(3.7, 3.7, 3.7)
+
+[node name="PalmeiraOeste" parent="CampoAberto" instance=ExtResource("7_palmeira")]
+position = Vector3(-7.444, 3.85, 20.233)
+rotation_degrees = Vector3(0, -19.0, 0)
+scale = Vector3(3.4, 3.4, 3.4)
+
+[node name="GaleriaBaseOeste" parent="MataDeGaleria" instance=ExtResource("4_galeria")]
+position = Vector3(24.083, 4.0, 17.453)
+rotation_degrees = Vector3(0, -15.0, 0)
+scale = Vector3(5.0, 5.0, 5.0)
+
+[node name="GaleriaBaseLeste" parent="MataDeGaleria" instance=ExtResource("4_galeria")]
+position = Vector3(28.613, 4.0, 1.162)
+rotation_degrees = Vector3(0, 22.0, 0)
+scale = Vector3(4.8, 4.8, 4.8)
+
+[node name="GaleriaBaixaOeste" parent="MataDeGaleria" instance=ExtResource("8_arvore_jovem")]
+position = Vector3(-2.197, 4.0, -16.258)
+rotation_degrees = Vector3(0, 33.0, 0)
+scale = Vector3(5.2, 5.2, 5.2)
+
+[node name="GaleriaBaixaLeste" parent="MataDeGaleria" instance=ExtResource("4_galeria")]
+position = Vector3(31.057, 4.0, 12.719)
+rotation_degrees = Vector3(0, -28.0, 0)
+scale = Vector3(4.5, 4.5, 4.5)
+
+[node name="GaleriaMediaOeste" parent="MataDeGaleria" instance=ExtResource("6_cerrado_esguio")]
+position = Vector3(10.412, 8.015, 15.031)
+rotation_degrees = Vector3(0, 12.0, 0)
+scale = Vector3(5.0, 5.0, 5.0)
+
+[node name="GaleriaMediaLeste" parent="MataDeGaleria" instance=ExtResource("4_galeria")]
+position = Vector3(28.929, 8.0, 8.337)
+rotation_degrees = Vector3(0, -34.0, 0)
+scale = Vector3(4.4, 4.4, 4.4)
+
+[node name="GaleriaAltaOeste" parent="MataDeGaleria" instance=ExtResource("8_arvore_jovem")]
+position = Vector3(12.904, 8.0, -24.543)
+rotation_degrees = Vector3(0, -18.0, 0)
+scale = Vector3(5.0, 5.0, 5.0)
+
+[node name="GaleriaAltaLeste" parent="MataDeGaleria" instance=ExtResource("4_galeria")]
+position = Vector3(25.912, 7.9, -27.947)
+rotation_degrees = Vector3(0, 26.0, 0)
+scale = Vector3(4.2, 4.2, 4.2)
+
+[node name="AraucariaOeste01" parent="FlorestaDeAltitude" instance=ExtResource("1_araucaria")]
+position = Vector3(-9.912, 9.009, -4.256)
+rotation_degrees = Vector3(0, -18.0, 0)
+scale = Vector3(0.92, 0.92, 0.92)
+
+[node name="AraucariaOeste02" parent="FlorestaDeAltitude" instance=ExtResource("2_pinheiro")]
+position = Vector3(-12.278, 9.217, -5.594)
+rotation_degrees = Vector3(0, 33.0, 0)
+scale = Vector3(0.95, 0.95, 0.95)
+
+[node name="AraucariaLeste01" parent="FlorestaDeAltitude" instance=ExtResource("3_pinheiro_esguio")]
+position = Vector3(15.003, 9.097, 26.727)
+rotation_degrees = Vector3(0, -22.0, 0)
+scale = Vector3(0.95, 0.95, 0.95)
+
+[node name="AraucariaLeste02" parent="FlorestaDeAltitude" instance=ExtResource("1_araucaria")]
+position = Vector3(29.953, 9.127, 13.335)
+rotation_degrees = Vector3(0, 15.0, 0)
+scale = Vector3(0.88, 0.88, 0.88)
+
+[node name="AraucariaCentral01" parent="FlorestaDeAltitude" instance=ExtResource("2_pinheiro")]
+position = Vector3(-0.018, 9.102, -8.437)
+rotation_degrees = Vector3(0, 41.0, 0)
+scale = Vector3(0.86, 0.86, 0.86)
+
+[node name="AraucariaCentral02" parent="FlorestaDeAltitude" instance=ExtResource("3_pinheiro_esguio")]
+position = Vector3(5.428, 8.953, -4.027)
+rotation_degrees = Vector3(0, -37.0, 0)
+scale = Vector3(0.9, 0.9, 0.9)
+
+[node name="AraucariaCentral03" parent="FlorestaDeAltitude" instance=ExtResource("1_araucaria")]
+position = Vector3(2.2, 8.999, 9.692)
+rotation_degrees = Vector3(0, 19.0, 0)
+scale = Vector3(0.78, 0.78, 0.78)
+
+[node name="AraucariaPico01" parent="FlorestaDeAltitude" instance=ExtResource("1_araucaria")]
+position = Vector3(2.975, 13.127, -1.601)
+rotation_degrees = Vector3(0, -12.0, 0)
+scale = Vector3(0.88, 0.88, 0.88)
+
+[node name="AraucariaPico02" parent="FlorestaDeAltitude" instance=ExtResource("2_pinheiro")]
+position = Vector3(13.121, 12.9, -5.727)
+rotation_degrees = Vector3(0, 25.0, 0)
+scale = Vector3(0.82, 0.82, 0.82)
+
+[node name="AraucariaPico03" parent="FlorestaDeAltitude" instance=ExtResource("3_pinheiro_esguio")]
+position = Vector3(-6.124, 12.948, 3.881)
+rotation_degrees = Vector3(0, -33.0, 0)
+scale = Vector3(0.74, 0.74, 0.74)
+
+[node name="CapimCampo01" parent="EstratoBaixo" instance=ExtResource("9_capim")]
+position = Vector3(-40.254, 4.097, 22.851)
+rotation_degrees = Vector3(0, 15.0, 0)
+scale = Vector3(0.42, 0.42, 0.42)
+
+[node name="CapimCampo02" parent="EstratoBaixo" instance=ExtResource("9_capim")]
+position = Vector3(-41.085, 3.996, 2.307)
+rotation_degrees = Vector3(0, -20.0, 0)
+scale = Vector3(0.5, 0.5, 0.5)
+
+[node name="CapimCampo03" parent="EstratoBaixo" instance=ExtResource("9_capim")]
+position = Vector3(-28.514, 4.088, 23.773)
+rotation_degrees = Vector3(0, 42.0, 0)
+scale = Vector3(0.38, 0.38, 0.38)
+
+[node name="CapimCampo04" parent="EstratoBaixo" instance=ExtResource("9_capim")]
+position = Vector3(-45.858, 3.931, 0.554)
+rotation_degrees = Vector3(0, 5.0, 0)
+scale = Vector3(0.48, 0.48, 0.48)
+
+[node name="CapimCampo05" parent="EstratoBaixo" instance=ExtResource("9_capim")]
+position = Vector3(-31.521, 3.949, -17.991)
+rotation_degrees = Vector3(0, -32.0, 0)
+scale = Vector3(0.43, 0.43, 0.43)
+
+[node name="CapimCampo06" parent="EstratoBaixo" instance=ExtResource("9_capim")]
+position = Vector3(-31.859, 3.916, -10.872)
+rotation_degrees = Vector3(0, 27.0, 0)
+scale = Vector3(0.5, 0.5, 0.5)
+
+[node name="CapimCampo07" parent="EstratoBaixo" instance=ExtResource("9_capim")]
+position = Vector3(-12.054, 3.926, -29.218)
+rotation_degrees = Vector3(0, -15.0, 0)
+scale = Vector3(0.46, 0.46, 0.46)
+
+[node name="CapimCampo08" parent="EstratoBaixo" instance=ExtResource("9_capim")]
+position = Vector3(-10.807, 3.87, -0.314)
+rotation_degrees = Vector3(0, 36.0, 0)
+scale = Vector3(0.52, 0.52, 0.52)
+
+[node name="CapimCampo09" parent="EstratoBaixo" instance=ExtResource("9_capim")]
+position = Vector3(9.498, 4.092, -16.417)
+rotation_degrees = Vector3(0, -41.0, 0)
+scale = Vector3(0.4, 0.4, 0.4)
+
+[node name="CapimCampo10" parent="EstratoBaixo" instance=ExtResource("9_capim")]
+position = Vector3(-7.4, 4.102, 21.487)
+rotation_degrees = Vector3(0, 18.0, 0)
+scale = Vector3(0.44, 0.44, 0.44)
+
+[node name="CapimCampo11" parent="EstratoBaixo" instance=ExtResource("9_capim")]
+position = Vector3(-10.182, 4.088, 4.681)
+rotation_degrees = Vector3(0, -10.0, 0)
+scale = Vector3(0.38, 0.38, 0.38)
+
+[node name="CapimCampo12" parent="EstratoBaixo" instance=ExtResource("9_capim")]
+position = Vector3(-22.324, 3.761, -6.397)
+rotation_degrees = Vector3(0, 52.0, 0)
+scale = Vector3(0.48, 0.48, 0.48)
+
+[node name="CapimCampo13" parent="EstratoBaixo" instance=ExtResource("9_capim")]
+position = Vector3(-40.351, 4.072, -3.446)
+rotation_degrees = Vector3(0, -26.0, 0)
+scale = Vector3(0.4, 0.4, 0.4)
+
+[node name="CapimCampo14" parent="EstratoBaixo" instance=ExtResource("9_capim")]
+position = Vector3(2.146, 4.097, 18.595)
+rotation_degrees = Vector3(0, 31.0, 0)
+scale = Vector3(0.42, 0.42, 0.42)
+
+[node name="ForracaoCampo01" parent="EstratoBaixo" instance=ExtResource("12_forracao")]
+position = Vector3(-39.888, 4.091, 26.845)
+rotation_degrees = Vector3(0, 12.0, 0)
+scale = Vector3(0.38, 0.38, 0.38)
+
+[node name="ForracaoCampo02" parent="EstratoBaixo" instance=ExtResource("12_forracao")]
+position = Vector3(-33.751, 3.962, -9.494)
+rotation_degrees = Vector3(0, -19.0, 0)
+scale = Vector3(0.34, 0.34, 0.34)
+
+[node name="ForracaoCampo03" parent="EstratoBaixo" instance=ExtResource("12_forracao")]
+position = Vector3(-32.712, 3.856, -5.535)
+rotation_degrees = Vector3(0, 28.0, 0)
+scale = Vector3(0.4, 0.4, 0.4)
+
+[node name="ForracaoCampo04" parent="EstratoBaixo" instance=ExtResource("12_forracao")]
+position = Vector3(-4.638, 3.976, -25.9)
+rotation_degrees = Vector3(0, -34.0, 0)
+scale = Vector3(0.36, 0.36, 0.36)
+
+[node name="ForracaoCampo05" parent="EstratoBaixo" instance=ExtResource("12_forracao")]
+position = Vector3(-0.347, 4.096, 12.15)
+rotation_degrees = Vector3(0, 15.0, 0)
+scale = Vector3(0.4, 0.4, 0.4)
+
+[node name="ForracaoCampo06" parent="EstratoBaixo" instance=ExtResource("12_forracao")]
+position = Vector3(3.555, 3.947, 35.394)
+rotation_degrees = Vector3(0, 47.0, 0)
+scale = Vector3(0.32, 0.32, 0.32)
+
+[node name="ForracaoCampo07" parent="EstratoBaixo" instance=ExtResource("12_forracao")]
+position = Vector3(-31.196, 4.026, 22.625)
+rotation_degrees = Vector3(0, -12.0, 0)
+scale = Vector3(0.36, 0.36, 0.36)
+
+[node name="ForracaoCampo08" parent="EstratoBaixo" instance=ExtResource("12_forracao")]
+position = Vector3(-4.635, 3.902, -6.841)
+rotation_degrees = Vector3(0, 21.0, 0)
+scale = Vector3(0.34, 0.34, 0.34)
+
+[node name="PlantaMargem01" parent="EstratoRibeirinho" instance=ExtResource("10_margem")]
+position = Vector3(-16.859, 4.097, 23.864)
+rotation_degrees = Vector3(0, 18.0, 0)
+scale = Vector3(0.42, 0.42, 0.42)
+
+[node name="PlantaMargem02" parent="EstratoRibeirinho" instance=ExtResource("10_margem")]
+position = Vector3(-7.307, 4.088, 11.277)
+rotation_degrees = Vector3(0, -25.0, 0)
+scale = Vector3(0.38, 0.38, 0.38)
+
+[node name="PlantaMargem03" parent="EstratoRibeirinho" instance=ExtResource("10_margem")]
+position = Vector3(-14.222, 4.083, 6.728)
+rotation_degrees = Vector3(0, -12.0, 0)
+scale = Vector3(0.36, 0.36, 0.36)
+
+[node name="PlantaMargem04" parent="EstratoRibeirinho" instance=ExtResource("10_margem")]
+position = Vector3(-8.431, 4.092, 17.154)
+rotation_degrees = Vector3(0, 31.0, 0)
+scale = Vector3(0.4, 0.4, 0.4)
+
+[node name="PlantaMargem05" parent="EstratoRibeirinho" instance=ExtResource("10_margem")]
+position = Vector3(-13.335, 8.079, 8.061)
+rotation_degrees = Vector3(0, 22.0, 0)
+scale = Vector3(0.34, 0.34, 0.34)
+
+[node name="PlantaMargem06" parent="EstratoRibeirinho" instance=ExtResource("10_margem")]
+position = Vector3(-7.496, 8.083, -1.977)
+rotation_degrees = Vector3(0, -17.0, 0)
+scale = Vector3(0.36, 0.36, 0.36)
+
+[node name="PlantaMargem07" parent="EstratoRibeirinho" instance=ExtResource("10_margem")]
+position = Vector3(-10.37, 8.074, 6.607)
+rotation_degrees = Vector3(0, 38.0, 0)
+scale = Vector3(0.32, 0.32, 0.32)
+
+[node name="PlantaMargem08" parent="EstratoRibeirinho" instance=ExtResource("10_margem")]
+position = Vector3(-4.818, 8.079, -10.512)
+rotation_degrees = Vector3(0, -33.0, 0)
+scale = Vector3(0.34, 0.34, 0.34)
+
+[node name="PlantaMargem09" parent="EstratoRibeirinho" instance=ExtResource("10_margem")]
+position = Vector3(-13.413, 12.069, -4.967)
+rotation_degrees = Vector3(0, 14.0, 0)
+scale = Vector3(0.3, 0.3, 0.3)
+
+[node name="PlantaMargem10" parent="EstratoRibeirinho" instance=ExtResource("10_margem")]
+position = Vector3(-4.917, 12.074, -13.74)
+rotation_degrees = Vector3(0, -21.0, 0)
+scale = Vector3(0.32, 0.32, 0.32)
+
+[node name="FolhagemMargem01" parent="EstratoRibeirinho" instance=ExtResource("14_folhagem_alta")]
+position = Vector3(-20.783, 4.376, 16.976)
+rotation_degrees = Vector3(0, 11.0, 0)
+scale = Vector3(0.24, 0.24, 0.24)
+
+[node name="FolhagemMargem02" parent="EstratoRibeirinho" instance=ExtResource("14_folhagem_alta")]
+position = Vector3(-12.77, 4.407, 3.689)
+rotation_degrees = Vector3(0, -23.0, 0)
+scale = Vector3(0.26, 0.26, 0.26)
+
+[node name="FolhagemMargem03" parent="EstratoRibeirinho" instance=ExtResource("14_folhagem_alta")]
+position = Vector3(-14.749, 4.344, 16.234)
+rotation_degrees = Vector3(0, 38.0, 0)
+scale = Vector3(0.22, 0.22, 0.22)
+
+[node name="FolhagemMargem04" parent="EstratoRibeirinho" instance=ExtResource("14_folhagem_alta")]
+position = Vector3(-9.693, 4.376, -5.525)
+rotation_degrees = Vector3(0, -31.0, 0)
+scale = Vector3(0.24, 0.24, 0.24)
+
+[node name="FolhagemMargem05" parent="EstratoRibeirinho" instance=ExtResource("14_folhagem_alta")]
+position = Vector3(-19.967, 8.344, 5.674)
+rotation_degrees = Vector3(0, 14.0, 0)
+scale = Vector3(0.22, 0.22, 0.22)
+
+[node name="FolhagemMargem06" parent="EstratoRibeirinho" instance=ExtResource("14_folhagem_alta")]
+position = Vector3(-8.421, 8.313, -5.323)
+rotation_degrees = Vector3(0, -18.0, 0)
+scale = Vector3(0.2, 0.2, 0.2)
+
+[node name="FolhagemMargem07" parent="EstratoRibeirinho" instance=ExtResource("14_folhagem_alta")]
+position = Vector3(-14.802, 12.282, 1.441)
+rotation_degrees = Vector3(0, 30.0, 0)
+scale = Vector3(0.18, 0.18, 0.18)
+
+[node name="FolhagemMargem08" parent="EstratoRibeirinho" instance=ExtResource("14_folhagem_alta")]
+position = Vector3(-6.592, 12.297, -13.785)
+rotation_degrees = Vector3(0, -27.0, 0)
+scale = Vector3(0.19, 0.19, 0.19)
+
+[node name="Samambaia01" parent="EstratoRibeirinho" instance=ExtResource("11_samambaia")]
+position = Vector3(-16.351, 4.055, 14.57)
+rotation_degrees = Vector3(0, -12.0, 0)
+scale = Vector3(0.24, 0.24, 0.24)
+
+[node name="Samambaia02" parent="EstratoRibeirinho" instance=ExtResource("11_samambaia")]
+position = Vector3(-1.194, 4.051, 21.869)
+rotation_degrees = Vector3(0, 28.0, 0)
+scale = Vector3(0.22, 0.22, 0.22)
+
+[node name="Samambaia03" parent="EstratoRibeirinho" instance=ExtResource("11_samambaia")]
+position = Vector3(-12.477, 4.046, 15.5)
+rotation_degrees = Vector3(0, 41.0, 0)
+scale = Vector3(0.2, 0.2, 0.2)
+
+[node name="Samambaia04" parent="EstratoRibeirinho" instance=ExtResource("11_samambaia")]
+position = Vector3(0.057, 4.051, 1.008)
+rotation_degrees = Vector3(0, -33.0, 0)
+scale = Vector3(0.22, 0.22, 0.22)
+
+[node name="Samambaia05" parent="EstratoRibeirinho" instance=ExtResource("11_samambaia")]
+position = Vector3(-15.826, 8.044, 0.538)
+rotation_degrees = Vector3(0, 18.0, 0)
+scale = Vector3(0.19, 0.19, 0.19)
+
+[node name="Samambaia06" parent="EstratoRibeirinho" instance=ExtResource("11_samambaia")]
+position = Vector3(-1.955, 8.046, -5.733)
+rotation_degrees = Vector3(0, -20.0, 0)
+scale = Vector3(0.2, 0.2, 0.2)
+
+[node name="Samambaia07" parent="EstratoRibeirinho" instance=ExtResource("11_samambaia")]
+position = Vector3(-11.125, 12.037, -5.495)
+rotation_degrees = Vector3(0, 34.0, 0)
+scale = Vector3(0.16, 0.16, 0.16)
+
+[node name="Samambaia08" parent="EstratoRibeirinho" instance=ExtResource("11_samambaia")]
+position = Vector3(-0.107, 11.822, -16.168)
+rotation_degrees = Vector3(0, -29.0, 0)
+scale = Vector3(0.18, 0.18, 0.18)
+
+[node name="FolhasLargas01" parent="EstratoRibeirinho" instance=ExtResource("15_folhas_largas")]
+position = Vector3(-23.936, 4.428, 23.165)
+rotation_degrees = Vector3(0, 18.0, 0)
+scale = Vector3(0.28, 0.28, 0.28)
+
+[node name="FolhasLargas02" parent="EstratoRibeirinho" instance=ExtResource("15_folhas_largas")]
+position = Vector3(-8.14, 4.397, 7.869)
+rotation_degrees = Vector3(0, -24.0, 0)
+scale = Vector3(0.26, 0.26, 0.26)
+
+[node name="FolhasLargas03" parent="EstratoRibeirinho" instance=ExtResource("15_folhas_largas")]
+position = Vector3(-19.343, 4.366, 17.921)
+rotation_degrees = Vector3(0, 36.0, 0)
+scale = Vector3(0.24, 0.24, 0.24)
+
+[node name="FolhasLargas04" parent="EstratoRibeirinho" instance=ExtResource("15_folhas_largas")]
+position = Vector3(-6.594, 4.382, -3.977)
+rotation_degrees = Vector3(0, -31.0, 0)
+scale = Vector3(0.25, 0.25, 0.25)
+
+[node name="FolhasLargas05" parent="EstratoRibeirinho" instance=ExtResource("15_folhas_largas")]
+position = Vector3(-22.467, 8.336, -0.175)
+rotation_degrees = Vector3(0, 12.0, 0)
+scale = Vector3(0.22, 0.22, 0.22)
+
+[node name="FolhasLargas06" parent="EstratoRibeirinho" instance=ExtResource("15_folhas_largas")]
+position = Vector3(-5.424, 8.305, -7.981)
+rotation_degrees = Vector3(0, -17.0, 0)
+scale = Vector3(0.2, 0.2, 0.2)
+
+[node name="BrotoSamambaia01" parent="EstratoRibeirinho" instance=ExtResource("13_broto_samambaia")]
+position = Vector3(-37.28, 4.129, 17.383)
+rotation_degrees = Vector3(0, -12.0, 0)
+scale = Vector3(0.56, 0.56, 0.56)
+
+[node name="BrotoSamambaia02" parent="EstratoRibeirinho" instance=ExtResource("13_broto_samambaia")]
+position = Vector3(-16.734, 4.116, 34.117)
+rotation_degrees = Vector3(0, 23.0, 0)
+scale = Vector3(0.5, 0.5, 0.5)
+
+[node name="BrotoSamambaia03" parent="EstratoRibeirinho" instance=ExtResource("13_broto_samambaia")]
+position = Vector3(-27.464, 4.12, 31.295)
+rotation_degrees = Vector3(0, 31.0, 0)
+scale = Vector3(0.52, 0.52, 0.52)
+
+[node name="BrotoSamambaia04" parent="EstratoRibeirinho" instance=ExtResource("13_broto_samambaia")]
+position = Vector3(-22.954, 4.127, -1.671)
+rotation_degrees = Vector3(0, -28.0, 0)
+scale = Vector3(0.55, 0.55, 0.55)
+
+[node name="BrotoSamambaia05" parent="EstratoRibeirinho" instance=ExtResource("13_broto_samambaia")]
+position = Vector3(-30.268, 8.111, 14.277)
+rotation_degrees = Vector3(0, 18.0, 0)
+scale = Vector3(0.48, 0.48, 0.48)
+
+[node name="BrotoSamambaia06" parent="EstratoRibeirinho" instance=ExtResource("13_broto_samambaia")]
+position = Vector3(-17.918, 8.102, -7.86)
+rotation_degrees = Vector3(0, -22.0, 0)
+scale = Vector3(0.44, 0.44, 0.44)
+
+[node name="BrotoSamambaia07" parent="EstratoRibeirinho" instance=ExtResource("13_broto_samambaia")]
+position = Vector3(-26.023, 12.092, -1.075)
+rotation_degrees = Vector3(0, 15.0, 0)
+scale = Vector3(0.4, 0.4, 0.4)
+
+[node name="FloresCampo01" parent="FloresDoCampo" instance=ExtResource("18_flores_amarelas")]
+position = Vector3(-17.201, 4.256, 24.361)
+rotation_degrees = Vector3(0, 15.0, 0)
+scale = Vector3(0.34, 0.34, 0.34)
+
+[node name="FloresCampo02" parent="FloresDoCampo" instance=ExtResource("19_flores_rosa")]
+position = Vector3(-16.813, 4.226, 19.754)
+rotation_degrees = Vector3(0, -24.0, 0)
+scale = Vector3(0.3, 0.3, 0.3)
+
+[node name="FloresCampo03" parent="FloresDoCampo" instance=ExtResource("18_flores_amarelas")]
+position = Vector3(-17.533, 3.931, 8.102)
+rotation_degrees = Vector3(0, 37.0, 0)
+scale = Vector3(0.32, 0.32, 0.32)
+
+[node name="FloresCampo04" parent="FloresDoCampo" instance=ExtResource("19_flores_rosa")]
+position = Vector3(9.519, 4.036, -3.858)
+rotation_degrees = Vector3(0, -18.0, 0)
+scale = Vector3(0.34, 0.34, 0.34)
+
+[node name="FloresCampo05" parent="FloresDoCampo" instance=ExtResource("18_flores_amarelas")]
+position = Vector3(17.14, 4.226, 25.079)
+rotation_degrees = Vector3(0, 28.0, 0)
+scale = Vector3(0.3, 0.3, 0.3)
+
+[node name="FloresCampo06" parent="FloresDoCampo" instance=ExtResource("19_flores_rosa")]
+position = Vector3(-14.694, 4.121, -15.011)
+rotation_degrees = Vector3(0, -31.0, 0)
+scale = Vector3(0.32, 0.32, 0.32)
+
+[node name="FlorAlta01" parent="FloresDoCampo" instance=ExtResource("20_flor_alta")]
+position = Vector3(-18.349, 3.866, 7.987)
+rotation_degrees = Vector3(0, 12.0, 0)
+scale = Vector3(0.26, 0.26, 0.26)
+
+[node name="FlorAlta02" parent="FloresDoCampo" instance=ExtResource("21_espiga")]
+position = Vector3(11.794, 4.192, -7.452)
+rotation_degrees = Vector3(0, -22.0, 0)
+scale = Vector3(0.24, 0.24, 0.24)
+
+[node name="FlorAlta03" parent="FloresDoCampo" instance=ExtResource("20_flor_alta")]
+position = Vector3(-6.494, 4.128, -14.084)
+rotation_degrees = Vector3(0, 35.0, 0)
+scale = Vector3(0.25, 0.25, 0.25)
+
+[node name="FlorAlta04" parent="FloresDoCampo" instance=ExtResource("21_espiga")]
+position = Vector3(15.703, 4.184, 21.718)
+rotation_degrees = Vector3(0, -31.0, 0)
+scale = Vector3(0.23, 0.23, 0.23)
+
+[node name="Cogumelos01" parent="Fungos" instance=ExtResource("22_cogumelos_baixos")]
+position = Vector3(-2.908, 4.256, 17.366)
+rotation_degrees = Vector3(0, 15.0, 0)
+scale = Vector3(0.12, 0.12, 0.12)
+
+[node name="Cogumelos02" parent="Fungos" instance=ExtResource("23_cogumelos_grupo")]
+position = Vector3(8.663, 4.235, 17.323)
+rotation_degrees = Vector3(0, -24.0, 0)
+scale = Vector3(0.11, 0.11, 0.11)
+
+[node name="Cogumelos03" parent="Fungos" instance=ExtResource("22_cogumelos_baixos")]
+position = Vector3(-2.934, 4.213, 8.017)
+rotation_degrees = Vector3(0, 32.0, 0)
+scale = Vector3(0.1, 0.1, 0.1)
+
+[node name="Cogumelos04" parent="Fungos" instance=ExtResource("23_cogumelos_grupo")]
+position = Vector3(8.501, 4.235, 8.307)
+rotation_degrees = Vector3(0, -28.0, 0)
+scale = Vector3(0.11, 0.11, 0.11)
+
+[node name="Cogumelos05" parent="Fungos" instance=ExtResource("22_cogumelos_baixos")]
+position = Vector3(-5.217, 8.213, 0.129)
+rotation_degrees = Vector3(0, 17.0, 0)
+scale = Vector3(0.1, 0.1, 0.1)
+
+[node name="Cogumelos06" parent="Fungos" instance=ExtResource("23_cogumelos_grupo")]
+position = Vector3(6.427, 8.192, 2.714)
+rotation_degrees = Vector3(0, -21.0, 0)
+scale = Vector3(0.09, 0.09, 0.09)
+
+[node name="RochasCachoeiraBaseOeste" parent="Afloramentos" instance=ExtResource("28_formacao_media")]
+position = Vector3(26.559, 5.953, -2.542)
+rotation_degrees = Vector3(0, 18.0, 0)
+scale = Vector3(0.85, 0.85, 0.85)
+
+[node name="RochasCachoeiraBaseLeste" parent="Afloramentos" instance=ExtResource("29_formacao_baixa")]
+position = Vector3(64.735, 6.071, 34.23)
+rotation_degrees = Vector3(0, -22.0, 0)
+scale = Vector3(0.9, 0.9, 0.9)
+
+[node name="PedraCorregoBaseOeste" parent="Afloramentos" instance=ExtResource("24_pedra")]
+position = Vector3(41.696, 6.298, -50.197)
+rotation_degrees = Vector3(0, 31.0, 0)
+scale = Vector3(1.0, 1.0, 1.0)
+
+[node name="PedraCorregoBaseLeste" parent="Afloramentos" instance=ExtResource("25_pedra_longa")]
+position = Vector3(73.608, 6.413, 3.274)
+rotation_degrees = Vector3(0, -17.0, 0)
+scale = Vector3(1.05, 1.05, 1.05)
+
+[node name="RochasPiscinaMediaOeste" parent="Afloramentos" instance=ExtResource("28_formacao_media")]
+position = Vector3(23.796, 9.655, -15.955)
+rotation_degrees = Vector3(0, 14.0, 0)
+scale = Vector3(0.72, 0.72, 0.72)
+
+[node name="PedraPiscinaMediaLeste" parent="Afloramentos" instance=ExtResource("26_pedra_redonda")]
+position = Vector3(61.887, 10.198, -0.209)
+rotation_degrees = Vector3(0, -28.0, 0)
+scale = Vector3(1.0, 1.0, 1.0)
+
+[node name="PedraCorregoMedioOeste" parent="Afloramentos" instance=ExtResource("24_pedra")]
+position = Vector3(32.243, 10.068, -63.683)
+rotation_degrees = Vector3(0, 37.0, 0)
+scale = Vector3(0.9, 0.9, 0.9)
+
+[node name="PedraCorregoMedioLeste" parent="Afloramentos" instance=ExtResource("25_pedra_longa")]
+position = Vector3(65.993, 10.114, 2.32)
+rotation_degrees = Vector3(0, -31.0, 0)
+scale = Vector3(0.92, 0.92, 0.92)
+
+[node name="RochasPiscinaTopoOeste" parent="Afloramentos" instance=ExtResource("29_formacao_baixa")]
+position = Vector3(38.598, 13.565, -26.17)
+rotation_degrees = Vector3(0, 16.0, 0)
+scale = Vector3(0.68, 0.68, 0.68)
+
+[node name="PedraPiscinaTopoLeste" parent="Afloramentos" instance=ExtResource("26_pedra_redonda")]
+position = Vector3(51.657, 13.884, -12.582)
+rotation_degrees = Vector3(0, -24.0, 0)
+scale = Vector3(0.82, 0.82, 0.82)
+
+[node name="AfloramentoOeste" parent="Afloramentos" instance=ExtResource("27_formacao_alta")]
+position = Vector3(25.102, 6.207, -47.38)
+rotation_degrees = Vector3(0, 28.0, 0)
+scale = Vector3(1.05, 1.05, 1.05)
+
+[node name="AfloramentoLeste" parent="Afloramentos" instance=ExtResource("31_formacao_larga")]
+position = Vector3(54.622, 6.081, 3.095)
+rotation_degrees = Vector3(0, -35.0, 0)
+scale = Vector3(0.9, 0.9, 0.9)
+
+[node name="MonolitoNorte" parent="Afloramentos" instance=ExtResource("30_monolito")]
+position = Vector3(29.71, 5.659, -38.76)
+rotation_degrees = Vector3(0, 14.0, 0)
+scale = Vector3(0.82, 0.82, 0.82)
+
+[node name="RochasMorroOeste" parent="Afloramentos" instance=ExtResource("27_formacao_alta")]
+position = Vector3(26.044, 9.803, -9.715)
+rotation_degrees = Vector3(0, -22.0, 0)
+scale = Vector3(0.78, 0.78, 0.78)
+
+[node name="RochasMorroLeste" parent="Afloramentos" instance=ExtResource("31_formacao_larga")]
+position = Vector3(38.504, 9.618, -15.137)
+rotation_degrees = Vector3(0, 31.0, 0)
+scale = Vector3(0.7, 0.7, 0.7)
+
+[node name="RochasDoPico" parent="Afloramentos" instance=ExtResource("30_monolito")]
+position = Vector3(33.195, 13.216, -13.34)
+rotation_degrees = Vector3(0, -16.0, 0)
+scale = Vector3(0.62, 0.62, 0.62)
