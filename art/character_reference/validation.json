@@ -1,0 +1,14 @@
+{
+  "blend_reopened": true,
+  "packed_reference": true,
+  "mesh_objects": 368,
+  "curve_objects": 356,
+  "curl_clumps": 285,
+  "rigged": false,
+  "previews": [
+    "three_quarter.png",
+    "front.png",
+    "side.png",
+    "back.png"
+  ]
+}

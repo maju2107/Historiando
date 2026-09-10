@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://div46k8jl0eh"
-path="res://.godot/imported/Plane_011.fbx-e100ace99b9c9dcef2f1e524af1e4c32.scn"
+path="res://.godot/imported/Plane_011.fbx-c686a0b36cb296d512837101f76eb898.scn"
 
 [deps]
 
-source_file="res://assets/models/creative_trio/Plants01/Plane_011.fbx"
-dest_files=["res://.godot/imported/Plane_011.fbx-e100ace99b9c9dcef2f1e524af1e4c32.scn"]
+source_file="res://assets/models/Plants01/Plane_011.fbx"
+dest_files=["res://.godot/imported/Plane_011.fbx-c686a0b36cb296d512837101f76eb898.scn"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cwpc8wxb86de"
-path="res://.godot/imported/Mushroom.fbx-43dfc05a890eca33177468f7a84432cd.scn"
+path="res://.godot/imported/Mushroom.fbx-dcbee2fba2f16683fbe9e9802314925b.scn"
 
 [deps]
 
-source_file="res://assets/models/creative_trio/Mushrooms/Mushroom.fbx"
-dest_files=["res://.godot/imported/Mushroom.fbx-43dfc05a890eca33177468f7a84432cd.scn"]
+source_file="res://assets/models/Mushrooms/Mushroom.fbx"
+dest_files=["res://.godot/imported/Mushroom.fbx-dcbee2fba2f16683fbe9e9802314925b.scn"]
 
 [params]
 

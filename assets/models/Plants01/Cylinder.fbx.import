@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cn12mo6gk0apb"
-path="res://.godot/imported/Cylinder.fbx-50f3c72163e8e1a2a6b6b0e900ff6431.scn"
+path="res://.godot/imported/Cylinder.fbx-97be2e2002697cfa663efaa167bf5f1e.scn"
 
 [deps]
 
-source_file="res://assets/models/creative_trio/Plants01/Cylinder.fbx"
-dest_files=["res://.godot/imported/Cylinder.fbx-50f3c72163e8e1a2a6b6b0e900ff6431.scn"]
+source_file="res://assets/models/Plants01/Cylinder.fbx"
+dest_files=["res://.godot/imported/Cylinder.fbx-97be2e2002697cfa663efaa167bf5f1e.scn"]
 
 [params]
 

@@ -7,6 +7,13 @@ extends CharacterBody3D
 @export var jump_velocity := 6.5
 @export var model_turn_speed := 10.0
 
+@export_category("Camera")
+@export var follow_behind := false
+@export_range(-60.0, 0.0) var follow_pitch_degrees := -18.0
+@export_range(0.5, 15.0, 0.5) var camera_turn_speed := 4.0
+var _movement_basis := Basis.IDENTITY
+var _stick_was_active := false
+
 
 
 #acesso a camera_pivo e camera para visão presa ao player
@@ -44,6 +51,9 @@ var joystick_sensitivity = 2.5
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	anim_player.play("Idle")
+	if follow_behind:
+		last_moviment_dir = gobot.global_basis.z.normalized()
+		_update_follow_camera()
 	if not gear_container:
 		push_warning("O HUD do jogador não foi encontrado; a contagem ficará desativada.")
 	_update_life_hud()
@@ -52,15 +62,15 @@ func _unhandled_input(event: InputEvent) -> void:
 	var is_camera_motion := (
 		event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
 	)
-	if is_camera_motion:
+	if is_camera_motion and not follow_behind:
 		camera_rotation += event.screen_relative * mouse_sensitivity
-	
+
 
 func  _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		
-		
+
+
 	if Input.is_action_just_pressed("left_click"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
@@ -68,27 +78,28 @@ func _physics_process(delta: float) -> void:
 	if not can_move or is_dead:
 		return
 
-	# rotação da camera
-	
-	#leitura do analógico direito
-	var joy_x = Input.get_joy_axis(0, JOY_AXIS_RIGHT_X) # eixo horizontal
-	var joy_y = Input.get_joy_axis(0, JOY_AXIS_RIGHT_Y) # eixo vertical
+	if not follow_behind:
+		# rotação da camera
 
-	#atualiza rotação da câmera com joystick
-	camera_rotation.x += joy_x * joystick_sensitivity
-	camera_rotation.y += joy_y * joystick_sensitivity
-	
-	#rotação com o mouse
-	camera_pivo.rotation.x += camera_rotation.y * delta
-	camera_pivo.rotation.x = clamp(camera_pivo.rotation.x, deg_to_rad(-75), deg_to_rad(20))
-	camera_pivo.rotation.y -= camera_rotation.x * delta
-	
-	camera_rotation = Vector2.ZERO
-	
+		#leitura do analógico direito
+		var joy_x = Input.get_joy_axis(0, JOY_AXIS_RIGHT_X) # eixo horizontal
+		var joy_y = Input.get_joy_axis(0, JOY_AXIS_RIGHT_Y) # eixo vertical
+
+		#atualiza rotação da câmera com joystick
+		camera_rotation.x += joy_x * joystick_sensitivity
+		camera_rotation.y += joy_y * joystick_sensitivity
+
+		#rotação com o mouse
+		camera_pivo.rotation.x += camera_rotation.y * delta
+		camera_pivo.rotation.x = clamp(camera_pivo.rotation.x, deg_to_rad(-75), deg_to_rad(20))
+		camera_pivo.rotation.y -= camera_rotation.x * delta
+
+		camera_rotation = Vector2.ZERO
+
 	#gravidade
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-		
+
 	is_jumping = Input.is_action_just_pressed("ui_accept") and is_on_floor()
 
 	#pulo
@@ -97,8 +108,15 @@ func _physics_process(delta: float) -> void:
 
 	#movimentação padrão
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	var forward := camera.global_basis.z
-	var right := camera.global_basis.x
+	# Mantem a referencia enquanto o stick esta pressionado para a camera
+	# nao transformar uma direcao mantida em movimento circular.
+	var active := input_dir.length() > 0.1
+	if follow_behind and active and not _stick_was_active:
+		_movement_basis = camera.global_basis
+	_stick_was_active = active
+	var movement_basis := _movement_basis if follow_behind else camera.global_basis
+	var forward := movement_basis.z
+	var right := movement_basis.x
 	forward.y = 0.0
 	right.y = 0.0
 	forward = forward.normalized()
@@ -107,26 +125,42 @@ func _physics_process(delta: float) -> void:
 	direction.y = 0.0
 	direction = direction.normalized()
 
-	var is_running := Input.is_action_pressed("sprint")
+	var is_running := InputMap.has_action("sprint") and Input.is_action_pressed("sprint")
 	var movement_speed := run_speed if is_running else walk_speed
-	
+
 	if is_on_floor():
 		velocity.x = direction.x * movement_speed
 		velocity.z = direction.z * movement_speed
-	
+
 	_handle_animation(is_running)
 	move_and_slide()
-	
-	
+
+
 	if direction.length() >0.1:
 		last_moviment_dir = direction
-	
+
 	var target_angle := Vector3.BACK.signed_angle_to(last_moviment_dir, Vector3.UP)
 	gobot.global_rotation.y = lerp_angle(
 		gobot.global_rotation.y,
 		target_angle,
 		minf(model_turn_speed * delta, 1.0)
 	)
+
+	if follow_behind:
+		_update_follow_camera(delta)
+
+
+func _update_follow_camera(delta: float = 0.0) -> void:
+	# O modelo olha para +Z; a camera fica no lado oposto, olhando para ele.
+	var target_yaw := gobot.global_rotation.y + PI
+	# Inicializa alinhada; durante o movimento, suaviza pelo menor arco.
+	var weight := 1.0 if delta <= 0.0 else 1.0 - exp(-camera_turn_speed * delta)
+	camera_pivo.global_rotation = Vector3(
+		deg_to_rad(follow_pitch_degrees),
+		lerp_angle(camera_pivo.global_rotation.y, target_yaw, weight), 0.0
+	)
+	camera_rotation = Vector2.ZERO
+
 
 func _handle_animation(is_running: bool) -> void:
 	if not is_on_floor():
@@ -150,7 +184,7 @@ func collect_gear():
 	gears += 1
 	if gear_container and gear_container.has_method("update_gear"):
 		gear_container.update_gear(gears)
-	
+
 
 func take_damage(amount: int = 1) -> void:
 	if amount <= 0 or is_dead or is_invulnerable:
@@ -197,8 +231,3 @@ func _die() -> void:
 	else:
 		push_warning("A interface GameOver não foi encontrada na cena.")
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		
-		
-
-
-	

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cybi15saf7gon"
-path="res://.godot/imported/Flower022.fbx-8e8362c251f4c805421e328f69e6fc7f.scn"
+path="res://.godot/imported/Flower022.fbx-8582b21f9c029534bdd8bb202281127f.scn"
 
 [deps]
 
-source_file="res://assets/models/creative_trio/Flowers/Flower022.fbx"
-dest_files=["res://.godot/imported/Flower022.fbx-8e8362c251f4c805421e328f69e6fc7f.scn"]
+source_file="res://assets/models/Flowers/Flower022.fbx"
+dest_files=["res://.godot/imported/Flower022.fbx-8582b21f9c029534bdd8bb202281127f.scn"]
 
 [params]
 

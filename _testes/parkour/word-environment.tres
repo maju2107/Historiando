@@ -1,17 +1,17 @@
 [gd_resource type="Environment" format=3 uid="uid://db68r5ch3eg8r"]
 
-[ext_resource type="Texture2D" uid="uid://6agfyfu0nqrg" path="res://assets/texture/citrus_orchard_road_puresky.webp" id="1_qifcq"]
+[ext_resource type="Texture2D" uid="uid://rt3i4u7ia0rp" path="res://assets/texture/Skyboxes/skybox-alien.png" id="1_5g2fn"]
 
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tqr4o"]
-panorama = ExtResource("1_qifcq")
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_3jrbu"]
+panorama = ExtResource("1_5g2fn")
 
-[sub_resource type="Sky" id="Sky_30rha"]
-sky_material = SubResource("PanoramaSkyMaterial_tqr4o")
+[sub_resource type="Sky" id="Sky_wcdg5"]
+sky_material = SubResource("PanoramaSkyMaterial_3jrbu")
 
 [resource]
 background_mode = 2
 background_energy_multiplier = 1.31
-sky = SubResource("Sky_30rha")
+sky = SubResource("Sky_wcdg5")
 tonemap_mode = 2
 ssao_radius = 0.01
 fog_enabled = true

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://w210tnq0s4yu"
-path="res://.godot/imported/Spiral.fbx-2e99ba556ef59bd2c28be551968850c5.scn"
+path="res://.godot/imported/Spiral.fbx-905a832a24e30806f952305c1759e34a.scn"
 
 [deps]
 
-source_file="res://assets/models/creative_trio/Plants01/Spiral.fbx"
-dest_files=["res://.godot/imported/Spiral.fbx-2e99ba556ef59bd2c28be551968850c5.scn"]
+source_file="res://assets/models/Plants01/Spiral.fbx"
+dest_files=["res://.godot/imported/Spiral.fbx-905a832a24e30806f952305c1759e34a.scn"]
 
 [params]
 
