@@ -62,7 +62,7 @@ light_energy = 1.3
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=493027666 instance=ExtResource("2_player")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 4.6, 22)
+transform = Transform3D(0.7702597, 0, -0.63773036, 0, 1, 0, 0.63773036, 0, 0.7702597, 0.8504281, 13.356521, -8.061268)
 follow_behind = true
 
 [node name="Terrain" type="Node3D" parent="." unique_id=180770518]
