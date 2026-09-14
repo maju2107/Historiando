@@ -1,0 +1,28 @@
+{
+  "blend_reopened": true,
+  "object": "Chibi Base \u00b7 editable mesh",
+  "vertices": 807,
+  "edges": 1610,
+  "faces": 805,
+  "triangles": 1610,
+  "all_quad_faces": true,
+  "connected_components": [
+    807
+  ],
+  "nonmanifold_edges": [],
+  "degenerate_faces": [],
+  "asymmetric_vertices": [],
+  "nonadjacent_face_intersections": [],
+  "signed_volume": 0.9649978256662447,
+  "finite_coordinates": true,
+  "height": 4.04,
+  "uv_layers": 1,
+  "packed_reference_images": [
+    "WhatsApp Image 2026-09-12 at 12.03.20.jpeg"
+  ],
+  "subdivision_disabled": true,
+  "exports": {
+    "Chibi_Reference_Base.glb": 110128,
+    "Chibi_Reference_Base.obj": 109713
+  }
+}

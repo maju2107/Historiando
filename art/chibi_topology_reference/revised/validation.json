@@ -1,0 +1,62 @@
+{
+  "blend_reopened": true,
+  "object": "Chibi Base \u00b7 editable mesh",
+  "vertices": 1691,
+  "edges": 3378,
+  "faces": 1689,
+  "triangles": 3378,
+  "all_quad_faces": true,
+  "connected_components": [
+    1691
+  ],
+  "nonmanifold_edges": [],
+  "degenerate_faces": [],
+  "asymmetric_vertices": [],
+  "nonadjacent_face_intersections": [],
+  "signed_volume": 0.969492641232444,
+  "finite_coordinates": true,
+  "height": 4.04,
+  "uv_layers": 1,
+  "five_fingers_per_hand": {
+    "L": true,
+    "R": true
+  },
+  "finger_vertex_groups": {
+    "L": [
+      "Finger / thumb.L",
+      "Finger / index.L",
+      "Finger / middle.L",
+      "Finger / ring.L",
+      "Finger / little.L"
+    ],
+    "R": [
+      "Finger / thumb.R",
+      "Finger / index.R",
+      "Finger / middle.R",
+      "Finger / ring.R",
+      "Finger / little.R"
+    ]
+  },
+  "perineum_bridge_quads": 8,
+  "patella_contour_quads_per_knee": {
+    "L": 10,
+    "R": 10
+  },
+  "knee_60_degree_test": {
+    "nonadjacent_face_intersections": [],
+    "degenerate_faces": [],
+    "signed_volume": 0.9701562602897258,
+    "saved_shape_key_value": 0.0
+  },
+  "packed_reference_images": [
+    "download (4).jpg",
+    "download (5).jpg",
+    "Modeling hips on characters_.jpg",
+    "WhatsApp Image 2026-09-12 at 12.03.20.jpeg"
+  ],
+  "subdivision_disabled": true,
+  "exports": {
+    "Chibi_Topology_Corrigida.glb": 234792,
+    "Chibi_Topology_Corrigida.obj": 242153
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "blend_reopened": true,
+  "blend_file": "C:\\Users\\obran\\OneDrive\\Documentos\\GitHub\\Historiando\\art\\chibi_base\\Chibi_Base.blend",
+  "active_scene": "Chibi_Character_Base",
+  "active_camera": "Character_Camera",
+  "logical_collections": [
+    "Accessories",
+    "Body",
+    "Hair",
+    "Head",
+    "Pants",
+    "Shoes",
+    "Torso"
+  ],
+  "mesh_objects": 67,
+  "curve_objects": 11,
+  "raw_vertices": 10995,
+  "raw_polygons": 11407,
+  "degenerate_raw_faces": 0,
+  "shoe_sole_minimum_world_z": {
+    "Shoe_Flat_Sole_L": 0.0,
+    "Shoe_Flat_Sole_R": 0.0
+  },
+  "packed_reference_count": 1,
+  "packed_reference_images": [
+    "WhatsApp Image 2026-09-10 at 17.27.48.jpeg"
+  ]
+}

@@ -6,12 +6,15 @@ extends Node3D
 @onready var interaction_prompt: Label3D = $InteractionPrompt
 @onready var dialogue_bubble_anchor: Marker3D = $DialogueBubbleAnchor
 
+@onready var anim_player: AnimationPlayer = $AnimationPlayer
+
 var player_nearby: CharacterBody3D
 var dialogue_active := false
 var player_could_move := true
 
 
 func _ready() -> void:
+	anim_player.play("Idle", 0.2)
 	interaction_prompt.hide()
 	interaction_area.body_entered.connect(_on_body_entered)
 	interaction_area.body_exited.connect(_on_body_exited)
