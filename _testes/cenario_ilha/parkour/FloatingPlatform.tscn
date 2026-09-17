@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://_testes/cenario_ilha/parkour/floating_platform.gd" id="1_script"]
+[ext_resource type="Shader" path="res://_testes/cenario_ilha/parkour/holographic_platform.gdshader" id="2_shader"]
+
+[sub_resource type="ShaderMaterial" id="Material"]
+resource_local_to_scene = true
+shader = ExtResource("2_shader")
+
+[sub_resource type="BoxMesh" id="Mesh"]
+size = Vector3(4.8, 0.36, 4.8)
+
+[sub_resource type="BoxShape3D" id="Shape"]
+size = Vector3(4.8, 0.36, 4.8)
+
+[node name="FloatingPlatform" type="StaticBody3D" groups=["floating_parkour_platform"]]
+script = ExtResource("1_script")
+
+[node name="Visual" type="MeshInstance3D" parent="."]
+cast_shadow = 0
+material_override = SubResource("Material")
+mesh = SubResource("Mesh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("Shape")
+
+[node name="Number" type="Label3D" parent="."]
+position = Vector3(0, 0.198, 0)
+rotation = Vector3(-1.5707964, 0, 0)
+pixel_size = 0.009
+modulate = Color(1, 0.5, 0.12, 0.85)
+outline_modulate = Color(0.1, 0.055, 0.015, 0.3)
+text = "01"
+font_size = 72
+outline_size = 3
+no_depth_test = false
+shaded = false

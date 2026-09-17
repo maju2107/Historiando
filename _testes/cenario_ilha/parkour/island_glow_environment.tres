@@ -1,0 +1,28 @@
+[gd_resource type="Environment" format=3 uid="uid://btkl1c5a4le7a"]
+
+[ext_resource type="Texture2D" uid="uid://rt3i4u7ia0rp" path="res://assets/texture/Skyboxes/skybox-alien.png" id="1_5g2fn"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_3jrbu"]
+panorama = ExtResource("1_5g2fn")
+
+[sub_resource type="Sky" id="Sky_wcdg5"]
+sky_material = SubResource("PanoramaSkyMaterial_3jrbu")
+
+[resource]
+background_mode = 2
+background_energy_multiplier = 1.31
+sky = SubResource("Sky_wcdg5")
+tonemap_mode = 2
+ssao_radius = 0.01
+glow_enabled = true
+glow_intensity = 0.55
+glow_hdr_threshold = 2.5
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.5179158, 0.5526029, 0.9013065, 1)
+fog_sun_scatter = 0.2
+fog_density = 0.994
+fog_sky_affect = 0.145
+fog_depth_curve = 0.435273
+fog_depth_begin = 2676.7
+fog_depth_end = 3967.0

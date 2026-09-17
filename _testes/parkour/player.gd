@@ -7,10 +7,37 @@ extends CharacterBody3D
 @export var jump_velocity := 6.5
 @export var model_turn_speed := 10.0
 
-@export_category("Camera")
-@export var follow_behind := false
+enum ControlPreset { TECLADO_E_CONTROLE, FLIPERAMA }
+
+@export_category("Controles")
+## Teclado e controle: camera livre pelo mouse/analogico direito.
+## Fliperama: camera acompanha o personagem e dispensa um segundo analogico.
+@export var control_preset: ControlPreset = ControlPreset.TECLADO_E_CONTROLE:
+	set(value):
+		control_preset = value
+		if is_node_ready():
+			_apply_control_preset()
+
+@export_group("Camera livre")
+## Graus de rotacao por pixel de movimento do mouse.
+@export_range(0.01, 0.6, 0.01) var mouse_sensitivity := 0.15
+## Velocidade maxima do analogico direito, em radianos por segundo.
+@export_range(0.1, 6.0, 0.1) var joystick_sensitivity := 2.5
+@export_range(0.0, 0.5, 0.01) var camera_stick_deadzone := 0.18
+@export var invert_camera_y := false
+
+@export_group("Camera de fliperama")
 @export_range(-60.0, 0.0) var follow_pitch_degrees := -18.0
 @export_range(0.5, 15.0, 0.5) var camera_turn_speed := 4.0
+@export_group("")
+
+# Alias mantido para scripts que ja alternavam o acompanhamento diretamente.
+# Apenas control_preset e salvo nas cenas e apresentado no Inspector.
+var follow_behind: bool:
+	get:
+		return control_preset == ControlPreset.FLIPERAMA
+	set(value):
+		control_preset = ControlPreset.FLIPERAMA if value else ControlPreset.TECLADO_E_CONTROLE
 var _movement_basis := Basis.IDENTITY
 var _stick_was_active := false
 
@@ -39,21 +66,16 @@ var is_dead := false
 var is_invulnerable := false
 
 #sencibilidade do mouse/rotação da camera
-var mouse_sensitivity: float = 0.15
 var camera_rotation: Vector2 = Vector2.ZERO
 var last_moviment_dir := Vector3.BACK
 var is_jumping := false
-
-#sensibilidade do analógico
-var joystick_sensitivity = 2.5
 
 #funções
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	anim_player.play("Idle")
-	if follow_behind:
-		last_moviment_dir = gobot.global_basis.z.normalized()
-		_update_follow_camera()
+	last_moviment_dir = gobot.global_basis.z.normalized()
+	_apply_control_preset()
 	if not gear_container:
 		push_warning("O HUD do jogador não foi encontrado; a contagem ficará desativada.")
 	_update_life_hud()
@@ -62,8 +84,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	var is_camera_motion := (
 		event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
 	)
-	if is_camera_motion and not follow_behind:
-		camera_rotation += event.screen_relative * mouse_sensitivity
+	if is_camera_motion and not follow_behind and can_move and not is_dead:
+		# Mouse fornece deslocamento, portanto nao deve ser multiplicado por delta.
+		camera_rotation += event.screen_relative * deg_to_rad(mouse_sensitivity)
 
 
 func  _input(event: InputEvent) -> void:
@@ -76,25 +99,11 @@ func  _input(event: InputEvent) -> void:
 
 func _physics_process(delta: float) -> void:
 	if not can_move or is_dead:
+		camera_rotation = Vector2.ZERO
 		return
 
 	if not follow_behind:
-		# rotação da camera
-
-		#leitura do analógico direito
-		var joy_x = Input.get_joy_axis(0, JOY_AXIS_RIGHT_X) # eixo horizontal
-		var joy_y = Input.get_joy_axis(0, JOY_AXIS_RIGHT_Y) # eixo vertical
-
-		#atualiza rotação da câmera com joystick
-		camera_rotation.x += joy_x * joystick_sensitivity
-		camera_rotation.y += joy_y * joystick_sensitivity
-
-		#rotação com o mouse
-		camera_pivo.rotation.x += camera_rotation.y * delta
-		camera_pivo.rotation.x = clamp(camera_pivo.rotation.x, deg_to_rad(-75), deg_to_rad(20))
-		camera_pivo.rotation.y -= camera_rotation.x * delta
-
-		camera_rotation = Vector2.ZERO
+		_update_free_camera(delta)
 
 	#gravidade
 	if not is_on_floor():
@@ -148,6 +157,34 @@ func _physics_process(delta: float) -> void:
 
 	if follow_behind:
 		_update_follow_camera(delta)
+
+
+func _apply_control_preset() -> void:
+	camera_rotation = Vector2.ZERO
+	_stick_was_active = false
+	_movement_basis = camera.global_basis
+	if follow_behind:
+		_update_follow_camera()
+
+
+func _update_free_camera(delta: float) -> void:
+	var stick := Vector2(
+		Input.get_joy_axis(0, JOY_AXIS_RIGHT_X),
+		Input.get_joy_axis(0, JOY_AXIS_RIGHT_Y)
+	)
+	# A zona morta evita que um pequeno desvio do analogico gire a camera.
+	var strength := stick.length()
+	if strength <= camera_stick_deadzone:
+		stick = Vector2.ZERO
+	else:
+		stick = stick.normalized() * minf((strength - camera_stick_deadzone) / (1.0 - camera_stick_deadzone), 1.0)
+	var motion := camera_rotation + stick * joystick_sensitivity * delta
+	var vertical_sign := -1.0 if invert_camera_y else 1.0
+	camera_pivo.rotation.x = clampf(
+		camera_pivo.rotation.x - motion.y * vertical_sign, deg_to_rad(-75), deg_to_rad(20)
+	)
+	camera_pivo.rotation.y -= motion.x
+	camera_rotation = Vector2.ZERO
 
 
 func _update_follow_camera(delta: float = 0.0) -> void:

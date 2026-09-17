@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b50bgpwf4s070"]
 
-[ext_resource type="Environment" uid="uid://db68r5ch3eg8r" path="res://_testes/parkour/word-environment.tres" id="1_b4dyc"]
+[ext_resource type="Environment" uid="uid://btkl1c5a4le7a" path="res://_testes/cenario_ilha/parkour/island_glow_environment.tres" id="1_b4dyc"]
 [ext_resource type="Script" uid="uid://b24hgnofusyov" path="res://_testes/cenario_ilha/terrain_chunk.gd" id="1_chunk"]
 [ext_resource type="PackedScene" uid="uid://crhwfju5ub5ji" path="res://_testes/parkour/Player.tscn" id="2_player"]
 [ext_resource type="PackedScene" uid="uid://hplj1hpdivta" path="res://assets/models/kenney_platformer-kit/Models/GLB format/block-grass-large-tall.glb" id="4_tall"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://yksg6oyp73u6" path="res://_testes/cenario_ilha/PleistoceneVegetation.tscn" id="17_vegetation"]
 [ext_resource type="Script" uid="uid://dabdswxvk177p" path="res://_testes/parkour/scripts/death_zone.gd" id="18_death"]
 [ext_resource type="PackedScene" path="res://_testes/cenario_ilha/water/IslandWater.tscn" id="19_water"]
+[ext_resource type="PackedScene" path="res://_testes/cenario_ilha/parkour/FloatingParkour.tscn" id="20_parkour"]
 
 [sub_resource type="BoxShape3D" id="DeathShape"]
 size = Vector3(90, 2, 100)
@@ -36,7 +37,7 @@ shadow_enabled = true
 
 [node name="Player" parent="." unique_id=493027666 instance=ExtResource("2_player")]
 transform = Transform3D(0.7702597, 0, -0.63773036, 0, 1, 0, 0.63773036, 0, 0.7702597, 0.8504281, 13.356521, -8.061268)
-follow_behind = true
+jump_velocity = 5.0
 
 [node name="Terrain" type="Node3D" parent="." unique_id=180770518]
 
@@ -255,8 +256,10 @@ transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 9, 3, 24)
 script = ExtResource("1_chunk")
 model = ExtResource("16_narrow")
 
+[node name="ParkourFlutuante" parent="." unique_id=1244333975 instance=ExtResource("20_parkour")]
+process_physics_priority = -10
+
 [node name="Water" parent="." unique_id=1052622256 instance=ExtResource("19_water")]
-shallow_color = Color(0.5372549, 0.8117647, 0.9411765, 1)
 deep_color = Color(0.3098039, 0.6156863, 0.8509804, 1)
 foam_color = Color(0.945098, 0.9803922, 1, 1)
 
