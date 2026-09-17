@@ -37,6 +37,7 @@ shadow_enabled = true
 
 [node name="Player" parent="." unique_id=493027666 instance=ExtResource("2_player")]
 transform = Transform3D(0.7702597, 0, -0.63773036, 0, 1, 0, 0.63773036, 0, 0.7702597, 0.8504281, 13.356521, -8.061268)
+walk_speed = 6.5
 jump_velocity = 5.0
 
 [node name="Terrain" type="Node3D" parent="." unique_id=180770518]
@@ -139,17 +140,17 @@ model = ExtResource("7_low_large")
 [node name="SubidaPico" type="Node3D" parent="Terrain" unique_id=1008273301]
 
 [node name="PicoDegrau01" type="StaticBody3D" parent="Terrain/SubidaPico" unique_id=1370248515]
-transform = Transform3D(2.819078, 0, -1.0260603, 0, 2.5, 0, 1.0260603, 0, 2.819078, 11, 8, -1)
+transform = Transform3D(2.9326963, 0, 0.6318981, 0, 2.5, 0, -0.6318981, 0, 2.9326963, 10.59824, 8, -1.4487348)
 script = ExtResource("1_chunk")
 model = ExtResource("7_low_large")
 
 [node name="PicoDegrau02" type="StaticBody3D" parent="Terrain/SubidaPico" unique_id=804345768]
-transform = Transform3D(2.2294345, 0, -2.007392, 0, 2.5, 0, 2.007392, 0, 2.2294345, 12, 9.25, -5)
+transform = Transform3D(2.9430933, 0, -0.5815512, 0, 2.4999998, 0, 0.5815512, 0, 2.9430933, 10.636553, 9.25, -5)
 script = ExtResource("1_chunk")
 model = ExtResource("8_low_long")
 
 [node name="PicoDegrau03" type="StaticBody3D" parent="Terrain/SubidaPico" unique_id=1357902901]
-transform = Transform3D(1.12382, 0, -2.7815516, 0, 2.5, 0, 2.7815516, 0, 1.12382, 10, 10.5, -9)
+transform = Transform3D(1.12382, 0, -2.7815516, 0, 2.5, 0, 2.7815516, 0, 1.12382, 10, 10.5, -9.014287)
 script = ExtResource("1_chunk")
 model = ExtResource("7_low_large")
 
@@ -258,6 +259,7 @@ model = ExtResource("16_narrow")
 
 [node name="ParkourFlutuante" parent="." unique_id=1244333975 instance=ExtResource("20_parkour")]
 process_physics_priority = -10
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6183758, 0)
 
 [node name="Water" parent="." unique_id=1052622256 instance=ExtResource("19_water")]
 deep_color = Color(0.3098039, 0.6156863, 0.8509804, 1)
