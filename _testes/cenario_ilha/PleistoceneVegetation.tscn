@@ -1,7 +1,7 @@
-[gd_scene format=4]
+[gd_scene format=4 uid="uid://yksg6oyp73u6"]
 
-[ext_resource type="Texture2D" path="res://assets/models/creative_trio/CT_Pallete.png" id="1_vatm7"]
-[ext_resource type="Texture2D" path="res://assets/models/creative_trio/CT_Rocks_Palette.png" id="2_18tup"]
+[ext_resource type="Texture2D" uid="uid://cqjravjkq5t6o" path="res://assets/models/creative_trio/CT_Pallete.png" id="1_vatm7"]
+[ext_resource type="Texture2D" uid="uid://cawaa6t6d64n3" path="res://assets/models/creative_trio/CT_Rocks_Palette.png" id="2_18tup"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gvyic"]
 albedo_texture = ExtResource("1_vatm7")
@@ -1657,7 +1657,7 @@ material_override = SubResource("StandardMaterial3D_cxtn0")
 mesh = SubResource("ArrayMesh_6sed0")
 
 [node name="Arvore_15" type="Node3D" parent="CampoAberto" unique_id=1890629806]
-transform = Transform3D(0.96763915, 0, -0.25233808, 0, 1, 0, 0.25233808, 0, 0.96763915, -6.3014607, 4, 4.4265084)
+transform = Transform3D(0.96763915, 0, -0.25233808, 0, 1, 0, 0.25233808, 0, 0.96763915, -7.188444, 4, 4.6509194)
 
 [node name="Modelo" type="MeshInstance3D" parent="CampoAberto/Arvore_15" unique_id=1547986799]
 transform = Transform3D(308.45374, -184.60583, -8.069378e-06, 0, -1.5713196e-05, 359.47607, -184.60583, -308.45374, -1.3482943e-05, 0.06951563, -5.1138477e-06, 0.055871487)
@@ -1753,7 +1753,7 @@ material_override = SubResource("StandardMaterial3D_u6ct5")
 mesh = SubResource("ArrayMesh_vhmyu")
 
 [node name="Arvore_42" type="Node3D" parent="CampoAberto" unique_id=1474904274]
-transform = Transform3D(0.96231145, 0, -0.27194977, 0, 1, 0, 0.27194977, 0, 0.96231145, -10.531743, 3.8578835, 24.261871)
+transform = Transform3D(0.96231145, 0, -0.27194977, 0, 1, 0, 0.27194977, 0, 0.96231145, -10.124107, 3.8578835, 24.261871)
 
 [node name="Modelo" type="MeshInstance3D" parent="CampoAberto/Arvore_42" unique_id=234921941]
 transform = Transform3D(40.14556, 57.76317, 2.5249083e-06, 0, -3.074825e-06, 70.343796, 57.76317, -40.14556, -1.7548182e-06, 3.3542534e-07, 3.4794977e-07, 3.3542534e-07)
@@ -1927,7 +1927,7 @@ mesh = SubResource("ArrayMesh_wkgun")
 [node name="EstratoBaixo" type="Node3D" parent="." unique_id=848806828]
 
 [node name="Detalhe_001" type="Node3D" parent="EstratoBaixo" unique_id=1538387393]
-transform = Transform3D(-0.28926983, 0, 0.9572476, 0, 1, 0, -0.9572476, 0, -0.28926983, -3.7000008, 4, -16.66387)
+transform = Transform3D(0.3649128, 0, 0.9310417, 0, 1, 0, -0.9310417, 0, 0.3649128, -4.3455048, 4, -16.243214)
 
 [node name="Modelo" type="MeshInstance3D" parent="EstratoBaixo/Detalhe_001" unique_id=1272556180]
 transform = Transform3D(15.646773, 3.6295831, 1.5865405e-07, 0, -7.0210257e-07, 16.062227, 3.6295831, -15.646773, -6.839419e-07, -0.09244058, 0.05879888, 0.0035371534)
@@ -2063,7 +2063,7 @@ material_override = SubResource("StandardMaterial3D_fktyu")
 mesh = SubResource("ArrayMesh_ynba7")
 
 [node name="Detalhe_065" type="Node3D" parent="EstratoBaixo" unique_id=554430971]
-transform = Transform3D(0.62771, 0, 0.7784473, 0, 1, 0, -0.7784473, 0, 0.62771, 13.443913, 3.9999962, -6.14547)
+transform = Transform3D(0.62771, 0, 0.7784473, 0, 1, 0, -0.7784473, 0, 0.62771, 12.876651, 3.9999962, -6.14547)
 
 [node name="Modelo" type="MeshInstance3D" parent="EstratoBaixo/Detalhe_065" unique_id=318521180]
 transform = Transform3D(-8.640772, -12.615477, -5.5143994e-07, 0, -6.683887e-07, 15.290949, -12.6154785, 8.640771, 3.7770002e-07, -0.008345518, 0.009226093, -0.020348229)
@@ -2234,7 +2234,7 @@ mesh = SubResource("ArrayMesh_ynba7")
 transform = Transform3D(0.04166215, 0, 0.99913174, 0, 1, 0, -0.99913174, 0, 0.04166215, -6.0717015, 4, 8.131314)
 
 [node name="Modelo" type="MeshInstance3D" parent="EstratoBaixo/Detalhe_164" unique_id=458929731]
-transform = Transform3D(-4.1181173, -4.0070047, -1.7515175e-07, 0, -2.5115978e-07, 5.7458663, -4.007005, 4.118117, 1.8000863e-07, 0.06319219, 0.019585077, -0.0072968667)
+transform = Transform3D(-4.118117, -4.007005, -1.7515177e-07, 0, -2.5115978e-07, 5.7458663, -4.0070057, 4.1181164, 1.8000861e-07, 0.11887932, -0.042666912, -0.009619236)
 material_override = SubResource("StandardMaterial3D_fihjv")
 mesh = SubResource("ArrayMesh_ynba7")
 
@@ -2247,7 +2247,7 @@ material_override = SubResource("StandardMaterial3D_xt880")
 mesh = SubResource("ArrayMesh_7hcim")
 
 [node name="Detalhe_170" type="Node3D" parent="EstratoBaixo" unique_id=382180936]
-transform = Transform3D(0.95330054, 0, 0.30202332, 0, 1, 0, -0.30202332, 0, 0.95330054, 14.451661, 3.8037643, -0.81795126)
+transform = Transform3D(0.95330054, 0, 0.30202332, 0, 1, 0, -0.30202332, 0, 0.95330054, 13.488896, 3.8037643, -0.81795126)
 
 [node name="Modelo" type="MeshInstance3D" parent="EstratoBaixo/Detalhe_170" unique_id=1161046012]
 transform = Transform3D(-14.543082, -21.232817, -9.281157e-07, 0, -1.1249496e-06, 25.73584, -21.232819, 14.543081, 6.356981e-07, -0.014046148, 0.015528222, -0.03424769)
@@ -2275,6 +2275,14 @@ transform = Transform3D(-0.97054064, 0, 0.2409374, 0, 1, 0, -0.2409374, 0, -0.97
 
 [node name="Modelo" type="MeshInstance3D" parent="EstratoBaixo/Detalhe_191" unique_id=1208276317]
 transform = Transform3D(17.606241, 4.0841203, 1.7852246e-07, 0, -7.900279e-07, 18.07372, 4.0841203, -17.606241, -7.695928e-07, -0.104017034, 0.06616234, 0.0039801155)
+material_override = SubResource("StandardMaterial3D_lv5ir")
+mesh = SubResource("ArrayMesh_26vxv")
+
+[node name="Detalhe_192" type="Node3D" parent="EstratoBaixo" unique_id=544860894]
+transform = Transform3D(-0.97054064, 0, 0.2409374, 0, 1, 0, -0.2409374, 0, -0.97054064, -4.110859, 9.720989, -1.6254449)
+
+[node name="Modelo" type="MeshInstance3D" parent="EstratoBaixo/Detalhe_192" unique_id=243746734]
+transform = Transform3D(17.606247, 4.0841255, 1.7852261e-07, 0, -7.900279e-07, 18.07372, 4.0841255, -17.606247, -7.695935e-07, -1.7039349, -0.15971375, 0.6017851)
 material_override = SubResource("StandardMaterial3D_lv5ir")
 mesh = SubResource("ArrayMesh_26vxv")
 
@@ -2753,7 +2761,7 @@ material_override = SubResource("StandardMaterial3D_mqtaa")
 mesh = SubResource("ArrayMesh_o70m7")
 
 [node name="Detalhe_239" type="Node3D" parent="EstratoRibeirinho" unique_id=430256732]
-transform = Transform3D(0.7485026, 0, 0.66313183, 0, 1, 0, -0.66313183, 0, 0.7485026, 7.551743, 8.000004, -1.5828667)
+transform = Transform3D(0.7485026, 0, 0.66313183, 0, 1, 0, -0.66313183, 0, 0.7485026, 5.5396466, 8.000004, -0.9932871)
 
 [node name="Modelo" type="MeshInstance3D" parent="EstratoRibeirinho/Detalhe_239" unique_id=1024713915]
 transform = Transform3D(-3.9381683, -3.8319106, -1.6749814e-07, 0, -2.4018485e-07, 5.494789, -3.8319113, 3.9381676, 1.7214278e-07, 0.060430985, 0.018729268, -0.0069780154)
@@ -2962,7 +2970,7 @@ mesh = SubResource("ArrayMesh_33tvj")
 transform = Transform3D(0.7503071, 0, -0.6610894, 0, 1, 0, 0.6610894, 0, 0.7503071, 14.46069, 3.799839, -5.0830693)
 
 [node name="Modelo" type="MeshInstance3D" parent="Afloramentos/Detalhe_156" unique_id=787289115]
-transform = Transform3D(0.42086312, 0, 0, 0, 0.42086312, 3.177428e-08, 0, -3.177428e-08, 0.42086312, -0.082898356, 5.977689e-08, 0.019653404)
+transform = Transform3D(0.4208631, 1.7763568e-15, 0, 0, 0.42086312, 3.177428e-08, 0, -3.1774277e-08, 0.4208631, -0.6473627, 0, 0.5169983)
 material_override = SubResource("StandardMaterial3D_rx3ts")
 mesh = SubResource("ArrayMesh_33tvj")
 

@@ -2,6 +2,13 @@
 class_name TerrainChunk
 extends StaticBody3D
 
+const WatercourseCarver = preload("res://_testes/cenario_ilha/water/carve_watercourse.gd")
+
+@export var carve_watercourse := false:
+	set(value):
+		carve_watercourse = value
+		_queue_rebuild()
+
 @export var model: PackedScene:
 	set(value):
 		model = value
@@ -52,6 +59,11 @@ func _create_mesh_collisions(root_node: Node3D) -> int:
 		var current_transform := entry.transform as Transform3D
 
 		if current is MeshInstance3D and current.mesh:
+			if carve_watercourse:
+				# These coordinates belong to CenarioIlha, so moving the entire island is safe.
+				var island := get_parent().get_parent().get_parent() as Node3D
+				var relative := island.global_transform.affine_inverse() * global_transform * current_transform
+				current.mesh = WatercourseCarver.new().build(current.mesh, relative)
 			var shape: Shape3D = current.mesh.create_trimesh_shape()
 			if shape:
 				var collision := CollisionShape3D.new()
