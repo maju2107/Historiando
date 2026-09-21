@@ -1,0 +1,148 @@
+{
+  "milestone": 5,
+  "height_m": 1.0000001189493275,
+  "floor_z": 2.599620796406299e-10,
+  "editable_half_vertices": 1263,
+  "body_control": {
+    "vertices": 2448,
+    "faces": 2448,
+    "quads": 2440,
+    "nonmanifold_edges": 0,
+    "inconsistent_normal_edges": 0,
+    "degenerate_faces": [],
+    "duplicate_vertices": [],
+    "self_intersections": [
+      [
+        483,
+        1167
+      ],
+      [
+        1707,
+        2391
+      ],
+      [
+        793,
+        914
+      ],
+      [
+        2017,
+        2138
+      ]
+    ],
+    "components": [
+      2446,
+      1,
+      1
+    ],
+    "signed_volume": 0.03698054115124458,
+    "max_symmetry_error": 0.0
+  },
+  "body_subdivision": {
+    "vertices": 39140,
+    "faces": 39136,
+    "quads": 39136,
+    "nonmanifold_edges": 0,
+    "inconsistent_normal_edges": 0,
+    "degenerate_faces": [],
+    "duplicate_vertices": [],
+    "self_intersections": [],
+    "components": [
+      39138,
+      1,
+      1
+    ],
+    "signed_volume": 0.03614665801028856,
+    "max_symmetry_error": 1.79436156599877e-07
+  },
+  "parts": {
+    "CHR_Body": {
+      "uv_layers": 1,
+      "faces": 39136,
+      "nonmanifold_edges": 0,
+      "normal_errors": 0
+    },
+    "CHR_Eye.L": {
+      "uv_layers": 0,
+      "faces": 350,
+      "nonmanifold_edges": 0,
+      "normal_errors": 0
+    },
+    "CHR_Eye.R": {
+      "uv_layers": 0,
+      "faces": 350,
+      "nonmanifold_edges": 0,
+      "normal_errors": 0
+    },
+    "CHR_Eyebrow.L": {
+      "uv_layers": 1,
+      "faces": 416,
+      "nonmanifold_edges": 0,
+      "normal_errors": 0
+    },
+    "CHR_Eyelid.L": {
+      "uv_layers": 1,
+      "faces": 1056,
+      "nonmanifold_edges": 0,
+      "normal_errors": 0
+    },
+    "CHR_Eyelash_1.L": {
+      "uv_layers": 1,
+      "faces": 288,
+      "nonmanifold_edges": 0,
+      "normal_errors": 0
+    },
+    "CHR_Eyelash_2.L": {
+      "uv_layers": 1,
+      "faces": 288,
+      "nonmanifold_edges": 0,
+      "normal_errors": 0
+    },
+    "CHR_Eyebrow.R": {
+      "uv_layers": 1,
+      "faces": 416,
+      "nonmanifold_edges": 0,
+      "normal_errors": 0
+    },
+    "CHR_Eyelid.R": {
+      "uv_layers": 1,
+      "faces": 1056,
+      "nonmanifold_edges": 0,
+      "normal_errors": 0
+    },
+    "CHR_Eyelash_1.R": {
+      "uv_layers": 1,
+      "faces": 288,
+      "nonmanifold_edges": 0,
+      "normal_errors": 0
+    },
+    "CHR_Eyelash_2.R": {
+      "uv_layers": 1,
+      "faces": 288,
+      "nonmanifold_edges": 0,
+      "normal_errors": 0
+    },
+    "CHR_Top": {
+      "uv_layers": 1,
+      "faces": 2560,
+      "nonmanifold_edges": 0,
+      "normal_errors": 0
+    },
+    "CHR_Briefs": {
+      "uv_layers": 1,
+      "faces": 3264,
+      "nonmanifold_edges": 0,
+      "normal_errors": 0
+    }
+  },
+  "issues": [
+    "body_control: self_intersections = [(483, 1167), (1707, 2391), (793, 914), (2017, 2138)]",
+    "body_control: disconnected components",
+    "body_control: non-quad faces",
+    "body_subdivision: disconnected components"
+  ],
+  "references": {
+    "image_objects": 9,
+    "all_packed": true
+  },
+  "mirror_present": true
+}

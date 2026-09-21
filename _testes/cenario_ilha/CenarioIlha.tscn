@@ -38,7 +38,9 @@ shadow_enabled = true
 [node name="Player" parent="." unique_id=493027666 instance=ExtResource("2_player")]
 transform = Transform3D(0.7702597, 0, -0.63773036, 0, 1, 0, 0.63773036, 0, 0.7702597, 0.8504281, 13.356521, -8.061268)
 walk_speed = 6.5
+run_speed = 2.0
 jump_velocity = 5.0
+control_preset = 1
 
 [node name="Terrain" type="Node3D" parent="." unique_id=180770518]
 

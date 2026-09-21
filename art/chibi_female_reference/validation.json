@@ -1,0 +1,160 @@
+{
+  "blend_reopened": true,
+  "body_control": {
+    "vertices": 2322,
+    "faces": 2320,
+    "quads": 2320,
+    "nonmanifold_edges": 0,
+    "degenerate_faces": [],
+    "components": [
+      2322
+    ],
+    "self_intersections": [],
+    "signed_volume": 1.541202325646461,
+    "max_symmetry_error": 2.3844768293201923e-07,
+    "finite_coordinates": true
+  },
+  "body_subdivision": {
+    "vertices": 37122,
+    "faces": 37120,
+    "quads": 37120,
+    "nonmanifold_edges": 0,
+    "degenerate_faces": [],
+    "components": [
+      37122
+    ],
+    "self_intersections": [],
+    "signed_volume": 1.5068768334603029,
+    "max_symmetry_error": 7.17773616543127e-07,
+    "finite_coordinates": true
+  },
+  "parts": {
+    "Chibi - corpo e cabeca": {
+      "control_faces": 2320,
+      "evaluated_faces": 37120,
+      "uv_layers": 1,
+      "evaluated_nonmanifold_edges": 0
+    },
+    "Olho.L": {
+      "control_faces": 350,
+      "evaluated_faces": 350,
+      "uv_layers": 1,
+      "evaluated_nonmanifold_edges": 0
+    },
+    "Olho.R": {
+      "control_faces": 350,
+      "evaluated_faces": 350,
+      "uv_layers": 1,
+      "evaluated_nonmanifold_edges": 0
+    },
+    "Sobrancelha.L": {
+      "control_faces": 26,
+      "evaluated_faces": 416,
+      "uv_layers": 1,
+      "evaluated_nonmanifold_edges": 0
+    },
+    "Palpebra superior.L": {
+      "control_faces": 16,
+      "evaluated_faces": 1056,
+      "uv_layers": 1,
+      "evaluated_nonmanifold_edges": 0
+    },
+    "Cilio_1.L": {
+      "control_faces": 18,
+      "evaluated_faces": 288,
+      "uv_layers": 1,
+      "evaluated_nonmanifold_edges": 0
+    },
+    "Cilio_2.L": {
+      "control_faces": 18,
+      "evaluated_faces": 288,
+      "uv_layers": 1,
+      "evaluated_nonmanifold_edges": 0
+    },
+    "Sobrancelha.R": {
+      "control_faces": 26,
+      "evaluated_faces": 416,
+      "uv_layers": 1,
+      "evaluated_nonmanifold_edges": 0
+    },
+    "Palpebra superior.R": {
+      "control_faces": 16,
+      "evaluated_faces": 1056,
+      "uv_layers": 1,
+      "evaluated_nonmanifold_edges": 0
+    },
+    "Cilio_1.R": {
+      "control_faces": 18,
+      "evaluated_faces": 288,
+      "uv_layers": 1,
+      "evaluated_nonmanifold_edges": 0
+    },
+    "Cilio_2.R": {
+      "control_faces": 18,
+      "evaluated_faces": 288,
+      "uv_layers": 1,
+      "evaluated_nonmanifold_edges": 0
+    },
+    "Top - peca separada": {
+      "control_faces": 64,
+      "evaluated_faces": 2560,
+      "uv_layers": 1,
+      "evaluated_nonmanifold_edges": 0
+    },
+    "Short - peca separada": {
+      "control_faces": 82,
+      "evaluated_faces": 3264,
+      "uv_layers": 1,
+      "evaluated_nonmanifold_edges": 0
+    }
+  },
+  "references": {
+    "cartoon-female-chibi-character-base-mesh-3d-model-21b9f05615.jpg": [
+      1400,
+      1000
+    ],
+    "cartoon-female-chibi-character-base-mesh-3d-model-2aa77f1153.jpg": [
+      1400,
+      1000
+    ],
+    "cartoon-female-chibi-character-base-mesh-3d-model-3726ebacab.jpg": [
+      1400,
+      1000
+    ],
+    "cartoon-female-chibi-character-base-mesh-3d-model-5f5cf94e96.jpg": [
+      1400,
+      1000
+    ],
+    "cartoon-female-chibi-character-base-mesh-3d-model-61135f677f.jpg": [
+      1400,
+      1000
+    ],
+    "cartoon-female-chibi-character-base-mesh-3d-model-7e135165fc.jpg": [
+      1400,
+      1000
+    ],
+    "cartoon-female-chibi-character-base-mesh-3d-model-93d81549c6.jpg": [
+      1400,
+      1000
+    ],
+    "cartoon-female-chibi-character-base-mesh-3d-model-9a858a9e65.jpg": [
+      1400,
+      1000
+    ],
+    "cartoon-female-chibi-character-base-mesh-3d-model-b0b62758aa.jpg": [
+      1400,
+      1000
+    ]
+  },
+  "exports": {
+    "Chibi_Feminina.blend": 1643376,
+    "Chibi_Feminina.glb": 2310684,
+    "Chibi_Feminina.obj": 490940
+  },
+  "glb_reimport": {
+    "mesh_objects": 13,
+    "triangles": 95480,
+    "all_have_uvs": true,
+    "all_have_materials": true
+  }
+}

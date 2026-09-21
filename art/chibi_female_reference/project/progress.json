@@ -1,0 +1,56 @@
+{
+  "completed": [
+    {
+      "milestone": 1,
+      "name": "reference_setup",
+      "file": "C:\\Users\\obran\\OneDrive\\Documentos\\GitHub\\Historiando\\art\\chibi_female_reference\\project\\output\\01_reference_setup.blend",
+      "notes": "Continued existing .blend. Classified all nine references, aligned primary images, measured proportions, normalized height to 1 m, created four orthographic cameras. Geometry retained.",
+      "saved_at": "2026-09-21T02:12:04.152390"
+    },
+    {
+      "milestone": 2,
+      "name": "silhouette_blockout",
+      "file": "C:\\Users\\obran\\OneDrive\\Documentos\\GitHub\\Historiando\\art\\chibi_female_reference\\project\\output\\02_silhouette_blockout.blend",
+      "notes": "Fitted the saved silhouette to measured front and side sections; increased posterior skull volume, adjusted cheek depth and body widths while retaining topology and T-pose.",
+      "saved_at": "2026-09-21T02:14:10.885975"
+    },
+    {
+      "milestone": 3,
+      "name": "production_topology",
+      "file": "C:\\Users\\obran\\OneDrive\\Documentos\\GitHub\\Historiando\\art\\chibi_female_reference\\project\\output\\03_production_topology.blend",
+      "notes": "Converted the existing continuous body to an editable positive-X half with clipping Mirror before Subdivision 2. Preserved deformation loops and reference-like quad flow.",
+      "saved_at": "2026-09-21T02:15:50.144979"
+    },
+    {
+      "milestone": 4,
+      "name": "face_and_ears",
+      "file": "C:\\Users\\obran\\OneDrive\\Documentos\\GitHub\\Historiando\\art\\chibi_female_reference\\project\\output\\04_face_and_ears.blend",
+      "notes": "Fitted shallow radial eye surfaces behind eyelids, refined rolled helix/concha/tragus in existing ear loops, and continued posterior skull curvature through the crown. Head mesh retained.",
+      "saved_at": "2026-09-21T02:19:59.257794"
+    },
+    {
+      "milestone": 5,
+      "name": "hands_and_feet",
+      "file": "C:\\Users\\obran\\OneDrive\\Documentos\\GitHub\\Historiando\\art\\chibi_female_reference\\project\\output\\05_hands_and_feet.blend",
+      "notes": "Replaced only hand geometry beyond the existing wrist. Built four separately articulated fingers plus a short rounded thumb, connected through a quad palm and webs; Mirror supplies the opposite hand. Feet retained after silhouette comparison.",
+      "saved_at": "2026-09-21T02:22:31.590955"
+    },
+    {
+      "milestone": 6,
+      "name": "validation_comparison",
+      "file": "C:\\Users\\obran\\OneDrive\\Documentos\\GitHub\\Historiando\\art\\chibi_female_reference\\project\\output\\06_validation_comparison.blend",
+      "notes": "Compared measured widths and all orthographic views. Validation identified isolated vertices, eight non-quad cage faces from the symmetry cut and four cage intersection pairs; the subdivided surface is closed without self-intersections. These local control-mesh issues are recorded for milestone 7 cleanup.",
+      "saved_at": "2026-09-21T02:27:47.297358"
+    },
+    {
+      "milestone": 7,
+      "name": "final_cleanup",
+      "file": "C:\\Users\\obran\\OneDrive\\Documentos\\GitHub\\Historiando\\art\\chibi_female_reference\\project\\output\\07_final_cleanup.blend",
+      "notes": "Removed isolated vertices, converted symmetry-cut triangles to quads with centerline support points, separated thumb/palm and cheek/socket cage faces, recalculated normals, refreshed UVs and set the evaluated height to exactly 1 m with soles at Z=0.",
+      "saved_at": "2026-09-21T02:33:14.387470"
+    }
+  ],
+  "latest_milestone": 7,
+  "latest_checkpoint": "C:\\Users\\obran\\OneDrive\\Documentos\\GitHub\\Historiando\\art\\chibi_female_reference\\project\\output\\07_final_cleanup.blend",
+  "next_milestone": null
+}

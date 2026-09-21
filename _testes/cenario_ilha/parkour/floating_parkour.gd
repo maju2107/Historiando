@@ -3,7 +3,7 @@ extends Node3D
 
 @export_group("Ciclo das plataformas")
 ## Tempo sólido, em segundos. O ciclo não depende de o jogador pisar na plataforma.
-@export_range(1.5, 20.0, 0.1) var active_seconds := 4.5:
+@export_range(1.5, 20.0, 0.1) var active_seconds := 6.0:
 	set(value):
 		active_seconds = maxf(value, 1.5)
 		_refresh()
