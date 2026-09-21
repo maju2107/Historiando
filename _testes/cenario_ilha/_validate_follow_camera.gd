@@ -7,6 +7,7 @@ func _initialize():
 	call_deferred("setup")
 func setup():
 	player = load("res://_testes/parkour/Player.tscn").instantiate()
+	player.arcade_auto_rotate = true
 	player.follow_behind = true
 	root.add_child(player)
 	previous_yaw = player.camera_pivo.global_rotation.y
@@ -26,11 +27,10 @@ func _physics_process(_delta):
 		previous_yaw = yaw
 		if frames > 110:
 			assert(behind.normalized().dot(player.gobot.global_basis.z) < -0.999, "Camera did not settle behind player")
-		assert(absf(player.camera_pivo.rotation.x - deg_to_rad(-18)) < 0.001)
+		assert(absf(player.camera_pivo.rotation.x - deg_to_rad(player.follow_pitch_degrees)) < 0.001)
 	if frames == 120:
 		Input.action_release("ui_right")
 		print("CAMERA_OK: smooth rotation, fixed pitch, settles behind player, no held-input drift")
 		player.queue_free()
 		quit()
 	return false
-

@@ -33,6 +33,7 @@ func _run() -> void:
 	await physics_frame
 	_check(_platforms.size() == 21, "Expected 21 platforms")
 	_check(_platforms.back().permanent, "The final platform is not permanent")
+	_check(_platforms.front().permanent, "The first platform is not permanent")
 	var previous_y := _spawn.y
 	for platform in _platforms:
 		_check(platform.surface_position().y > previous_y, "The course must keep ascending")
@@ -79,18 +80,18 @@ func _test_cycle_and_collision() -> void:
 
 func _test_disappearing_support() -> void:
 	_course.cycle_enabled = false
-	var first := _platforms[0]
+	var first := _platforms[1]
 	_player.global_position = first.surface_position() + Vector3(0, 0.03, 0)
 	_player.velocity = Vector3.ZERO
 	for frame in 12:
 		await _step(Vector3.ZERO)
 	_check(_player.is_on_floor(), "Player did not stand on the active platform")
 	_course.cycle_enabled = true
-	_course.apply_cycle_time(_course.active_seconds + 0.1)
+	_course.apply_cycle_time(_course.stagger_seconds + _course.active_seconds + 0.1)
 	for frame in 24:
 		await _step(Vector3.ZERO)
 	_check(_player.global_position.y < first.surface_position().y - 0.3, "Ghost platform still supports the player")
-	_course.apply_cycle_time(0.1)
+	_course.apply_cycle_time(_course.stagger_seconds + 0.1)
 	await physics_frame
 	await physics_frame
 	_check(first.is_solid and not first.get_node("CollisionShape3D").disabled, "Platform did not restore collision")

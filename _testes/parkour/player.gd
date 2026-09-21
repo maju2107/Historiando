@@ -11,7 +11,7 @@ enum ControlPreset { TECLADO_E_CONTROLE, FLIPERAMA }
 
 @export_category("Controles")
 ## Teclado e controle: camera livre pelo mouse/analogico direito.
-## Fliperama: camera acompanha o personagem e dispensa um segundo analogico.
+## Fliperama: camera acompanha por tras e a manopla usa oito direcoes.
 @export var control_preset: ControlPreset = ControlPreset.TECLADO_E_CONTROLE:
 	set(value):
 		control_preset = value
@@ -27,7 +27,11 @@ enum ControlPreset { TECLADO_E_CONTROLE, FLIPERAMA }
 @export var invert_camera_y := false
 
 @export_group("Camera de fliperama")
-@export_range(-60.0, 0.0) var follow_pitch_degrees := -18.0
+## Gira suavemente para acompanhar o personagem por tras.
+@export var arcade_auto_rotate := true
+## Limiar por eixo da manopla; permite reconhecer ambos nas diagonais.
+@export_range(0.05, 0.5, 0.01) var arcade_stick_deadzone := 0.2
+@export_range(-60.0, 0.0) var follow_pitch_degrees := -28.0
 @export_range(0.5, 15.0, 0.5) var camera_turn_speed := 4.0
 @export_group("")
 
@@ -40,6 +44,7 @@ var follow_behind: bool:
 		control_preset = ControlPreset.FLIPERAMA if value else ControlPreset.TECLADO_E_CONTROLE
 var _movement_basis := Basis.IDENTITY
 var _stick_was_active := false
+var _previous_arcade_input := Vector2.ZERO
 
 
 
@@ -72,6 +77,8 @@ var is_jumping := false
 
 #funções
 func _ready() -> void:
+	if camera_pivo is SpringArm3D:
+		camera_pivo.add_excluded_object(get_rid())
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	anim_player.play("Idle")
 	last_moviment_dir = gobot.global_basis.z.normalized()
@@ -116,13 +123,15 @@ func _physics_process(delta: float) -> void:
 		velocity.y = jump_velocity
 
 	#movimentação padrão
-	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	# Mantem a referencia enquanto o stick esta pressionado para a camera
-	# nao transformar uma direcao mantida em movimento circular.
+	var input_dir := _get_movement_input()
+	# Uma direcao mantida nao deriva com a camera. Ao mudar a manopla,
+	# usa a camera atual sem exigir que o jogador solte o controle.
 	var active := input_dir.length() > 0.1
-	if follow_behind and active and not _stick_was_active:
+	var changed_direction := not input_dir.is_equal_approx(_previous_arcade_input)
+	if follow_behind and active and (not _stick_was_active or changed_direction or not arcade_auto_rotate):
 		_movement_basis = camera.global_basis
 	_stick_was_active = active
+	_previous_arcade_input = input_dir
 	var movement_basis := _movement_basis if follow_behind else camera.global_basis
 	var forward := movement_basis.z
 	var right := movement_basis.x
@@ -137,9 +146,9 @@ func _physics_process(delta: float) -> void:
 	var is_running := InputMap.has_action("sprint") and Input.is_action_pressed("sprint")
 	var movement_speed := run_speed if is_running else walk_speed
 
-	if is_on_floor():
-		velocity.x = direction.x * movement_speed
-		velocity.z = direction.z * movement_speed
+	# Atualiza tambem no ar: soltar a direcao deve interromper o movimento.
+	velocity.x = direction.x * movement_speed
+	velocity.z = direction.z * movement_speed
 
 	_handle_animation(is_running)
 	move_and_slide()
@@ -159,9 +168,24 @@ func _physics_process(delta: float) -> void:
 		_update_follow_camera(delta)
 
 
+func _get_movement_input() -> Vector2:
+	if not follow_behind:
+		return Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	# A manopla tem oito direcoes. Avalia cada eixo independentemente,
+	# sem descartar a diagonal pela zona morta radial das acoes de UI.
+	var axes := Vector2(
+		Input.get_action_raw_strength("ui_right") - Input.get_action_raw_strength("ui_left"),
+		Input.get_action_raw_strength("ui_down") - Input.get_action_raw_strength("ui_up")
+	)
+	axes.x = signf(axes.x) if absf(axes.x) > arcade_stick_deadzone else 0.0
+	axes.y = signf(axes.y) if absf(axes.y) > arcade_stick_deadzone else 0.0
+	return axes.normalized()
+
+
 func _apply_control_preset() -> void:
 	camera_rotation = Vector2.ZERO
 	_stick_was_active = false
+	_previous_arcade_input = Vector2.ZERO
 	_movement_basis = camera.global_basis
 	if follow_behind:
 		_update_follow_camera()
@@ -188,6 +212,12 @@ func _update_free_camera(delta: float) -> void:
 
 
 func _update_follow_camera(delta: float = 0.0) -> void:
+	# Com angulo estavel, a manopla sempre corresponde as direcoes da tela.
+	# O pivo continua seguindo a posicao do jogador e evitando obstaculos.
+	if not arcade_auto_rotate:
+		camera_pivo.rotation.x = deg_to_rad(follow_pitch_degrees)
+		camera_rotation = Vector2.ZERO
+		return
 	# O modelo olha para +Z; a camera fica no lado oposto, olhando para ele.
 	var target_yaw := gobot.global_rotation.y + PI
 	# Inicializa alinhada; durante o movimento, suaviza pelo menor arco.

@@ -1,5 +1,7 @@
 [gd_scene format=4 uid="uid://yksg6oyp73u6"]
 
+[ext_resource type="Script" path="res://_testes/cenario_ilha/vegetation_collision.gd" id="3_collision"]
+
 [ext_resource type="Texture2D" uid="uid://cqjravjkq5t6o" path="res://assets/models/creative_trio/CT_Pallete.png" id="1_vatm7"]
 [ext_resource type="Texture2D" uid="uid://cawaa6t6d64n3" path="res://assets/models/creative_trio/CT_Rocks_Palette.png" id="2_18tup"]
 
@@ -1573,6 +1575,7 @@ radius = 0.035
 height = 0.07
 
 [node name="PleistoceneVegetation" type="Node3D" unique_id=1550867674]
+script = ExtResource("3_collision")
 
 [node name="CampoAberto" type="Node3D" parent="." unique_id=1442038048]
 

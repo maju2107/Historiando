@@ -123,7 +123,7 @@ func _test_switching_and_saving() -> void:
 	_player.control_preset = 1
 	_check(_player.follow_behind, "Arcade preset did not enable automatic camera")
 	_check(_player.camera_rotation.is_zero_approx(), "Preset change left queued mouse motion")
-	_check(is_equal_approx(_player.camera_pivo.rotation.x, deg_to_rad(-18)), "Arcade preset did not restore its pitch")
+	_check(is_equal_approx(_player.camera_pivo.rotation.x, deg_to_rad(_player.follow_pitch_degrees)), "Arcade preset did not restore its pitch")
 	var yaw: float = _player.camera_pivo.global_rotation.y
 	_mouse(Vector2(100, 100))
 	_joy(JOY_AXIS_RIGHT_X, 1.0)

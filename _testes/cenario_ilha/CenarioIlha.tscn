@@ -262,6 +262,7 @@ model = ExtResource("16_narrow")
 [node name="ParkourFlutuante" parent="." unique_id=1244333975 instance=ExtResource("20_parkour")]
 process_physics_priority = -10
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6183758, 0)
+active_seconds = 8.0
 
 [node name="Water" parent="." unique_id=1052622256 instance=ExtResource("19_water")]
 deep_color = Color(0.3098039, 0.6156863, 0.8509804, 1)

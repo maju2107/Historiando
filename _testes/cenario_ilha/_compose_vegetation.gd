@@ -16,6 +16,7 @@ func _initialize() -> void:
 	island.get_node("Player").free()
 	vegetation = Node3D.new()
 	vegetation.name = "PleistoceneVegetation"
+	vegetation.set_script(load("res://_testes/cenario_ilha/vegetation_collision.gd"))
 	island.add_child(vegetation)
 	for label in ["CampoAberto", "MataDeGaleria", "FlorestaDeAltitude", "EstratoBaixo", "EstratoRibeirinho", "FloresDoCampo", "Fungos", "Afloramentos", "Santuario"]:
 		var group := Node3D.new()
@@ -161,4 +162,3 @@ func _physics_process(_delta: float) -> bool:
 	print("BAKED trees=", count + 1, " summit=", peak.position)
 	quit()
 	return false
-
