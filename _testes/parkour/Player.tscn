@@ -26,11 +26,14 @@ transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0.9218304, 0)
 shape = SubResource("SphereShape3D_hijyl")
 debug_color = Color(0.9647059, 0, 0.49803922, 1)
 
-[node name="camera_pivo" type="Node3D" parent="." unique_id=1424319402]
+[node name="camera_pivo" type="SpringArm3D" parent="." unique_id=1424319402]
 transform = Transform3D(1, 0, 0, 0, 0.9620229, 0.27296874, 0, -0.27296874, 0.9620229, 0, 1.2858493, 0)
+spring_length = 3.5
+collision_mask = 1
+margin = 0.15
 
 [node name="camera" type="Camera3D" parent="camera_pivo" unique_id=314590229]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.5)
+near = 0.05
 
 [node name="HUD" type="CanvasLayer" parent="."]
 

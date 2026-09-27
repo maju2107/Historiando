@@ -10,6 +10,7 @@ script = ExtResource("1_course")
 position = Vector3(5.000000, 13.770000, 0.300000)
 rotation = Vector3(0, 1.714247, 0)
 platform_number = 1
+permanent = true
 
 [node name="Plataforma02" parent="." instance=ExtResource("2_platform")]
 position = Vector3(14.000000, 14.420000, -1.000000)

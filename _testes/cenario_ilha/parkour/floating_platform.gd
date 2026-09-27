@@ -43,6 +43,8 @@ func _refresh_geometry() -> void:
 	_material.set_shader_parameter("permanent", 1.0 if permanent else 0.0)
 	_label.position.y = platform_size.y * 0.5 + 0.018
 	_label.text = "CHEGADA" if permanent else "%02d" % platform_number
+	if permanent and platform_number == 1:
+		_label.text = "INÍCIO"
 	_label.font_size = 58 if permanent else 72
 	if permanent:
 		set_active_state(true, 0.0)
