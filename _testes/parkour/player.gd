@@ -81,6 +81,9 @@ func _ready() -> void:
 	_update_life_hud()
 
 func _unhandled_input(event: InputEvent) -> void:
+	# UI receives clicks first; the global pause manager owns Escape/cursor.
+	if event.is_action_pressed("left_click"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	var is_camera_motion := (
 		event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
 	)
@@ -88,14 +91,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		# Mouse fornece deslocamento, portanto nao deve ser multiplicado por delta.
 		camera_rotation += event.screen_relative * deg_to_rad(mouse_sensitivity)
 
-
-func  _input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("ui_cancel"):
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-
-
-	if Input.is_action_just_pressed("left_click"):
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _physics_process(delta: float) -> void:
 	if not can_move or is_dead:

@@ -30,6 +30,16 @@ recomendada de implementação.
 O projeto atualmente declara recursos do Godot **4.7**. Evite salvar o projeto
 com uma versão anterior, pois isso pode reescrever cenas e imports.
 
+## Interface
+
+A interface usa a identidade Historiando/Pindorama com recortes de HQ e arcade.
+Execute **F5** para abrir a tela inicial. **Começar a jornada → capítulo 01** abre
+o protótipo 3D da ilha. **Créditos** reúne autores e fontes dos assets do registro
+`Licencas_Assets`. A demonstração da HUD continua em `scenes/ui/hud_demo.tscn`.
+
+Prévias, componentes, integração e instruções da fonte personalizada estão em
+[docs/ui/README.md](docs/ui/README.md).
+
 ## Organização
 
 - `scenes/`: fluxo principal, menus e fases integradas;

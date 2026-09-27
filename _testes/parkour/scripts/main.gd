@@ -8,6 +8,8 @@ func _ready() -> void:
 	pass
 
 func _input(event):
+	if get_node_or_null("/root/BotaoGlobal"):
+		return # The shared interface owns pause when the project autoload is active.
 	if event.is_action_pressed("ui_cancel"):
 		toggle_pause()
 
