@@ -57,13 +57,8 @@ Dialogic="*uid://ds2q0uclmolvu"
 
 [dialogic]
 
-directories/dch_directory={
-"personagem_secundario": "res://dialogo/personagens/personagem_secundario.dch",
-"player": "res://dialogo/personagens/player.dch"
-}
-directories/dtl_directory={
-"timeline": "res://dialogo/linha_do_tempo/timeline.dtl"
-}
+directories/dch_directory={}
+directories/dtl_directory={}
 layout/style_directory={
 "": "res://dialogo/estilos/balao_de_fala.tres",
 "balao_de_fala": "res://dialogo/estilos/balao_de_fala.tres"

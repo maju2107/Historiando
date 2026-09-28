@@ -4,6 +4,14 @@ Abra `res://_testes/cenario_ilha/CenarioIlha.tscn` e execute a cena com **F6**.
 
 ## Trocar teclado/controle por fliperama
 
+Também é possível selecionar **Mobile** em **Control Preset** ou pelo seletor
+de controles na HUD. No computador, pressione **F4** para abrir esse seletor.
+No modo Mobile, o joystick circular inferior esquerdo controla a direção e a
+intensidade do movimento; o botão inferior direito pula. Arraste outro dedo
+fora desses controles para girar a câmera. Os três gestos podem ser usados
+simultaneamente. A sensibilidade e a inversão vertical usam as opções de
+**Camera Livre**. Os controles se ajustam ao tamanho da tela.
+
 1. Na árvore de `CenarioIlha`, selecione **Player**.
 2. No Inspector, vá a **Controles → Control Preset**.
 3. Escolha **Teclado e Controle** (padrão) ou **Fliperama** e salve a cena.

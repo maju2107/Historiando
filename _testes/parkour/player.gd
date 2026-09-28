@@ -7,7 +7,10 @@ extends CharacterBody3D
 @export var jump_velocity := 6.5
 @export var model_turn_speed := 10.0
 
-enum ControlPreset { TECLADO_E_CONTROLE, FLIPERAMA }
+enum ControlPreset { TECLADO_E_CONTROLE, FLIPERAMA, MOBILE }
+
+const MobileControls = preload("res://scenes/ui/mobile_controls.gd")
+var mobile_controls: Control
 
 @export_category("Controles")
 ## Teclado e controle: camera livre pelo mouse/analogico direito.
@@ -82,12 +85,22 @@ func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	anim_player.play("Idle")
 	last_moviment_dir = gobot.global_basis.z.normalized()
+	mobile_controls = MobileControls.new()
+	mobile_controls.player = self
+	$HUD.add_child(mobile_controls)
 	_apply_control_preset()
 	if not gear_container:
 		push_warning("O HUD do jogador não foi encontrado; a contagem ficará desativada.")
 	_update_life_hud()
 
 func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_F4:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		mobile_controls.open_selector()
+		get_viewport().set_input_as_handled()
+		return
+	if control_preset == ControlPreset.MOBILE:
+		return
 	# UI receives clicks first; the global pause manager owns Escape/cursor.
 	if event.is_action_pressed("left_click"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -102,6 +115,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func _physics_process(delta: float) -> void:
 	if not can_move or is_dead:
 		camera_rotation = Vector2.ZERO
+		mobile_controls.reset_touches()
 		return
 
 	if not follow_behind:
@@ -111,7 +125,8 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	is_jumping = Input.is_action_just_pressed("ui_accept") and is_on_floor()
+	var jump_requested: bool = mobile_controls.consume_jump() if control_preset == ControlPreset.MOBILE else Input.is_action_just_pressed("ui_accept")
+	is_jumping = jump_requested and is_on_floor()
 
 	#pulo
 	if is_jumping:
@@ -140,6 +155,8 @@ func _physics_process(delta: float) -> void:
 
 	var is_running := InputMap.has_action("sprint") and Input.is_action_pressed("sprint")
 	var movement_speed := run_speed if is_running else walk_speed
+	if control_preset == ControlPreset.MOBILE:
+		movement_speed = walk_speed * input_dir.length()
 
 	# Atualiza tambem no ar: soltar a direcao deve interromper o movimento.
 	velocity.x = direction.x * movement_speed
@@ -164,6 +181,8 @@ func _physics_process(delta: float) -> void:
 
 
 func _get_movement_input() -> Vector2:
+	if control_preset == ControlPreset.MOBILE:
+		return mobile_controls.movement
 	if not follow_behind:
 		return Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	# A manopla tem oito direcoes. Avalia cada eixo independentemente,
@@ -178,6 +197,9 @@ func _get_movement_input() -> Vector2:
 
 
 func _apply_control_preset() -> void:
+	if mobile_controls:
+		mobile_controls.set_mobile(control_preset == ControlPreset.MOBILE)
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE if control_preset == ControlPreset.MOBILE else Input.MOUSE_MODE_CAPTURED)
 	camera_rotation = Vector2.ZERO
 	_stick_was_active = false
 	_previous_arcade_input = Vector2.ZERO
@@ -193,6 +215,9 @@ func _update_free_camera(delta: float) -> void:
 	)
 	# A zona morta evita que um pequeno desvio do analogico gire a camera.
 	var strength := stick.length()
+	if control_preset == ControlPreset.MOBILE:
+		stick = Vector2.ZERO
+		strength = 0.0
 	if strength <= camera_stick_deadzone:
 		stick = Vector2.ZERO
 	else:
