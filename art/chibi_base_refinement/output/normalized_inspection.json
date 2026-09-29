@@ -1,0 +1,444 @@
+{
+  "bounds": [
+    [
+      -0.49708548188209534,
+      -0.16797509789466858,
+      0.0
+    ],
+    [
+      0.4975197911262512,
+      0.21693289279937744,
+      1.0
+    ]
+  ],
+  "objects": {
+    "CHR_Neck": {
+      "vertices": 2774,
+      "faces": 2772,
+      "quads": 2772,
+      "triangles": 0,
+      "nonmanifold": 0,
+      "boundary": 0,
+      "normals": 0,
+      "components": [
+        {
+          "vertices": 2774,
+          "bbox": [
+            [
+              -0.04020648077130318,
+              -0.05673559010028839,
+              0.5676175355911255
+            ],
+            [
+              0.04020648077130318,
+              0.05727086216211319,
+              0.692418098449707
+            ]
+          ]
+        }
+      ],
+      "symmetry_error_local": 1.794337407545754e-07,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "materials": [],
+      "uv_layers": [
+        "Attribute"
+      ],
+      "modifiers": [],
+      "groups": []
+    },
+    "CHR_Head": {
+      "vertices": 41638,
+      "faces": 41636,
+      "quads": 41636,
+      "triangles": 0,
+      "nonmanifold": 0,
+      "boundary": 0,
+      "normals": 0,
+      "components": [
+        {
+          "vertices": 41638,
+          "bbox": [
+            [
+              -0.1567738801240921,
+              -0.16797509789466858,
+              0.6445939540863037
+            ],
+            [
+              0.15677385032176971,
+              0.21693289279937744,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "symmetry_error_local": 0.002526799915358424,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "materials": [],
+      "uv_layers": [],
+      "modifiers": [],
+      "groups": []
+    },
+    "CHR_Body": {
+      "vertices": 37317,
+      "faces": 37315,
+      "quads": 37315,
+      "triangles": 0,
+      "nonmanifold": 0,
+      "boundary": 0,
+      "normals": 0,
+      "components": [
+        {
+          "vertices": 37317,
+          "bbox": [
+            [
+              -0.49708548188209534,
+              -0.1494707614183426,
+              0.0
+            ],
+            [
+              0.4975197911262512,
+              0.07618887722492218,
+              0.621643602848053
+            ]
+          ]
+        }
+      ],
+      "symmetry_error_local": 0.0060884952545166016,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "materials": [],
+      "uv_layers": [],
+      "modifiers": [],
+      "groups": []
+    },
+    "CHR_Eye.L": {
+      "vertices": 6146,
+      "faces": 6144,
+      "quads": 6144,
+      "triangles": 0,
+      "nonmanifold": 0,
+      "boundary": 0,
+      "normals": 0,
+      "components": [
+        {
+          "vertices": 6146,
+          "bbox": [
+            [
+              0.05360882356762886,
+              -0.11429909616708755,
+              0.7594192028045654
+            ],
+            [
+              0.13281425833702087,
+              -0.08428194373846054,
+              0.8134939670562744
+            ]
+          ]
+        }
+      ],
+      "symmetry_error_local": 0.18647843599319458,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "materials": [],
+      "uv_layers": [
+        "Attribute"
+      ],
+      "modifiers": [],
+      "groups": []
+    },
+    "CHR_Eye.R": {
+      "vertices": 6146,
+      "faces": 6144,
+      "quads": 6144,
+      "triangles": 0,
+      "nonmanifold": 0,
+      "boundary": 0,
+      "normals": 0,
+      "components": [
+        {
+          "vertices": 6146,
+          "bbox": [
+            [
+              -0.13281425833702087,
+              -0.11429909616708755,
+              0.7594192028045654
+            ],
+            [
+              -0.05360882356762886,
+              -0.08428194373846054,
+              0.8134939670562744
+            ]
+          ]
+        }
+      ],
+      "symmetry_error_local": 0.18647843599319458,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "materials": [],
+      "uv_layers": [
+        "Attribute"
+      ],
+      "modifiers": [],
+      "groups": []
+    },
+    "CHR_Ear.L": {
+      "vertices": 6146,
+      "faces": 6144,
+      "quads": 6144,
+      "triangles": 0,
+      "nonmanifold": 0,
+      "boundary": 0,
+      "normals": 0,
+      "components": [
+        {
+          "vertices": 6146,
+          "bbox": [
+            [
+              0.12028198689222336,
+              -0.02521112561225891,
+              0.7008287310600281
+            ],
+            [
+              0.1940270960330963,
+              0.03494682163000107,
+              0.8107990622520447
+            ]
+          ]
+        }
+      ],
+      "symmetry_error_local": 0.31939446926116943,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "materials": [],
+      "uv_layers": [
+        "Attribute"
+      ],
+      "modifiers": [],
+      "groups": []
+    },
+    "CHR_Ear.R": {
+      "vertices": 6146,
+      "faces": 6144,
+      "quads": 6144,
+      "triangles": 0,
+      "nonmanifold": 0,
+      "boundary": 0,
+      "normals": 0,
+      "components": [
+        {
+          "vertices": 6146,
+          "bbox": [
+            [
+              -0.1940270960330963,
+              -0.02521112561225891,
+              0.7008287310600281
+            ],
+            [
+              -0.12028198689222336,
+              0.03494682163000107,
+              0.8107990622520447
+            ]
+          ]
+        }
+      ],
+      "symmetry_error_local": 0.31939446926116943,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "materials": [],
+      "uv_layers": [
+        "Attribute"
+      ],
+      "modifiers": [],
+      "groups": []
+    },
+    "CHR_Eyelid.L": {
+      "vertices": 3602,
+      "faces": 3600,
+      "quads": 3600,
+      "triangles": 0,
+      "nonmanifold": 0,
+      "boundary": 0,
+      "normals": 0,
+      "components": [
+        {
+          "vertices": 3602,
+          "bbox": [
+            [
+              0.05382125452160835,
+              -0.11934209614992142,
+              0.7761073112487793
+            ],
+            [
+              0.14940814673900604,
+              -0.09144039452075958,
+              0.8154913783073425
+            ]
+          ]
+        }
+      ],
+      "symmetry_error_local": 0.2042568027973175,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "materials": [],
+      "uv_layers": [
+        "Attribute"
+      ],
+      "modifiers": [],
+      "groups": []
+    },
+    "CHR_Eyelid.R": {
+      "vertices": 3602,
+      "faces": 3600,
+      "quads": 3600,
+      "triangles": 0,
+      "nonmanifold": 0,
+      "boundary": 0,
+      "normals": 0,
+      "components": [
+        {
+          "vertices": 3602,
+          "bbox": [
+            [
+              -0.14940814673900604,
+              -0.11934209614992142,
+              0.7761073112487793
+            ],
+            [
+              -0.05382125452160835,
+              -0.09144039452075958,
+              0.8154913783073425
+            ]
+          ]
+        }
+      ],
+      "symmetry_error_local": 0.2042568027973175,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "materials": [],
+      "uv_layers": [
+        "Attribute"
+      ],
+      "modifiers": [],
+      "groups": []
+    }
+  }
+}

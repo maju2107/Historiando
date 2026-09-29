@@ -1,0 +1,82 @@
+{
+  "front_sections": [
+    {
+      "landmark": "foot_span",
+      "z_m": 0.025,
+      "target_m": 0.3025516403402187,
+      "model_m": 0.3027758363068407,
+      "difference_mm": 0.22419596662198726
+    },
+    {
+      "landmark": "lower_leg_span",
+      "z_m": 0.12,
+      "target_m": 0.28068043742405835,
+      "model_m": 0.27815660603288006,
+      "difference_mm": -2.5238313911782884
+    },
+    {
+      "landmark": "knee_span",
+      "z_m": 0.213,
+      "target_m": 0.2393681652490887,
+      "model_m": 0.23803043370897542,
+      "difference_mm": -1.3377315401132683
+    },
+    {
+      "landmark": "hip_span",
+      "z_m": 0.39,
+      "target_m": 0.1919805589307412,
+      "model_m": 0.18997571776322675,
+      "difference_mm": -2.0048411675144537
+    },
+    {
+      "landmark": "waist",
+      "z_m": 0.48,
+      "target_m": 0.1275820170109356,
+      "model_m": 0.1270232752975975,
+      "difference_mm": -0.5587417133381123
+    },
+    {
+      "landmark": "head_width",
+      "z_m": 0.82,
+      "target_m": 0.3487241798298906,
+      "model_m": 0.3447745938167094,
+      "difference_mm": -3.949586013181239
+    },
+    {
+      "landmark": "upper_head",
+      "z_m": 0.94,
+      "target_m": 0.2733900364520049,
+      "model_m": 0.2734757211304535,
+      "difference_mm": 0.08568467844860539
+    }
+  ],
+  "eyes": [
+    {
+      "name": "CHR_Eye.L",
+      "center": [
+        0.07652570307254791,
+        -0.11903998628258705,
+        0.7909382283687592
+      ],
+      "dimensions": [
+        0.08502855896949768,
+        0.02702450007200241,
+        0.08502858877182007
+      ]
+    },
+    {
+      "name": "CHR_Eye.R",
+      "center": [
+        -0.07652570307254791,
+        -0.11903998628258705,
+        0.7909382283687592
+      ],
+      "dimensions": [
+        0.08502855896949768,
+        0.02702450007200241,
+        0.08502858877182007
+      ]
+    }
+  ],
+  "note": "Section dimensions of the preserved control cage; reference measurements are approximate screenshot measurements."
+}

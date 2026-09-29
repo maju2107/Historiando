@@ -1,0 +1,60 @@
+{
+  "file": "C:\\Users\\obran\\OneDrive\\Documentos\\GitHub\\Historiando\\art\\chibi_base_refinement\\output\\character_FINAL.blend",
+  "file_size": 13430767,
+  "sha256": "fb15cd60929ea635e639b9d09eeb91a81bc8fcae53ab6e31189a79fd3acacf4b",
+  "checkpoint": "character_07d_validation.blend",
+  "verified_at": "2026-09-29T06:01:33.937620",
+  "source_sha256": "8506a84aeae4f134cab5ddb584de7c5f49ada4e617fddc293f39212e8bf58fd5",
+  "reference_hashes": {
+    "cartoon-female-chibi-character-base-mesh-3d-model-9a858a9e65.jpg": "4e3278bb0742979e058fa86c56bf50718e5b085641583044291e5d18f9867e4c",
+    "cartoon-female-chibi-character-base-mesh-3d-model-21b9f05615.jpg": "37dfe53896f045218a4f48492e54ed67950ad6b7eff259b6a060b695ba9a76f3",
+    "cartoon-female-chibi-character-base-mesh-3d-model-b0b62758aa.jpg": "31c6dbe53e02487aa42d886b7fc91bbf97449df34d79d49e27a36e17e24edfea",
+    "cartoon-female-chibi-character-base-mesh-3d-model-7e135165fc.jpg": "2c63a82743d37aefd9907924af1f26f409d154abb1c183faf1f6316d5ef35747",
+    "cartoon-female-chibi-character-base-mesh-3d-model-93d81549c6.jpg": "bbfa3f54ed15f3f9d7238a8bc411c28c04104d70074afc25189998d70678839d",
+    "cartoon-female-chibi-character-base-mesh-3d-model-5f5cf94e96.jpg": "d09c50faf4de5bbba5526fd24a5c2ae5280151fcda6bf21fe6424358e3874d4d",
+    "cartoon-female-chibi-character-base-mesh-3d-model-2aa77f1153.jpg": "d354e82f6e92dc58276ee2b30015d6e1b181b8544d3e0e296cb3a592606a6618",
+    "cartoon-female-chibi-character-base-mesh-3d-model-3726ebacab.jpg": "f6a0d6793282bd1476f345989ee6c9b0a0e047fd3b03060f128b774d1ef88acc",
+    "cartoon-female-chibi-character-base-mesh-3d-model-61135f677f.jpg": "50c94e895e03329f19357e1871e3a10af7fc6f64ea1d6c563c166a5dcc5044cf"
+  },
+  "packed_references": [
+    "cartoon-female-chibi-character-base-mesh-3d-model-21b9f05615.jpg",
+    "cartoon-female-chibi-character-base-mesh-3d-model-2aa77f1153.jpg",
+    "cartoon-female-chibi-character-base-mesh-3d-model-3726ebacab.jpg",
+    "cartoon-female-chibi-character-base-mesh-3d-model-5f5cf94e96.jpg",
+    "cartoon-female-chibi-character-base-mesh-3d-model-61135f677f.jpg",
+    "cartoon-female-chibi-character-base-mesh-3d-model-7e135165fc.jpg",
+    "cartoon-female-chibi-character-base-mesh-3d-model-93d81549c6.jpg",
+    "cartoon-female-chibi-character-base-mesh-3d-model-9a858a9e65.jpg",
+    "cartoon-female-chibi-character-base-mesh-3d-model-b0b62758aa.jpg"
+  ],
+  "paired_symmetry_error_m": {
+    "CHR_Eye": 0.0,
+    "CHR_Ear": 0.0,
+    "CHR_Eyelid": 0.0,
+    "CHR_Eyebrow": 3.166496753692627e-06
+  },
+  "height_m": 0.9999998808126325,
+  "floor_z_m": -2.192201975503849e-11,
+  "control_faces": 114636,
+  "control_quads": 114592,
+  "quad_percentage": 99.96161764192749,
+  "technical_issues": [],
+  "renders": [
+    "back.png",
+    "before_after.png",
+    "comparison_back_three_quarter.png",
+    "comparison_front_side.png",
+    "face_closeup.png",
+    "face_three_quarter.png",
+    "finger_diagnosis.png",
+    "front.png",
+    "hand_after.png",
+    "hand_before.png",
+    "side.png",
+    "three_quarter.png",
+    "topology_face.png",
+    "topology_front.png",
+    "topology_hand.png"
+  ],
+  "scope": "Preserved dense source topology; central-part self-intersection tests; separate components intentionally overlap at attachments; no rig."
+}

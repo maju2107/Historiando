@@ -1,0 +1,13 @@
+{
+  "original_hand": "3 long fingers and thumb",
+  "final_hand": "4 long fingers and thumb",
+  "replaced_palm_faces": 8,
+  "boundary_vertices": 12,
+  "added_vertices": 97,
+  "root": [
+    0.36424148082733154,
+    0.06291255354881287,
+    0.5717609524726868
+  ],
+  "preserved": "Original thumb, three fingers, wrist, arm, torso, pelvis, legs and feet remain in the same mesh."
+}
