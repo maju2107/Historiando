@@ -1,0 +1,60 @@
+{
+  "bones": 46,
+  "deform_bones": 45,
+  "meshes": {
+    "CHR_Neck": {
+      "vertices": 130,
+      "unweighted": 0,
+      "max_weight_sum_error": 2.9802322387695312e-08,
+      "max_influences": 2
+    },
+    "CHR_Head": {
+      "vertices": 5379,
+      "unweighted": 0,
+      "max_weight_sum_error": 0.0,
+      "max_influences": 1
+    },
+    "CHR_Eye.L": {
+      "vertices": 386,
+      "unweighted": 0,
+      "max_weight_sum_error": 0.0,
+      "max_influences": 1
+    },
+    "CHR_Ear.L": {
+      "vertices": 386,
+      "unweighted": 0,
+      "max_weight_sum_error": 0.0,
+      "max_influences": 1
+    },
+    "CHR_Eyelid.L": {
+      "vertices": 331,
+      "unweighted": 0,
+      "max_weight_sum_error": 0.0,
+      "max_influences": 1
+    },
+    "CHR_Body": {
+      "vertices": 4038,
+      "unweighted": 0,
+      "max_weight_sum_error": 4.470348358154297e-08,
+      "max_influences": 4
+    },
+    "CHR_Eye.R": {
+      "vertices": 386,
+      "unweighted": 0,
+      "max_weight_sum_error": 0.0,
+      "max_influences": 1
+    },
+    "CHR_Ear.R": {
+      "vertices": 386,
+      "unweighted": 0,
+      "max_weight_sum_error": 0.0,
+      "max_influences": 1
+    },
+    "CHR_Eyelid.R": {
+      "vertices": 331,
+      "unweighted": 0,
+      "max_weight_sum_error": 0.0,
+      "max_influences": 1
+    }
+  }
+}

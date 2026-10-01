@@ -1,5 +1,7 @@
-# Continue from the saved refinement
+# Current game character
 
-Open `output/character_FINAL.blend`. Latest numbered checkpoint: `output/character_07d_validation.blend`.
+Open `output/character_GAME_RIGGED.blend`. Latest numbered checkpoint: `output/character_13_game_ready.blend`.
 
-The final delivery was reopened and audited. Read README.md for preservation details and remaining differences from the references. Do not rebuild, reimport, or replay earlier deformation scripts on this model. New edits should create another numbered revision.
+User-approved long eyes and original three fingers plus thumb restored. Retopology, FK skeleton, normalized weights and five pose tests completed. GLB and FBX reimported and compared in three poses. See GAME_README.md and output/game_export_verification.json.
+
+Do not resume from the older character_FINAL.blend, which is preserved historical work. Do not reimport or rebuild. New refinements should create another checkpoint.

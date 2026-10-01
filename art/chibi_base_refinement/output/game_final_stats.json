@@ -1,0 +1,86 @@
+{
+  "vertices": 18099,
+  "faces": 18226,
+  "quads": 17780,
+  "triangles_when_exported": 36162,
+  "bones": 46,
+  "deform_bones": 45,
+  "parts": {
+    "CHR_Neck": {
+      "vertices": 130,
+      "max_influences": 2,
+      "weight_error": 2.9802322387695312e-08,
+      "uv_layers": 1
+    },
+    "CHR_Head": {
+      "vertices": 5379,
+      "max_influences": 1,
+      "weight_error": 0.0,
+      "uv_layers": 1
+    },
+    "CHR_Eye.L": {
+      "vertices": 386,
+      "max_influences": 1,
+      "weight_error": 0.0,
+      "uv_layers": 1
+    },
+    "CHR_Ear.L": {
+      "vertices": 1538,
+      "max_influences": 1,
+      "weight_error": 0.0,
+      "uv_layers": 1
+    },
+    "CHR_Eyelid.L": {
+      "vertices": 331,
+      "max_influences": 1,
+      "weight_error": 0.0,
+      "uv_layers": 1
+    },
+    "CHR_Body": {
+      "vertices": 8080,
+      "max_influences": 4,
+      "weight_error": 4.470348358154297e-08,
+      "uv_layers": 1
+    },
+    "CHR_Eye.R": {
+      "vertices": 386,
+      "max_influences": 1,
+      "weight_error": 0.0,
+      "uv_layers": 1
+    },
+    "CHR_Ear.R": {
+      "vertices": 1538,
+      "max_influences": 1,
+      "weight_error": 0.0,
+      "uv_layers": 1
+    },
+    "CHR_Eyelid.R": {
+      "vertices": 331,
+      "max_influences": 1,
+      "weight_error": 0.0,
+      "uv_layers": 1
+    }
+  },
+  "pose_tests": {
+    "T_POSE": {
+      "self_intersections": 0,
+      "stretch_p99": 1.0000050571299601
+    },
+    "RELAXED": {
+      "self_intersections": 0,
+      "stretch_p99": 1.1873560433180537
+    },
+    "ELBOW_KNEE_BEND": {
+      "self_intersections": 0,
+      "stretch_p99": 1.3864463500217932
+    },
+    "HEAD_TURN": {
+      "self_intersections": 0,
+      "stretch_p99": 1.1601556138052347
+    },
+    "FINGER_CURL": {
+      "self_intersections": 0,
+      "stretch_p99": 1.3219741068598403
+    }
+  }
+}

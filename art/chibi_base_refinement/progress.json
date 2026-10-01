@@ -95,12 +95,72 @@
       "file": "character_07d_validation.blend",
       "notes": "Aligned the subdivided soles to Z=0 and height to 1 m, measured final proportions, and added disabled actual-topology review meshes and detail cameras.",
       "saved_at": "2026-09-29T05:57:26.893074"
+    },
+    {
+      "stage": 8,
+      "file": "character_08_restored_design.blend",
+      "notes": "Recovered stage 03c head/eyes/ears/lids, original three fingers plus thumb, and retained refined body. Corrected only the posterior skull; archived high resolution targets for retopology.",
+      "saved_at": "2026-10-01T09:40:38.179097"
+    },
+    {
+      "stage": 9,
+      "file": "character_09_game_retopology.blend",
+      "notes": "New projected quad cages over restored source. Original eye/ear cages reduced where regular. Four digits retained per hand. High-resolution source archived. Joint deformation and weights still require validation.",
+      "saved_at": "2026-10-01T09:42:56.302888"
+    },
+    {
+      "stage": 9,
+      "file": "character_09_game_retopology_clean.blend",
+      "notes": "Welded symmetric seam; rebuilt neck as controlled quad rings; reduced eyelid cages; rounded the full posterior cranium without altering the frontal features. Technical audit retained for further local cleanup.",
+      "saved_at": "2026-10-01T09:44:48.891187"
+    },
+    {
+      "stage": 9,
+      "file": "character_09_game_retopology_welded.blend",
+      "notes": "Replaced defective symmetry seams with bisect-and-welded cages; retained approved source shapes. Small component cages and corrected posterior skull preserved.",
+      "saved_at": "2026-10-01T09:46:41.694462"
+    },
+    {
+      "stage": 10,
+      "file": "character_10_skeleton_skinning.blend",
+      "notes": "Created FK game skeleton with calibrated three-finger-plus-thumb chains, eye bones and full body skinning. Weights normalized and limited to four influences; finger weights isolated by chain. Pose validation next.",
+      "saved_at": "2026-10-01T09:49:03.094312"
+    },
+    {
+      "stage": 11,
+      "file": "character_11_deformation_validation.blend",
+      "notes": "Added five FK test poses and rendered head/hand/joint deformation. Rest pose at frame 1. See game_pose_audit.json; any remaining pose issues must be reviewed before final export.",
+      "saved_at": "2026-10-01T09:52:18.529032"
+    },
+    {
+      "stage": 11,
+      "file": "character_11_refined_joint_weights.blend",
+      "notes": "Replaced sharp heat-weight transitions with broad monotone bands at shoulders/elbows/knees/ankles and continuous digit-chain weights across the palm. Five poses audited again.",
+      "saved_at": "2026-10-01T09:53:50.971659"
+    },
+    {
+      "stage": 12,
+      "file": "character_12_runtime_materials.blend",
+      "notes": "Prepared fresh game UVs, disabled optional subdivision for the runtime mesh, and baked the original head surface onto a packed 2K tangent normal texture. Rig stays in T-pose at frame 1.",
+      "saved_at": "2026-10-01T09:55:51.488045"
+    },
+    {
+      "stage": 12,
+      "file": "character_12_runtime_detail.blend",
+      "notes": "Added projected quad subdivisions only to hands and feet and restored smooth ear contours. Runtime subdivision remains disabled. Inherited skin weights normalized to four influences and deformation retested.",
+      "saved_at": "2026-10-01T09:58:20.815725"
+    },
+    {
+      "stage": 13,
+      "file": "character_13_game_ready.blend",
+      "notes": "Runtime mesh and FK skeleton reviewed in five test poses, with no body self-intersections detected. Packed face normal map, reference images, source archive and topology/rig review helpers retained. Export/reimport verification follows.",
+      "saved_at": "2026-10-01T10:01:54.520473"
     }
   ],
-  "latest_checkpoint": "character_07d_validation.blend",
-  "latest_stage": 7,
+  "latest_checkpoint": "character_13_game_ready.blend",
+  "latest_stage": 13,
   "next_stage": null,
-  "delivery_file": "character_FINAL.blend",
+  "delivery_file": "character_GAME_RIGGED.blend",
   "delivery_verified": true,
-  "work_status": "refinement_delivery_saved"
+  "work_status": "game_rig_delivery_verified"
 }

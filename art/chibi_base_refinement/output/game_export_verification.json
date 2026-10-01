@@ -1,0 +1,111 @@
+{
+  "blend": "C:\\Users\\obran\\OneDrive\\Documentos\\GitHub\\Historiando\\art\\chibi_base_refinement\\output\\character_GAME_RIGGED.blend",
+  "packed_images": [
+    "cartoon-female-chibi-character-base-mesh-3d-model-21b9f05615.jpg",
+    "cartoon-female-chibi-character-base-mesh-3d-model-2aa77f1153.jpg",
+    "cartoon-female-chibi-character-base-mesh-3d-model-3726ebacab.jpg",
+    "cartoon-female-chibi-character-base-mesh-3d-model-5f5cf94e96.jpg",
+    "cartoon-female-chibi-character-base-mesh-3d-model-61135f677f.jpg",
+    "cartoon-female-chibi-character-base-mesh-3d-model-7e135165fc.jpg",
+    "cartoon-female-chibi-character-base-mesh-3d-model-93d81549c6.jpg",
+    "cartoon-female-chibi-character-base-mesh-3d-model-9a858a9e65.jpg",
+    "cartoon-female-chibi-character-base-mesh-3d-model-b0b62758aa.jpg",
+    "Chibi_head_normal"
+  ],
+  "exports": {
+    "glb": {
+      "bones": 46,
+      "meshes": 9,
+      "poses": {
+        "1": {
+          "CHR_Body": 6.752544550181483e-07,
+          "CHR_Ear.L": 1.1944189282075968e-07,
+          "CHR_Ear.R": 1.1944189282075968e-07,
+          "CHR_Eye.L": 7.450580596923828e-09,
+          "CHR_Eye.R": 6.188916756855178e-08,
+          "CHR_Eyelid.L": 1.2013700256829907e-07,
+          "CHR_Eyelid.R": 1.2013700256829907e-07,
+          "CHR_Head": 1.2287812012345967e-07,
+          "CHR_Neck": 1.1944189282075968e-07
+        },
+        "40": {
+          "CHR_Body": 7.303408892767038e-06,
+          "CHR_Ear.L": 7.300048565639372e-08,
+          "CHR_Ear.R": 6.757064596740747e-08,
+          "CHR_Eye.L": 6.705522537231445e-08,
+          "CHR_Eye.R": 1.268788167863022e-07,
+          "CHR_Eyelid.L": 7.300048565639372e-08,
+          "CHR_Eyelid.R": 6.746788017153449e-08,
+          "CHR_Head": 7.300048565639372e-08,
+          "CHR_Neck": 6.247501715961334e-08
+        },
+        "80": {
+          "CHR_Body": 3.336265308462316e-06,
+          "CHR_Ear.L": 1.1944189282075968e-07,
+          "CHR_Ear.R": 1.1944189282075968e-07,
+          "CHR_Eye.L": 7.450580596923828e-09,
+          "CHR_Eye.R": 6.188916756855178e-08,
+          "CHR_Eyelid.L": 1.2013700256829907e-07,
+          "CHR_Eyelid.R": 1.2013700256829907e-07,
+          "CHR_Head": 1.2287812012345967e-07,
+          "CHR_Neck": 1.1944189282075968e-07
+        }
+      }
+    },
+    "fbx": {
+      "bones": 46,
+      "meshes": 9,
+      "poses": {
+        "1": {
+          "CHR_Ear.L": 1.3667158782482147e-07,
+          "CHR_Eye.L": 1.4751397259260557e-07,
+          "CHR_Eyelid.L": 1.341104507446289e-07,
+          "CHR_Head": 1.7881393432617188e-07,
+          "CHR_Ear.R": 1.3667158782482147e-07,
+          "CHR_Body": 1.8842200688595767e-07,
+          "CHR_Eye.R": 1.4156103134155273e-07,
+          "CHR_Eyelid.R": 1.341104507446289e-07,
+          "CHR_Neck": 1.1362135410308838e-07
+        },
+        "40": {
+          "CHR_Ear.L": 1.598405674485548e-07,
+          "CHR_Eye.L": 1.4642807855125284e-07,
+          "CHR_Eyelid.L": 1.6664169777413917e-07,
+          "CHR_Head": 1.9097336689810618e-07,
+          "CHR_Ear.R": 1.497548112183722e-07,
+          "CHR_Body": 3.223614157832344e-07,
+          "CHR_Eye.R": 1.4751397259260557e-07,
+          "CHR_Eyelid.R": 1.564621925354004e-07,
+          "CHR_Neck": 1.3004211041334202e-07
+        },
+        "80": {
+          "CHR_Ear.L": 1.3667158782482147e-07,
+          "CHR_Eye.L": 1.4751397259260557e-07,
+          "CHR_Eyelid.L": 1.341104507446289e-07,
+          "CHR_Head": 1.7881393432617188e-07,
+          "CHR_Ear.R": 1.3667158782482147e-07,
+          "CHR_Body": 3.3567459922778653e-07,
+          "CHR_Eye.R": 1.4156103134155273e-07,
+          "CHR_Eyelid.R": 1.341104507446289e-07,
+          "CHR_Neck": 1.1362135410308838e-07
+        }
+      }
+    }
+  },
+  "max_roundtrip_position_error_m": 7.303408892767038e-06,
+  "files": {
+    "blend": {
+      "bytes": 10846978,
+      "sha256": "f49511a6fdf3cb2d232e3a61116494e3c2b7bdb61a457613dd293fe3ea79f9b7"
+    },
+    "glb": {
+      "bytes": 1953488,
+      "sha256": "0b8156f76873550bc4027e8320fde864493f47c07f12017b2afd939a7446fcd7"
+    },
+    "fbx": {
+      "bytes": 2092524,
+      "sha256": "3113db811ce655b70756c6040d6d14bc0fea7865e3d110b759b58411ef989601"
+    }
+  },
+  "verified_at": "2026-10-01T10:04:39.531778"
+}

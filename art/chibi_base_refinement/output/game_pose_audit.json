@@ -1,0 +1,72 @@
+{
+  "T_POSE": {
+    "vertices": 8080,
+    "faces": 8164,
+    "quads": 7992,
+    "nonmanifold_edges": 0,
+    "normal_errors": 0,
+    "degenerate_faces": 0,
+    "duplicate_vertex_pairs": [],
+    "self_intersections": [],
+    "self_intersection_count": 0,
+    "signed_volume": 0.014946146842744912,
+    "edge_stretch_p99": 1.0000050571299601,
+    "edge_stretch_max": 1.000013349104625
+  },
+  "RELAXED": {
+    "vertices": 8080,
+    "faces": 8164,
+    "quads": 7992,
+    "nonmanifold_edges": 0,
+    "normal_errors": 0,
+    "degenerate_faces": 0,
+    "duplicate_vertex_pairs": [],
+    "self_intersections": [],
+    "self_intersection_count": 0,
+    "signed_volume": 0.014899571411705373,
+    "edge_stretch_p99": 1.1873560433180537,
+    "edge_stretch_max": 1.430349308614018
+  },
+  "ELBOW_KNEE_BEND": {
+    "vertices": 8080,
+    "faces": 8164,
+    "quads": 7992,
+    "nonmanifold_edges": 0,
+    "normal_errors": 0,
+    "degenerate_faces": 0,
+    "duplicate_vertex_pairs": [],
+    "self_intersections": [],
+    "self_intersection_count": 0,
+    "signed_volume": 0.01459271636667626,
+    "edge_stretch_p99": 1.3864463500217932,
+    "edge_stretch_max": 2.5619802124144457
+  },
+  "HEAD_TURN": {
+    "vertices": 8080,
+    "faces": 8164,
+    "quads": 7992,
+    "nonmanifold_edges": 0,
+    "normal_errors": 0,
+    "degenerate_faces": 0,
+    "duplicate_vertex_pairs": [],
+    "self_intersections": [],
+    "self_intersection_count": 0,
+    "signed_volume": 0.014928140140870775,
+    "edge_stretch_p99": 1.1601556138052347,
+    "edge_stretch_max": 1.4103318101863462
+  },
+  "FINGER_CURL": {
+    "vertices": 8080,
+    "faces": 8164,
+    "quads": 7992,
+    "nonmanifold_edges": 0,
+    "normal_errors": 0,
+    "degenerate_faces": 0,
+    "duplicate_vertex_pairs": [],
+    "self_intersections": [],
+    "self_intersection_count": 0,
+    "signed_volume": 0.014849030463560522,
+    "edge_stretch_p99": 1.3219741068598403,
+    "edge_stretch_max": 1.747217529713571
+  }
+}

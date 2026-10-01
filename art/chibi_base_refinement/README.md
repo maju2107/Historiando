@@ -1,5 +1,7 @@
 # Refinamento do seu FBX
 
+**Atualização de 01/10/2026:** a versão atual recupera os olhos alongados e a mão com três dedos mais polegar, inclui retopologia e esqueleto. Abra [character_GAME_RIGGED.blend](output/character_GAME_RIGGED.blend) e leia [GAME_README.md](GAME_README.md). O conteúdo abaixo documenta a entrega anterior, preservada como histórico.
+
 Arquivo de entrega: [output/character_FINAL.blend](output/character_FINAL.blend).
 
 O trabalho parte exclusivamente de `source/base.fbx`, a cópia do arquivo que você modelou. O projeto anterior gerado do zero não foi usado como geometria. Os checkpoints numerados e suas revisões foram mantidos em `output/`.

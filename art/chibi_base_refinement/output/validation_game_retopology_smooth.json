@@ -1,0 +1,803 @@
+{
+  "label": "game_retopology_smooth",
+  "parts": {
+    "CHR_Neck": {
+      "vertices": 872,
+      "faces": 868,
+      "quads": 868,
+      "nonmanifold_edges": 32,
+      "normal_errors": 0,
+      "degenerate_faces": 0,
+      "duplicate_vertex_pairs": [
+        [
+          5,
+          88
+        ],
+        [
+          62,
+          159
+        ],
+        [
+          67,
+          164
+        ],
+        [
+          80,
+          177
+        ],
+        [
+          231,
+          387
+        ],
+        [
+          361,
+          546
+        ],
+        [
+          364,
+          549
+        ],
+        [
+          365,
+          550
+        ],
+        [
+          739,
+          834
+        ],
+        [
+          740,
+          835
+        ]
+      ],
+      "self_intersections": [
+        [
+          543,
+          705
+        ],
+        [
+          368,
+          705
+        ],
+        [
+          371,
+          705
+        ],
+        [
+          619,
+          786
+        ],
+        [
+          619,
+          785
+        ],
+        [
+          629,
+          818
+        ],
+        [
+          329,
+          746
+        ],
+        [
+          329,
+          660
+        ],
+        [
+          337,
+          660
+        ],
+        [
+          337,
+          661
+        ],
+        [
+          336,
+          661
+        ],
+        [
+          336,
+          659
+        ],
+        [
+          647,
+          823
+        ],
+        [
+          644,
+          817
+        ],
+        [
+          644,
+          823
+        ],
+        [
+          628,
+          818
+        ],
+        [
+          628,
+          817
+        ],
+        [
+          336,
+          656
+        ],
+        [
+          656,
+          804
+        ],
+        [
+          656,
+          808
+        ],
+        [
+          648,
+          808
+        ],
+        [
+          649,
+          821
+        ],
+        [
+          649,
+          808
+        ],
+        [
+          649,
+          811
+        ],
+        [
+          647,
+          821
+        ],
+        [
+          647,
+          820
+        ],
+        [
+          323,
+          704
+        ],
+        [
+          57,
+          512
+        ],
+        [
+          301,
+          762
+        ],
+        [
+          301,
+          763
+        ],
+        [
+          235,
+          515
+        ],
+        [
+          84,
+          515
+        ],
+        [
+          85,
+          515
+        ],
+        [
+          255,
+          757
+        ],
+        [
+          255,
+          758
+        ],
+        [
+          32,
+          719
+        ],
+        [
+          32,
+          757
+        ],
+        [
+          254,
+          629
+        ],
+        [
+          30,
+          307
+        ],
+        [
+          307,
+          782
+        ],
+        [
+          720,
+          746
+        ],
+        [
+          340,
+          745
+        ],
+        [
+          340,
+          746
+        ],
+        [
+          340,
+          751
+        ],
+        [
+          63,
+          720
+        ],
+        [
+          63,
+          750
+        ],
+        [
+          63,
+          96
+        ],
+        [
+          79,
+          96
+        ],
+        [
+          79,
+          99
+        ],
+        [
+          76,
+          99
+        ],
+        [
+          76,
+          129
+        ],
+        [
+          76,
+          128
+        ],
+        [
+          128,
+          732
+        ],
+        [
+          128,
+          736
+        ],
+        [
+          81,
+          793
+        ],
+        [
+          81,
+          792
+        ],
+        [
+          81,
+          795
+        ],
+        [
+          304,
+          818
+        ],
+        [
+          304,
+          782
+        ],
+        [
+          304,
+          817
+        ],
+        [
+          304,
+          783
+        ],
+        [
+          80,
+          783
+        ],
+        [
+          80,
+          793
+        ],
+        [
+          308,
+          732
+        ],
+        [
+          311,
+          795
+        ],
+        [
+          311,
+          732
+        ],
+        [
+          311,
+          733
+        ],
+        [
+          520,
+          705
+        ],
+        [
+          523,
+          705
+        ],
+        [
+          202,
+          515
+        ],
+        [
+          516,
+          705
+        ],
+        [
+          203,
+          515
+        ],
+        [
+          186,
+          515
+        ],
+        [
+          519,
+          705
+        ],
+        [
+          512,
+          863
+        ],
+        [
+          187,
+          515
+        ],
+        [
+          343,
+          412
+        ],
+        [
+          540,
+          705
+        ],
+        [
+          234,
+          515
+        ],
+        [
+          345,
+          668
+        ],
+        [
+          344,
+          415
+        ],
+        [
+          705,
+          779
+        ],
+        [
+          705,
+          778
+        ],
+        [
+          705,
+          791
+        ],
+        [
+          705,
+          790
+        ],
+        [
+          705,
+          786
+        ],
+        [
+          515,
+          633
+        ],
+        [
+          515,
+          634
+        ],
+        [
+          515,
+          713
+        ],
+        [
+          515,
+          714
+        ],
+        [
+          515,
+          762
+        ],
+        [
+          342,
+          415
+        ],
+        [
+          147,
+          342
+        ],
+        [
+          342,
+          412
+        ],
+        [
+          514,
+          710
+        ],
+        [
+          706,
+          774
+        ],
+        [
+          706,
+          773
+        ],
+        [
+          706,
+          779
+        ],
+        [
+          514,
+          711
+        ],
+        [
+          514,
+          633
+        ]
+      ],
+      "self_intersection_count": 107,
+      "signed_volume": 0.00024722391166989894,
+      "max_symmetry_error": 1.7881636438232817e-07,
+      "transforms_identity": true,
+      "source_name": "pesco\u00e7o ",
+      "uv_layers": 0
+    },
+    "CHR_Head": {
+      "vertices": 23880,
+      "faces": 23648,
+      "quads": 23648,
+      "nonmanifold_edges": 242,
+      "normal_errors": 0,
+      "degenerate_faces": 0,
+      "duplicate_vertex_pairs": [],
+      "self_intersections": [
+        [
+          12497,
+          23263
+        ],
+        [
+          12497,
+          23261
+        ],
+        [
+          23270,
+          23622
+        ],
+        [
+          23269,
+          23622
+        ],
+        [
+          18532,
+          20012
+        ],
+        [
+          18533,
+          20012
+        ],
+        [
+          18541,
+          18547
+        ],
+        [
+          18541,
+          18546
+        ]
+      ],
+      "self_intersection_count": 8,
+      "signed_volume": 0.023051066892621822,
+      "max_symmetry_error": 1.8143349223009864e-07,
+      "transforms_identity": true,
+      "source_name": "coco",
+      "uv_layers": 0
+    },
+    "CHR_Eye.L": {
+      "vertices": 1538,
+      "faces": 1536,
+      "quads": 1536,
+      "nonmanifold_edges": 0,
+      "normal_errors": 0,
+      "degenerate_faces": 0,
+      "duplicate_vertex_pairs": [],
+      "self_intersections": [],
+      "self_intersection_count": 0,
+      "signed_volume": 5.6906818173902963e-05,
+      "transforms_identity": true,
+      "source_name": "bolota do zoio",
+      "uv_layers": 1
+    },
+    "CHR_Ear.L": {
+      "vertices": 1538,
+      "faces": 1536,
+      "quads": 1536,
+      "nonmanifold_edges": 0,
+      "normal_errors": 0,
+      "degenerate_faces": 0,
+      "duplicate_vertex_pairs": [],
+      "self_intersections": [],
+      "self_intersection_count": 0,
+      "signed_volume": 0.00015497213685884906,
+      "transforms_identity": true,
+      "source_name": "orelhas",
+      "uv_layers": 1
+    },
+    "CHR_Eyelid.L": {
+      "vertices": 14402,
+      "faces": 14400,
+      "quads": 14400,
+      "nonmanifold_edges": 0,
+      "normal_errors": 0,
+      "degenerate_faces": 0,
+      "duplicate_vertex_pairs": [],
+      "self_intersections": [],
+      "self_intersection_count": 0,
+      "signed_volume": 5.402264851101119e-06,
+      "transforms_identity": true,
+      "source_name": "c\u00edlios ",
+      "uv_layers": 1
+    },
+    "CHR_Body": {
+      "vertices": 23319,
+      "faces": 23184,
+      "quads": 23184,
+      "nonmanifold_edges": 234,
+      "normal_errors": 0,
+      "degenerate_faces": 0,
+      "duplicate_vertex_pairs": [
+        [
+          55,
+          2961
+        ],
+        [
+          58,
+          2964
+        ],
+        [
+          433,
+          3337
+        ],
+        [
+          1706,
+          4597
+        ],
+        [
+          2939,
+          5793
+        ],
+        [
+          2942,
+          5795
+        ],
+        [
+          2948,
+          5796
+        ],
+        [
+          3314,
+          5853
+        ],
+        [
+          3355,
+          5854
+        ],
+        [
+          4594,
+          5865
+        ],
+        [
+          5800,
+          5823
+        ],
+        [
+          5812,
+          5839
+        ],
+        [
+          6080,
+          11806
+        ],
+        [
+          6102,
+          11828
+        ],
+        [
+          6117,
+          14667
+        ],
+        [
+          7428,
+          14031
+        ],
+        [
+          9003,
+          17391
+        ],
+        [
+          10387,
+          16143
+        ]
+      ],
+      "self_intersections": [
+        [
+          4116,
+          23103
+        ],
+        [
+          4116,
+          23124
+        ],
+        [
+          13020,
+          22107
+        ],
+        [
+          13020,
+          19483
+        ],
+        [
+          4120,
+          23146
+        ],
+        [
+          4120,
+          23145
+        ],
+        [
+          13040,
+          22731
+        ],
+        [
+          4128,
+          23124
+        ],
+        [
+          13005,
+          19483
+        ],
+        [
+          4124,
+          23146
+        ],
+        [
+          4124,
+          23145
+        ],
+        [
+          13041,
+          22734
+        ],
+        [
+          13041,
+          22731
+        ],
+        [
+          12856,
+          22250
+        ],
+        [
+          16447,
+          23024
+        ],
+        [
+          4836,
+          16447
+        ],
+        [
+          4836,
+          16346
+        ],
+        [
+          16446,
+          23024
+        ],
+        [
+          20153,
+          22203
+        ],
+        [
+          5319,
+          16824
+        ],
+        [
+          5289,
+          23171
+        ],
+        [
+          5272,
+          23180
+        ]
+      ],
+      "self_intersection_count": 22,
+      "signed_volume": 0.014798158910748625,
+      "max_symmetry_error": 1.8129001944089396e-07,
+      "transforms_identity": true,
+      "source_name": "corpo",
+      "uv_layers": 0
+    },
+    "CHR_Eye.R": {
+      "vertices": 1538,
+      "faces": 1536,
+      "quads": 1536,
+      "nonmanifold_edges": 0,
+      "normal_errors": 0,
+      "degenerate_faces": 0,
+      "duplicate_vertex_pairs": [],
+      "self_intersections": [],
+      "self_intersection_count": 0,
+      "signed_volume": 5.6906815532755416e-05,
+      "transforms_identity": true,
+      "source_name": "bolota do zoio",
+      "uv_layers": 1
+    },
+    "CHR_Ear.R": {
+      "vertices": 1538,
+      "faces": 1536,
+      "quads": 1536,
+      "nonmanifold_edges": 0,
+      "normal_errors": 0,
+      "degenerate_faces": 0,
+      "duplicate_vertex_pairs": [],
+      "self_intersections": [],
+      "self_intersection_count": 0,
+      "signed_volume": 0.00015497212520877693,
+      "transforms_identity": true,
+      "source_name": "orelhas",
+      "uv_layers": 1
+    },
+    "CHR_Eyelid.R": {
+      "vertices": 14402,
+      "faces": 14400,
+      "quads": 14400,
+      "nonmanifold_edges": 0,
+      "normal_errors": 0,
+      "degenerate_faces": 0,
+      "duplicate_vertex_pairs": [],
+      "self_intersections": [],
+      "self_intersection_count": 0,
+      "signed_volume": 5.402265181877159e-06,
+      "transforms_identity": true,
+      "source_name": "c\u00edlios ",
+      "uv_layers": 1
+    }
+  },
+  "issues": [
+    "CHR_Neck: nonmanifold_edges = 32",
+    "CHR_Neck: duplicate_vertex_pairs = [(5, 88), (62, 159), (67, 164), (80, 177), (231, 387), (361, 546), (364, 549), (365, 550), (739, 834), (740, 835)]",
+    "CHR_Neck: self_intersection_count = 107",
+    "CHR_Head: nonmanifold_edges = 242",
+    "CHR_Head: self_intersection_count = 8",
+    "CHR_Body: nonmanifold_edges = 234",
+    "CHR_Body: duplicate_vertex_pairs = [(55, 2961), (58, 2964), (433, 3337), (1706, 4597), (2939, 5793), (2942, 5795), (2948, 5796), (3314, 5853), (3355, 5854), (4594, 5865), (5800, 5823), (5812, 5839), (6080, 11806), (6102, 11828), (6117, 14667), (7428, 14031), (9003, 17391), (10387, 16143)]",
+    "CHR_Body: self_intersection_count = 22"
+  ],
+  "bounds": [
+    [
+      -0.45816105604171753,
+      -0.14711745083332062,
+      0.0005529039772227407
+    ],
+    [
+      0.45816105604171753,
+      0.198151633143425,
+      0.9991994500160217
+    ]
+  ],
+  "height_m": 0.998646546038799
+}

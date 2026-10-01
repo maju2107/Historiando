@@ -1,0 +1,236 @@
+{
+  "label": "game_clean_control",
+  "parts": {
+    "CHR_Neck": {
+      "vertices": 130,
+      "faces": 128,
+      "quads": 128,
+      "nonmanifold_edges": 0,
+      "normal_errors": 0,
+      "degenerate_faces": 0,
+      "duplicate_vertex_pairs": [],
+      "self_intersections": [],
+      "self_intersection_count": 0,
+      "signed_volume": 0.00028551087690350456,
+      "max_symmetry_error": 1.35935793026892e-17,
+      "transforms_identity": true,
+      "source_name": "pesco\u00e7o ",
+      "uv_layers": 0
+    },
+    "CHR_Head": {
+      "vertices": 5917,
+      "faces": 5912,
+      "quads": 5904,
+      "nonmanifold_edges": 14,
+      "normal_errors": 0,
+      "degenerate_faces": 0,
+      "duplicate_vertex_pairs": [],
+      "self_intersections": [
+        [
+          3124,
+          5817
+        ],
+        [
+          3124,
+          5815
+        ],
+        [
+          5815,
+          5905
+        ],
+        [
+          4633,
+          5002
+        ],
+        [
+          4633,
+          4635
+        ],
+        [
+          4636,
+          5002
+        ]
+      ],
+      "self_intersection_count": 6,
+      "signed_volume": 0.023579414755191007,
+      "max_symmetry_error": 0.0,
+      "transforms_identity": true,
+      "source_name": "coco",
+      "uv_layers": 0
+    },
+    "CHR_Eye.L": {
+      "vertices": 386,
+      "faces": 384,
+      "quads": 384,
+      "nonmanifold_edges": 0,
+      "normal_errors": 0,
+      "degenerate_faces": 0,
+      "duplicate_vertex_pairs": [],
+      "self_intersections": [],
+      "self_intersection_count": 0,
+      "signed_volume": 5.8120794183527535e-05,
+      "transforms_identity": true,
+      "source_name": "bolota do zoio",
+      "uv_layers": 1
+    },
+    "CHR_Ear.L": {
+      "vertices": 386,
+      "faces": 384,
+      "quads": 384,
+      "nonmanifold_edges": 0,
+      "normal_errors": 0,
+      "degenerate_faces": 0,
+      "duplicate_vertex_pairs": [],
+      "self_intersections": [],
+      "self_intersection_count": 0,
+      "signed_volume": 0.00016004626044608533,
+      "transforms_identity": true,
+      "source_name": "orelhas",
+      "uv_layers": 1
+    },
+    "CHR_Eyelid.L": {
+      "vertices": 331,
+      "faces": 359,
+      "quads": 299,
+      "nonmanifold_edges": 0,
+      "normal_errors": 0,
+      "degenerate_faces": 0,
+      "duplicate_vertex_pairs": [],
+      "self_intersections": [],
+      "self_intersection_count": 0,
+      "signed_volume": 4.899295285689525e-06,
+      "transforms_identity": true,
+      "source_name": "c\u00edlios ",
+      "uv_layers": 1
+    },
+    "CHR_Body": {
+      "vertices": 5829,
+      "faces": 5794,
+      "quads": 5754,
+      "nonmanifold_edges": 66,
+      "normal_errors": 0,
+      "degenerate_faces": 0,
+      "duplicate_vertex_pairs": [],
+      "self_intersections": [
+        [
+          1029,
+          5778
+        ],
+        [
+          3253,
+          5526
+        ],
+        [
+          3253,
+          4869
+        ],
+        [
+          1029,
+          5773
+        ],
+        [
+          1030,
+          5773
+        ],
+        [
+          1030,
+          5784
+        ],
+        [
+          3258,
+          5682
+        ],
+        [
+          3258,
+          5526
+        ],
+        [
+          1031,
+          5778
+        ],
+        [
+          3249,
+          4869
+        ],
+        [
+          3904,
+          5762
+        ],
+        [
+          4634,
+          5068
+        ]
+      ],
+      "self_intersection_count": 12,
+      "signed_volume": 0.01495710880621005,
+      "max_symmetry_error": 4.620524123311043e-07,
+      "transforms_identity": true,
+      "source_name": "corpo",
+      "uv_layers": 0
+    },
+    "CHR_Eye.R": {
+      "vertices": 386,
+      "faces": 384,
+      "quads": 384,
+      "nonmanifold_edges": 0,
+      "normal_errors": 0,
+      "degenerate_faces": 0,
+      "duplicate_vertex_pairs": [],
+      "self_intersections": [],
+      "self_intersection_count": 0,
+      "signed_volume": 5.8120794183527684e-05,
+      "transforms_identity": true,
+      "source_name": "bolota do zoio",
+      "uv_layers": 1
+    },
+    "CHR_Ear.R": {
+      "vertices": 386,
+      "faces": 384,
+      "quads": 384,
+      "nonmanifold_edges": 0,
+      "normal_errors": 0,
+      "degenerate_faces": 0,
+      "duplicate_vertex_pairs": [],
+      "self_intersections": [],
+      "self_intersection_count": 0,
+      "signed_volume": 0.00016004626044608558,
+      "transforms_identity": true,
+      "source_name": "orelhas",
+      "uv_layers": 1
+    },
+    "CHR_Eyelid.R": {
+      "vertices": 331,
+      "faces": 359,
+      "quads": 299,
+      "nonmanifold_edges": 0,
+      "normal_errors": 0,
+      "degenerate_faces": 0,
+      "duplicate_vertex_pairs": [],
+      "self_intersections": [],
+      "self_intersection_count": 0,
+      "signed_volume": 4.8992952856896885e-06,
+      "transforms_identity": true,
+      "source_name": "c\u00edlios ",
+      "uv_layers": 1
+    }
+  },
+  "issues": [
+    "CHR_Head: nonmanifold_edges = 14",
+    "CHR_Head: self_intersection_count = 6",
+    "CHR_Body: nonmanifold_edges = 66",
+    "CHR_Body: self_intersection_count = 12"
+  ],
+  "bounds": [
+    [
+      -0.4601696729660034,
+      -0.1484752595424652,
+      0.00042478067916817963
+    ],
+    [
+      0.4601696729660034,
+      0.19893589615821838,
+      0.999462366104126
+    ]
+  ],
+  "height_m": 0.9990375854249578
+}

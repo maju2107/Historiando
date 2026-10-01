@@ -1,0 +1,365 @@
+{
+  "CHR_Neck": [
+    {
+      "iterations": 0,
+      "verts": 2774,
+      "faces": 2772,
+      "face_sizes": {
+        "4": 2772
+      },
+      "nonmanifold": 0
+    },
+    {
+      "iterations": 2,
+      "verts": 721,
+      "faces": 773,
+      "face_sizes": {
+        "4": 665,
+        "3": 108
+      },
+      "nonmanifold": 0
+    },
+    {
+      "iterations": 4,
+      "verts": 281,
+      "faces": 403,
+      "face_sizes": {
+        "4": 155,
+        "3": 248
+      },
+      "nonmanifold": 0
+    },
+    {
+      "iterations": 6,
+      "verts": 222,
+      "faces": 371,
+      "face_sizes": {
+        "4": 69,
+        "3": 302
+      },
+      "nonmanifold": 0
+    }
+  ],
+  "CHR_Head": [
+    {
+      "iterations": 0,
+      "verts": 41638,
+      "faces": 41636,
+      "face_sizes": {
+        "4": 41636
+      },
+      "nonmanifold": 0
+    },
+    {
+      "iterations": 2,
+      "verts": 12051,
+      "faces": 14763,
+      "face_sizes": {
+        "4": 9335,
+        "3": 5428
+      },
+      "nonmanifold": 0
+    },
+    {
+      "iterations": 4,
+      "verts": 7378,
+      "faces": 11376,
+      "face_sizes": {
+        "4": 3376,
+        "3": 8000
+      },
+      "nonmanifold": 0
+    },
+    {
+      "iterations": 6,
+      "verts": 6811,
+      "faces": 11075,
+      "face_sizes": {
+        "4": 2543,
+        "3": 8532
+      },
+      "nonmanifold": 0
+    }
+  ],
+  "CHR_Body": [
+    {
+      "iterations": 0,
+      "verts": 37317,
+      "faces": 37315,
+      "face_sizes": {
+        "4": 37315
+      },
+      "nonmanifold": 0
+    },
+    {
+      "iterations": 2,
+      "verts": 11226,
+      "faces": 14202,
+      "face_sizes": {
+        "4": 8246,
+        "3": 5956
+      },
+      "nonmanifold": 0
+    },
+    {
+      "iterations": 4,
+      "verts": 7725,
+      "faces": 12398,
+      "face_sizes": {
+        "4": 3048,
+        "3": 9350
+      },
+      "nonmanifold": 0
+    },
+    {
+      "iterations": 6,
+      "verts": 7578,
+      "faces": 12397,
+      "face_sizes": {
+        "3": 9642,
+        "4": 2755
+      },
+      "nonmanifold": 0
+    }
+  ],
+  "CHR_Eye.L": [
+    {
+      "iterations": 0,
+      "verts": 6146,
+      "faces": 6144,
+      "face_sizes": {
+        "4": 6144
+      },
+      "nonmanifold": 0
+    },
+    {
+      "iterations": 2,
+      "verts": 1538,
+      "faces": 1536,
+      "face_sizes": {
+        "4": 1536
+      },
+      "nonmanifold": 0
+    },
+    {
+      "iterations": 4,
+      "verts": 386,
+      "faces": 384,
+      "face_sizes": {
+        "4": 384
+      },
+      "nonmanifold": 0
+    },
+    {
+      "iterations": 6,
+      "verts": 98,
+      "faces": 96,
+      "face_sizes": {
+        "4": 96
+      },
+      "nonmanifold": 0
+    }
+  ],
+  "CHR_Eye.R": [
+    {
+      "iterations": 0,
+      "verts": 6146,
+      "faces": 6144,
+      "face_sizes": {
+        "4": 6144
+      },
+      "nonmanifold": 0
+    },
+    {
+      "iterations": 2,
+      "verts": 1536,
+      "faces": 1538,
+      "face_sizes": {
+        "4": 1530,
+        "3": 8
+      },
+      "nonmanifold": 0
+    },
+    {
+      "iterations": 4,
+      "verts": 466,
+      "faces": 578,
+      "face_sizes": {
+        "4": 350,
+        "3": 228
+      },
+      "nonmanifold": 0
+    },
+    {
+      "iterations": 6,
+      "verts": 278,
+      "faces": 451,
+      "face_sizes": {
+        "3": 350,
+        "4": 101
+      },
+      "nonmanifold": 0
+    }
+  ],
+  "CHR_Ear.L": [
+    {
+      "iterations": 0,
+      "verts": 6146,
+      "faces": 6144,
+      "face_sizes": {
+        "4": 6144
+      },
+      "nonmanifold": 0
+    },
+    {
+      "iterations": 2,
+      "verts": 1538,
+      "faces": 1536,
+      "face_sizes": {
+        "4": 1536
+      },
+      "nonmanifold": 0
+    },
+    {
+      "iterations": 4,
+      "verts": 386,
+      "faces": 384,
+      "face_sizes": {
+        "4": 384
+      },
+      "nonmanifold": 0
+    },
+    {
+      "iterations": 6,
+      "verts": 98,
+      "faces": 96,
+      "face_sizes": {
+        "4": 96
+      },
+      "nonmanifold": 0
+    }
+  ],
+  "CHR_Ear.R": [
+    {
+      "iterations": 0,
+      "verts": 6146,
+      "faces": 6144,
+      "face_sizes": {
+        "4": 6144
+      },
+      "nonmanifold": 0
+    },
+    {
+      "iterations": 2,
+      "verts": 1536,
+      "faces": 1538,
+      "face_sizes": {
+        "4": 1530,
+        "3": 8
+      },
+      "nonmanifold": 0
+    },
+    {
+      "iterations": 4,
+      "verts": 466,
+      "faces": 578,
+      "face_sizes": {
+        "4": 350,
+        "3": 228
+      },
+      "nonmanifold": 0
+    },
+    {
+      "iterations": 6,
+      "verts": 278,
+      "faces": 451,
+      "face_sizes": {
+        "3": 350,
+        "4": 101
+      },
+      "nonmanifold": 0
+    }
+  ],
+  "CHR_Eyelid.L": [
+    {
+      "iterations": 0,
+      "verts": 3602,
+      "faces": 3600,
+      "face_sizes": {
+        "4": 3600
+      },
+      "nonmanifold": 0
+    },
+    {
+      "iterations": 2,
+      "verts": 913,
+      "faces": 934,
+      "face_sizes": {
+        "4": 888,
+        "3": 46
+      },
+      "nonmanifold": 0
+    },
+    {
+      "iterations": 4,
+      "verts": 331,
+      "faces": 448,
+      "face_sizes": {
+        "4": 210,
+        "3": 238
+      },
+      "nonmanifold": 0
+    },
+    {
+      "iterations": 6,
+      "verts": 233,
+      "faces": 392,
+      "face_sizes": {
+        "4": 70,
+        "3": 322
+      },
+      "nonmanifold": 0
+    }
+  ],
+  "CHR_Eyelid.R": [
+    {
+      "iterations": 0,
+      "verts": 3602,
+      "faces": 3600,
+      "face_sizes": {
+        "4": 3600
+      },
+      "nonmanifold": 0
+    },
+    {
+      "iterations": 2,
+      "verts": 909,
+      "faces": 928,
+      "face_sizes": {
+        "4": 886,
+        "3": 42
+      },
+      "nonmanifold": 0
+    },
+    {
+      "iterations": 4,
+      "verts": 326,
+      "faces": 439,
+      "face_sizes": {
+        "4": 209,
+        "3": 230
+      },
+      "nonmanifold": 0
+    },
+    {
+      "iterations": 6,
+      "verts": 231,
+      "faces": 389,
+      "face_sizes": {
+        "4": 69,
+        "3": 320
+      },
+      "nonmanifold": 0
+    }
+  ]
+}
