@@ -20,6 +20,7 @@
 [ext_resource type="Script" uid="uid://dabdswxvk177p" path="res://_testes/parkour/scripts/death_zone.gd" id="18_death"]
 [ext_resource type="PackedScene" path="res://_testes/cenario_ilha/water/IslandWater.tscn" id="19_water"]
 [ext_resource type="PackedScene" path="res://_testes/cenario_ilha/parkour/FloatingParkour.tscn" id="20_parkour"]
+[ext_resource type="PackedScene" path="res://_testes/mecanica_de_fuga/TigreTemporario.tscn" id="21_5wwmd"]
 
 [sub_resource type="BoxShape3D" id="DeathShape"]
 size = Vector3(90, 2, 100)
@@ -40,7 +41,6 @@ transform = Transform3D(0.7702597, 0, -0.63773036, 0, 1, 0, 0.63773036, 0, 0.770
 walk_speed = 6.5
 run_speed = 2.0
 jump_velocity = 5.0
-control_preset = 2
 
 [node name="Terrain" type="Node3D" parent="." unique_id=180770518]
 
@@ -276,5 +276,8 @@ script = ExtResource("18_death")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DeathZone" unique_id=1177841]
 shape = SubResource("DeathShape")
+
+[node name="TigreTemporario" parent="." unique_id=1115097762 instance=ExtResource("21_5wwmd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3730111, 4.353756, 25.81906)
 
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
