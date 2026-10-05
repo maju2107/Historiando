@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene format=3]
 
-[ext_resource type="Script" path="res://_testes/tigreParkour/tigre_temporario.gd" id="1_enemy"]
-[ext_resource type="PackedScene" path="res://common/characters/addons/gdquest_beetle_bot/model/beetle_bot_fused.glb" id="2_model"]
+[ext_resource type="Script" uid="uid://d0twqwiqniwb8" path="res://_testes/mecanica_de_fuga/tigre_temporario.gd" id="1_enemy"]
+[ext_resource type="PackedScene" uid="uid://dbqoj8oam1dsg" path="res://common/characters/addons/gdquest_beetle_bot/model/beetle_bot_fused.glb" id="2_model"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape_enemy"]
 radius = 0.75

@@ -4,6 +4,7 @@
 [ext_resource type="Environment" uid="uid://db68r5ch3eg8r" path="res://_testes/parkour/word-environment.tres" id="1_v3o1u"]
 [ext_resource type="PackedScene" path="res://_testes/mecanica_de_fuga/TigreTemporario.tscn" id="2_enemy"]
 [ext_resource type="PackedScene" uid="uid://derrjddag5wep" path="res://_testes/parkour/game_over.tscn" id="3_game_over"]
+[ext_resource type="Script" uid="uid://dabdswxvk177p" path="res://_testes/parkour/scripts/death_zone.gd" id="5_nca82"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_p2adb"]
 
@@ -75,6 +76,9 @@ size = Vector3(7.498596, 3.7637696, 4.273926)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rlt3e"]
 points = PackedVector3Array(3.749298, 2.7654052, 2.1365447, 3.749298, 2.7654052, -2.136963, -3.749298, 2.7654052, 2.1365447, 3.749298, -2.7654052, 2.1365447, 3.749298, -2.7654052, -2.136963, -3.749298, 2.7654052, -2.136963, -3.749298, -2.7654052, 2.1365447, -3.749298, -2.7654052, -2.136963)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ws2rb"]
+size = Vector3(90, 2, 160.86987)
 
 [node name="TigreParkour" type="Node3D" unique_id=859111300]
 
@@ -256,3 +260,14 @@ target_path = NodePath("../Player")
 
 [node name="GameOver" parent="." unique_id=140617329 instance=ExtResource("3_game_over")]
 visible = false
+
+[node name="DeathZone" type="Area3D" parent="." unique_id=939335503]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
+script = ExtResource("5_nca82")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DeathZone" unique_id=1161204740]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -55.4386)
+shape = SubResource("BoxShape3D_ws2rb")
+debug_color = Color(0, 0.81960785, 0.36078432, 1)
+
+[connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
