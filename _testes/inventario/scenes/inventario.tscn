@@ -67,8 +67,8 @@ theme_override_constants/margin_bottom = 5
 
 [node name="InventarioGridContainer" type="GridContainer" parent="inventario/MarginContainer" unique_id=519853521]
 unique_name_in_owner = true
-clip_contents = true
 custom_minimum_size = Vector2(10, 10)
+clip_contents = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
