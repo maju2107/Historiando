@@ -46,10 +46,55 @@ func _run() -> void:
 		await _traverse(false)
 		if _failures == 0:
 			await _traverse(true)
+	await _test_checkpoints_and_finish()
 	_release_input()
 	_island.free()
 	print("FLOATING_PARKOUR ", "PASS" if _failures == 0 else "FAIL", " failures=", _failures)
 	quit(0 if _failures == 0 else 1)
+
+
+func _test_checkpoints_and_finish() -> void:
+	_release_input()
+	_course.cycle_enabled = false
+	for index in [0, 7, 14]:
+		var platform := _platforms[index]
+		_check(platform.checkpoint and platform.permanent, "Missing safe checkpoint at %s" % platform.name)
+		_player.global_position = platform.surface_position() + Vector3(0, 0.03, 0)
+		_player.velocity = Vector3.ZERO
+		for frame in 12:
+			await _step(Vector3.ZERO)
+		_course._update_progress()
+		_check(_course._checkpoint_index == index, "Landing did not activate checkpoint")
+		_check(_player.player_start_position.distance_to(platform.surface_position() + Vector3(0, 0.08, 0)) < 0.01, "Respawn position does not match checkpoint")
+		if index == 7:
+			var health_before: int = _player.health
+			_player.global_position = platform.surface_position() - Vector3(0, 3.2, 0)
+			_player.velocity = Vector3.DOWN
+			_course._update_progress()
+			await process_frame
+			await process_frame
+			_check(_player.global_position.distance_to(_player.player_start_position) < 0.02, "Fall did not recover at checkpoint")
+			_check(_player.health == health_before - 1, "Fall should cost exactly one life")
+			_check(not _course._retry_pending, "Recovery remained pending")
+			# Immunity must not prevent recovery or consume another life.
+			_player.global_position -= Vector3(0, 4, 0)
+			_player.velocity = Vector3.DOWN
+			_course._update_progress()
+			await process_frame
+			await process_frame
+			_check(_player.global_position.distance_to(_player.player_start_position) < 0.02, "Invulnerable player was not recovered")
+			_check(_player.health == health_before - 1, "Recovery bypassed damage immunity")
+			await create_timer(1.1).timeout
+	_player.global_position = _platforms.back().surface_position() + Vector3(0, 0.03, 0)
+	_player.velocity = Vector3.ZERO
+	for frame in 12:
+		await _step(Vector3.ZERO)
+	_course._update_progress()
+	_check(_course._completed and not _course._route_active, "Finish did not complete the course")
+	var hud: Control = _course._get_hud()
+	_check(hud != null and hud.objective.text.contains("concluída"), "Finish did not update HUD")
+	_check(hud != null and (hud.get("notification") as Label).text.contains("CONCLUÍDA"), "Finish did not notify player")
+	print("CHECKPOINT_RECOVERY_FINISH_OK")
 
 
 func _test_cycle_and_collision() -> void:
@@ -156,17 +201,22 @@ func _traverse(timed: bool) -> void:
 func _step(direction: Vector3, jump: bool = false) -> void:
 	await physics_frame
 	if _advance_cycle:
-		_course._physics_process(1.0 / 60.0)
+		_course._elapsed = fposmod(_course._elapsed + 1.0 / 60.0, _course.active_seconds + _course.ghost_seconds)
+		_course.apply_cycle_time(_course._elapsed)
 	_set_action("ui_right", maxf(direction.x, 0.0))
 	_set_action("ui_left", maxf(-direction.x, 0.0))
 	_set_action("ui_down", maxf(direction.z, 0.0))
 	_set_action("ui_up", maxf(-direction.z, 0.0))
 	if jump:
 		Input.action_press("ui_accept")
-	# Express the test's direction in world space without changing movement,
-	# jump strength, collision shape or the player's lack of air control.
+	# Align the arcade camera basis with the requested world direction. Its
+	# eight-way stick intentionally quantizes each input axis.
 	_player._movement_basis = Basis.IDENTITY
 	_player._stick_was_active = true
+	var snapped: Vector2 = _player._get_movement_input()
+	_player._previous_arcade_input = snapped
+	if _player.follow_behind and not direction.is_zero_approx():
+		_player._movement_basis = Basis(Vector3.UP, atan2(direction.x, direction.z) - atan2(snapped.x, snapped.y))
 	if not _player.follow_behind:
 		_player.camera_pivo.global_rotation = Vector3(deg_to_rad(-18), 0, 0)
 	_player._physics_process(1.0 / 60.0)

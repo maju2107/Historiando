@@ -33,6 +33,12 @@ extends Node3D
 
 var _elapsed := 0.0
 var _platforms: Array[Node3D] = []
+var _player: CharacterBody3D
+var _last_landed := -1
+var _checkpoint_index := -1
+var _route_active := false
+var _completed := false
+var _retry_pending := false
 
 
 func _ready() -> void:
@@ -41,6 +47,8 @@ func _ready() -> void:
 		if child is Node3D and child.has_method("apply_cycle"):
 			_platforms.append(child)
 	_refresh()
+	if not Engine.is_editor_hint():
+		_player = get_node_or_null("../Player") as CharacterBody3D
 	set_physics_process(not Engine.is_editor_hint())
 
 
@@ -48,6 +56,73 @@ func _physics_process(delta: float) -> void:
 	if cycle_enabled:
 		_elapsed = fposmod(_elapsed + delta, active_seconds + ghost_seconds)
 		apply_cycle_time(_elapsed)
+	_update_progress()
+
+
+func _update_progress() -> void:
+	if not is_instance_valid(_player) or _player.is_dead or _completed or _retry_pending:
+		return
+	if _player.is_on_floor():
+		for i in _player.get_slide_collision_count():
+			var platform_index := _platforms.find(_player.get_slide_collision(i).get_collider())
+			if platform_index >= 0:
+				_register_landing(platform_index)
+				break
+	# Recover shortly after a missed jump instead of falling through the island.
+	# The entrance remains a free exit back to ordinary island exploration.
+	if _route_active and _last_landed > 0 and _player.velocity.y < 0.0:
+		if _player.global_position.y < _platforms[_last_landed].surface_position().y - 3.0:
+			_retry_pending = true
+			_retry_from_checkpoint.call_deferred()
+
+
+func _register_landing(index: int) -> void:
+	if index <= _last_landed:
+		return
+	_last_landed = index
+	_route_active = true
+	var platform := _platforms[index]
+	var hud := _get_hud()
+	if platform.checkpoint:
+		_checkpoint_index = index
+		_player.player_start_position = platform.surface_position() + Vector3(0, 0.08, 0)
+		if hud:
+			hud.notify("TRILHA DOS CÉUS" if index == 0 else "PONTO DE RETORNO ATIVADO")
+	if index == _platforms.size() - 1:
+		_completed = true
+		_route_active = false
+		if hud:
+			hud.set_objective("Trilha concluída! Aproveite o mirante.")
+			hud.notify("TRILHA DOS CÉUS CONCLUÍDA!")
+	elif hud:
+		hud.set_objective("Trilha dos céus · %02d / %02d\n%s" % [index + 1, _platforms.size(), "Verde: retorno seguro." if platform.checkpoint else "Siga as setas. Vermelho: vai sumir!"])
+
+
+func _retry_from_checkpoint() -> void:
+	_retry_pending = false
+	if not is_instance_valid(_player) or _player.is_dead:
+		return
+	_player.respawn_player()
+	# Damage immunity can suppress take_damage; recovery still needs a floor.
+	if not _player.is_dead:
+		_player.global_position = _player.player_start_position
+		_player.velocity = Vector3.ZERO
+	_last_landed = _checkpoint_index
+	# Give the next jumps a fresh solid window after recovering.
+	_elapsed = maxf(_checkpoint_index, 0) * stagger_seconds + 3.0
+	apply_cycle_time(_elapsed)
+	var hud := _get_hud()
+	if hud and not _player.is_dead:
+		hud.set_objective("Trilha dos céus · %02d / %02d\nContinue do ponto de retorno." % [_checkpoint_index + 1, _platforms.size()])
+		hud.notify("DE VOLTA AO PONTO DE RETORNO")
+
+
+func _get_hud() -> Control:
+	if is_instance_valid(_player) and _player.gear_container:
+		var hud: Control = _player.gear_container.comic_hud
+		if is_instance_valid(hud) and hud.is_node_ready():
+			return hud
+	return null
 
 
 func _refresh() -> void:
