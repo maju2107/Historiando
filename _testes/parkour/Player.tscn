@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c6s5jst30uky6" path="res://_testes/parkour/player.gd" id="1_wagyn"]
 [ext_resource type="PackedScene" uid="uid://kod0awm1ha4o" path="res://common/characters/addons/gdquest_gobot/model/gobot.glb" id="2_pas6u"]
-[ext_resource type="Script" path="res://_testes/parkour/scripts/gear_container.gd" id="3_hud"]
+[ext_resource type="Script" uid="uid://cmic71qvf6x65" path="res://_testes/parkour/scripts/gear_container.gd" id="3_hud"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5bjwj"]
 radius = 0.24804688
@@ -29,15 +29,13 @@ debug_color = Color(0.9647059, 0, 0.49803922, 1)
 [node name="camera_pivo" type="SpringArm3D" parent="." unique_id=1424319402]
 transform = Transform3D(1, 0, 0, 0, 0.9620229, 0.27296874, 0, -0.27296874, 0.9620229, 0, 1.2858493, 0)
 spring_length = 3.5
-collision_mask = 1
 margin = 0.15
 
 [node name="camera" type="Camera3D" parent="camera_pivo" unique_id=314590229]
-near = 0.05
 
-[node name="HUD" type="CanvasLayer" parent="."]
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1342026312]
 
-[node name="gear_container" type="HBoxContainer" parent="HUD"]
+[node name="gear_container" type="HBoxContainer" parent="HUD" unique_id=1388140525]
 offset_left = 32.0
 offset_top = 32.0
 offset_right = 260.0
@@ -45,12 +43,12 @@ offset_bottom = 72.0
 theme_override_constants/separation = 32
 script = ExtResource("3_hud")
 
-[node name="gear_label" type="Label" parent="HUD/gear_container"]
+[node name="gear_label" type="Label" parent="HUD/gear_container" unique_id=455306895]
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Itens: 0"
 
-[node name="life_label" type="Label" parent="HUD/gear_container"]
+[node name="life_label" type="Label" parent="HUD/gear_container" unique_id=2021907655]
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Vidas: 3"

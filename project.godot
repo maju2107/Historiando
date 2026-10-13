@@ -87,7 +87,7 @@ project/assembly_name="historiando"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/rubonnek.inventory_manager/plugin.cfg", "res://addons/simplegrasstextured/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/simplegrasstextured/plugin.cfg")
 
 [file_customization]
 

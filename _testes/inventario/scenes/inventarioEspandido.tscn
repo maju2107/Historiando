@@ -1,0 +1,291 @@
+[gd_scene format=3 uid="uid://hao0oq6i8q2a"]
+
+[ext_resource type="Script" uid="uid://564t72iw1f4v" path="res://_testes/inventario/scripts/inventario_panel.gd" id="1_7hmiy"]
+[ext_resource type="Script" uid="uid://coaokc14q5fp4" path="res://_testes/inventario/scripts/espaco_inv.gd" id="2_cxkom"]
+[ext_resource type="Resource" uid="uid://ccqfofnsq5eh7" path="res://_testes/inventario/itens_resources/estrela.tres" id="3_siwpb"]
+[ext_resource type="Texture2D" uid="uid://ckccjykbv0utt" path="res://assets/texture/estrelaItem.png" id="4_gmysc"]
+[ext_resource type="Resource" uid="uid://cn85etocs0lr3" path="res://_testes/inventario/itens_resources/coracao.tres" id="5_8s23m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7hak3"]
+bg_color = Color(0.8235294, 0.38431373, 0.27058825, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8, 0.8, 0.8, 0.015686275)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q4cuq"]
+bg_color = Color(0.8969358, 0.40778586, 0.2818162, 0.8980392)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_detail = 1
+
+[node name="InventarioEspandido" type="CanvasLayer" unique_id=748668401]
+
+[node name="inventario" type="Panel" parent="." unique_id=940476726]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -451.5
+offset_top = -245.0
+offset_right = 451.5
+offset_bottom = 245.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_7hmiy")
+
+[node name="MarginContainer" type="MarginContainer" parent="inventario" unique_id=1614385243]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.52400005
+offset_left = -465.0
+offset_top = -236.00002
+offset_right = 182.85712
+offset_bottom = 106.525696
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.4, 1.4)
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="InventarioGridContainer" type="GridContainer" parent="inventario/MarginContainer" unique_id=1528987701]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(10, 10)
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 3.37
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 40
+columns = 5
+
+[node name="espacoInv" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=139855257]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7hak3")
+script = ExtResource("2_cxkom")
+item = ExtResource("3_siwpb")
+
+[node name="icone" type="TextureRect" parent="inventario/MarginContainer/InventarioGridContainer/espacoInv" unique_id=1495533908]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_gmysc")
+
+[node name="espacoInv2" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=606349641]
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q4cuq")
+script = ExtResource("2_cxkom")
+item = ExtResource("5_8s23m")
+
+[node name="icone" type="TextureRect" parent="inventario/MarginContainer/InventarioGridContainer/espacoInv2" unique_id=945774483]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="espacoInv3" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=338455268]
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q4cuq")
+script = ExtResource("2_cxkom")
+item = ExtResource("5_8s23m")
+
+[node name="icone" type="TextureRect" parent="inventario/MarginContainer/InventarioGridContainer/espacoInv3" unique_id=1232087812]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="espacoInv4" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=278034736]
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q4cuq")
+script = ExtResource("2_cxkom")
+item = ExtResource("5_8s23m")
+
+[node name="icone" type="TextureRect" parent="inventario/MarginContainer/InventarioGridContainer/espacoInv4" unique_id=1596851081]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="espacoInv5" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=398808948]
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q4cuq")
+script = ExtResource("2_cxkom")
+item = ExtResource("5_8s23m")
+
+[node name="icone" type="TextureRect" parent="inventario/MarginContainer/InventarioGridContainer/espacoInv5" unique_id=118682619]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="espacoInv6" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=1845525402]
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q4cuq")
+script = ExtResource("2_cxkom")
+item = ExtResource("5_8s23m")
+
+[node name="icone" type="TextureRect" parent="inventario/MarginContainer/InventarioGridContainer/espacoInv6" unique_id=88700324]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="espacoInv7" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=858037974]
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q4cuq")
+script = ExtResource("2_cxkom")
+item = ExtResource("5_8s23m")
+
+[node name="icone" type="TextureRect" parent="inventario/MarginContainer/InventarioGridContainer/espacoInv7" unique_id=1406726897]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="espacoInv8" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=1782130102]
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q4cuq")
+script = ExtResource("2_cxkom")
+item = ExtResource("5_8s23m")
+
+[node name="icone" type="TextureRect" parent="inventario/MarginContainer/InventarioGridContainer/espacoInv8" unique_id=1085205010]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="espacoInv9" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=13813350]
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q4cuq")
+script = ExtResource("2_cxkom")
+item = ExtResource("5_8s23m")
+
+[node name="icone" type="TextureRect" parent="inventario/MarginContainer/InventarioGridContainer/espacoInv9" unique_id=76805419]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="espacoInv10" type="Panel" parent="inventario/MarginContainer/InventarioGridContainer" unique_id=1738180690]
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q4cuq")
+script = ExtResource("2_cxkom")
+item = ExtResource("5_8s23m")
+
+[node name="icone" type="TextureRect" parent="inventario/MarginContainer/InventarioGridContainer/espacoInv10" unique_id=1507047013]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
