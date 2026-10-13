@@ -1,0 +1,12 @@
+{
+  "backup": "C:\\Users\\obran\\Historiando_Backups\\2026-10-12_art_cleanup",
+  "archived_art_files": 2991,
+  "archived_art_bytes": 3963611473,
+  "archived_old_helpers": 16,
+  "all_archived_files_sha256_verified": true,
+  "protected_runtime_files": 32,
+  "runtime_mesh_textures_scripts_controls_unchanged": true,
+  "current_art_files": 30,
+  "current_art_bytes": 31105381,
+  "issues": []
+}

@@ -1,0 +1,27 @@
+{
+  "file": "C:\\Users\\obran\\OneDrive\\Documentos\\GitHub\\Historiando\\assets\\characters\\yara\\yara_playable.glb",
+  "sha256": "fc4e40068ac0cbf132c6dc276170d06e9b0be81b8e556bde46f4e7ed819c6f07",
+  "bytes": 10940488,
+  "triangles": 112484,
+  "vertices": 76995,
+  "bone_count": 60,
+  "animations": [
+    "EdgeGrab",
+    "Fall",
+    "Flip",
+    "Idle",
+    "Jump",
+    "Run",
+    "VictorySign",
+    "Walk",
+    "WallSlide"
+  ],
+  "materials": 16,
+  "maximum_influences": 4,
+  "maximum_weight_sum_error": 1.2351665645837784e-07,
+  "unweighted_vertices": 0,
+  "issues": [],
+  "vertex_colors": {},
+  "images": 13,
+  "textured_materials": 16
+}

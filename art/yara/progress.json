@@ -1,0 +1,31 @@
+{
+  "version": 54,
+  "current_model": "C:\\Users\\obran\\OneDrive\\Documentos\\GitHub\\Historiando\\art\\yara\\yara.blend",
+  "runtime": "C:\\Users\\obran\\OneDrive\\Documentos\\GitHub\\Historiando\\assets\\characters\\yara\\yara_playable.glb",
+  "preview": "C:\\Users\\obran\\OneDrive\\Documentos\\GitHub\\Historiando\\art\\yara\\previews\\paint_review.png",
+  "texture_folder": "C:\\Users\\obran\\OneDrive\\Documentos\\GitHub\\Historiando\\assets\\characters\\yara\\textures",
+  "backup": "C:\\Users\\obran\\Historiando_Backups\\2026-10-12_art_cleanup",
+  "authoring_sha256": "c2ea1e4b18b891829c5bacb20d0ca12adcbe25b501aac0630e24f7bc2c1c884b",
+  "appearance_constraints": {
+    "hair": "Approved checkpoint-52 hair. The user called it perfect; do not alter its material, painting or geometry without an explicit request.",
+    "face": "Checkpoint-54 face painting on the manually approved face shape.",
+    "body_clothes_shoes": "Preserve manual geometry, separate ears, integral wrap with real underlap, detailed buttons, cream soles, engraved teeth and continuous shoe upper."
+  },
+  "rig": {
+    "bones": 60,
+    "maximum_influences": 4,
+    "clips": [
+      "Idle",
+      "Walk",
+      "Run",
+      "Jump",
+      "Fall",
+      "Flip",
+      "VictorySign",
+      "EdgeGrab",
+      "WallSlide"
+    ],
+    "physics": "assets/characters/yara/YaraHairPhysics.gd"
+  },
+  "historical_checkpoints": "Stored outside the project in the local backup."
+}

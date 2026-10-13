@@ -1,0 +1,31 @@
+{
+  "repository": "https://github.com/gdquest-demos/godot-4-3D-Characters",
+  "local_file": "common/characters/addons/gdquest_gobot/model/gobot.glb",
+  "history": [
+    {
+      "commit": "5046f0545bbb776a1aa4830ad7488f3b7dfcc3b7",
+      "date": "2026-05-16T07:33:27Z",
+      "license_header": "This project uses 2 licenses:\n\n1. The demo's source code (script files, scene files, shaders, and generally all Godot-generated resources) is available under the MIT license.\n2. Art assets (image textures and 3D models) are [CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).\n\nFor an explanation of the license terms and how to respect them correctly, see:\n\n- MIT license: https://www.gdquest.com/library/taxonomy/license/mit/\n- CC-BY-NC-SA 4.0 license: https://www.gdquest.com/library/taxonomy/license/ccby/"
+    },
+    {
+      "commit": "8034d3fede52c8a58d2cbc7b8d3e8e6c79f6c8b3",
+      "date": "2025-12-27T10:21:18Z",
+      "license_header": "This project uses 2 licenses:\n\n1. The demo's source code (script files, scene files, shaders, and generally all Godot-generated resources) is available under the MIT license.\n2. Art assets (image textures and 3D models) are [CC-By 4.0](https://creativecommons.org/licenses/by/4.0/).\n\nIn short, this means you can reuse code and art assets in your own projects freely, including commercial ones, as long as you give credit to GDQuest.\n\nFor assets, you can add this to your credits: \"Additional assets CC-By 4.0 GDQuest (https://www.gdquest.com/)\".\n\nFor code, you can add this to your credits: \"Portions of this project use code from GDQuest (https://www.gdquest.com/) licensed under MIT\".\n\nIt really helps when you credit creators, so thank you in advance!\n\nThe above is just for clarity. You can find the exact terms of each license below."
+    },
+    {
+      "commit": "7fef53b2b218c8f3d48e36d067c6a099d5939011",
+      "date": "2023-06-08T14:28:14Z",
+      "license_header": "MIT License\n\nCopyright (c) 2023 GDQuest\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+    }
+  ],
+  "local_sha256": "b1eaf44293a7aa96155ba180eb3899d18a014d16f063a07eb3479c207babb567",
+  "upstream_current_asset_sha256": "b1eaf44293a7aa96155ba180eb3899d18a014d16f063a07eb3479c207babb567",
+  "matches_current": true,
+  "historical_asset": {
+    "commit": "8034d3fede52c8a58d2cbc7b8d3e8e6c79f6c8b3",
+    "sha256": "b1eaf44293a7aa96155ba180eb3899d18a014d16f063a07eb3479c207babb567",
+    "matches_local": true,
+    "license": "CC-BY-4.0",
+    "license_path": "C:\\Users\\obran\\OneDrive\\Documentos\\GitHub\\Historiando\\art\\chibi_female_reference\\project\\game_rig_49\\GDQUEST_LICENSE_8034d3fe.txt"
+  }
+}

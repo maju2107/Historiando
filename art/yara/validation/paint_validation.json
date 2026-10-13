@@ -1,0 +1,33 @@
+{
+  "source": "C:\\Users\\obran\\Historiando_Backups\\2026-10-12_art_cleanup\\original\\art\\chibi_female_reference\\project\\output\\53_yara_reference_paint.blend",
+  "source_sha256": "5447e13b8d4beb4dc93a84517a57db46ccc7084c82b2a2f4b7830855cdb793e9",
+  "hair_restored_from": "C:\\Users\\obran\\Historiando_Backups\\2026-10-12_art_cleanup\\original\\art\\chibi_female_reference\\project\\output\\52_yara_painted_uv_clothing_coverage.blend",
+  "hair_maps_exact": {
+    "Albedo": true,
+    "Roughness": true,
+    "Normal": true,
+    "UV": true
+  },
+  "authoring": "C:\\Users\\obran\\OneDrive\\Documentos\\GitHub\\Historiando\\art\\yara\\yara.blend",
+  "authoring_sha256": "c2ea1e4b18b891829c5bacb20d0ca12adcbe25b501aac0630e24f7bc2c1c884b",
+  "runtime_sha256": "fc4e40068ac0cbf132c6dc276170d06e9b0be81b8e556bde46f4e7ed819c6f07",
+  "preserved": {
+    "mesh_weights_bones": "ebc1e0ba8a6acef2d9717863228183168de5a459218e5c3a107d62c62d2e0c38",
+    "uv": "9893a120e0afe9afa91356a9d3131acb0c609b00e678b355b5472353b7d13f10",
+    "animation": "2ebb2dff69cd6973a1802e6ab1ef2ffd7850bf0f3c0d09b133798df2f407de7a"
+  },
+  "source_geometry_uv_weights_clips_preserved": true,
+  "sets": [
+    "SkinEyes",
+    "Hair",
+    "Outfit",
+    "Shoes",
+    "Accessories",
+    "Underlap"
+  ],
+  "texture_size": 2048,
+  "underlap_size": 256,
+  "issues": [],
+  "archived_authoring": "C:\\Users\\obran\\Historiando_Backups\\2026-10-12_art_cleanup\\original\\art\\chibi_female_reference\\project\\output\\54_yara_restored_hair_face_paint.blend",
+  "cleanup_preservation_report": "C:\\Users\\obran\\OneDrive\\Documentos\\GitHub\\Historiando\\art\\yara\\validation\\organization_validation.json"
+}

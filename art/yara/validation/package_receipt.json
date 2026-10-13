@@ -1,0 +1,27 @@
+{
+  "authoring": "C:\\Users\\obran\\OneDrive\\Documentos\\GitHub\\Historiando\\art\\yara\\yara.blend",
+  "authoring_sha256": "c2ea1e4b18b891829c5bacb20d0ca12adcbe25b501aac0630e24f7bc2c1c884b",
+  "aliases": {},
+  "runtime_sha256": "fc4e40068ac0cbf132c6dc276170d06e9b0be81b8e556bde46f4e7ed819c6f07",
+  "texture_files": 24,
+  "texture_kit": "C:\\Users\\obran\\Historiando_Backups\\2026-10-12_art_cleanup\\original\\art\\chibi_female_reference\\project\\texture_54\\Yara_UV_Paint_Kit.zip",
+  "texture_kit_sha256": "d9693f04d32057ec43fa142d5f93503cf02a6a9b21a0f2525efb915ad978aea8",
+  "preserved": {
+    "mesh_weights_bones": "ebc1e0ba8a6acef2d9717863228183168de5a459218e5c3a107d62c62d2e0c38",
+    "uv": "9893a120e0afe9afa91356a9d3131acb0c609b00e678b355b5472353b7d13f10",
+    "animation": "2ebb2dff69cd6973a1802e6ab1ef2ffd7850bf0f3c0d09b133798df2f407de7a"
+  },
+  "hair_restored_from": "C:\\Users\\obran\\Historiando_Backups\\2026-10-12_art_cleanup\\original\\art\\chibi_female_reference\\project\\output\\52_yara_painted_uv_clothing_coverage.blend",
+  "hair_maps_exact": {
+    "Albedo": true,
+    "Roughness": true,
+    "Normal": true,
+    "UV": true
+  },
+  "animation_channels_compared": 1620,
+  "maximum_animation_difference": 0,
+  "engine_checks": 27,
+  "physics_checks": 33,
+  "issues": [],
+  "archive_receipt": "C:\\Users\\obran\\Historiando_Backups\\2026-10-12_art_cleanup\\original\\art\\chibi_female_reference\\project\\texture_54\\package_receipt.json"
+}

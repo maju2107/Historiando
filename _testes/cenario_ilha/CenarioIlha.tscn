@@ -2,7 +2,7 @@
 
 [ext_resource type="Environment" uid="uid://btkl1c5a4le7a" path="res://_testes/cenario_ilha/parkour/island_glow_environment.tres" id="1_b4dyc"]
 [ext_resource type="Script" uid="uid://b24hgnofusyov" path="res://_testes/cenario_ilha/terrain_chunk.gd" id="1_chunk"]
-[ext_resource type="PackedScene" uid="uid://crhwfju5ub5ji" path="res://_testes/parkour/Player.tscn" id="2_player"]
+[ext_resource type="PackedScene" uid="uid://bfwxb2v4bbq5r" path="res://_testes/cenario_ilha/YaraPlayer.tscn" id="2_player"]
 [ext_resource type="PackedScene" uid="uid://hplj1hpdivta" path="res://assets/models/kenney_platformer-kit/Models/GLB format/block-grass-large-tall.glb" id="4_tall"]
 [ext_resource type="PackedScene" uid="uid://ivmne1axfi67" path="res://assets/models/kenney_platformer-kit/Models/GLB format/block-grass-overhang-large.glb" id="5_overhang"]
 [ext_resource type="PackedScene" uid="uid://btv2nilmk5wnp" path="res://assets/models/kenney_platformer-kit/Models/GLB format/block-grass-overhang-large-tall.glb" id="6_overhang_tall"]
@@ -40,7 +40,6 @@ transform = Transform3D(0.7702597, 0, -0.63773036, 0, 1, 0, 0.63773036, 0, 0.770
 walk_speed = 6.5
 run_speed = 2.0
 jump_velocity = 5.0
-control_preset = 2
 
 [node name="Terrain" type="Node3D" parent="." unique_id=180770518]
 

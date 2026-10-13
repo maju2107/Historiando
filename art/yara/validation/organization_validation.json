@@ -1,0 +1,44 @@
+{
+  "source": "checkpoint 54",
+  "final_path": "C:\\Users\\obran\\OneDrive\\Documentos\\GitHub\\Historiando\\art\\yara\\yara.blend",
+  "geometry_uv_weights_bones_actions_unchanged": true,
+  "protected": {
+    "mesh_weights_bones": "63bcd65f8d425591d14c16e83a8f181701d5bd3ce88ad86c8677be6bdb4cee48",
+    "uv": "9893a120e0afe9afa91356a9d3131acb0c609b00e678b355b5472353b7d13f10",
+    "animations": "2ebb2dff69cd6973a1802e6ab1ef2ffd7850bf0f3c0d09b133798df2f407de7a"
+  },
+  "active_image_bytes_unchanged": true,
+  "active_images": {
+    "Yara53_Accessories_Albedo": "//../../assets/characters/yara/textures/Yara_Accessories_Albedo.png",
+    "Yara53_Accessories_Roughness": "//../../assets/characters/yara/textures/Yara_Accessories_Roughness.png",
+    "Yara53_Outfit_Albedo": "//../../assets/characters/yara/textures/Yara_Outfit_Albedo.png",
+    "Yara53_Outfit_Roughness": "//../../assets/characters/yara/textures/Yara_Outfit_Roughness.png",
+    "Yara53_Shoes_Albedo": "//../../assets/characters/yara/textures/Yara_Shoes_Albedo.png",
+    "Yara53_Shoes_Roughness": "//../../assets/characters/yara/textures/Yara_Shoes_Roughness.png",
+    "Yara53_Underlap_Albedo": "//../../assets/characters/yara/textures/Yara_Underlap_Albedo.png",
+    "Yara53_Underlap_Roughness": "//../../assets/characters/yara/textures/Yara_Underlap_Roughness.png",
+    "Yara54_SkinEyes_Albedo": "//../../assets/characters/yara/textures/Yara_SkinEyes_Albedo.png",
+    "Yara54_SkinEyes_Roughness": "//../../assets/characters/yara/textures/Yara_SkinEyes_Roughness.png",
+    "Yara_Hair_Albedo.001": "//../../assets/characters/yara/textures/Yara_Hair_Albedo.png",
+    "Yara_Hair_Normal.001": "//../../assets/characters/yara/textures/Yara_Hair_Normal.png",
+    "Yara_Hair_Roughness.001": "//../../assets/characters/yara/textures/Yara_Hair_Roughness.png"
+  },
+  "images_embedded": true,
+  "bones": 60,
+  "authoring_actions": [
+    "EdgeGrab",
+    "Fall",
+    "Flip",
+    "Idle",
+    "Jump",
+    "RigCheck_Arms",
+    "RigCheck_Fingers",
+    "RigCheck_Legs",
+    "Run",
+    "VictorySign",
+    "Walk",
+    "WallSlide"
+  ],
+  "sha256": "c2ea1e4b18b891829c5bacb20d0ca12adcbe25b501aac0630e24f7bc2c1c884b",
+  "issues": []
+}

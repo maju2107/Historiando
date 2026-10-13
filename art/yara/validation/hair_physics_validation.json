@@ -1,0 +1,186 @@
+{
+	"checks": [
+		{
+			"check": "Physics is installed automatically on playable Yara",
+			"passed": true
+		},
+		{
+			"check": "Three ponytail bones imported",
+			"passed": true
+		},
+		{
+			"check": "Idle stays finite and within angular limits",
+			"passed": true
+		},
+		{
+			"check": "Idle has secondary motion",
+			"passed": true
+		},
+		{
+			"check": "Idle keeps head and tie anchored",
+			"passed": true
+		},
+		{
+			"check": "Walk stays finite and within angular limits",
+			"passed": true
+		},
+		{
+			"check": "Walk has secondary motion",
+			"passed": true
+		},
+		{
+			"check": "Walk keeps head and tie anchored",
+			"passed": true
+		},
+		{
+			"check": "Run stays finite and within angular limits",
+			"passed": true
+		},
+		{
+			"check": "Run has secondary motion",
+			"passed": true
+		},
+		{
+			"check": "Run keeps head and tie anchored",
+			"passed": true
+		},
+		{
+			"check": "Jump stays finite and within angular limits",
+			"passed": true
+		},
+		{
+			"check": "Jump has secondary motion",
+			"passed": true
+		},
+		{
+			"check": "Jump keeps head and tie anchored",
+			"passed": true
+		},
+		{
+			"check": "Fall stays finite and within angular limits",
+			"passed": true
+		},
+		{
+			"check": "Fall has secondary motion",
+			"passed": true
+		},
+		{
+			"check": "Fall keeps head and tie anchored",
+			"passed": true
+		},
+		{
+			"check": "Flip stays finite and within angular limits",
+			"passed": true
+		},
+		{
+			"check": "Flip has secondary motion",
+			"passed": true
+		},
+		{
+			"check": "Flip keeps head and tie anchored",
+			"passed": true
+		},
+		{
+			"check": "VictorySign stays finite and within angular limits",
+			"passed": true
+		},
+		{
+			"check": "VictorySign has secondary motion",
+			"passed": true
+		},
+		{
+			"check": "VictorySign keeps head and tie anchored",
+			"passed": true
+		},
+		{
+			"check": "EdgeGrab stays finite and within angular limits",
+			"passed": true
+		},
+		{
+			"check": "EdgeGrab has secondary motion",
+			"passed": true
+		},
+		{
+			"check": "EdgeGrab keeps head and tie anchored",
+			"passed": true
+		},
+		{
+			"check": "WallSlide stays finite and within angular limits",
+			"passed": true
+		},
+		{
+			"check": "WallSlide has secondary motion",
+			"passed": true
+		},
+		{
+			"check": "WallSlide keeps head and tie anchored",
+			"passed": true
+		},
+		{
+			"check": "Hair settles at rest",
+			"passed": true
+		},
+		{
+			"check": "Turning in place produces bounded hair lag",
+			"passed": true
+		},
+		{
+			"check": "Teleport resets the spring",
+			"passed": true
+		},
+		{
+			"check": "Engine applies bounded spring physics after animation",
+			"passed": true
+		}
+	],
+	"clips": {
+		"EdgeGrab": {
+			"finite": true,
+			"head_unchanged": true,
+			"maximum_joint_rotation_degrees": 0.55813072229659
+		},
+		"Fall": {
+			"finite": true,
+			"head_unchanged": true,
+			"maximum_joint_rotation_degrees": 2.39326498800026
+		},
+		"Flip": {
+			"finite": true,
+			"head_unchanged": true,
+			"maximum_joint_rotation_degrees": 6.30328703309681
+		},
+		"Idle": {
+			"finite": true,
+			"head_unchanged": true,
+			"maximum_joint_rotation_degrees": 0.67492679702125
+		},
+		"Jump": {
+			"finite": true,
+			"head_unchanged": true,
+			"maximum_joint_rotation_degrees": 1.81186157004562
+		},
+		"Run": {
+			"finite": true,
+			"head_unchanged": true,
+			"maximum_joint_rotation_degrees": 3.56403262283062
+		},
+		"VictorySign": {
+			"finite": true,
+			"head_unchanged": true,
+			"maximum_joint_rotation_degrees": 3.47231812331615
+		},
+		"Walk": {
+			"finite": true,
+			"head_unchanged": true,
+			"maximum_joint_rotation_degrees": 2.3984932843665
+		},
+		"WallSlide": {
+			"finite": true,
+			"head_unchanged": true,
+			"maximum_joint_rotation_degrees": 1.19811987441361
+		}
+	},
+	"engine_motion_degrees": 2.04564485806999,
+	"issues": [],
+	"turning_motion_degrees": 3.13575201422731
+}

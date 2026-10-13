@@ -1,0 +1,184 @@
+{
+  "name": "Yara playable character",
+  "version": "54",
+  "authoring_checkpoint": "C:\\Users\\obran\\OneDrive\\Documentos\\GitHub\\Historiando\\art\\yara\\yara.blend",
+  "source_static_checkpoint": {
+    "path": "C:\\Users\\obran\\Historiando_Backups\\2026-10-12_art_cleanup\\original\\art\\chibi_female_reference\\project\\output\\48_yara_integral_folded_wrap_shirt.blend",
+    "archive": "C:\\Users\\obran\\Historiando_Backups\\2026-10-12_art_cleanup\\original\\art\\chibi_female_reference\\project\\game_rig_49\\source_checkpoint.blend",
+    "sha256": "c270a74b9e0456e514a97ff6fc9ceb0d09f796796a2fe7a3c639e4c09e03dfce",
+    "mtime": 1791834407.179315
+  },
+  "runtime": {
+    "file": "C:\\Users\\obran\\OneDrive\\Documentos\\GitHub\\Historiando\\assets\\characters\\yara\\yara_playable.glb",
+    "sha256": "fc4e40068ac0cbf132c6dc276170d06e9b0be81b8e556bde46f4e7ed819c6f07",
+    "bytes": 10940488,
+    "triangles": 112484,
+    "vertices": 76995,
+    "bone_count": 60,
+    "animations": [
+      "EdgeGrab",
+      "Fall",
+      "Flip",
+      "Idle",
+      "Jump",
+      "Run",
+      "VictorySign",
+      "Walk",
+      "WallSlide"
+    ],
+    "materials": 16,
+    "maximum_influences": 4,
+    "maximum_weight_sum_error": 1.2351665645837784e-07,
+    "unweighted_vertices": 0,
+    "issues": [],
+    "vertex_colors": {},
+    "images": 13,
+    "textured_materials": 16
+  },
+  "animation_license": {
+    "creator": "GDQuest",
+    "license": "CC-BY-4.0",
+    "source_commit": "8034d3fede52c8a58d2cbc7b8d3e8e6c79f6c8b3",
+    "source_sha256": "b1eaf44293a7aa96155ba180eb3899d18a014d16f063a07eb3479c207babb567",
+    "modifications": "Retargeted human proportions, anatomical hinges, joint limits, foot contact and airborne poses."
+  },
+  "game_scene": "res://_testes/cenario_ilha/YaraPlayer.tscn",
+  "island": "res://_testes/cenario_ilha/CenarioIlha.tscn",
+  "checks": {
+    "authoring_meshes_preserved": 67,
+    "deformation_cases": 31,
+    "deformation_self_intersections": 0,
+    "engine_checks": 27,
+    "engine_issues": [],
+    "gpu_review": [
+      "Idle",
+      "Walk",
+      "Run",
+      "Jump",
+      "Flip",
+      "VictorySign",
+      "Face",
+      "Chest",
+      "Shoes",
+      "Back"
+    ],
+    "gpu_renderers": [
+      "Vulkan Forward+"
+    ],
+    "hair_physics_checks": 33,
+    "animation_channels_compared": 1620,
+    "maximum_animation_difference": 0
+  },
+  "hashes": {
+    "yara_playable.glb": "fc4e40068ac0cbf132c6dc276170d06e9b0be81b8e556bde46f4e7ed819c6f07",
+    "YaraSkin.gd": "7eb182e2d9f38bda69d91058997d8ddc9da0ffc2b62023a3bac4de6157cbfa49",
+    "YaraSkin.tscn": "f224d16df88bd241891fc9267850b39dbf61df8dae95a1c5936eaddeb4c2267e",
+    "ATTRIBUTION.md": "afea0943f921f3725ca1578c02c5b033f4e3e0d315232d90d02b5f6786c9138c",
+    "GDQuest-LICENSE.txt": "34c728393b332536e25be2db8e730b296c685bed2c766a02d97e442bb5aa9d0e",
+    "YaraHairPhysics.gd": "064721b33897fe0cc1f9b41662896eeb85d440e2b62ec8f1954eea5df3f9892f",
+    "gobot_provenance.json": "c5ac5df0cbafb7e6ab23e4f752f43b2445dea2e06677bcb9e7162e0df864c7cd"
+  },
+  "secondary_motion": {
+    "implementation": "YaraHairPhysics.gd / SkeletonModifier3D",
+    "bones": [
+      "Ponytail.1",
+      "Ponytail.2",
+      "Ponytail.3"
+    ],
+    "actions": [
+      "EdgeGrab",
+      "Fall",
+      "Flip",
+      "Idle",
+      "Jump",
+      "Run",
+      "VictorySign",
+      "Walk",
+      "WallSlide"
+    ],
+    "anchored_parts": [
+      "scalp",
+      "baby hairs",
+      "ear curls",
+      "gold tie",
+      "white bow"
+    ],
+    "physics_checks": 33,
+    "issues": [],
+    "preview": "C:\\Users\\obran\\Historiando_Backups\\2026-10-12_art_cleanup\\original\\art\\chibi_female_reference\\project\\renders\\m50_hair\\walking_hair.gif"
+  },
+  "uv_paint": {
+    "texture_size": 2048,
+    "sets": [
+      "SkinEyes",
+      "Hair",
+      "Outfit",
+      "Shoes",
+      "Accessories"
+    ],
+    "underlap_size": 256,
+    "uv_layer": "YaraPaintUV",
+    "hair_restored_from": "C:\\Users\\obran\\Historiando_Backups\\2026-10-12_art_cleanup\\original\\art\\chibi_female_reference\\project\\output\\52_yara_painted_uv_clothing_coverage.blend",
+    "hair_maps_exact": {
+      "Albedo": true,
+      "Roughness": true,
+      "Normal": true,
+      "UV": true
+    },
+    "paint": [
+      "exact checkpoint-52 hair material and maps restored",
+      "soft cheek and nose blush",
+      "subtle lip tint",
+      "warm eyelid shading and pronounced aegyo-sal",
+      "amber iris top shadow, lower crescent and sparkle glints",
+      "checkpoint-53 clothing and shoe paint retained"
+    ],
+    "files": {
+      "Yara_Accessories_Albedo.png": "c4531671f21dda252769144f785563c37cb55eaa43e1a16abf010f89a73e22e5",
+      "Yara_Accessories_Normal.png": "ed9d0d14e1864d48818b13fec8812c0ed28b4455de1a868f9b4251f0f4738b4e",
+      "Yara_Accessories_Roughness.png": "746dadd21a938b229a54ba83e0ed54e962184b6583c262564ee3fe322c9aca71",
+      "Yara_Accessories_UV.png": "f72498e91bc060ef5b97f7e4409332b9250bd52f133816b5352d4052075f0e11",
+      "Yara_Hair_Albedo.png": "23ef561cacf886ac6d65154e490273d27f59799490803f4d2de937792b4c2d5b",
+      "Yara_Hair_Normal.png": "4332929c8f7e481bf1a9b9a4c3cc1a2d4d93666ded52998d5f631a1417c278ef",
+      "Yara_Hair_Roughness.png": "9e92b87e766cf80b1f9ad91e5e71b264e8e751406924466272d8c379b7a5b950",
+      "Yara_Hair_UV.png": "0d2d7b5826968499a75e923b326e7e96f8d1b66bf732c1414781b6143b2867ae",
+      "Yara_Outfit_Albedo.png": "3229c115f9fea642e566ba870e784fe846fb21694487712d5f6134cb81986aed",
+      "Yara_Outfit_Normal.png": "783833099de25f7e7d4aeaaa3fc70a8cbcae231fcf0c1fe0cb794fa8ca5a0002",
+      "Yara_Outfit_Roughness.png": "3f179d6d6d9f775eb72944dcc43d657cd68506d99be7c322daaae3304a364ae3",
+      "Yara_Outfit_UV.png": "92f20d8f0646f033737e98732bf4453a53cfbd1df985b1ca536c0cae6dacb69b",
+      "Yara_Shoes_Albedo.png": "334d27082611c121d7412cb985f2d3433d2487c4aced8a84eba279755e5957c5",
+      "Yara_Shoes_Normal.png": "160b5735874b23d77ce2339195cf06f96965e4a7af3b02846d9332e48b08e72b",
+      "Yara_Shoes_Roughness.png": "a2ab833f6d5823edc40b9cf9f462f98bec6d6b8acd3338710eec922776455588",
+      "Yara_Shoes_UV.png": "3a8aa2b652935f5379a55755021ffe48a2fc0f30aaae978055c1a47dfa41a9b7",
+      "Yara_SkinEyes_Albedo.png": "f9fea820eaf4702786d61c2401df0228dd4e9fe9a16674bdc0b62a80d85b323f",
+      "Yara_SkinEyes_Normal.png": "d6bdce16e30436e20cebabfec7cefaaaa453449bf2c1d72b31905feb2faeeb60",
+      "Yara_SkinEyes_Roughness.png": "2ee0ddd6b414c158f76281d96940dbeb4641ce9fa502072b55e964574b5c90c3",
+      "Yara_SkinEyes_UV.png": "e6b6ea4e17ef656d87d5d47ebb44b450fba1a1939faf32e15f21e505a7cbcb33",
+      "Yara_Underlap_Albedo.png": "f1ac9ae13ab968557b900cd76ddddf963ded3dc3c6f071c2868b003d80e730cd",
+      "Yara_Underlap_Normal.png": "1a9d9426ca98e75a09ad3a385b78a1f5fb1f8503684bb4a508f7af86a4a6bf8c",
+      "Yara_Underlap_Roughness.png": "064b9fdd99117b587035efa5ee210fda6d1ce8d42fddb38b7d8a264213550c1e",
+      "Yara_Underlap_UV.png": "3516bbf6e1305eb0434fe7c535fc867cded30c927959fe8f0ce7d1f1479f54e1"
+    },
+    "kit": "C:\\Users\\obran\\Historiando_Backups\\2026-10-12_art_cleanup\\original\\art\\chibi_female_reference\\project\\texture_54\\Yara_UV_Paint_Kit.zip",
+    "kit_sha256": "d9693f04d32057ec43fa142d5f93503cf02a6a9b21a0f2525efb915ad978aea8",
+    "source_geometry_uv_weights_clips_preserved": true
+  },
+  "clothing_coverage": {
+    "cuff_weight_transition": "shin/foot matched to body",
+    "chest_underlap": "behind the existing wrap",
+    "visible_skin_hits": {
+      "hem": 0,
+      "chest": 0
+    },
+    "shoe_shape_preserved": true
+  },
+  "authoring_sha256": "c2ea1e4b18b891829c5bacb20d0ca12adcbe25b501aac0630e24f7bc2c1c884b",
+  "organization": {
+    "backup": "C:\\Users\\obran\\Historiando_Backups\\2026-10-12_art_cleanup",
+    "authoring": "art/yara/yara.blend",
+    "runtime": "assets/characters/yara",
+    "tools": "tools/yara",
+    "geometry_uv_weights_bones_animations_and_texture_pixels_unchanged": true,
+    "current_validation": "art/yara/validation"
+  }
+}

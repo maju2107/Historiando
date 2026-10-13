@@ -1,0 +1,116 @@
+{
+	"checks": [
+		{
+			"check": "Yara player loads",
+			"passed": true
+		},
+		{
+			"check": "Existing AnimationPlayer path works",
+			"passed": true
+		},
+		{
+			"check": "Clip Idle",
+			"passed": true
+		},
+		{
+			"check": "Clip Walk",
+			"passed": true
+		},
+		{
+			"check": "Clip Run",
+			"passed": true
+		},
+		{
+			"check": "Clip Jump",
+			"passed": true
+		},
+		{
+			"check": "Clip Fall",
+			"passed": true
+		},
+		{
+			"check": "Clip Flip",
+			"passed": true
+		},
+		{
+			"check": "Clip VictorySign",
+			"passed": true
+		},
+		{
+			"check": "Clip EdgeGrab",
+			"passed": true
+		},
+		{
+			"check": "Clip WallSlide",
+			"passed": true
+		},
+		{
+			"check": "Loop Idle",
+			"passed": true
+		},
+		{
+			"check": "Loop Walk",
+			"passed": true
+		},
+		{
+			"check": "Loop Run",
+			"passed": true
+		},
+		{
+			"check": "Deform skeleton and volume helpers imported",
+			"passed": true
+		},
+		{
+			"check": "Player lands on existing collider",
+			"passed": true
+		},
+		{
+			"check": "Standing selects Idle",
+			"passed": true
+		},
+		{
+			"check": "Movement selects Walk",
+			"passed": true
+		},
+		{
+			"check": "Existing movement controls move Yara",
+			"passed": true
+		},
+		{
+			"check": "Sprint selects Run",
+			"passed": true
+		},
+		{
+			"check": "Stopping returns to Idle",
+			"passed": true
+		},
+		{
+			"check": "Jump input selects airborne Jump",
+			"passed": true
+		},
+		{
+			"check": "Descent selects Fall",
+			"passed": true
+		},
+		{
+			"check": "Landing returns to Idle",
+			"passed": true
+		},
+		{
+			"check": "Island loads with Yara",
+			"passed": true
+		},
+		{
+			"check": "Island replaces only player visual prefab",
+			"passed": true
+		},
+		{
+			"check": "Island movement tuning preserved",
+			"passed": true
+		}
+	],
+	"issues": [],
+	"jump_velocity_sample": 6.33666658401489,
+	"states": [],
+	"test_only_sprint_binding": true
+}
