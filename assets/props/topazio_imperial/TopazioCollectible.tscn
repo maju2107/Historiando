@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://assets/props/topazio_imperial/topazio_collectible.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://assets/props/topazio_imperial/topazio_imperial_semi.glb" id="2_model"]
+
+[sub_resource type="SphereShape3D" id="PickupShape"]
+radius = 0.52
+
+[node name="Topazio" type="Area3D" groups=["topazio_collectible"]]
+collision_layer = 0
+collision_mask = 1
+monitorable = false
+script = ExtResource("1_script")
+
+[node name="Visual" type="Node3D" parent="."]
+
+[node name="Crystal" parent="Visual" instance=ExtResource("2_model")]
+position = Vector3(0, -0.315, 0)
+scale = Vector3(0.85, 0.85, 0.85)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("PickupShape")

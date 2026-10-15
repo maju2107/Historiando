@@ -1,0 +1,88 @@
+{
+  "blender_version": "5.2.2 LTS",
+  "generator": "tools/topazio_imperial/refine_topazio.py",
+  "source": "art/topazio_imperial/topazio_imperial.blend",
+  "style": "semi-realistic",
+  "vertices": 1170,
+  "triangles": 2332,
+  "mesh_objects": 1,
+  "materials": 1,
+  "maps": [
+    "basecolor",
+    "roughness",
+    "normal"
+  ],
+  "texture_resolution": [
+    2048,
+    2048
+  ],
+  "dimensions_m": [
+    0.3039362132549286,
+    0.2424677610397339,
+    0.740166962146759
+  ],
+  "nonmanifold_edges": 0,
+  "volume_m3": 0.04290470641878285,
+  "alpha_mode": "OPAQUE",
+  "pivot": "base center",
+  "transmission": 0,
+  "prompt": "Mais texturas e imperfeicoes no topazio imperial; aspecto natural e semi-realista, mantendo a forma aprovada.",
+  "negative_prompt": "Sem joia lapidada, sem ponta de quartzo, sem danos exagerados, sem ruido uniforme.",
+  "license": "MIT, original procedural geometry and PBR textures, no reference pixels copied",
+  "checks": {
+    "closed_manifold": true,
+    "positive_volume": true,
+    "triangle_budget_6000": true,
+    "finite_texture_pixels": true,
+    "glb_header_and_lengths": true,
+    "embedded_pbr_maps": true,
+    "godot_import_and_instantiation": "Godot 4.7.1: one mesh, 2332 triangles, color/normal/roughness maps, 32-point convex collision",
+    "visual_review": "Blender hero and detail renders inspected"
+  },
+  "files": {
+    "topazio_imperial_prop.tscn": {
+      "bytes": 1428,
+      "sha256": "3564dca9acb929700e02999f064a61256708081efc2afde0102d68c602cf2f46"
+    },
+    "topazio_imperial_semi.blend": {
+      "bytes": 14261151,
+      "sha256": "2cc03ecfa7047398be982bff66198eb1cca55e939b3acd07ac4891e3e0cf49d7"
+    },
+    "topazio_imperial_semi.glb": {
+      "bytes": 13671628,
+      "sha256": "b14e155e89648d7eaeb61b9427989e27d22a6a8bcbfaaae7c90d3d2ba915c702"
+    },
+    "topazio_imperial_semi_back.png": {
+      "bytes": 1209606,
+      "sha256": "458bbe91e8455487c6cb2daa288dc088b537edaf86ea0770df6f1555dde6e9f8"
+    },
+    "topazio_imperial_semi_detalhe.png": {
+      "bytes": 1557124,
+      "sha256": "923063ffdb0c84ac05785c980245f36bcfb9f557159af70d63fe375d985fbe57"
+    },
+    "topazio_imperial_semi_preview.png": {
+      "bytes": 1727144,
+      "sha256": "04fd49f57503b912e71b92c45b8b84bb6cf76020e1afedbae34f3ec97d70e018"
+    },
+    "topazio_semi_basecolor.png": {
+      "bytes": 4944499,
+      "sha256": "033efc04ebfdccf0efafedee095f4e2bc6b9c195a4475d3b22a17ef87e950f10"
+    },
+    "topazio_semi_normal.png": {
+      "bytes": 6198269,
+      "sha256": "e1bfca2e074e22d2c7a72d19f027a3591b835a8ad2d4e0c11c771a9c548dd0f4"
+    },
+    "topazio_semi_roughness.png": {
+      "bytes": 2543674,
+      "sha256": "e1ef2431fb6ac449211b8dd05cbba26666ed0afae050d40151484f007a573c39"
+    },
+    "LICENSE.txt": {
+      "bytes": 1065,
+      "sha256": "740b045cc90f9a8a69bdc0d4581f87a037c30cc61a94a4601b1437d73878a967"
+    },
+    "README.md": {
+      "bytes": 1755,
+      "sha256": "edf2d9fc8d62a9951596a380ff2ed9eaf8f3a48c1929a86a7b05e11d69206a49"
+    }
+  }
+}

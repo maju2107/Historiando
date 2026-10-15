@@ -1,0 +1,129 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/props/topazio_imperial/TopazioCollectible.tscn" id="1_topazio"]
+
+[node name="Topazios" type="Node3D"]
+
+[node name="Trilha01" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(-8.800000, 4.850000, 14.900001)
+float_phase = 0.00
+
+[node name="Trilha02" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(-10.800001, 4.850000, 13.900002)
+float_phase = 0.90
+
+[node name="Trilha03" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(-12.300001, 4.850000, 12.800001)
+float_phase = 1.80
+
+[node name="Trilha04" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(-13.000000, 6.100000, 10.800000)
+float_phase = 2.70
+
+[node name="Trilha05" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(-13.000000, 6.100000, 9.200000)
+float_phase = 3.60
+
+[node name="Trilha06" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(-13.649519, 7.261380, 6.325000)
+float_phase = 4.50
+
+[node name="Trilha07" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(-13.000000, 7.350000, 4.700000)
+float_phase = 5.40
+
+[node name="Trilha08" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(-12.600000, 8.600000, 2.000000)
+float_phase = 0.02
+
+[node name="Trilha09" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(-11.500000, 8.600000, -0.600000)
+float_phase = 0.92
+
+[node name="Trilha10" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(-9.200000, 8.714829, 1.000000)
+float_phase = 1.82
+
+[node name="Trilha11" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(-6.200000, 8.850000, 1.000000)
+float_phase = 2.72
+
+[node name="Trilha12" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(-3.200000, 8.850000, 1.000000)
+float_phase = 3.62
+
+[node name="Trilha13" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(0.000000, 8.850000, 2.200001)
+float_phase = 4.52
+
+[node name="Trilha14" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(3.300000, 8.390000, 2.200001)
+float_phase = 5.42
+
+[node name="Trilha15" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(6.300000, 8.850000, 1.000000)
+float_phase = 0.03
+
+[node name="Trilha16" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(8.199999, 10.116920, 0.400000)
+float_phase = 0.93
+
+[node name="Trilha17" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(10.300000, 10.121457, -1.400000)
+float_phase = 1.83
+
+[node name="Trilha18" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(10.500000, 11.364985, -4.000000)
+float_phase = 2.73
+
+[node name="Trilha19" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(10.100000, 12.600000, -7.500000)
+float_phase = 3.63
+
+[node name="Trilha20" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(7.700000, 13.450001, -10.800000)
+float_phase = 4.53
+
+[node name="Trilha21" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(5.000000, 14.100000, -10.800000)
+float_phase = 5.43
+
+[node name="Trilha22" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(4.500000, 14.100000, -12.799999)
+float_phase = 0.05
+
+[node name="Trilha23" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(0.500000, 14.100000, -12.799999)
+float_phase = 0.95
+
+[node name="Trilha24" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(0.500000, 14.100000, -9.000000)
+float_phase = 1.85
+
+[node name="Trilha25" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(0.850000, 14.100000, -8.000000)
+float_phase = 2.75
+
+[node name="TopazioPlataforma01" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(5.000000, 14.761624, -5.000000)
+float_phase = 0.00
+
+[node name="TopazioPlataforma04" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(16.914467, 16.361626, 6.156363)
+float_phase = 2.70
+
+[node name="TopazioPlataforma08" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(-3.125667, 18.611624, 17.726540)
+float_phase = 0.02
+
+[node name="TopazioPlataforma12" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(-18.000000, 20.761625, 0.000000)
+float_phase = 3.62
+
+[node name="TopazioPlataforma15" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(-9.000000, 22.461624, -15.588457)
+float_phase = 0.03
+
+[node name="TopazioPlataforma21" parent="." instance=ExtResource("1_topazio")]
+position = Vector3(18.000000, 25.761623, 0.000000)
+float_phase = 5.43

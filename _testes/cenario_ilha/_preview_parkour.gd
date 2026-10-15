@@ -2,6 +2,7 @@ extends SceneTree
 ## Real-render review: godot --path . --script res://_testes/cenario_ilha/_preview_parkour.gd
 
 func _initialize() -> void:
+	set_meta("skip_island_intro",true)
 	call_deferred("_capture")
 
 

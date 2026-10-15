@@ -10,27 +10,13 @@ var _jump_pending := false
 var _stick_center := Vector2.ZERO
 var _jump_center := Vector2.ZERO
 var _radius := 70.0
-var _selector: OptionButton
 
 
 func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
-	_selector = OptionButton.new()
-	_selector.add_item("Teclado / Joystick", 0)
-	_selector.add_item("Fliperama", 1)
-	_selector.add_item("Mobile", 2)
-	_selector.position = Vector2(32, 90)
-	_selector.custom_minimum_size = Vector2(220, 44)
-	_selector.tooltip_text = "Controles (F4)"
-	_selector.item_selected.connect(func(index: int): player.control_preset = index)
-	add_child(_selector)
 	resized.connect(_layout)
 	_layout()
-
-
-func open_selector() -> void:
-	_selector.show_popup()
 
 
 func _layout() -> void:
@@ -43,7 +29,6 @@ func _layout() -> void:
 
 func set_mobile(enabled: bool) -> void:
 	_mobile = enabled
-	_selector.select(player.control_preset)
 	reset_touches()
 
 

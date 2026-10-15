@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgrj7re3bho10"
-path="res://.godot/imported/yara_playable_Yara_Outfit_Albedo.png-ede566a8824eef6a4a23365b04204635.ctex"
+path.s3tc="res://.godot/imported/yara_playable_Yara_Outfit_Albedo.png-ede566a8824eef6a4a23365b04204635.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "fc46e3efa16dcec9c6b57994a9b79b12"
@@ -14,11 +15,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/characters/yara/yara_playable_Yara_Outfit_Albedo.png"
-dest_files=["res://.godot/imported/yara_playable_Yara_Outfit_Albedo.png-ede566a8824eef6a4a23365b04204635.ctex"]
+dest_files=["res://.godot/imported/yara_playable_Yara_Outfit_Albedo.png-ede566a8824eef6a4a23365b04204635.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +41,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

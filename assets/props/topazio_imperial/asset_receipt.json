@@ -1,0 +1,55 @@
+{
+    "source_package":  "art/topazio_imperial/semi_realista/topazio_imperial_semi_pacote.zip",
+    "source_manifest_sha256":  "9689f342343a98f5a7bdafe493dfbe19eb306a9af0dfdf6e608bbd39a13deee9",
+    "destination":  "assets/props/topazio_imperial",
+    "license":  "MIT",
+    "triangles":  2332,
+    "texture_resolution":  [
+                               2048,
+                               2048
+                           ],
+    "files":  {
+                  "topazio_imperial_semi.glb":  {
+                                                    "sha256":  "b14e155e89648d7eaeb61b9427989e27d22a6a8bcbfaaae7c90d3d2ba915c702",
+                                                    "bytes":  13671628
+                                                },
+                  "LICENSE.txt":  {
+                                      "sha256":  "740b045cc90f9a8a69bdc0d4581f87a037c30cc61a94a4601b1437d73878a967",
+                                      "bytes":  1065
+                                  }
+              },
+    "provenance":  "Original Blender geometry and procedural PBR maps; no photograph pixels copied",
+    "integrity":  "Archive CRC and complete source hash roster verified before copying; destination bytes matched",
+    "godot_imported_textures":  {
+                                    "topazio_imperial_semi_topazio_semi_basecolor.png":  {
+                                                                                             "bytes":  4944499,
+                                                                                             "sha256":  "033efc04ebfdccf0efafedee095f4e2bc6b9c195a4475d3b22a17ef87e950f10"
+                                                                                         },
+                                    "topazio_imperial_semi_topazio_semi_normal.png":  {
+                                                                                          "bytes":  6198269,
+                                                                                          "sha256":  "e1bfca2e074e22d2c7a72d19f027a3591b835a8ad2d4e0c11c771a9c548dd0f4"
+                                                                                      },
+                                    "topazio_imperial_semi_topazio_semi_roughness.png":  {
+                                                                                             "bytes":  2364444,
+                                                                                             "sha256":  "55450a2595c1c36373fe6509df0556b28377a553c8b37b452606f6733fbc6738"
+                                                                                         }
+                                },
+    "integration":  {
+                        "scene":  "_testes/cenario_ilha/TopaziosIlha.tscn",
+                        "pickup_scene":  "assets/props/topazio_imperial/TopazioCollectible.tscn",
+                        "count":  31,
+                        "collection_api":  "Player.collect_gear()",
+                        "checks":  [
+                                       "real player Area3D overlap for all thirty-one pickups",
+                                       "one fragment per pickup and visible HUD counter",
+                                       "nonplayer filtering",
+                                       "rotation, bounded bob and pause",
+                                       "ground support and player capsule clearance",
+                                       "shared mesh resources",
+                                       "scene restart restores pickups and counter"
+                                   ],
+                        "result":  "PASS; zero test failures",
+                        "capture":  "Vulkan Forward+; NVIDIA RTX 3050; actual island/player/HUD; fragments 00 to 01",
+                        "scene_sha256":  "574a1401f9cb0bc5b23ede8ea84442f461829d2816f4aa50f9c7eed90dcc68a5"
+                    }
+}

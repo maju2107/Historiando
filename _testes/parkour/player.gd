@@ -1,4 +1,5 @@
 extends CharacterBody3D
+signal respawned
 
 #constantes
 @export_category("Movimento")
@@ -6,6 +7,14 @@ extends CharacterBody3D
 @export var run_speed := 11.0
 @export var jump_velocity := 6.5
 @export var model_turn_speed := 10.0
+
+@export_category("Retorno")
+## Limite global de altura, mesmo fora da area da zona de morte.
+@export var fall_reset_height := -50.0
+## Maximum safe drop from the highest airborne point to the landing surface.
+@export_range(1.0,30.0,0.5) var fall_damage_height := 8.0
+var _fall_peak := 0.0
+var _tracking_fall := false
 
 enum ControlPreset { TECLADO_E_CONTROLE, FLIPERAMA, MOBILE }
 
@@ -88,16 +97,15 @@ func _ready() -> void:
 	mobile_controls = MobileControls.new()
 	mobile_controls.player = self
 	$HUD.add_child(mobile_controls)
+	var preferences := preload("res://scenes/ui/interface.gd").load_settings()
+	control_preset = clampi(int(preferences.get_value("controls", "preset", control_preset)), 0, 2)
 	_apply_control_preset()
 	if not gear_container:
 		push_warning("O HUD do jogador não foi encontrado; a contagem ficará desativada.")
 	_update_life_hud()
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_F4:
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		mobile_controls.open_selector()
-		get_viewport().set_input_as_handled()
+	if not can_move or is_dead:
 		return
 	if control_preset == ControlPreset.MOBILE:
 		return
@@ -113,6 +121,9 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _physics_process(delta: float) -> void:
+	if not is_dead and global_position.y < fall_reset_height:
+		respawn_player()
+		return
 	if not can_move or is_dead:
 		camera_rotation = Vector2.ZERO
 		mobile_controls.reset_touches()
@@ -163,7 +174,9 @@ func _physics_process(delta: float) -> void:
 	velocity.z = direction.z * movement_speed
 
 	_handle_animation(is_running)
+	var height_before_move := global_position.y
 	move_and_slide()
+	_update_fall_damage(height_before_move)
 
 
 	if direction.length() >0.1:
@@ -281,9 +294,7 @@ func take_damage(amount: int = 1) -> void:
 	health = maxi(health - amount, 0)
 	_update_life_hud()
 
-	global_position = player_start_position
-	velocity = Vector3.ZERO
-	anim_player.play("Idle", 0.0)
+	_return_to_spawn()
 
 	if health == 0:
 		_die()
@@ -300,7 +311,38 @@ func take_damage(amount: int = 1) -> void:
 	is_invulnerable = false
 
 func respawn_player() -> void:
-	take_damage(1)
+	if is_dead:
+		return
+	# Immunity protects lives, but must never leave the player in the void.
+	if is_invulnerable:
+		_return_to_spawn()
+	else:
+		take_damage(1)
+
+func _update_fall_damage(height_before_move: float) -> void:
+	if not _tracking_fall:
+		_fall_peak = height_before_move
+	_fall_peak = maxf(_fall_peak,maxf(height_before_move,global_position.y))
+	if not is_on_floor():
+		_tracking_fall = true
+		return
+	var drop := _fall_peak-global_position.y
+	_tracking_fall = false
+	_fall_peak = global_position.y
+	if drop > fall_damage_height:
+		respawn_player()
+
+func _return_to_spawn() -> void:
+	global_position = player_start_position
+	velocity = Vector3.ZERO
+	_tracking_fall = false
+	_fall_peak = global_position.y
+	is_jumping = false
+	camera_rotation = Vector2.ZERO
+	mobile_controls.reset_touches()
+	anim_player.play("Idle", 0.0)
+	reset_physics_interpolation()
+	respawned.emit()
 
 func _update_life_hud() -> void:
 	if gear_container and gear_container.has_method("update_life"):
@@ -312,9 +354,25 @@ func _die() -> void:
 	velocity = Vector3.ZERO
 	set_physics_process(false)
 
+	# The island uses the global retry screen rather than a local GameOver node.
+	var manager := get_node_or_null("/root/BotaoGlobal")
+	if manager and manager.has_method("show_game_over"):
+		manager.show_game_over.call_deferred()
+		return
+
 	var game_over_ui := get_parent().get_node_or_null("GameOver")
 	if game_over_ui:
 		game_over_ui.show()
 	else:
-		push_warning("A interface GameOver não foi encontrada na cena.")
+		# Standalone scenes without a retry screen must remain playable.
+		health = 3
+		is_dead = false
+		can_move = true
+		_update_life_hud()
+		_return_to_spawn()
+		set_physics_process(true)
+		# Keep immunity across other fall callbacks queued in the same frame.
+		await get_tree().create_timer(maxf(invulnerability_duration, 0.01)).timeout
+		is_invulnerable = false
+		return
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

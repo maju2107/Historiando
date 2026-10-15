@@ -1,0 +1,19 @@
+# Abertura da ilha
+
+O player começa junto à árvore do campo no nível baixo da ilha, em `(-7.1, 4.08, 15.5)`. O tigre temporário foi removido desta cena.
+
+`island_intro.gd` controla a sequência: olhos abrindo e fechando em primeira pessoa, corte para Yara sentada ao pé da árvore, piscada e movimento da cabeça, fala, sobrevoo da ilha, transição para a pose em pé, close e devolução da câmera/controles. O botão **Pular abertura** restaura o estado completo em qualquer etapa. A abertura acontece uma vez por sessão; reiniciar após morrer não obriga a assisti-la outra vez. `Enabled` permite desativá-la no Inspector.
+
+A fala `onde eu estou...?` está em `res://dialogo/linha_do_tempo/ilha_despertar.dtl`. É uma timeline real do Dialogic, usando `res://dialogo/estilos/island_banner_style.tres`. O balão 2D acompanha o topo da tela com margens mínimas, papel, contorno roxo e detalhe ocre da identidade visual do jogo. A fala avança automaticamente para o passeio da câmera. O estilo é separado do antigo balão preso ao personagem.
+
+`waking_pose.gd` aplica uma pose temporária aos ossos do rig existente: quadril apoiado no chão, pernas esticadas e abertas em V, pés relaxados, cabeça e tronco. A pose sentada parte do rig de referência para evitar a assimetria das pernas no primeiro frame de Idle, e interpola de volta à animação ao levantar. A câmera mostra as duas pernas.
+
+O piscar usa a pálpebra superior para cobrir os olhos, mantendo a inferior parada. Os cílios superiores acompanham essa borda; as sobrancelhas ficam fixas. Coordenadas locais do olho em UV2 mantêm o fechamento alinhado mesmo quando a cabeça se move, sem achatar o globo ocular. A cópia temporária da malha é usada somente na abertura. Ao terminar ou pular, são restaurados a malha original, os materiais, a posição do modelo e a animação Idle; o GLB original da Yara não foi alterado. `capture_blink.gd` renderiza os estados aberto, intermediário e fechado em `art/island_intro/previews/blink_*.png`.
+
+A primeira missão é **Descubra onde você está. Siga os cristais pela ilha.** A localização aparece como **LOCAL DESCONHECIDO** até alcançar a trilha, quando a época **PLEISTOCENO** é revelada. As 25 unidades terrestres em `TopaziosIlha.tscn` indicam o caminho da árvore ao mirante, contornando a árvore do santuário; outras seis ficam no parkour. Um degrau baixo em `Terrain/SubidaPico/DegrauDoMirante` permite acessar o mirante com o pulo atual. O primeiro pouso na trilha inicia a missão do parkour pelo controlador existente.
+
+Na primeira chegada ao parkour, `scenes/ui/epoch_presentation.gd` apresenta uma caixa roxa e dourada à direita, com o título **PLEISTOCENO** e três linhas sobre a época, as glaciações e a megafauna. Ela entra suavemente, fica legível por dez segundos e desaparece, mantendo o movimento livre. O tempo de leitura para durante a pausa; a preferência de reduzir animações remove o deslocamento. Quedas e checkpoints seguintes não repetem a apresentação. As datas seguem a [Comissão Internacional de Estratigrafia](https://stratigraphy.org/chart/): 2,58 milhões a 11,7 mil anos atrás. `validate_epoch.gd` verifica disparo, três linhas, limites do painel, pausa e apresentação única.
+
+O painel roxo da missão usa containers e ajusta a altura ao texto. A seleção de controles foi movida para **Pausa → Ajustes → Controles** e é salva nas preferências. Teclado/joystick, fliperama e mobile podem ser alternados com a cena em execução.
+
+Verificações em `tools/island_intro/`: `validate_intro.gd`, `validate_ui.gd` e `validate_trail.gd`. Os testes de cena podem definir `SceneTree` metadata `skip_island_intro=true`; `intro_duration_scale` acelera apenas a apresentação para as verificações. `capture_intro.gd` renderiza a sequência em um SubViewport usando a GPU e salva imagens em `art/island_intro/previews/`.

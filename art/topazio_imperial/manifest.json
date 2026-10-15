@@ -1,0 +1,73 @@
+{
+  "blender_version": "5.2.2 LTS",
+  "generator": "tools/topazio_imperial/create_topazio.py",
+  "vertices": 338,
+  "triangles": 672,
+  "mesh_objects": 1,
+  "materials": 1,
+  "texture_resolution": [
+    1024,
+    1024
+  ],
+  "nonmanifold_edges": 0,
+  "positive_volume_m3": 0.04298951508119639,
+  "dimensions_m": [
+    0.3016499876976013,
+    0.2401999980211258,
+    0.7395758628845215
+  ],
+  "origin": "bottom center",
+  "alpha_mode": "OPAQUE",
+  "transmission": 0,
+  "runtime_export": "glTF 2.0 binary; Y up; embedded texture",
+  "reference_provenance": "Three user-supplied photographs used for visual guidance only.",
+  "prompt": "Um cristal de topazio imperial em natura no estilo cartoon, modelado no Blender, para prop de jogo.",
+  "negative_prompt": "Sem lapidacao de joia, sem ponta de quartzo, sem ruido fotorealista, sem pedestal exportado.",
+  "checks": {
+    "manifold_mesh": true,
+    "triangle_budget_1500": true,
+    "glb_header_and_lengths": true,
+    "texture_embedded": true,
+    "godot_import_and_instantiation": "Godot 4.7.1; one mesh; 672 triangles; PBR material and texture; 32-point convex collision",
+    "visual_review": "Blender hero render inspected"
+  },
+  "license": "Original procedural asset; follows repository MIT license.",
+  "files": {
+    "topazio_imperial.blend": {
+      "bytes": 614586,
+      "sha256": "b0279bc8167fbaa09157c203c90896873875fc0c895f27876fa777ab4189b8ed"
+    },
+    "topazio_imperial.glb": {
+      "bytes": 560220,
+      "sha256": "d4bf9fe2ee64051226f42c27c53948b17964c59ae069444a84003cff66a76182"
+    },
+    "topazio_imperial_back.png": {
+      "bytes": 825364,
+      "sha256": "84b8a193b138a9abe7ae46b4a5acc2cdf85e464b40ea3a1f2d72491336814472"
+    },
+    "topazio_imperial_basecolor.png": {
+      "bytes": 513195,
+      "sha256": "3e66eaf4c2db9bb0c932490fa121deca866e156601c6256ad0197444d592cbe2"
+    },
+    "topazio_imperial_front.png": {
+      "bytes": 840712,
+      "sha256": "a778f1625c2e2d05eeeab47ceb5bc93794623e67eb5cbcb9af591daac76576ce"
+    },
+    "topazio_imperial_preview.png": {
+      "bytes": 1233054,
+      "sha256": "2af4aafd4e982853f7010a971147796bb717f5e60a9c6c154a7ace7d1ec39cb5"
+    },
+    "topazio_imperial_prop.tscn": {
+      "bytes": 1423,
+      "sha256": "31cf72afad93434b2294549961a666c5794e03972e1aefc2c728bbd0dbedb42b"
+    },
+    "README.md": {
+      "bytes": 2224,
+      "sha256": "7bb06c2954d4fb9d8b112ee610ed17c72e0663cc0601ae1b2f295def65ff988c"
+    },
+    "LICENSE.txt": {
+      "bytes": 1065,
+      "sha256": "740b045cc90f9a8a69bdc0d4581f87a037c30cc61a94a4601b1437d73878a967"
+    }
+  }
+}

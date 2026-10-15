@@ -17,13 +17,10 @@
 [ext_resource type="PackedScene" uid="uid://dvxl4bvv0vgnr" path="res://assets/models/kenney_platformer-kit/Models/GLB format/block-grass-long.glb" id="15_long"]
 [ext_resource type="PackedScene" uid="uid://c10b5fc8dy63w" path="res://assets/models/kenney_platformer-kit/Models/GLB format/block-grass-narrow.glb" id="16_narrow"]
 [ext_resource type="PackedScene" uid="uid://yksg6oyp73u6" path="res://_testes/cenario_ilha/PleistoceneVegetation.tscn" id="17_vegetation"]
-[ext_resource type="Script" uid="uid://dabdswxvk177p" path="res://_testes/parkour/scripts/death_zone.gd" id="18_death"]
 [ext_resource type="PackedScene" path="res://_testes/cenario_ilha/water/IslandWater.tscn" id="19_water"]
 [ext_resource type="PackedScene" path="res://_testes/cenario_ilha/parkour/FloatingParkour.tscn" id="20_parkour"]
-[ext_resource type="PackedScene" path="res://_testes/mecanica_de_fuga/TigreTemporario.tscn" id="21_5wwmd"]
-
-[sub_resource type="BoxShape3D" id="DeathShape"]
-size = Vector3(90, 2, 100)
+[ext_resource type="PackedScene" path="res://_testes/cenario_ilha/TopaziosIlha.tscn" id="22_topazios"]
+[ext_resource type="Script" uid="uid://dr7urjtmuwhv5" path="res://_testes/cenario_ilha/intro/island_intro.gd" id="23_intro"]
 
 [node name="CenarioIlha" type="Node3D" unique_id=280377929]
 
@@ -37,10 +34,12 @@ light_energy = 1.3
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=493027666 instance=ExtResource("2_player")]
-transform = Transform3D(0.7702597, 0, -0.63773036, 0, 1, 0, 0.63773036, 0, 0.7702597, 0.8504281, 13.356521, -8.061268)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.1, 4.08, 15.5)
 walk_speed = 6.5
 run_speed = 2.0
 jump_velocity = 5.0
+fall_reset_height = -8.0
+fall_damage_height = 8.0
 
 [node name="Terrain" type="Node3D" parent="." unique_id=180770518]
 
@@ -153,6 +152,11 @@ model = ExtResource("8_low_long")
 
 [node name="PicoDegrau03" type="StaticBody3D" parent="Terrain/SubidaPico" unique_id=1357902901]
 transform = Transform3D(1.12382, 0, -2.7815516, 0, 2.5, 0, 2.7815516, 0, 1.12382, 10, 10.5, -9.014287)
+script = ExtResource("1_chunk")
+model = ExtResource("7_low_large")
+
+[node name="DegrauDoMirante" type="StaticBody3D" parent="Terrain/SubidaPico" unique_id=180989727]
+transform = Transform3D(0.8, 0, 0, 0, 1.2, 0, 0, 0, 1.4, 7.45, 12, -10.8)
 script = ExtResource("1_chunk")
 model = ExtResource("7_low_large")
 
@@ -271,14 +275,7 @@ foam_color = Color(0.945098, 0.9803922, 1, 1)
 [node name="Vegetation" parent="." unique_id=1239158731 instance=ExtResource("17_vegetation")]
 transform = Transform3D(0.9999847, -0.0046031117, 0.0030749773, 0.004594295, 0.99998534, 0.0028642071, -0.003088135, -0.0028500156, 0.9999912, 0.036936283, -0.02182436, 0.037572145)
 
-[node name="DeathZone" type="Area3D" parent="." unique_id=2014082131]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
-script = ExtResource("18_death")
+[node name="Topazios" parent="." unique_id=1691970815 instance=ExtResource("22_topazios")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="DeathZone" unique_id=1177841]
-shape = SubResource("DeathShape")
-
-[node name="TigreTemporario" parent="." unique_id=1115097762 instance=ExtResource("21_5wwmd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3730111, 4.353756, 25.81906)
-
-[connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
+[node name="Opening" type="Node3D" parent="." unique_id=1325784733]
+script = ExtResource("23_intro")

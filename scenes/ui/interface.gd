@@ -120,7 +120,7 @@ func _chapters() -> void:
 	var progress := get_node_or_null("/root/FaseCore")
 	var unlocked := [true, bool(progress and progress.fase1_concluida), bool(progress and progress.fase2_concluida)]
 	var completed := [bool(progress and progress.fase1_concluida),bool(progress and progress.fase2_concluida),bool(progress and progress.fase3_concluida)]
-	var names := ["A ilha de Pindorama", "Novos caminhos", "Além do horizonte"]
+	var names := ["A ilha do Pleistoceno", "Novos caminhos", "Além do horizonte"]
 	var colors := [Kit.GOLD,Kit.CLAY,Kit.GREEN]
 	for i in range(3):
 		var x := 72.0+float(i)*496.0
@@ -238,11 +238,52 @@ func _settings() -> void:
 		AudioServer.set_bus_volume_db(0,linear_to_db(v/100.0))
 		_save("audio","volume",v/100.0))
 	_toggle("Silenciar áudio",Rect2(102,419,1350,53),bool(load_settings().get_value("audio","mute",false)),func(v: bool): AudioServer.set_bus_mute(0,v); _save("audio","mute",v))
-	_toggle("Tela cheia",Rect2(102,513,1350,53),DisplayServer.window_get_mode() in [DisplayServer.WINDOW_MODE_FULLSCREEN,DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN],func(v: bool): DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN if v else DisplayServer.WINDOW_MODE_WINDOWED); _save("video","fullscreen",v))
-	_toggle("Reduzir animações da interface",Rect2(102,607,1350,53),bool(load_settings().get_value("accessibility","reduce_motion",false)),func(v: bool): _save("accessibility","reduce_motion",v))
+	_toggle("Tela cheia",Rect2(102,486,1350,48),DisplayServer.window_get_mode() in [DisplayServer.WINDOW_MODE_FULLSCREEN,DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN],func(v: bool): DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN if v else DisplayServer.WINDOW_MODE_WINDOWED); _save("video","fullscreen",v))
+	_toggle("Reduzir animações da interface",Rect2(102,544,1350,48),bool(load_settings().get_value("accessibility","reduce_motion",false)),func(v: bool): _save("accessibility","reduce_motion",v))
+	Kit.label(content,"CONTROLES",Rect2(105,617,500,44),29,Kit.GOLD,Kit.BOLD)
+	var selector := OptionButton.new()
+	selector.name = "ControlPresetSelector"
+	selector.position = Vector2(866,605)
+	selector.custom_minimum_size = Vector2(580,62)
+	for mode in ["TECLADO / JOYSTICK", "FLIPERAMA", "MOBILE"]:
+		selector.add_item(mode)
+	var players := get_tree().get_nodes_in_group("player")
+	var selected := int(load_settings().get_value("controls","preset",0))
+	for player in players:
+		if "control_preset" in player:
+			selected = player.control_preset
+			break
+	selector.select(clampi(selected,0,2))
+	selector.add_theme_font_override("font",Kit.BOLD)
+	selector.add_theme_font_size_override("font_size",29)
+	for state in ["normal","hover","pressed","focus"]:
+		var box := StyleBoxFlat.new()
+		box.bg_color = Kit.PAPER if state == "normal" else Kit.GOLD
+		box.set_border_width_all(3)
+		box.border_color = Kit.INK
+		box.content_margin_left = 24
+		box.content_margin_right = 40
+		selector.add_theme_stylebox_override(state,box)
+	for state in ["font_color","font_hover_color","font_pressed_color","font_focus_color"]:
+		selector.add_theme_color_override(state,Kit.INK)
+	selector.get_popup().add_theme_font_override("font",Kit.BOLD)
+	selector.get_popup().add_theme_font_size_override("font_size",29)
+	selector.item_selected.connect(_change_controls)
+	content.add_child(selector)
 	first_button = Kit.button(content,"‹   VOLTAR",Rect2(72,748,258,64),func(): show_screen(back_screen),Kit.PAPER,true)
 	Kit.label(content,"Os ajustes são salvos automaticamente.",Rect2(947,762,580,37),24)
 	_footer()
+
+func _change_controls(index: int) -> void:
+	for player in get_tree().get_nodes_in_group("player"):
+		if not "control_preset" in player: continue
+		player.control_preset = index
+		var manager := get_node_or_null("/root/BotaoGlobal")
+		if manager and is_instance_valid(manager.pause_screen):
+			manager.previous_mouse_mode = Input.MOUSE_MODE_VISIBLE if index == 2 or not player.can_move else Input.MOUSE_MODE_CAPTURED
+	# Keep the settings cursor available after the live controller setter runs.
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	_save("controls","preset",index)
 
 func _toggle(words: String, box: Rect2, value: bool, action: Callable) -> void:
 	var check := CheckButton.new()

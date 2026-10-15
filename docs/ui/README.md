@@ -7,8 +7,8 @@ e verde `#2F5143`; botões recortados, sombras sólidas e retículas discretas.
 ## Abrir e testar
 
 1. Abra o projeto em Godot 4.7.1 e pressione **F5**: a tela inicial já usa a interface.
-2. **Começar a jornada** abre os três capítulos. O cartão grande **01 — A ilha de
-   Pindorama** agora abre a ilha, identificada como **Protótipo 3D**. O botão extra
+2. **Começar a jornada** abre os três capítulos. O cartão grande **01 — A ilha do
+   Pleistoceno** abre a ilha. O botão extra
    foi removido. Os capítulos 02 e 03 preservam os caminhos e bloqueios de `FaseCore`.
 3. **Créditos**, no início, substitui o botão Conhecer a HUD e reúne autores,
    fontes e links dos oito registros de assets em `Licencas_Assets`.
@@ -16,12 +16,15 @@ e verde `#2F5143`; botões recortados, sombras sólidas e retículas discretas.
    `scenes/ui/hud_demo.tscn` e executar com **F6**.
 5. **Esc** pausa/retoma; setas, Tab e Enter navegam. Os botões nativos também aceitam
    o controle configurado no Input Map; a ação `menu` existente é preservada.
-6. Ajustes de volume, mudo, tela cheia e animação são guardados em
+6. Ajustes de volume, mudo, tela cheia, animação e controles são guardados em
    `user://interface.cfg`, separado do progresso das fases.
 
 ## O que está integrado
 
 - Tela inicial, seleção de capítulos, ajustes, créditos e pausa global.
+- A primeira missão da ilha pede para descobrir onde você está, seguindo os cristais.
+  Na chegada ao parkour, o HUD revela **PLEISTOCENO** e apresenta uma caixa de três
+  linhas sobre a época, uma vez por partida, com dez segundos de leitura sem bloquear o movimento.
 - Confirmações de saída/retorno e avisos usam painéis de HQ, com fundo escurecido,
   foco inicial no cancelamento, navegação contida e restauração do foco ao fechar.
   Escape fecha a confirmação sem sair do jogo ou desfazer a pausa.

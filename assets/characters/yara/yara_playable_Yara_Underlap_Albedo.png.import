@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2x35p74y0pcd"
-path="res://.godot/imported/yara_playable_Yara_Underlap_Albedo.png-a195ab6c9eb931dc172c644330732688.ctex"
+path.s3tc="res://.godot/imported/yara_playable_Yara_Underlap_Albedo.png-a195ab6c9eb931dc172c644330732688.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "b1fdd8c6bb7e7e742b728563e527110f"
@@ -14,11 +15,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/characters/yara/yara_playable_Yara_Underlap_Albedo.png"
-dest_files=["res://.godot/imported/yara_playable_Yara_Underlap_Albedo.png-a195ab6c9eb931dc172c644330732688.ctex"]
+dest_files=["res://.godot/imported/yara_playable_Yara_Underlap_Albedo.png-a195ab6c9eb931dc172c644330732688.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +41,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

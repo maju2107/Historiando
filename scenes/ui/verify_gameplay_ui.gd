@@ -4,6 +4,7 @@ var failures := 0
 var capture := false
 
 func _initialize() -> void:
+	set_meta("skip_island_intro",true)
 	capture = "--capture" in OS.get_cmdline_user_args()
 	call_deferred("_run")
 

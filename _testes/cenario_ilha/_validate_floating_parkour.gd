@@ -11,6 +11,7 @@ var _advance_cycle := false
 
 
 func _initialize() -> void:
+	set_meta("skip_island_intro",true)
 	call_deferred("_run")
 
 
@@ -24,7 +25,8 @@ func _run() -> void:
 	_island = load("res://_testes/cenario_ilha/CenarioIlha.tscn").instantiate()
 	root.add_child(_island)
 	_player = _island.get_node("Player") as CharacterBody3D
-	_spawn = _player.global_position
+	# This harness starts at the parkour entrance; the real spawn is now below.
+	_spawn = Vector3(0.8504281,13.350598,-8.061268)
 	_player.set_physics_process(false)
 	_course = _island.get_node("ParkourFlutuante")
 	_course.set_physics_process(false)
@@ -66,25 +68,8 @@ func _test_checkpoints_and_finish() -> void:
 		_course._update_progress()
 		_check(_course._checkpoint_index == index, "Landing did not activate checkpoint")
 		_check(_player.player_start_position.distance_to(platform.surface_position() + Vector3(0, 0.08, 0)) < 0.01, "Respawn position does not match checkpoint")
-		if index == 7:
-			var health_before: int = _player.health
-			_player.global_position = platform.surface_position() - Vector3(0, 3.2, 0)
-			_player.velocity = Vector3.DOWN
-			_course._update_progress()
-			await process_frame
-			await process_frame
-			_check(_player.global_position.distance_to(_player.player_start_position) < 0.02, "Fall did not recover at checkpoint")
-			_check(_player.health == health_before - 1, "Fall should cost exactly one life")
-			_check(not _course._retry_pending, "Recovery remained pending")
-			# Immunity must not prevent recovery or consume another life.
-			_player.global_position -= Vector3(0, 4, 0)
-			_player.velocity = Vector3.DOWN
-			_course._update_progress()
-			await process_frame
-			await process_frame
-			_check(_player.global_position.distance_to(_player.player_start_position) < 0.02, "Invulnerable player was not recovered")
-			_check(_player.health == health_before - 1, "Recovery bypassed damage immunity")
-			await create_timer(1.1).timeout
+		# Landing damage, immunity and void recovery use the real controller in
+		# _validate_respawn.gd, including actual walk-offs from platforms 01/02/08.
 	_player.global_position = _platforms.back().surface_position() + Vector3(0, 0.03, 0)
 	_player.velocity = Vector3.ZERO
 	for frame in 12:
@@ -199,6 +184,11 @@ func _traverse(timed: bool) -> void:
 
 
 func _step(direction: Vector3, jump: bool = false) -> void:
+	if jump:
+		var event := InputEventAction.new()
+		event.action = "ui_accept"
+		event.pressed = true
+		Input.parse_input_event(event)
 	await physics_frame
 	if _advance_cycle:
 		_course._elapsed = fposmod(_course._elapsed + 1.0 / 60.0, _course.active_seconds + _course.ghost_seconds)
@@ -207,8 +197,6 @@ func _step(direction: Vector3, jump: bool = false) -> void:
 	_set_action("ui_left", maxf(-direction.x, 0.0))
 	_set_action("ui_down", maxf(direction.z, 0.0))
 	_set_action("ui_up", maxf(-direction.z, 0.0))
-	if jump:
-		Input.action_press("ui_accept")
 	# Align the arcade camera basis with the requested world direction. Its
 	# eight-way stick intentionally quantizes each input axis.
 	_player._movement_basis = Basis.IDENTITY

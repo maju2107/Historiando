@@ -62,13 +62,15 @@ directories/dch_directory={
 "player": "res://dialogo/personagens/player.dch"
 }
 directories/dtl_directory={
+"ilha_despertar": "res://dialogo/linha_do_tempo/ilha_despertar.dtl",
 "timeline": "res://dialogo/linha_do_tempo/timeline.dtl"
 }
 layout/style_directory={
 "": "res://dialogo/estilos/balao_de_fala.tres",
+"Ilha / Faixa de fala": "res://dialogo/estilos/island_banner_style.tres",
 "balao_de_fala": "res://dialogo/estilos/balao_de_fala.tres"
 }
-layout/style_list=["res://dialogo/estilos/balao_de_fala.tres"]
+layout/style_list=["res://dialogo/estilos/balao_de_fala.tres", "res://dialogo/estilos/island_banner_style.tres"]
 layout/default_style="res://dialogo/estilos/balao_de_fala.tres"
 variables={}
 glossary/default_case_sensitive=true

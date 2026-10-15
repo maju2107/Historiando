@@ -1,6 +1,10 @@
 # Current art files
 
-Only the current Yara project is kept here.
+Current authoring projects are kept here, separate from runtime assets.
+
+- [island_intro/previews/](island_intro/previews/): GPU captures of the island opening, Dialogic banner and updated gameplay UI.
+
+- [topazio_imperial/topazio_imperial.blend](topazio_imperial/topazio_imperial.blend): cartoon imperial topaz prop, GLB export and previews; see its [README](topazio_imperial/README.md).
 
 - Open [yara/yara.blend](yara/yara.blend) to edit the character.
 - References and current previews are inside [yara/](yara/).

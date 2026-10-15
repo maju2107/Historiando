@@ -5,11 +5,15 @@ const Kit = preload("res://scenes/ui/ui_kit.gd")
 var canvas: Control
 var hearts: Label
 var counter: Label
+var location_label: Label
+var activity_label: Label
 var objective: Label
+var objective_panel: PanelContainer
 var interaction: Control
 var prompt: Label
 var notification: Label
 var notice_timer: Timer
+var epoch_presentation: PanelContainer
 var health := 3
 var collectibles := 0
 
@@ -28,12 +32,31 @@ func _ready() -> void:
 	Kit.rect(canvas,Rect2(46,158,340,4),Kit.GOLD)
 	Kit.rect(canvas,Rect2(1200,48,352,62),Kit.INK)
 	counter = Kit.label(canvas,"",Rect2(1220,51,318,50),28,Kit.PAPER,Kit.BOLD)
-	Kit.label(canvas,"P I N D O R A M A",Rect2(665,42,300,26),21,Kit.PAPER,Kit.BOLD).horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	Kit.label(canvas,"EXPLORAÇÃO",Rect2(665,68,300,24),16,Kit.PAPER).horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	Kit.rect(canvas,Rect2(46,204,328,106),Color("1a002ce8"))
-	Kit.rect(canvas,Rect2(46,204,5,106),Kit.GOLD)
-	Kit.label(canvas,"SUA JORNADA",Rect2(65,215,280,26),20,Kit.GOLD,Kit.BOLD)
-	objective = Kit.label(canvas,"Explore os caminhos da ilha.",Rect2(65,248,287,54),25)
+	location_label = Kit.label(canvas,"PLEISTOCENO",Rect2(665,42,300,26),21,Kit.PAPER,Kit.BOLD)
+	location_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	activity_label = Kit.label(canvas,"EXPLORAÇÃO",Rect2(665,68,300,24),16,Kit.PAPER)
+	activity_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	objective_panel = PanelContainer.new()
+	objective_panel.name = "MissionPanel"
+	objective_panel.position = Vector2(46,204)
+	objective_panel.size = Vector2(328,0)
+	objective_panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var panel_style := StyleBoxFlat.new()
+	panel_style.bg_color = Color("1a002ce8")
+	panel_style.border_width_left = 5
+	panel_style.border_color = Kit.GOLD
+	panel_style.content_margin_left = 19
+	panel_style.content_margin_right = 20
+	panel_style.content_margin_top = 12
+	panel_style.content_margin_bottom = 18
+	objective_panel.add_theme_stylebox_override("panel",panel_style)
+	canvas.add_child(objective_panel)
+	var mission_content := VBoxContainer.new()
+	mission_content.add_theme_constant_override("separation",8)
+	objective_panel.add_child(mission_content)
+	Kit.label(mission_content,"SUA JORNADA",Rect2(),20,Kit.GOLD,Kit.BOLD)
+	objective = Kit.label(mission_content,"Explore os caminhos da ilha.",Rect2(),25)
+	objective.custom_minimum_size.x = 287
 	objective.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	interaction = Control.new()
 	interaction.position = Vector2(585,720)
@@ -60,6 +83,8 @@ func _ready() -> void:
 	notice_timer.one_shot = true
 	notice_timer.timeout.connect(notification.hide)
 	add_child(notice_timer)
+	epoch_presentation = preload("res://scenes/ui/epoch_presentation.gd").new()
+	canvas.add_child(epoch_presentation)
 	set_health(health)
 	set_collectibles(collectibles)
 	get_viewport().size_changed.connect(_resize)
@@ -81,7 +106,14 @@ func set_collectibles(value: int) -> void:
 	if counter: counter.text = "FRAGMENTOS      %02d" % collectibles
 
 func set_objective(text: String) -> void:
-	if objective: objective.text = text
+	if objective:
+		objective.text = text
+		# Containers grow with wrapped text and can shrink for a shorter mission.
+		objective_panel.reset_size()
+
+func set_location(location: String,activity: String = "EXPLORAÇÃO") -> void:
+	location_label.text = location
+	activity_label.text = activity
 
 func set_interaction(text: String, key: String = "E") -> void:
 	if not interaction: return
@@ -93,6 +125,9 @@ func notify(text: String) -> void:
 	notification.text = text
 	notification.show()
 	notice_timer.start(3.0)
+
+func show_epoch_intro() -> void:
+	epoch_presentation.present()
 
 func _pause() -> void:
 	var manager := get_node_or_null("/root/BotaoGlobal")
