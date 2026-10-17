@@ -7,6 +7,7 @@ var _course: Node3D
 
 func _initialize() -> void:
 	set_meta("skip_island_intro",true)
+	set_meta("skip_parkour_quiz",true) # Dedicated controller/fall isolation.
 	call_deferred("_run")
 
 func _check(condition: bool,message: String) -> void:

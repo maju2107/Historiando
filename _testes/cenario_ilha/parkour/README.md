@@ -47,9 +47,9 @@ plataformas vizinhas têm uma diferença de **1 s** entre seus ciclos, próxima 
 tempo de um salto. A borda frontal indica o tempo restante e o brilho muda para
 vermelho e pulsa nos últimos **1,2 s** antes de desaparecer.
 O relógio é contínuo e não depende de pisar nelas: espere a janela do ciclo para
-começar. As plataformas **01, 08, 15 e 21** são maiores e permanecem sólidas:
+começar. As plataformas **01, 04, 08, 12, 16 e 21** são maiores e permanecem sólidas:
 o brilho verde e os cristais flutuantes identificam os pontos seguros entre as
-três etapas. Elas também continuam transparentes.
+quatro desafios, além do início e fim. Elas também continuam transparentes.
 
 Pisar em um ponto verde atualiza o retorno do jogador durante esta sessão.
 O jogador mede a distância entre o ponto mais alto em que esteve no ar e o chão
@@ -64,7 +64,8 @@ vidas, a tela global permite reiniciar. A ilha não usa volumes de morte:
 `Fall Reset Height = -8 m` protege apenas contra quedas para fora do mundo,
 onde não existe chão para detectar o impacto.
 
-A trilha não usa títulos flutuantes; a mensagem de início aparece na HUD.
+As perguntas aparecem em balões e as respostas em placas flutuantes.
+A mensagem de início continua na HUD.
 A HUD mostra os saltos alcançados, confirma pontos de retorno e celebra a chegada
 ao mirante. A conclusão é local a esta cena; não desbloqueia capítulos nem grava
 progresso permanente.
@@ -113,3 +114,14 @@ Para revisar a aparência real em Forward+, execute
 `godot --path . --windowed --script res://_testes/cenario_ilha/_preview_parkour.gd`.
 As capturas da entrada, percurso, ponto de retorno, aviso e fase fantasma ficam
 em `tmp/parkour/`, ignorado pelo Git.
+
+## Perguntas e corações dourados
+
+A trilha agora tem quatro checkpoints intermediários, quatro perguntas sobre o
+Pleistoceno e dois caminhos de resposta após cada pergunta. As plataformas de
+pergunta e de resposta certa são permanentes. A resposta errada não tem colisão:
+a queda desconta uma vida e Kai dá uma dica pelo Dialogic, exceto na última vida.
+Há cinco corações dourados em espaços livres: são sempre coletados, mas só
+recuperam uma vida quando necessário, até o limite de três.
+Veja [QUIZ.md](QUIZ.md) para editar perguntas/dicas, detalhes dos recursos e
+verificações de jogabilidade e layout.

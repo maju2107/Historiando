@@ -21,6 +21,7 @@ extends StaticBody3D
 		_refresh_geometry()
 
 var is_solid := true
+var quiz_blocked := false
 var _material: ShaderMaterial
 var _collision: CollisionShape3D
 var _route_marker: MeshInstance3D
@@ -129,7 +130,7 @@ func apply_cycle(time: float, active_seconds: float, ghost_seconds: float, warni
 
 
 func set_active_state(active: bool, warning: float = 0.0) -> void:
-	active = active or permanent
+	active = (active or permanent) and not quiz_blocked
 	if _material == null:
 		return
 	_material.set_shader_parameter("solid_amount", 1.0 if active else 0.0)

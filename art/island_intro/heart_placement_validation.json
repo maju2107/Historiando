@@ -1,0 +1,52 @@
+[
+	{
+		"clearance": 0.75,
+		"kind": "island",
+		"name": "GoldenHeart01",
+		"position": [
+			-4.5,
+			5.00000095367432,
+			20.5980758666992
+		]
+	},
+	{
+		"clearance": 0.75,
+		"kind": "island",
+		"name": "GoldenHeart02",
+		"position": [
+			-12.0,
+			6.25,
+			10.0
+		]
+	},
+	{
+		"clearance": 0.75,
+		"kind": "island",
+		"name": "GoldenHeart03",
+		"position": [
+			14.5000009536743,
+			9.0,
+			8.0
+		]
+	},
+	{
+		"clearance": 0.75,
+		"kind": "checkpoint",
+		"name": "GoldenHeart04",
+		"position": [
+			-5.46695232391357,
+			18.7616233825684,
+			18.8963184356689
+		]
+	},
+	{
+		"clearance": 0.75,
+		"kind": "checkpoint",
+		"name": "GoldenHeart05",
+		"position": [
+			-1.32566785812378,
+			23.1616230010986,
+			-19.6265392303467
+		]
+	}
+]

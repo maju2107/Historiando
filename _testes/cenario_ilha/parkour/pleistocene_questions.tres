@@ -1,0 +1,43 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://_testes/cenario_ilha/parkour/question_bank.gd" id="1_bank"]
+
+[resource]
+script = ExtResource("1_bank")
+questions = Array[Dictionary]([{
+"checkpoint": 3,
+"question_platform": 4,
+"answer_platform": 5,
+"authored_lane": -1,
+"question": "O Pleistoceno é conhecido por fazer parte de qual era?",
+"answers": ["Era do Gelo", "Era dos Dinossauros"],
+"correct": 0,
+"hint": "res://dialogo/linha_do_tempo/quiz_gelo.dtl"
+}, {
+"checkpoint": 7,
+"question_platform": 8,
+"answer_platform": 9,
+"authored_lane": 1,
+"question": "O que significa megafauna?",
+"answers": ["Animais minúsculos", "Animais de grande porte"],
+"correct": 1,
+"hint": "res://dialogo/linha_do_tempo/quiz_megafauna.dtl"
+}, {
+"checkpoint": 11,
+"question_platform": 12,
+"answer_platform": 13,
+"authored_lane": 1,
+"question": "Como o clima mudou durante o Pleistoceno?",
+"answers": ["Foi sempre quente", "Alternou frio e calor"],
+"correct": 1,
+"hint": "res://dialogo/linha_do_tempo/quiz_clima.dtl"
+}, {
+"checkpoint": 15,
+"question_platform": 16,
+"answer_platform": 17,
+"authored_lane": -1,
+"question": "Já existiam seres humanos no Pleistoceno?",
+"answers": ["Sim!", "Não!"],
+"correct": 0,
+"hint": "res://dialogo/linha_do_tempo/quiz_humanos.dtl"
+}])

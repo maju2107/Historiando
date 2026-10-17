@@ -1,0 +1,61 @@
+{
+	"failures": 0,
+	"layouts": [
+		{
+			"capture": "question_1",
+			"plates_visible": 2,
+			"viewport": [
+				1440,
+				900
+			]
+		},
+		{
+			"capture": "question_mobile_844x390",
+			"plates_visible": 2,
+			"viewport": [
+				844,
+				390
+			]
+		},
+		{
+			"capture": "question_mobile_640x360",
+			"plates_visible": 2,
+			"viewport": [
+				640,
+				360
+			]
+		},
+		{
+			"capture": "question_mobile_390x844",
+			"plates_visible": 2,
+			"viewport": [
+				390,
+				844
+			]
+		},
+		{
+			"capture": "question_2",
+			"plates_visible": 2,
+			"viewport": [
+				1440,
+				900
+			]
+		},
+		{
+			"capture": "question_3",
+			"plates_visible": 2,
+			"viewport": [
+				1440,
+				900
+			]
+		},
+		{
+			"capture": "question_4",
+			"plates_visible": 2,
+			"viewport": [
+				1440,
+				900
+			]
+		}
+	]
+}

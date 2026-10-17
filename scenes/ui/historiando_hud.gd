@@ -17,6 +17,8 @@ var interaction: Control
 var prompt: Label
 var notification: Label
 var notice_timer: Timer
+var checkpoint_notification: Label
+var checkpoint_notice_timer: Timer
 var epoch_presentation: PanelContainer
 var health := 3
 var collectibles := 0
@@ -119,6 +121,21 @@ func _ready() -> void:
 	notice_timer.one_shot = true
 	notice_timer.timeout.connect(notification.hide)
 	add_child(notice_timer)
+	# Checkpoints use a viewport-relative bottom row, clear of quiz speech.
+	checkpoint_notification = Kit.label(self,"",Rect2(),30,Kit.INK,Kit.BOLD)
+	checkpoint_notification.name = "CheckpointNotice"
+	checkpoint_notification.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	checkpoint_notification.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	var checkpoint_bg := preload("res://scenes/ui/comic_panel.gd").new()
+	checkpoint_bg.name = "Panel"
+	checkpoint_bg.fill = Kit.GOLD
+	checkpoint_bg.show_behind_parent = true
+	checkpoint_notification.add_child(checkpoint_bg)
+	checkpoint_notification.hide()
+	checkpoint_notice_timer = Timer.new()
+	checkpoint_notice_timer.one_shot = true
+	checkpoint_notice_timer.timeout.connect(checkpoint_notification.hide)
+	add_child(checkpoint_notice_timer)
 	epoch_presentation = preload("res://scenes/ui/epoch_presentation.gd").new()
 	canvas.add_child(epoch_presentation)
 	set_health(health)
@@ -142,6 +159,12 @@ func _resize() -> void:
 	objective.visible = not compact_mission
 	objective_summary.visible = compact_mission
 	objective_panel.reset_size()
+	var notice_factor := clampf(viewport.x/1600.0,.65,1.1)
+	checkpoint_notification.size = Vector2(minf(620*notice_factor,viewport.x-40),52*notice_factor)
+	checkpoint_notification.position = Vector2((viewport.x-checkpoint_notification.size.x)/2,viewport.y-checkpoint_notification.size.y-20)
+	checkpoint_notification.add_theme_font_size_override("font_size",roundi(29*notice_factor))
+	checkpoint_notification.get_node("Panel").size = checkpoint_notification.size+Vector2(16,4)
+	checkpoint_notification.get_node("Panel").position = Vector2(-8,-2)
 
 func _process(_delta: float) -> void:
 	pause_prompt.visible = not Kit.uses_touch_controls(get_tree())
@@ -212,6 +235,11 @@ func notify(text: String) -> void:
 	notification.text = text
 	notification.show()
 	notice_timer.start(3.0)
+
+func notify_checkpoint(text: String) -> void:
+	checkpoint_notification.text = text
+	checkpoint_notification.show()
+	checkpoint_notice_timer.start(3.0)
 
 func show_epoch_intro() -> void:
 	epoch_presentation.present()

@@ -1,0 +1,12 @@
+{
+	"failures": 0,
+	"full_route_traversed": true,
+	"heart_count": 5,
+	"heart_triangles": 1408,
+	"hints_seen": 4,
+	"intermediate_checkpoints": 4,
+	"last_life_has_no_hint": true,
+	"physical_jumps": true,
+	"questions": 4,
+	"wrong_platforms_have_no_collision": true
+}

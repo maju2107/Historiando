@@ -28,3 +28,9 @@ shots, gestures, expressions, effects and mission handoff. Edit the Text events
 to change only the speeches. Keep existing `[b]...[/b]` tags where you want the
 same bold emphasis. The current banner style and manual advance behavior are
 shared by all three timelines and do not need changing to edit the words.
+
+The parkour also uses `quiz_gelo.dtl`, `quiz_megafauna.dtl`, `quiz_clima.dtl`
+and `quiz_humanos.dtl` for Kai's hints after nonfatal wrong answers. Edit their
+Text events in the same Dialogic editor. The question/answer wording itself is
+in `res://_testes/cenario_ilha/parkour/pleistocene_questions.tres`, exposed as
+**Question Bank** on **ParkourFlutuante**. See that folder's `QUIZ.md`.

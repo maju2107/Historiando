@@ -12,6 +12,7 @@ var _advance_cycle := false
 
 func _initialize() -> void:
 	set_meta("skip_island_intro",true)
+	set_meta("skip_parkour_quiz",true) # This harness isolates the platform cycles.
 	call_deferred("_run")
 
 
@@ -58,7 +59,7 @@ func _run() -> void:
 func _test_checkpoints_and_finish() -> void:
 	_release_input()
 	_course.cycle_enabled = false
-	for index in [0, 7, 14]:
+	for index in [0, 3, 7, 11, 15]:
 		var platform := _platforms[index]
 		_check(platform.checkpoint and platform.permanent, "Missing safe checkpoint at %s" % platform.name)
 		_player.global_position = platform.surface_position() + Vector3(0, 0.03, 0)

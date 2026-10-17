@@ -32,16 +32,23 @@ platform_number = 3
 position = Vector3(16.914467, 16.950000, 6.156363)
 rotation = Vector3(0, 2.617994, 0)
 platform_number = 4
+platform_size = Vector3(5.8, 0.46, 5.8)
+permanent = true
+checkpoint = true
 
 [node name="Plataforma05" parent="." instance=ExtResource("2_platform")]
 position = Vector3(13.788800, 17.500000, 11.570177)
 rotation = Vector3(0, 2.268928, 0)
 platform_number = 5
+platform_size = Vector3(5.2, 0.36, 5.2)
+permanent = true
 
 [node name="Plataforma06" parent="." instance=ExtResource("2_platform")]
-position = Vector3(9.000000, 18.050000, 15.588457)
+position = Vector3(10.671248, 18.050000, 17.580173)
 rotation = Vector3(0, 1.919862, 0)
 platform_number = 6
+platform_size = Vector3(3.5, 0.36, 3.5)
+permanent = true
 
 [node name="Plataforma07" parent="." instance=ExtResource("2_platform")]
 position = Vector3(3.125667, 18.600000, 17.726540)
@@ -60,11 +67,15 @@ checkpoint = true
 position = Vector3(-9.000000, 19.700000, 15.588457)
 rotation = Vector3(0, 0.872665, 0)
 platform_number = 9
+platform_size = Vector3(5.2, 0.36, 5.2)
+permanent = true
 
 [node name="Plataforma10" parent="." instance=ExtResource("2_platform")]
-position = Vector3(-13.788800, 20.250000, 11.570177)
+position = Vector3(-12.117553, 20.250000, 9.578461)
 rotation = Vector3(0, 0.523599, 0)
 platform_number = 10
+platform_size = Vector3(3.5, 0.36, 3.5)
+permanent = true
 
 [node name="Plataforma11" parent="." instance=ExtResource("2_platform")]
 position = Vector3(-16.914467, 20.800000, 6.156363)
@@ -75,39 +86,50 @@ platform_number = 11
 position = Vector3(-18.000000, 21.350000, 0.000000)
 rotation = Vector3(0, -0.174533, 0)
 platform_number = 12
+platform_size = Vector3(5.8, 0.46, 5.8)
+permanent = true
+checkpoint = true
 
 [node name="Plataforma13" parent="." instance=ExtResource("2_platform")]
 position = Vector3(-16.914467, 21.900000, -6.156363)
 rotation = Vector3(0, -0.523599, 0)
 platform_number = 13
+platform_size = Vector3(5.2, 0.36, 5.2)
+permanent = true
 
 [node name="Plataforma14" parent="." instance=ExtResource("2_platform")]
-position = Vector3(-13.788800, 22.450000, -11.570177)
+position = Vector3(-11.537134, 22.450000, -10.270176)
 rotation = Vector3(0, -0.872665, 0)
 platform_number = 14
+platform_size = Vector3(3.5, 0.36, 3.5)
+permanent = true
 
 [node name="Plataforma15" parent="." instance=ExtResource("2_platform")]
 position = Vector3(-9.000000, 23.000000, -15.588457)
 rotation = Vector3(0, -1.221730, 0)
 platform_number = 15
-platform_size = Vector3(5.8, 0.46, 5.8)
-permanent = true
-checkpoint = true
 
 [node name="Plataforma16" parent="." instance=ExtResource("2_platform")]
 position = Vector3(-3.125667, 23.550000, -17.726540)
 rotation = Vector3(0, -1.570796, 0)
 platform_number = 16
+platform_size = Vector3(5.8, 0.46, 5.8)
+permanent = true
+checkpoint = true
 
 [node name="Plataforma17" parent="." instance=ExtResource("2_platform")]
 position = Vector3(3.125667, 24.100000, -17.726540)
 rotation = Vector3(0, -1.919862, 0)
 platform_number = 17
+platform_size = Vector3(5.2, 0.36, 5.2)
+permanent = true
 
 [node name="Plataforma18" parent="." instance=ExtResource("2_platform")]
-position = Vector3(9.000000, 24.650000, -15.588457)
+position = Vector3(9.889252, 24.650000, -18.031658)
 rotation = Vector3(0, -2.268928, 0)
 platform_number = 18
+platform_size = Vector3(3.5, 0.36, 3.5)
+permanent = true
 
 [node name="Plataforma19" parent="." instance=ExtResource("2_platform")]
 position = Vector3(13.788800, 25.200000, -11.570177)

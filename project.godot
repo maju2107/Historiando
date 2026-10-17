@@ -66,6 +66,10 @@ directories/dtl_directory={
 "ilha_despertar": "res://dialogo/linha_do_tempo/ilha_despertar.dtl",
 "ilha_final": "res://dialogo/linha_do_tempo/ilha_final.dtl",
 "kai_encontro": "res://dialogo/linha_do_tempo/kai_encontro.dtl",
+"quiz_clima": "res://dialogo/linha_do_tempo/quiz_clima.dtl",
+"quiz_gelo": "res://dialogo/linha_do_tempo/quiz_gelo.dtl",
+"quiz_humanos": "res://dialogo/linha_do_tempo/quiz_humanos.dtl",
+"quiz_megafauna": "res://dialogo/linha_do_tempo/quiz_megafauna.dtl",
 "timeline": "res://dialogo/linha_do_tempo/timeline.dtl"
 }
 layout/style_directory={

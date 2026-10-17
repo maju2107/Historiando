@@ -65,6 +65,8 @@ func _stage(value: String) -> void:
 func _start() -> void:
 	var opening: Node = get_parent().get_node("Opening")
 	if opening.active: await opening.finished
+	var quiz: Node = get_parent().get_node("ParkourFlutuante").quiz
+	if quiz and quiz.hint_active: await quiz.hint_finished
 	if not is_inside_tree() or started or not _hud.fragments_complete: return
 	started = true
 	active = true

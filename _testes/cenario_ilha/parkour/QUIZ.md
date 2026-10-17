@@ -1,0 +1,29 @@
+# Trilha dos céus: perguntas do Pleistoceno
+
+The existing 21-deck route now has four intermediate checkpoints: platforms 04, 08, 12 and 16. Start (01) and finish (21) remain safe endpoints and do not count toward the four. Each checkpoint leads to a permanent question deck, then two separated answer decks. The correct deck rejoins the original ascending route. The incorrect deck looks the same but has no collision; its fall costs exactly one life and returns the player to that checkpoint. Later decks stay in their ghost state until the preceding question is answered, so the choice cannot be bypassed by jumping ahead.
+
+Questions are in **`pleistocene_questions.tres`**, in Brazilian Portuguese, exposed as **Question Bank** on the course's Inspector. Expand its Questions array to edit `question`, `answers` and `correct` (0 = A, 1 = B). The native resource travels with exported builds. The four topics are the Ice Age, megafauna, alternating colder/warmer phases, and humans during the Pleistocene. Platform indices refer to the main list (zero-based); keep those and `authored_lane` when editing only text. Changing `correct` automatically swaps which lane is solid. Answer text is displayed on floating ink/paper plates; answering uses movement/jumping, with no extra quiz button. Safe question and answer decks never disappear while the player reads.
+
+The historical content was checked against the US National Park Service's [Quaternary overview](https://www.nps.gov/articles/000/quaternary-period.htm) and [Bering Land Bridge Ice Age overview](https://www.nps.gov/bela/learn/nature/the-ice-age.htm). “Era do Gelo” is the familiar popular name; the climate hint explicitly explains repeated glacial and warmer phases.
+
+Kai's hints are native Dialogic timelines: `quiz_gelo`, `quiz_megafauna`, `quiz_clima` and `quiz_humanos` under `dialogo/linha_do_tempo`. Edit their speeches in Dialogic's timeline editor. They use the existing banner, A/touch advance, expressive Kai actor, and a temporary camera at the checkpoint. Movement pauses during the hint and resumes afterward; the ordinary pause menu still works. No hint starts when the wrong choice exhausts the player's final life. The finale waits for an active hint to finish.
+
+Golden hearts are reusable native Godot assets in `assets/props/golden_heart/GoldenHeart.tscn`. `golden_hearts.gd` places three on clear island terrain and two at checkpoints 08/16 (five total). Placement checks the full spinning/bobbing envelope against physics and visible terrain/vegetation bounds, including plants without collision. Island hearts require flat standing room, and unsafe positions are skipped. Every heart is consumed on contact. It restores one lost life when needed, capped at three; full-health pickups leave the life count unchanged. Pickups are once-only, do not count as fragments, and reset with a fresh scene/retry.
+
+The question eases in over 0.38 seconds; the answer plates follow with a subtle stagger and short upward settle. Reaching either choice immediately starts a 0.26–0.28-second fade-out. Correct-answer feedback and restoration of the ordinary HUD wait for the bubble to clear, and the camera's field of view eases between its two framings. Platform collisions, scoring and player movement respond immediately. A correct answer leaves the labels hidden while the route continues; after a nonfatal wrong answer, they return with the question for a retry. Repeated checkpoint/question landings do not restart an entrance, and reversing an unfinished fade resumes from its current opacity. Reduced motion uses brief opacity fades without spatial movement or stagger.
+
+Questions stay at the top on desktop and mobile; short phones use a compact full-width bubble with health/pause beneath it. Checkpoint activation/return messages use a separate bottom notice, clear of the question and mobile controls.
+
+The original heart mesh is generated locally by `golden_heart.gd`: a closed, puffed silhouette with 64 radial sections, smooth normals, gold shading and an ink outline. It needs no generated textures, paid service or third-party model. Its source is the editable script/scene, rather than a Blender export. `previews/quiz/golden_heart.png` shows the actual GPU-rendered asset.
+
+Validation from the project root:
+
+```powershell
+& 'C:/Users/obran/Downloads/Godot_v4.7.1-stable_win64.exe/Godot_v4.7.1-stable_win64_console.exe' --headless --fixed-fps 60 --path . --script res://_testes/cenario_ilha/_validate_quiz.gd
+```
+
+This test physically traverses the complete gated route, jumps into all four wrong choices, advances each real hint, returns through each correct answer, pauses hints, and checks last-life game over. Actual Area3D overlaps verify the heart's +1/cap/duplicate behavior. `_validate_floating_parkour.gd` separately checks the platform cycle and geometry with keyboard/controller presets; `_validate_respawn.gd` isolates ordinary falls, immunity and retries. Those two older harnesses explicitly disable the quiz for their isolated checks; normal play enables it.
+
+`_capture_quiz.gd` runs hidden GPU review captures for every question, Kai's hint, the native heart, and phone landscape/portrait layouts. It also verifies the two projected answer plates fit onscreen and stay clear of the question bubble and pause control. Reports are `art/island_intro/quiz_validation.json` and `quiz_layout_validation.json`; previews live in `art/island_intro/previews/quiz`.
+
+`_validate_quiz_transitions.gd` additionally checks intermediate opacity during both entry and exit, pause, interrupted fades, repeated landings and reduced motion. `_capture_quiz_transitions.gd` records the actual desktop/mobile rendering at normal speed; the resulting `transition_1440x900.gif` and `transition_844x390.gif` previews show the complete presentation and choice sequence.

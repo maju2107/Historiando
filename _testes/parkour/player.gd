@@ -285,6 +285,12 @@ func collect_gear():
 	if gear_container and gear_container.has_method("update_gear"):
 		gear_container.update_gear(gears)
 
+func restore_life(amount: int = 1) -> bool:
+	if amount <= 0 or is_dead or health >= 3: return false
+	health = mini(3,health+amount)
+	_update_life_hud()
+	return true
+
 
 func take_damage(amount: int = 1) -> void:
 	if amount <= 0 or is_dead or is_invulnerable:

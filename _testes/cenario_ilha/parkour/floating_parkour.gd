@@ -1,6 +1,9 @@
 @tool
 extends Node3D
 
+@export_group("Perguntas do Pleistoceno")
+@export var question_bank: Resource = preload("res://_testes/cenario_ilha/parkour/pleistocene_questions.tres")
+
 @export_group("Ciclo das plataformas")
 ## Tempo sólido, em segundos. O ciclo não depende de o jogador pisar na plataforma.
 @export_range(1.5, 20.0, 0.1) var active_seconds := 6.0:
@@ -39,6 +42,7 @@ var _checkpoint_index := -1
 var _route_active := false
 var _completed := false
 var _epoch_presented := false
+var quiz: Node3D
 
 
 func _ready() -> void:
@@ -51,6 +55,11 @@ func _ready() -> void:
 		_player = get_node_or_null("../Player") as CharacterBody3D
 		if _player:
 			_player.respawned.connect(_on_player_respawned)
+			if not get_tree().get_meta("skip_parkour_quiz",false):
+				quiz = preload("res://_testes/cenario_ilha/parkour/pleistocene_quiz.gd").new()
+				quiz.name = "PleistoceneQuiz"
+				quiz.question_bank = question_bank
+				add_child(quiz)
 	set_physics_process(not Engine.is_editor_hint())
 
 
@@ -84,6 +93,7 @@ func _supporting_platform_index() -> int:
 func _register_landing(index: int) -> void:
 	if _completed or index <= _last_landed:
 		return
+	if is_instance_valid(quiz) and not quiz.allows_platform(index): return
 	_last_landed = index
 	_route_active = true
 	var platform := _platforms[index]
@@ -97,7 +107,7 @@ func _register_landing(index: int) -> void:
 		_checkpoint_index = index
 		_player.player_start_position = platform.surface_position() + Vector3(0, 0.08, 0)
 		if hud and index != 0:
-			hud.notify("PONTO DE RETORNO ATIVADO")
+			hud.notify_checkpoint("PONTO DE RETORNO ATIVADO")
 	if index == _platforms.size() - 1:
 		_completed = true
 		_route_active = false
@@ -107,6 +117,7 @@ func _register_landing(index: int) -> void:
 			hud.notify("TRILHA DOS CÉUS CONCLUÍDA!")
 	elif hud:
 		hud.set_objective("Trilha dos céus · %02d / %02d\n%s" % [index + 1, _platforms.size(), "Verde: retorno seguro." if platform.checkpoint else "Siga as setas. Vermelho: vai sumir!"])
+	if is_instance_valid(quiz): quiz.on_landing(index)
 
 
 func _on_player_respawned() -> void:
@@ -117,7 +128,7 @@ func _on_player_respawned() -> void:
 	var hud := _get_hud()
 	if hud and _player.health > 0 and not _completed and _checkpoint_index >= 0:
 		hud.set_objective("Trilha dos céus · %02d / %02d\nContinue do ponto de retorno." % [_checkpoint_index + 1, _platforms.size()])
-		hud.notify("DE VOLTA AO PONTO DE RETORNO")
+		hud.notify_checkpoint("DE VOLTA AO PONTO DE RETORNO")
 
 
 func _get_hud() -> Control:
@@ -139,6 +150,7 @@ func _refresh() -> void:
 func apply_cycle_time(time: float) -> void:
 	for i in _platforms.size():
 		var platform := _platforms[i]
+		platform.quiz_blocked = is_instance_valid(quiz) and not quiz.allows_platform(i)
 		if not cycle_enabled or Engine.is_editor_hint():
 			platform.set_active_state(true)
 		else:
