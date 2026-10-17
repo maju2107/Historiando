@@ -87,7 +87,7 @@ func show_screen(next: String) -> void:
 		content.modulate.a = 0.0
 		create_tween().tween_property(content,"modulate:a",1.0,0.18)
 
-func _footer(words: String = "↑ ↓  NAVEGAR       ENTER  SELECIONAR       ESC  VOLTAR") -> void:
+func _footer(words: String = "↑ ↓  Navegar       ENTER - Selecionar       ESC - Voltar") -> void:
 	Kit.rect(content,Rect2(55,852,1490,1),Color("68516c"))
 	Kit.label(content,words,Rect2(60,863,1180,27),19,Kit.PAPER)
 	Kit.brand(content,Rect2(1305,856,235,39))
@@ -99,10 +99,10 @@ func _header(kicker: String, title: String) -> void:
 
 func _home() -> void:
 	Kit.brand(content,Rect2(61,46,58,58),true)
-	Kit.label(content,"CADA HISTÓRIA, UMA NOVA DESCOBERTA.",Rect2(137,57,485,35),22,Kit.GOLD,Kit.BOLD)
+	Kit.label(content,"APRENDA SOBRE A HISTÓRIA DO BRASIL",Rect2(137,57,485,35),22,Kit.GOLD,Kit.BOLD)
 	Kit.brand(content,Rect2(64,178,505,139))
-	Kit.label(content,"O passado está vivo.\nExplore.",Rect2(72,342,520,145),59,Kit.PAPER,Kit.BOLD)
-	Kit.label(content,"Atravesse o tempo. Encontre novas histórias.",Rect2(75,498,515,40),25,Kit.PAPER)
+	Kit.label(content,"Nossas raízes \nfazem parte de nós",Rect2(72,342,520,145),59,Kit.PAPER,Kit.BOLD)
+	Kit.label(content,"Mergulhe nessa aventura e viaje pelo tempo",Rect2(75,498,515,40),25,Kit.PAPER)
 	first_button = Kit.button(content,"COMEÇAR A JORNADA    ›",Rect2(74,566,470,86),func(): show_screen("chapters"))
 	Kit.button(content,"AJUSTES",Rect2(74,672,224,59),func(): _open_settings("home"),Kit.PAPER,true)
 	Kit.button(content,"SOBRE O JOGO",Rect2(313,672,230,59),func(): _open_about("home"),Kit.PAPER,true)
@@ -111,12 +111,12 @@ func _home() -> void:
 	Kit.rect(content,Rect2(706,102,279,39),Kit.INK)
 	Kit.label(content,"UMA AVENTURA PELO TEMPO",Rect2(719,105,265,34),20,Kit.PAPER,Kit.BOLD)
 	Kit.rect(content,Rect2(1208,700,258,63),Kit.INK)
-	Kit.label(content,"EXPLORE. DESCUBRA. VIVA.",Rect2(1224,707,245,43),23,Kit.GOLD,Kit.BOLD)
+	Kit.label(content,"EXPLORE. BRINQUE. VIVA!",Rect2(1224,707,245,43),23,Kit.GOLD,Kit.BOLD)
 	_footer("TECLADO OU CONTROLE  /  SUA JORNADA COMEÇA AQUI")
 
 func _chapters() -> void:
-	_header("SUA JORNADA", "Escolha seu próximo capítulo.")
-	Kit.label(content,"Cada descoberta abre um novo caminho.",Rect2(69,220,1050,40),28)
+	_header("SUA JORNADA", "Escolha o próximo capítulo.")
+	Kit.label(content,"Quanto mais aprender, mais portas vão se abrir",Rect2(69,220,1050,40),28)
 	var progress := get_node_or_null("/root/FaseCore")
 	var unlocked := [true, bool(progress and progress.fase1_concluida), bool(progress and progress.fase2_concluida)]
 	var completed := [bool(progress and progress.fase1_concluida),bool(progress and progress.fase2_concluida),bool(progress and progress.fase3_concluida)]
@@ -129,7 +129,7 @@ func _chapters() -> void:
 		Kit.label(content,"CAPÍTULO",Rect2(x+27,321,370,34),23,Kit.INK if unlocked[i] else Kit.PAPER,Kit.BOLD)
 		Kit.label(content,"0%d" % (i+1),Rect2(x+24,350,400,158),136,Kit.INK if unlocked[i] else Color("796781"),Kit.DISPLAY)
 		Kit.label(content,names[i],Rect2(x+27,529,410,61),39,Kit.INK if unlocked[i] else Kit.PAPER,Kit.BOLD)
-		var hint: String = "PROTÓTIPO 3D  /  EXPLORE A ILHA" if i == 0 else ("CONCLUÍDO  /  JOGAR NOVAMENTE" if completed[i] else ("PRONTO PARA EXPLORAR" if unlocked[i] else "CONCLUA O CAPÍTULO %02d" % i))
+		var hint: String = "PRÉ-HISTÓRIA BRASILEIRA /  EXPLORE A ILHA" if i == 0 else ("CONCLUÍDO  /  JOGAR NOVAMENTE" if completed[i] else ("PRONTO PARA EXPLORAR" if unlocked[i] else "CONCLUA O CAPÍTULO %02d" % i))
 		Kit.label(content,hint,Rect2(x+28,596,410,33),21,Kit.INK if unlocked[i] else Kit.PAPER,Kit.BOLD)
 		var play := Kit.button(content,"EXPLORAR   ›" if unlocked[i] else "BLOQUEADO",Rect2(x+24,642,414,57),_launch_chapter.bind(i+1),Kit.PAPER,true)
 		play.disabled = not unlocked[i]
@@ -147,7 +147,7 @@ func _open_about(previous: String) -> void:
 
 func _credits() -> void:
 	_header("QUEM FAZ ESSA HISTÓRIA", "Créditos & fontes dos assets")
-	Kit.label(content,"Arte, natureza, música e letras que dão vida a Pindorama.",Rect2(70,216,1390,43),28)
+	Kit.label(content,"Arte, natureza, música e letras que dão vida ao Historiando.",Rect2(70,216,1390,43),28)
 	var panel := ComicPanel.new()
 	panel.position = Vector2(72,278)
 	panel.size = Vector2(1456,436)
@@ -169,7 +169,7 @@ func _credits() -> void:
 	text.add_theme_constant_override("line_separation",5)
 	text.meta_clicked.connect(func(url: Variant):
 		if str(url).begins_with("https://"): OS.shell_open(str(url)))
-	var words := "[color=#dda63b][b]HISTORIANDO / PINDORAMA[/b][/color]\nIdentidade visual e marcas: artes originais do projeto Historiando.\n\n[color=#dda63b][b]ASSETS DOS CENÁRIOS[/b][/color]\n"
+	var words := "[color=#dda63b][b]HISTORIANDO: PINDORAMA[/b][/color]\nIdentidade visual e marcas: artes originais do projeto Historiando.\n\n[color=#dda63b][b]ASSETS DOS CENÁRIOS[/b][/color]\n"
 	for entry: Dictionary in Credits.ENTRIES:
 		var author: String = entry.author
 		if author == "Creative Trio": author = "Creative Trio (CreativeTrio)"
@@ -186,7 +186,7 @@ func _credits() -> void:
 	content.add_child(text)
 	first_button = Kit.button(content,"‹   VOLTAR",Rect2(72,753,240,60),func(): show_screen("home"),Kit.PAPER,true)
 	Kit.label(content,"ROLE PARA VER TODOS OS CRÉDITOS  ↓",Rect2(958,765,570,34),23,Kit.GOLD,Kit.BOLD)
-	_footer("↑ ↓ / RODA DO MOUSE  ROLAR       TAB  NAVEGAR       ESC  VOLTAR")
+	_footer("↑ ↓ / RODA DO MOUSE - Rolar       TAB - Navegar       ESC - Voltar")
 
 static func load_settings() -> ConfigFile:
 	var config := ConfigFile.new()
@@ -209,7 +209,7 @@ func _save(section: String, key: String, value: Variant) -> void:
 		_confirm("Não foi possível salvar", "Os ajustes desta sessão continuam ativos. Tente novamente ao reabrir o jogo.",Callable(),false)
 
 func _settings() -> void:
-	_header("DO SEU JEITO", "Prepare sua aventura.")
+	_header("Ajustes", "Prepare a sua aventura")
 	Kit.rect(content,Rect2(72,255,1456,452),Color("2b1539"))
 	Kit.label(content,"SOM",Rect2(104,282,400,48),35,Kit.GOLD,Kit.BOLD)
 	Kit.label(content,"Volume geral",Rect2(105,351,400,45),29)
@@ -301,10 +301,10 @@ func _toggle(words: String, box: Rect2, value: bool, action: Callable) -> void:
 	check.toggled.connect(action)
 
 func _about() -> void:
-	_header("HISTORIANDO / PINDORAMA", "Histórias que atravessam o tempo.")
+	_header("HISTORIANDO: PINDORAMA", "Mais que um jogo, é a nossa História.")
 	Kit.brand(content,Rect2(95,304,310,300),true)
-	Kit.label(content,"Uma aventura de exploração e descoberta",Rect2(495,296,980,62),42,Kit.GOLD,Kit.BOLD)
-	var description := Kit.label(content,"Historiando é um jogo educacional sobre história e culturas dos povos originários, com exploração, narrativa e viagem temporal.\n\nIdentidade visual: artes originais do projeto Historiando.\nInterface: recortes de HQ, retículas e formas geométricas originais.\nTipografia: Historiando Mosaico, derivada de Palette Mosaic (Shibuya Font), e Barlow Condensed (Jeremy Tribby), sob SIL OFL.\nMúsica: Empty Moon, de Ian Aisling / Uppbeat.",Rect2(495,373,935,322),27)
+	Kit.label(content,"Conheça-me um pouquinho",Rect2(495,296,980,62),42,Kit.GOLD,Kit.BOLD)
+	var description := Kit.label(content,"O Historiando é um jogo educacional que possue o objetivo de auxiliar no aprendizado da História\ndo Brasil (especificamente dos períodos pré-colonial e colonial) de maneira lúdica, aproximando o jogador à disciplina por meio de uma\nnarrativa envolvente e explorações em diversos tempos históricos.\nAdemais, busca-se valorizar a cultura dos vários povos originários do Brasil e apresentar\nas informações através de uma perspectiva decolonial.\n\n - Identidade visual: artes originais do projeto Historiando.\n - Interface: recortes de HQ, retículas e formas geométricas originais.\n - Tipografia: Historiando Mosaico, derivada de Palette Mosaic (Shibuya Font), e Barlow Condensed (Jeremy Tribby), sob SIL OFL.\n - Música: Empty Moon, de Ian Aisling / Uppbeat.",Rect2(495,373,935,322),27)
 	description.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	first_button = Kit.button(content,"‹   VOLTAR",Rect2(72,748,258,64),func(): show_screen(back_screen),Kit.PAPER,true)
 	Kit.button(content,"CONHECER A FONTE",Rect2(1037,748,490,64),func(): show_screen("type"),Kit.GOLD,true)
@@ -325,13 +325,13 @@ func _font_specimen() -> void:
 	_footer()
 
 func _pause_menu() -> void:
-	_header("PODE RESPIRAR.","A história espera por você.")
+	_header("FAÇA UMA PAUSA.","Enquanto isso pense no que já aprendeu.")
 	Kit.brand(content,Rect2(1010,288,390,355),true)
 	first_button = Kit.button(content,"CONTINUAR    ›",Rect2(95,304,635,89),func(): close_requested.emit())
 	Kit.button(content,"AJUSTES",Rect2(95,418,635,78),func(): _open_settings("pause"),Kit.PAPER)
 	Kit.button(content,"VOLTAR AO INÍCIO",Rect2(95,519,635,78),_confirm_home,Kit.CLAY)
 	Kit.label(content,"Seu progresso de fases permanece salvo.",Rect2(101,632,700,50),27)
-	_footer("ESC  CONTINUAR       ↑ ↓  NAVEGAR       ENTER  SELECIONAR")
+	_footer("ESC - Continuar       ↑ ↓  Navegar       ENTER - Selecionar ")
 
 func _demo() -> void:
 	Kit.rect(content,Rect2(0,0,1600,900),Color(0.1,0,0.17,0.24))
@@ -351,10 +351,10 @@ func _retry_menu() -> void:
 	_header("A JORNADA CONTINUA", "Toda descoberta tem seus desafios.")
 	Kit.brand(content,Rect2(1030,286,355,340),true)
 	Kit.label(content,"Vamos tentar de novo?",Rect2(96,295,820,90),55,Kit.GOLD,Kit.BOLD)
-	Kit.label(content,"Recomece este cenário e encontre um novo caminho.",Rect2(99,392,820,50),29)
+	Kit.label(content,"Recomece esta aventura e encontre um novo caminho.",Rect2(99,392,820,50),29)
 	first_button = Kit.button(content,"TENTAR NOVAMENTE    ›",Rect2(95,485,720,89),func(): restart_requested.emit())
 	Kit.button(content,"VOLTAR AO INÍCIO",Rect2(95,604,720,78),func(): _launch("res://scenes/telaInicial/TelaInicial.tscn"); close_requested.emit(),Kit.PAPER)
-	_footer("↑ ↓  NAVEGAR       ENTER  SELECIONAR")
+	_footer("↑ ↓  NAVEGAR       ENTER - Selecionar")
 
 func _launch_chapter(number: int) -> void:
 	_launch(chapter_path(number))
@@ -365,7 +365,7 @@ static func chapter_path(number: int) -> String:
 func _launch(path: String) -> void:
 	if loading: return
 	if not ResourceLoader.exists(path):
-		_confirm("Caminho indisponível", "Não foi possível encontrar este cenário. Volte e escolha outro capítulo.",Callable(),false)
+		_confirm("Caminho indisponível", "Não foi possível encontrar esta aventura. Volte e escolha outro capítulo.",Callable(),false)
 		return
 	loading = true
 	get_tree().paused = false

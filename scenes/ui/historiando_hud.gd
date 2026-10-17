@@ -36,7 +36,7 @@ func _ready() -> void:
 	Kit.rect(canvas, Rect2(43,43,350,103), Kit.INK)
 	Kit.rect(canvas, Rect2(48,48,340,93), Kit.PAPER)
 	Kit.brand(canvas, Rect2(58,53,78,78), true)
-	Kit.label(canvas,"VIAJANTE",Rect2(150,53,200,25),20,Kit.INK,Kit.BOLD)
+	Kit.label(canvas,"YARA",Rect2(150,53,200,25),20,Kit.INK,Kit.BOLD)
 	hearts = Kit.label(canvas,"",Rect2(148,76,220,48),34,Kit.CLAY,Kit.BOLD)
 	Kit.rect(canvas,Rect2(46,158,340,7),Kit.INK)
 	Kit.rect(canvas,Rect2(46,158,340,4),Kit.GOLD)
