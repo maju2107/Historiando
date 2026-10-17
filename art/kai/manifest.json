@@ -1,0 +1,463 @@
+{
+  "asset": "Kai",
+  "source": "kai.blend",
+  "status": "Rigged, weighted and expressive island-cutscene NPC; runtime GLB and baked atlases installed",
+  "files": [
+    {
+      "path": "ATTRIBUTION.md",
+      "bytes": 1046,
+      "sha256": "e1f58fb50e8d42d782ccc54f291c46a8676fc1de34587d7186f7e0748f43ec3b"
+    },
+    {
+      "path": "cloth_validation.json",
+      "bytes": 1473,
+      "sha256": "364dc57998358526ad4253580e0fb0de0960756b8d3086e568a6a2c04b16d3d8"
+    },
+    {
+      "path": "face_refinement_validation.json",
+      "bytes": 1271,
+      "sha256": "9d570bb309c852fef1c4bcbb8ce366e0b2dd5b8e448a8b900e2fc467d3f87ed8"
+    },
+    {
+      "path": "facial_pad_validation.json",
+      "bytes": 968,
+      "sha256": "8c21583e7d0a5a6c914ea40638c31fc7bb1515b9e233e368089ee6b0a4d945cf"
+    },
+    {
+      "path": "finish_validation.json",
+      "bytes": 738,
+      "sha256": "b0d35d378e39bc490e5a593af8bb13550f46edfa97ee30adba71b7f539828ebb"
+    },
+    {
+      "path": "footwear_coverage_validation.json",
+      "bytes": 273,
+      "sha256": "4d3b87a9dd7385ed3cdb4a1e98d092b721d18c06074139717c0e77bae316b2b0"
+    },
+    {
+      "path": "GDQuest-LICENSE.txt",
+      "bytes": 2794,
+      "sha256": "34c728393b332536e25be2db8e730b296c685bed2c766a02d97e442bb5aa9d0e"
+    },
+    {
+      "path": "ground_contact_validation.json",
+      "bytes": 1627,
+      "sha256": "a18aa75aa02a24dd008e6d1d0ef31b9bb2b8135646ddde06dd69a34fda2d28e6"
+    },
+    {
+      "path": "ground_engine_validation.json",
+      "bytes": 1083,
+      "sha256": "2715a2c66ed8cb20e941db97098d35da699d0296312d2669f1f5f9bb0100095d"
+    },
+    {
+      "path": "hair_cleanup_validation.json",
+      "bytes": 948,
+      "sha256": "86819e785d6739b3262f1858df195ce56a00fd22107a9ce4f6a36e04759ed4a2"
+    },
+    {
+      "path": "hair_detail_validation.json",
+      "bytes": 731,
+      "sha256": "92494c245fd44a607d5129244aba10462f56e2454014ce16a865822b2efbe2f4"
+    },
+    {
+      "path": "hair_volume_validation.json",
+      "bytes": 141192,
+      "sha256": "904f0cf60d9ba1795488e704b72a5ba00633ae1e1a0fd2fe675391fad658ebc0"
+    },
+    {
+      "path": "joint_motion_validation.json",
+      "bytes": 3082,
+      "sha256": "e4946e2227d3341fd703d409901dc8620e61c6adc0aa1f4eff25a856b95fb896"
+    },
+    {
+      "path": "joint_paint_validation.json",
+      "bytes": 142,
+      "sha256": "2d227b08a7dcafd01e0f0f410c55a8a3593344f24d566e26f0277266f61dac8e"
+    },
+    {
+      "path": "kai.blend",
+      "bytes": 10462215,
+      "sha256": "7f6949ec6033329194e155cf6231ab880a437e4107c3874246a5039cb58ebbea"
+    },
+    {
+      "path": "lash_fit_validation.json",
+      "bytes": 2211,
+      "sha256": "7e9533a773377d032037d4d0f9c7f44e24e0b7a5a3e4dbc0c120a6737aef18db"
+    },
+    {
+      "path": "leg_lash_validation.json",
+      "bytes": 1998,
+      "sha256": "d89174b15319ac229db9de0da4336bf26d5cf573bac5a6cb8b215f50e20f1cc3"
+    },
+    {
+      "path": "previews/back.png",
+      "bytes": 1014428,
+      "sha256": "5ce239d800c15e09f015ee57893051b8582f3c4e604fb01256a69d92678fd2cf"
+    },
+    {
+      "path": "previews/cloth_motion.gif",
+      "bytes": 693627,
+      "sha256": "9b80c2e7a0b475eae57ebaddf58519769c706321f78bf2f6b9df80412ec71771"
+    },
+    {
+      "path": "previews/clothes_details.png",
+      "bytes": 369751,
+      "sha256": "a92d5144e36268bd7301f436e2181be50e82c14f1768f4e5a56471dda239fbea"
+    },
+    {
+      "path": "previews/eyelashes.png",
+      "bytes": 636924,
+      "sha256": "32baaca097731fd1bbf2dbf5761c38bce6cf46e16b2981fd9fc777772f42b528"
+    },
+    {
+      "path": "previews/face.png",
+      "bytes": 761506,
+      "sha256": "7698f45889b51b834858c3b848570fe740d074bd58d81e31472faacf998810c0"
+    },
+    {
+      "path": "previews/finish_details.png",
+      "bytes": 568342,
+      "sha256": "76ce25695a7d658ca3ea488b08bf506dd6cca3aa6040e94ad205dffff238da84"
+    },
+    {
+      "path": "previews/front.png",
+      "bytes": 1066926,
+      "sha256": "97182615c66fa3c4eb674643d80ecdf20f1d7ed7fb5de82e3e406fd07f20595a"
+    },
+    {
+      "path": "previews/hair_details.png",
+      "bytes": 568532,
+      "sha256": "a49ed813453b173e978f00cd043c3700bf40e9916486ef4bad6156db408a5157"
+    },
+    {
+      "path": "previews/knees_front.png",
+      "bytes": 1385166,
+      "sha256": "384656a6f99e354ddfb41dab16784fad253736a964b0cff77857aeef8daff664"
+    },
+    {
+      "path": "previews/knees_side.png",
+      "bytes": 1242358,
+      "sha256": "9a4344fc99d6dadfeecff892612929d5dea2ff222c1c018d00254b70cc7f023e"
+    },
+    {
+      "path": "previews/lashes_eye_front.png",
+      "bytes": 963687,
+      "sha256": "41a4d76ef943270d4ff8afecc5d044f0f7936e4bc01f8d0c0269b15e62681dd5"
+    },
+    {
+      "path": "previews/lashes_eye_left.png",
+      "bytes": 943399,
+      "sha256": "963c02e1014a9861b64aeb845bb313a0a53b4e2aa8d79287c79cd1b7240a0493"
+    },
+    {
+      "path": "previews/lashes_eye_profile_left.png",
+      "bytes": 896107,
+      "sha256": "a32b0a13db1252d2ffa085e28fcf320b95d48a007da8915f2080de7a2a17b020"
+    },
+    {
+      "path": "previews/lashes_eye_profile_right.png",
+      "bytes": 902377,
+      "sha256": "3ae3805f097d93b32459043a9e3de162b28e63182bfabbe3ae9d9789556482f7"
+    },
+    {
+      "path": "previews/lashes_eye_right.png",
+      "bytes": 954265,
+      "sha256": "5dea5455a2c72a827c2f47d4c740a56500fd69a609a39806cec6c586ef44c31e"
+    },
+    {
+      "path": "previews/leg_lash_details.png",
+      "bytes": 555998,
+      "sha256": "3d4510626d597d5451ad0be69c86f8cfc6b42d999a05f6eee3bbdf40236e3ac8"
+    },
+    {
+      "path": "previews/legs.png",
+      "bytes": 498853,
+      "sha256": "490e7b6d87d778bd3ba524f4c009b0f84b31f5a8fdc3a05a7847be4f5e17e5a6"
+    },
+    {
+      "path": "previews/lower.png",
+      "bytes": 1194901,
+      "sha256": "8b14eb883c3da4d87773adfc328a8d84e328945d9685b68c7f458a60ff660053"
+    },
+    {
+      "path": "previews/lower_back.png",
+      "bytes": 1107023,
+      "sha256": "c9a57c7f18ec591b2d7d6bf253bea2a1af95ea2905433129ddde78c208af9c28"
+    },
+    {
+      "path": "previews/lower_side.png",
+      "bytes": 957373,
+      "sha256": "90d1d9c6aed7235562686081aaa330342e63380aadb223335e6cef9e49a1c555"
+    },
+    {
+      "path": "previews/rig/Correct.png",
+      "bytes": 226358,
+      "sha256": "4c7513e2627f7e249faab81e67150504b17414177c8d62bd35c0506203089ec7"
+    },
+    {
+      "path": "previews/rig/Explain.png",
+      "bytes": 223341,
+      "sha256": "7a864fa90fc9aada54668beda1e26e7c6e0f63c5682f08b50b61b3f18d0eeee4"
+    },
+    {
+      "path": "previews/rig/Face.png",
+      "bytes": 626756,
+      "sha256": "001dab19a967c0d348be6fcac66528723034eefe87d7a09846d2a4fe7d161000"
+    },
+    {
+      "path": "previews/rig/Fall.png",
+      "bytes": 207101,
+      "sha256": "cc33be02d1ec33c26247863aeb7ed3a2c7873e2330fc2c3cb15f92d2809d0f25"
+    },
+    {
+      "path": "previews/rig/Idle.png",
+      "bytes": 227632,
+      "sha256": "2ab9118b99021444f40565227763adba60e1fbe8bd19efccb2cd20e66f4099ec"
+    },
+    {
+      "path": "previews/rig/Joint_Correct_20.png",
+      "bytes": 440935,
+      "sha256": "84e7c7fc5874b6f26ef8d19cef7c02db03584dddd00fdd93462485d9c2fac0f7"
+    },
+    {
+      "path": "previews/rig/Joint_Correct_45.png",
+      "bytes": 438991,
+      "sha256": "d4de85cc1ffe519d81539d41c1ca5a760f72778e0ce1901ac6cdd99f41c6b158"
+    },
+    {
+      "path": "previews/rig/Joint_Correct_70.png",
+      "bytes": 443132,
+      "sha256": "a6dfd36e3d2d7cad64d597d24165f55bf7eedf0cbfcee82c681df125db86ad09"
+    },
+    {
+      "path": "previews/rig/Joint_Correct_90.png",
+      "bytes": 438613,
+      "sha256": "706148e5f9c22839d93466c732a82d91b89199e1b81b6e566a679bf2217578fe"
+    },
+    {
+      "path": "previews/rig/Joint_Explain_20.png",
+      "bytes": 439139,
+      "sha256": "e692b424bcad94f17a25888697922281fbd4feb24e1b2c6a80d9acee9d305229"
+    },
+    {
+      "path": "previews/rig/Joint_Explain_45.png",
+      "bytes": 447396,
+      "sha256": "95bde7b126af3ed0c01026bdb886f9520df355b125994760479c5fe672f324fe"
+    },
+    {
+      "path": "previews/rig/Joint_Explain_70.png",
+      "bytes": 444051,
+      "sha256": "7cbf038181f3e67b8d377e7cb19079c5a46ec99d1c61ed4d938c3d4ab051e4c3"
+    },
+    {
+      "path": "previews/rig/Joint_Explain_90.png",
+      "bytes": 439430,
+      "sha256": "e882c445e1c9c6684d5ac642012db322b9c0009c09b434a2fae099bf71a8755f"
+    },
+    {
+      "path": "previews/rig/Joint_Jump_20.png",
+      "bytes": 235219,
+      "sha256": "8e6a4a13617bfa414726498e561805e65f8d2cc4bfbbd4064a70538f018bb3c9"
+    },
+    {
+      "path": "previews/rig/Joint_Jump_45.png",
+      "bytes": 235219,
+      "sha256": "8e6a4a13617bfa414726498e561805e65f8d2cc4bfbbd4064a70538f018bb3c9"
+    },
+    {
+      "path": "previews/rig/Joint_Jump_70.png",
+      "bytes": 235219,
+      "sha256": "8e6a4a13617bfa414726498e561805e65f8d2cc4bfbbd4064a70538f018bb3c9"
+    },
+    {
+      "path": "previews/rig/Joint_Jump_90.png",
+      "bytes": 235219,
+      "sha256": "8e6a4a13617bfa414726498e561805e65f8d2cc4bfbbd4064a70538f018bb3c9"
+    },
+    {
+      "path": "previews/rig/Joint_Run_20.png",
+      "bytes": 253507,
+      "sha256": "453053c5010f4fa74ffdc8d183d2f6de77ffb14fddda51777d15d4bdbb67d41d"
+    },
+    {
+      "path": "previews/rig/Joint_Run_45.png",
+      "bytes": 335633,
+      "sha256": "85cf81f818ffeff319d7e52a8c4a7e93c851093e56200b2af0f43b385d63fcc7"
+    },
+    {
+      "path": "previews/rig/Joint_Run_70.png",
+      "bytes": 255294,
+      "sha256": "09ebc382952ed43389af44aced4b2c02ab8de7ba6432d36ad8c15bf681a4ca65"
+    },
+    {
+      "path": "previews/rig/Joint_Run_90.png",
+      "bytes": 339096,
+      "sha256": "db0d25cc39501b7399780e429a04528b596a3413f5ac7a98768cab7216cc3a88"
+    },
+    {
+      "path": "previews/rig/Joint_Walk_20.png",
+      "bytes": 264998,
+      "sha256": "58533438a48deac6aff42886dcaec2297c7006e7b92d1e48a321bdb33968b07b"
+    },
+    {
+      "path": "previews/rig/Joint_Walk_45.png",
+      "bytes": 371920,
+      "sha256": "cc2e82447f4786831aae9a982feaf10f6b5f85ee73b8685ad66bd0237d63c3d7"
+    },
+    {
+      "path": "previews/rig/Joint_Walk_70.png",
+      "bytes": 259044,
+      "sha256": "d94249e63a40b0e66946f285f2ab373a57bd75af748a4afce6a5f9bb7aa2e71e"
+    },
+    {
+      "path": "previews/rig/Joint_Walk_90.png",
+      "bytes": 335918,
+      "sha256": "3a08b657fe9b55f0bd6c823bed541d0ed1aecfa11257ed9ba914ae487538da9d"
+    },
+    {
+      "path": "previews/rig/Jump.png",
+      "bytes": 227151,
+      "sha256": "7135e4ffd5832b49078cc2ac64b605dbb2f24f7c36fded6628c04b7873b8b920"
+    },
+    {
+      "path": "previews/rig/Point.png",
+      "bytes": 224456,
+      "sha256": "bdde48aba8a671c3417764477e69ac7ed72ba0081d8a7065ab239d34a13b5e12"
+    },
+    {
+      "path": "previews/rig/React.png",
+      "bytes": 225425,
+      "sha256": "7f8022f1d0063d1361af7d093d6b686753b1fa425e1381ade5c2fbbb1b5e8edb"
+    },
+    {
+      "path": "previews/rig/Run.png",
+      "bytes": 209200,
+      "sha256": "f747467a954b2b6a7e8296c38090029cb3219e588f5096fd43b419dd6c3104db"
+    },
+    {
+      "path": "previews/rig/Shrug.png",
+      "bytes": 222066,
+      "sha256": "cc9208372b0bd9c547f86ad7b5e6423490136d60504c97aa4b1e5a692144115e"
+    },
+    {
+      "path": "previews/rig/Talk.png",
+      "bytes": 223341,
+      "sha256": "7a864fa90fc9aada54668beda1e26e7c6e0f63c5682f08b50b61b3f18d0eeee4"
+    },
+    {
+      "path": "previews/rig/VictorySign.png",
+      "bytes": 207934,
+      "sha256": "27e9dbf65569bfa2e4ae8a3cfa2f85fbfd4729a483743706c6564a55f9491f5e"
+    },
+    {
+      "path": "previews/rig/Walk.png",
+      "bytes": 210601,
+      "sha256": "5472d253e98bb763bb4b72f4a3b861378b83128fae84a007b853551398d81604"
+    },
+    {
+      "path": "previews/side.png",
+      "bytes": 972066,
+      "sha256": "9619f14b6ab2daa28a012c9760ffa62a27119580b5a2632c56281732a79ceab5"
+    },
+    {
+      "path": "previews/three_quarter.png",
+      "bytes": 1068533,
+      "sha256": "cc7b674c84fed22a9659b06f4fd71f93b251d224d1a686578fe17d6a6723db64"
+    },
+    {
+      "path": "previews/turnaround.png",
+      "bytes": 722296,
+      "sha256": "5e58a10f83efd68bfbd725c61ac9e674085d772cac971ee55264f6e700631606"
+    },
+    {
+      "path": "README.md",
+      "bytes": 11840,
+      "sha256": "d39a3fce9a001066e0fd8692f577370f4cf49c2f61440e3d8cb4941cd68bd31c"
+    },
+    {
+      "path": "references/kai_turnaround.png",
+      "bytes": 1453209,
+      "sha256": "84d7ca4129e14839d7b307c4a02bdc80a7e4fb65c3f87ef8c18019b4cca066b3"
+    },
+    {
+      "path": "rig_validation.json",
+      "bytes": 6871,
+      "sha256": "cd4b363c5a4d242305b29739ca870e7eb33615f5dbdb47088af7130e4cc68084"
+    },
+    {
+      "path": "runtime_motion_validation.json",
+      "bytes": 1565,
+      "sha256": "2ef4869ed366ff94b11d6ec60d1ec367c32d6570c3d2ed05731d7077c63a2164"
+    },
+    {
+      "path": "runtime_validation.json",
+      "bytes": 984,
+      "sha256": "b2ed3c67cb580f75f48c2fa00329808cf33889ca37f1d891305fbb2438320e4e"
+    },
+    {
+      "path": "side_lock_validation.json",
+      "bytes": 282,
+      "sha256": "85c7795ea5caa4f7265c78174e7b3728ad765973efc6575beaa6f47e3a4b0a05"
+    },
+    {
+      "path": "validation.json",
+      "bytes": 53231,
+      "sha256": "fd67b59664c76185bc8a327010ad6fc2c9d6ce04bf97b6333e2714698045c6ad"
+    }
+  ],
+  "runtime": {
+    "file": "assets/characters/kai/kai.glb",
+    "bytes": 30665752,
+    "sha256": "55ca755c4b2c6cb87624b4cbbbd0c353cce5d7a1117da052bd9f698c125e04e5",
+    "triangles": 234050,
+    "vertices": 159976,
+    "bones": 60,
+    "clips": [
+      "Correct",
+      "Explain",
+      "Fall",
+      "Idle",
+      "Jump",
+      "Point",
+      "React",
+      "Run",
+      "Shrug",
+      "Talk",
+      "VictorySign",
+      "Walk"
+    ],
+    "facial_shapes": [
+      "MouthOpen",
+      "MouthRound",
+      "Smile",
+      "Concern",
+      "BrowUp",
+      "BrowAsym",
+      "Blink",
+      "EyesWide",
+      "VisemeWide",
+      "VisemeU",
+      "LipPress",
+      "LipBite",
+      "Grin",
+      "Smirk",
+      "Sad",
+      "CheekRaise",
+      "Squint"
+    ],
+    "materials": 5,
+    "maximum_influences": 4,
+    "maximum_weight_sum_error": 1.1082738637924194e-07,
+    "unweighted_vertices": 0,
+    "textures": {
+      "kai_albedo.png": [
+        4096,
+        4096
+      ],
+      "kai_orm.png": [
+        2048,
+        2048
+      ]
+    },
+    "issues": []
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "shape_keys": [
+    "MouthOpen",
+    "MouthRound",
+    "Smile",
+    "Concern",
+    "BrowUp",
+    "BrowAsym",
+    "Blink",
+    "EyesWide",
+    "VisemeWide",
+    "VisemeU",
+    "LipPress",
+    "LipBite",
+    "Grin",
+    "Smirk",
+    "Sad",
+    "CheekRaise",
+    "Squint"
+  ],
+  "source_parts": {
+    "KAI_Base_Body": 1254,
+    "KAI_Base_Eye.L": 352,
+    "KAI_Base_Eye.R": 352,
+    "KAI_Base_Eyebrow.L": 360,
+    "KAI_Base_Eyebrow.R": 360,
+    "KAI_Connected cartoon lashes L": 2391,
+    "KAI_Connected cartoon lashes R": 2391
+  },
+  "curved_pad_angle_degrees": 126,
+  "runtime_shapes": 17,
+  "all_appearance_parts_preserved": true,
+  "facial_source_validation": "art/island_intro/facial_source_validation.json",
+  "facial_runtime_validation": "art/island_intro/facial_runtime_validation.json",
+  "face_revision": "Concentric lips, soft philtrum, fairing, deep cavity, dental arch, rounded tongue and orbital lid/lash correctives"
+}

@@ -1,0 +1,179 @@
+{
+  "Idle": {
+    "ankle_x_before_degrees": [
+      -20.05,
+      21.77
+    ],
+    "ankle_x_after_degrees": [
+      -20.05,
+      21.77
+    ],
+    "elbow_hinge_limit_degrees": [
+      1.15,
+      117.46
+    ],
+    "grounded_support_plane_m": 0.002
+  },
+  "Walk": {
+    "ankle_x_before_degrees": [
+      -20.05,
+      21.77
+    ],
+    "ankle_x_after_degrees": [
+      -20.05,
+      21.77
+    ],
+    "elbow_hinge_limit_degrees": [
+      1.15,
+      117.46
+    ],
+    "grounded_support_plane_m": 0.002
+  },
+  "Run": {
+    "ankle_x_before_degrees": [
+      -17.78,
+      21.77
+    ],
+    "ankle_x_after_degrees": [
+      -17.78,
+      21.77
+    ],
+    "elbow_hinge_limit_degrees": [
+      1.15,
+      117.46
+    ],
+    "grounded_support_plane_m": 0.002
+  },
+  "Jump": {
+    "ankle_x_before_degrees": [
+      21.77,
+      21.77
+    ],
+    "ankle_x_after_degrees": [
+      21.77,
+      21.77
+    ],
+    "elbow_hinge_limit_degrees": [
+      1.15,
+      117.46
+    ]
+  },
+  "Fall": {
+    "ankle_x_before_degrees": [
+      -7.03,
+      21.77
+    ],
+    "ankle_x_after_degrees": [
+      -7.03,
+      21.77
+    ],
+    "elbow_hinge_limit_degrees": [
+      1.15,
+      117.46
+    ]
+  },
+  "VictorySign": {
+    "ankle_x_before_degrees": [
+      -6.1,
+      21.77
+    ],
+    "ankle_x_after_degrees": [
+      -6.1,
+      21.77
+    ],
+    "elbow_hinge_limit_degrees": [
+      1.15,
+      117.46
+    ]
+  },
+  "Talk": {
+    "ankle_x_before_degrees": [
+      -20.05,
+      18.89
+    ],
+    "ankle_x_after_degrees": [
+      -20.05,
+      18.89
+    ],
+    "elbow_hinge_limit_degrees": [
+      1.15,
+      117.46
+    ],
+    "grounded_support_plane_m": 0.002
+  },
+  "Explain": {
+    "ankle_x_before_degrees": [
+      -20.05,
+      18.89
+    ],
+    "ankle_x_after_degrees": [
+      -20.05,
+      18.89
+    ],
+    "elbow_hinge_limit_degrees": [
+      1.15,
+      117.46
+    ],
+    "grounded_support_plane_m": 0.002
+  },
+  "Correct": {
+    "ankle_x_before_degrees": [
+      -20.05,
+      18.89
+    ],
+    "ankle_x_after_degrees": [
+      -20.05,
+      18.89
+    ],
+    "elbow_hinge_limit_degrees": [
+      1.15,
+      117.46
+    ],
+    "grounded_support_plane_m": 0.002
+  },
+  "Shrug": {
+    "ankle_x_before_degrees": [
+      -20.05,
+      18.89
+    ],
+    "ankle_x_after_degrees": [
+      -20.05,
+      18.89
+    ],
+    "elbow_hinge_limit_degrees": [
+      1.15,
+      117.46
+    ],
+    "grounded_support_plane_m": 0.002
+  },
+  "Point": {
+    "ankle_x_before_degrees": [
+      -20.05,
+      18.89
+    ],
+    "ankle_x_after_degrees": [
+      -20.05,
+      18.89
+    ],
+    "elbow_hinge_limit_degrees": [
+      1.15,
+      117.46
+    ],
+    "grounded_support_plane_m": 0.002
+  },
+  "React": {
+    "ankle_x_before_degrees": [
+      -20.05,
+      18.89
+    ],
+    "ankle_x_after_degrees": [
+      -20.05,
+      18.89
+    ],
+    "elbow_hinge_limit_degrees": [
+      1.15,
+      117.46
+    ],
+    "grounded_support_plane_m": 0.002
+  }
+}

@@ -14,3 +14,4 @@ name = "Ilha / Faixa de fala"
 layer_info = {
 "": SubResource("BannerBase")
 }
+metadata/_latest_layer = ""

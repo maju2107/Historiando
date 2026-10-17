@@ -1,0 +1,76 @@
+{
+  "Kai": {
+    "source_reopened": true,
+    "bones": 60,
+    "shape_keys": [
+      "MouthOpen",
+      "MouthRound",
+      "Smile",
+      "Concern",
+      "BrowUp",
+      "BrowAsym",
+      "Blink",
+      "EyesWide",
+      "VisemeWide",
+      "VisemeU",
+      "LipPress",
+      "LipBite",
+      "Grin",
+      "Smirk",
+      "Sad",
+      "CheekRaise",
+      "Squint"
+    ],
+    "neutral_shape_defaults": true,
+    "changed_existing_vertices": 44,
+    "outside_face_changes": 0,
+    "original_animation_actions_unchanged": true,
+    "normalized_bone_weights": true,
+    "maximum_weight_sum_error": 1.000000000139778e-06,
+    "editable_masks": [
+      "Face_Jaw",
+      "Face_Lips",
+      "Face_Cheek.L"
+    ],
+    "native_sha256": "7f6949ec6033329194e155cf6231ab880a437e4107c3874246a5039cb58ebbea",
+    "runtime_sha256": "55ca755c4b2c6cb87624b4cbbbd0c353cce5d7a1117da052bd9f698c125e04e5"
+  },
+  "Yara": {
+    "source_reopened": true,
+    "bones": 60,
+    "shape_keys": [
+      "MouthOpen",
+      "MouthRound",
+      "Smile",
+      "Concern",
+      "BrowUp",
+      "BrowAsym",
+      "Blink",
+      "EyesWide",
+      "VisemeWide",
+      "VisemeU",
+      "LipPress",
+      "LipBite",
+      "Grin",
+      "Smirk",
+      "Sad",
+      "CheekRaise",
+      "Squint"
+    ],
+    "neutral_shape_defaults": true,
+    "changed_existing_vertices": 322,
+    "outside_face_changes": 0,
+    "original_animation_actions_unchanged": true,
+    "normalized_bone_weights": true,
+    "maximum_weight_sum_error": 1.000000000139778e-06,
+    "editable_masks": [
+      "Face_Cheek.L",
+      "Face_Jaw",
+      "Face_Lips",
+      "Face_Cheek.R"
+    ],
+    "native_sha256": "58b7a8fb4c466b5ca522c7cee265675293b0990e8f47199ee0e04ea4b248efe1",
+    "runtime_sha256": "1cc3db3c19646a840cd1d97388466154d49b098c54cd591e9eb649a0459e9bb8"
+  },
+  "issues": []
+}

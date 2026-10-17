@@ -8,6 +8,8 @@ var _rest := {}
 var seated := 1.0
 var nod := 0.0
 var blink := 0.0
+var authored_face_blink := false
+var confused := 0.0
 var _eyes: Array[Dictionary] = []
 var _lashes: Array[Dictionary] = []
 var _original_meshes: Array[Dictionary] = []
@@ -37,6 +39,8 @@ func configure(character: Node3D) -> void:
 		if bounds.is_empty(): continue
 		var source := skin.mesh
 		var posed_mesh := ArrayMesh.new()
+		posed_mesh.blend_shape_mode = source.blend_shape_mode
+		for index in source.get_blend_shape_count(): posed_mesh.add_blend_shape(source.get_blend_shape_name(index))
 		for surface in source.get_surface_count():
 			var original := skin.get_active_material(surface) as StandardMaterial3D
 			var arrays := source.surface_get_arrays(surface)
@@ -58,7 +62,7 @@ func configure(character: Node3D) -> void:
 					shader.set_shader_parameter("eye_height",box.size.y)
 					_lashes.append(record)
 				skin.set_surface_override_material(surface,shader)
-			posed_mesh.add_surface_from_arrays(source.surface_get_primitive_type(surface),arrays)
+			posed_mesh.add_surface_from_arrays(source.surface_get_primitive_type(surface),arrays,source.surface_get_blend_shape_arrays(surface))
 			posed_mesh.surface_set_material(surface,source.surface_get_material(surface))
 		_original_meshes.append({"mesh":skin,"original":source})
 		skin.mesh = posed_mesh
@@ -76,7 +80,7 @@ func _seat_rotation(bone: String,offset: Quaternion) -> void:
 
 func apply_pose() -> void:
 	if skeleton == null: return
-	for eye in _eyes: eye.shader.set_shader_parameter("blink",blink)
+	for eye in _eyes: eye.shader.set_shader_parameter("blink",0.0 if authored_face_blink else blink)
 	# Ground sitting: hips down, legs extended in a relaxed V, rather than a squat.
 	model.position = _original_position + Vector3.DOWN * .44 * seated
 	_seat_rotation("Body",Quaternion.IDENTITY)
@@ -90,11 +94,13 @@ func apply_pose() -> void:
 		_rotate("LowerArm."+side,Vector3.RIGHT,deg_to_rad(-12)*seated)
 	_seat_rotation("Spine",Quaternion(Vector3.RIGHT,deg_to_rad(-4)))
 	_rotate("Head",Vector3.RIGHT,deg_to_rad(13)*seated+nod)
+	_rotate("Chest",Vector3.RIGHT,-.08*confused)
 	var head: Dictionary = _rest["Head"]
 	skeleton.set_bone_pose_rotation(head.index,skeleton.get_bone_pose_rotation(head.index) * Quaternion(Vector3.UP,sin(nod*5)*.12))
+	skeleton.set_bone_pose_rotation(head.index,skeleton.get_bone_pose_rotation(head.index) * Quaternion(Vector3.FORWARD,.18*confused))
 	var eye_up := (skeleton.get_bone_global_pose(head.index).basis * skeleton.get_bone_global_rest(head.index).basis.inverse() * Vector3.UP).normalized()
 	for lash in _lashes:
-		lash.shader.set_shader_parameter("blink",blink)
+		lash.shader.set_shader_parameter("blink",0.0 if authored_face_blink else blink)
 		lash.shader.set_shader_parameter("eye_up",eye_up)
 
 func _process(_delta: float) -> void:

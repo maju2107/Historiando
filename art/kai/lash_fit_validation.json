@@ -1,0 +1,69 @@
+{
+  "source_checkpoint": "C:\\Users\\obran\\Historiando_Backups\\kai_lashes_2026-10-16\\kai_before_lash_fit.blend",
+  "preserved_other_meshes": 194,
+  "ribbons": [
+    {
+      "object": "KAI_Relaxed upper eye contour L",
+      "width_m": 0.0065,
+      "shrinkwrap_offset_m": 0.00012,
+      "thickness_m": 0.0006
+    },
+    {
+      "object": "KAI_Base_LowerLashline.L",
+      "width_m": 0.0032,
+      "shrinkwrap_offset_m": 0.00012,
+      "thickness_m": 0.0006
+    },
+    {
+      "object": "KAI_Relaxed upper eye contour R",
+      "width_m": 0.0065,
+      "shrinkwrap_offset_m": 0.00012,
+      "thickness_m": 0.0006
+    },
+    {
+      "object": "KAI_Base_LowerLashline.R",
+      "width_m": 0.0032,
+      "shrinkwrap_offset_m": 0.00012,
+      "thickness_m": 0.0006
+    }
+  ],
+  "attachment_check": [
+    {
+      "object": "KAI_Base_LowerLashline.L",
+      "max_vertex_distance_m": 0.00042005465365946293,
+      "max_face_center_distance_m": 0.0004382909683045,
+      "evaluated_vertices": 5850
+    },
+    {
+      "object": "KAI_Base_LowerLashline.R",
+      "max_vertex_distance_m": 0.00042004892020486295,
+      "max_face_center_distance_m": 0.00043828110210597515,
+      "evaluated_vertices": 5850
+    },
+    {
+      "object": "KAI_Relaxed upper eye contour L",
+      "max_vertex_distance_m": 0.0004200536641292274,
+      "max_face_center_distance_m": 0.0006133993156254292,
+      "evaluated_vertices": 5850
+    },
+    {
+      "object": "KAI_Relaxed upper eye contour R",
+      "max_vertex_distance_m": 0.0004200466792099178,
+      "max_face_center_distance_m": 0.0006133406423032284,
+      "evaluated_vertices": 5850
+    }
+  ],
+  "attachment_passed": true,
+  "before_max_skin_gap_m": {
+    "KAI_Relaxed upper eye contour L": 0.0032174070365726948,
+    "KAI_Base_LowerLashline.L": 0.009803489781916142,
+    "KAI_Relaxed upper eye contour R": 0.0034563997760415077,
+    "KAI_Base_LowerLashline.R": 0.009803557768464088
+  },
+  "checked_views": [
+    "front",
+    "both_three_quarter",
+    "both_near_profiles"
+  ],
+  "surface_distance_note": "Evaluated distances include the thin front surface of the ribbon; its back surface embeds into skin."
+}

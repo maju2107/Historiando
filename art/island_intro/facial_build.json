@@ -1,0 +1,64 @@
+{
+  "Kai": {
+    "shapes": [
+      "MouthOpen",
+      "MouthRound",
+      "Smile",
+      "Concern",
+      "BrowUp",
+      "BrowAsym",
+      "Blink",
+      "EyesWide",
+      "VisemeWide",
+      "VisemeU",
+      "LipPress",
+      "LipBite",
+      "Grin",
+      "Smirk",
+      "Sad",
+      "CheekRaise",
+      "Squint"
+    ],
+    "face_weights": {
+      "head_repainted": 1287,
+      "lip_mask": 350
+    },
+    "mapped_face_vertices": 1328,
+    "maximum_mapping_distance": 0.0,
+    "quad_mouth_faces": 0,
+    "added_lip_vertices": 909,
+    "vertex_count": 118936,
+    "outside_face_preserved": true
+  },
+  "Yara": {
+    "shapes": [
+      "MouthOpen",
+      "MouthRound",
+      "Smile",
+      "Concern",
+      "BrowUp",
+      "BrowAsym",
+      "Blink",
+      "EyesWide",
+      "VisemeWide",
+      "VisemeU",
+      "LipPress",
+      "LipBite",
+      "Grin",
+      "Smirk",
+      "Sad",
+      "CheekRaise",
+      "Squint"
+    ],
+    "face_weights": {
+      "head_repainted": 1164,
+      "lip_mask": 296
+    },
+    "mapped_face_vertices": 1200,
+    "maximum_mapping_distance": 0.004492695443332195,
+    "quad_mouth_faces": 492,
+    "added_lip_vertices": 747,
+    "vertex_count": 57295,
+    "outside_face_preserved": true
+  }
+}

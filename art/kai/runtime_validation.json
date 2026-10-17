@@ -1,0 +1,56 @@
+{
+  "file": "assets/characters/kai/kai.glb",
+  "bytes": 30665752,
+  "sha256": "55ca755c4b2c6cb87624b4cbbbd0c353cce5d7a1117da052bd9f698c125e04e5",
+  "triangles": 234050,
+  "vertices": 159976,
+  "bones": 60,
+  "clips": [
+    "Correct",
+    "Explain",
+    "Fall",
+    "Idle",
+    "Jump",
+    "Point",
+    "React",
+    "Run",
+    "Shrug",
+    "Talk",
+    "VictorySign",
+    "Walk"
+  ],
+  "facial_shapes": [
+    "MouthOpen",
+    "MouthRound",
+    "Smile",
+    "Concern",
+    "BrowUp",
+    "BrowAsym",
+    "Blink",
+    "EyesWide",
+    "VisemeWide",
+    "VisemeU",
+    "LipPress",
+    "LipBite",
+    "Grin",
+    "Smirk",
+    "Sad",
+    "CheekRaise",
+    "Squint"
+  ],
+  "materials": 5,
+  "maximum_influences": 4,
+  "maximum_weight_sum_error": 1.1082738637924194e-07,
+  "unweighted_vertices": 0,
+  "textures": {
+    "kai_albedo.png": [
+      4096,
+      4096
+    ],
+    "kai_orm.png": [
+      2048,
+      2048
+    ]
+  },
+  "issues": []
+}

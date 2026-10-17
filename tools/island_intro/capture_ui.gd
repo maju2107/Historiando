@@ -18,6 +18,7 @@ func _run() -> void:
 	viewport.add_child(island)
 	var player: CharacterBody3D = island.get_node("Player")
 	player.set_physics_process(false)
+	player.control_preset = 0
 	var course: Node3D = island.get_node("ParkourFlutuante")
 	course.cycle_enabled = false
 	course.set_physics_process(false)
@@ -33,6 +34,23 @@ func _run() -> void:
 	hud.set_objective("Trilha dos céus · 08 / 21\nVerde: retorno seguro.\nSiga as setas. Vermelho: vai sumir!")
 	DirAccess.make_dir_recursive_absolute("res://art/island_intro/previews")
 	await save_image("mission_panel")
+	player.control_preset = 2
+	for dimensions in [Vector2i(1280,720),Vector2i(844,390),Vector2i(640,360)]:
+		viewport.size = dimensions
+		await save_image("mobile_controls_%dx%d" % [dimensions.x,dimensions.y])
+		var controls: Control = player.mobile_controls
+		var touch := InputEventScreenTouch.new()
+		touch.index = 0
+		touch.pressed = true
+		touch.position = controls._stick_center+Vector2(controls._radius*.6,-controls._radius*.35)
+		controls._unhandled_input(touch)
+		touch.index = 1
+		touch.position = controls._jump_center
+		controls._unhandled_input(touch)
+		await save_image("mobile_active_%dx%d" % [dimensions.x,dimensions.y])
+		controls.reset_touches()
+	player.control_preset = 0
+	viewport.size = Vector2i(1600,900)
 	hud.show_epoch_intro()
 	for frame in 40: await process_frame
 	await save_image("pleistoceno_presentation")

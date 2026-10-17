@@ -1,5 +1,7 @@
 extends Control
 ## Touch ownership keeps movement, jumping and camera gestures independent.
+const Kit = preload("res://scenes/ui/ui_kit.gd")
+const SPIRAL = preload("res://assets/ui/historiando/controls/joystick_spiral.svg")
 var player: CharacterBody3D
 var movement := Vector2.ZERO
 var _mobile := false
@@ -21,9 +23,10 @@ func _ready() -> void:
 
 func _layout() -> void:
 	reset_touches()
-	_radius = clampf(minf(size.x, size.y) * 0.13, 42.0, 85.0)
-	_stick_center = Vector2(_radius * 1.7, size.y - _radius * 1.7)
-	_jump_center = Vector2(size.x - _radius * 1.5, size.y - _radius * 1.6)
+	# Larger thumb targets, lifted clear of the bottom edge / gesture bar.
+	_radius = clampf(minf(size.x, size.y) * 0.19, 64.0, 112.0)
+	_stick_center = Vector2(_radius * 1.6, size.y - _radius * 1.9)
+	_jump_center = Vector2(size.x - _radius * 1.6, size.y - _radius * 1.9)
 	queue_redraw()
 
 
@@ -68,14 +71,14 @@ func _input(event: InputEvent) -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	if not _mobile or not player.can_move or player.is_dead:
+	if not _mobile or not is_visible_in_tree() or not player.can_move or player.is_dead:
 		return
 	if event is InputEventScreenTouch and event.pressed and not event.canceled:
 		if event.position.distance_to(_stick_center) <= _radius * 1.25:
 			if _move_finger == -1:
 				_move_finger = event.index
 				_update_stick(event.position)
-		elif event.position.distance_to(_jump_center) <= _radius * 0.8:
+		elif event.position.distance_to(_jump_center) <= _radius * 0.9:
 			if _jump_finger == -1:
 				_jump_finger = event.index
 				_jump_pending = true
@@ -100,17 +103,34 @@ func _update_stick(position_on_screen: Vector2) -> void:
 func _draw() -> void:
 	if not _mobile:
 		return
-	var outline := Color(1, 1, 1, 0.75)
-	draw_circle(_stick_center, _radius, Color(0.08, 0.1, 0.14, 0.4))
-	draw_arc(_stick_center, _radius, 0, TAU, 64, outline, 2.0, true)
-	draw_circle(_stick_center + movement * _radius * 0.65, _radius * 0.4, Color(1, 1, 1, 0.65))
-	var jump_radius := _radius * 0.8
-	draw_circle(_jump_center, jump_radius, Color(1, 1, 1, 0.55 if _jump_finger >= 0 else 0.25))
-	draw_arc(_jump_center, jump_radius, 0, TAU, 64, outline, 2.0, true)
+	var line_width := maxf(2.5,_radius*.035)
+	var ink := Color(Kit.INK,.85)
+	draw_circle(_stick_center+Vector2(3,5),_radius+3,Color(Kit.INK,.45))
+	draw_circle(_stick_center,_radius,Color(Kit.INK,.64))
+	draw_arc(_stick_center,_radius,0,TAU,96,Kit.PAPER,line_width,true)
+	draw_arc(_stick_center,_radius*.88,0,TAU,96,Color(Kit.GOLD,.65),line_width*.6,true)
+	# Small compass marks frame the logo without obscuring the world.
+	for direction in [Vector2.UP,Vector2.DOWN,Vector2.LEFT,Vector2.RIGHT]:
+		draw_line(_stick_center+direction*_radius*.76,_stick_center+direction*_radius*.86,Kit.GOLD,line_width,true)
+	var thumb := _stick_center+movement*_radius*.48
+	var thumb_radius := _radius*.55
+	draw_circle(thumb+Vector2(2,3),thumb_radius+2,ink)
+	draw_circle(thumb,thumb_radius,Color(Kit.CLAY,.96))
+	draw_arc(thumb,thumb_radius,0,TAU,64,Kit.GOLD,line_width,true)
+	draw_texture_rect(SPIRAL,Rect2(thumb-Vector2.ONE*thumb_radius*.87,Vector2.ONE*thumb_radius*1.74),false)
+	var jump_radius := _radius*.9
+	var tone := Kit.GOLD.lightened(.16) if _jump_finger>=0 else Kit.GOLD
+	draw_circle(_jump_center+Vector2(3,5),jump_radius+3,ink)
+	draw_circle(_jump_center,jump_radius,Color(tone,.92))
+	draw_arc(_jump_center,jump_radius,0,TAU,96,Kit.INK,line_width*1.3,true)
+	draw_arc(_jump_center,jump_radius*.87,0,TAU,96,Kit.PAPER,line_width*.7,true)
 	var arrow := PackedVector2Array([
-		_jump_center + Vector2(-0.3, 0.05) * _radius,
-		_jump_center + Vector2(0, -0.25) * _radius,
-		_jump_center + Vector2(0.3, 0.05) * _radius,
-	])
-	draw_polyline(arrow, outline, 5.0, true)
-	draw_line(_jump_center + Vector2(0, -0.25) * _radius, _jump_center + Vector2(0, 0.3) * _radius, outline, 5.0, true)
+		_jump_center+Vector2(-.26,-.05)*_radius,
+		_jump_center+Vector2(0,-.33)*_radius,
+		_jump_center+Vector2(.26,-.05)*_radius])
+	draw_polyline(arrow,Kit.INK,line_width*1.8,true)
+	draw_line(_jump_center+Vector2(0,-.31)*_radius,_jump_center+Vector2(0,.16)*_radius,Kit.INK,line_width*1.8,true)
+	var font_size := int(_radius*.27)
+	var caption := "PULAR"
+	var width := Kit.BOLD.get_string_size(caption,HORIZONTAL_ALIGNMENT_LEFT,-1,font_size).x
+	draw_string(Kit.BOLD,_jump_center+Vector2(-width/2,_radius*.54),caption,HORIZONTAL_ALIGNMENT_LEFT,-1,font_size,Kit.INK)

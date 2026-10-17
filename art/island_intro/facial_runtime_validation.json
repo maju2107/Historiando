@@ -1,0 +1,68 @@
+{
+  "Kai": {
+    "file": "assets/characters/kai/kai.glb",
+    "sha256": "55ca755c4b2c6cb87624b4cbbbd0c353cce5d7a1117da052bd9f698c125e04e5",
+    "bones": 60,
+    "clips": 12,
+    "facial_shapes": [
+      "MouthOpen",
+      "MouthRound",
+      "Smile",
+      "Concern",
+      "BrowUp",
+      "BrowAsym",
+      "Blink",
+      "EyesWide",
+      "VisemeWide",
+      "VisemeU",
+      "LipPress",
+      "LipBite",
+      "Grin",
+      "Smirk",
+      "Sad",
+      "CheekRaise",
+      "Squint"
+    ],
+    "neutral_defaults": true,
+    "normalized_four_influence_weights": true,
+    "maximum_weight_sum_error": 1.1082738637924194e-07,
+    "vertices": 159976
+  },
+  "Yara": {
+    "file": "assets/characters/yara/yara_playable.glb",
+    "sha256": "1cc3db3c19646a840cd1d97388466154d49b098c54cd591e9eb649a0459e9bb8",
+    "bones": 60,
+    "clips": 9,
+    "facial_shapes": [
+      "MouthOpen",
+      "MouthRound",
+      "Smile",
+      "Concern",
+      "BrowUp",
+      "BrowAsym",
+      "Blink",
+      "EyesWide",
+      "VisemeWide",
+      "VisemeU",
+      "LipPress",
+      "LipBite",
+      "Grin",
+      "Smirk",
+      "Sad",
+      "CheekRaise",
+      "Squint"
+    ],
+    "neutral_defaults": true,
+    "normalized_four_influence_weights": true,
+    "maximum_weight_sum_error": 1.2351665645837784e-07,
+    "vertices": 78072
+  },
+  "lip_balm": {
+    "embedded_texture_matches_native_paint": true,
+    "painted_texels": 969,
+    "total_texels": 4194304,
+    "original_pixels_preserved_outside_soft_lip_tint": true
+  },
+  "corrected_logo_matches_user_svg": true,
+  "issues": []
+}

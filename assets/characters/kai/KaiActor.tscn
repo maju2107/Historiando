@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/characters/kai/kai.glb" id="1_model"]
+[ext_resource type="Script" path="res://assets/characters/kai/KaiActor.gd" id="2_actor"]
+
+[sub_resource type="CapsuleShape3D" id="BodyShape"]
+radius = 0.18
+height = 0.90
+
+[node name="Kai" type="Node3D"]
+script = ExtResource("2_actor")
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+scale = Vector3(1.25,1.25,1.25)
+
+[node name="Body" type="StaticBody3D" parent="."]
+collision_layer = 1
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Body"]
+position = Vector3(0,0.57,0)
+shape = SubResource("BodyShape")

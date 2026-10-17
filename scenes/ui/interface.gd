@@ -90,7 +90,7 @@ func show_screen(next: String) -> void:
 func _footer(words: String = "↑ ↓  NAVEGAR       ENTER  SELECIONAR       ESC  VOLTAR") -> void:
 	Kit.rect(content,Rect2(55,852,1490,1),Color("68516c"))
 	Kit.label(content,words,Rect2(60,863,1180,27),19,Kit.PAPER)
-	Kit.texture(content,"res://assets/ui/historiando/brand_wordmark.svg",Rect2(1305,856,235,39))
+	Kit.brand(content,Rect2(1305,856,235,39))
 
 func _header(kicker: String, title: String) -> void:
 	Kit.brand(content,Rect2(60,39,55,55),true)

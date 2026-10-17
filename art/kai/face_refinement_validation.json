@@ -1,0 +1,61 @@
+{
+  "hair_lowering": {
+    "KAI_Flowing fringe 02": 0.024,
+    "KAI_Fine fringe left": 0.024,
+    "KAI_Flowing fringe 04": 0.028,
+    "KAI_Fine fringe right": 0.028,
+    "KAI_Center part curl": 0.034,
+    "KAI_Part wisp": 0.034
+  },
+  "upper_lids": "Integrated into existing face topology; separate patches removed",
+  "body_upper_eye_control_vertices_changed": [
+    944,
+    945,
+    946,
+    960,
+    961,
+    962,
+    963,
+    964,
+    965,
+    966,
+    967,
+    976,
+    977,
+    978,
+    979,
+    980,
+    981,
+    982,
+    983,
+    992,
+    993,
+    994,
+    995,
+    996,
+    997,
+    998,
+    999
+  ],
+  "all_other_body_vertices_unchanged": true,
+  "rebuilt_face_objects": [
+    "KAI_Base_Eyebrow.L",
+    "KAI_Base_Eyebrow.R",
+    "KAI_Relaxed upper eye contour L",
+    "KAI_Relaxed upper eye contour R"
+  ],
+  "unchanged_other_meshes": 151,
+  "fit": [
+    {
+      "side": "L",
+      "skin_fit_samples": 369,
+      "max_forehead_fit_error": 0.000929246573773107
+    },
+    {
+      "side": "R",
+      "skin_fit_samples": 369,
+      "max_forehead_fit_error": 0.0017554682867840093
+    }
+  ],
+  "backup": "C:\\Users\\obran\\Historiando_Backups\\kai_face_2026-10-16\\kai_before_forehead_lids_brows.blend"
+}

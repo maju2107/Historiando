@@ -1,0 +1,2039 @@
+{
+  "source_reopened": true,
+  "armature_bones": 60,
+  "mesh_objects": 198,
+  "evaluated_viewport_triangles": 1072480,
+  "structural_errors": [],
+  "protected_yara_unchanged": {
+    "art/yara/yara.blend": true,
+    "assets/characters/yara/yara_playable.glb": true
+  },
+  "protected_hashes": {
+    "art/yara/yara.blend": "58b7a8fb4c466b5ca522c7cee265675293b0990e8f47199ee0e04ea4b248efe1",
+    "assets/characters/yara/yara_playable.glb": "1cc3db3c19646a840cd1d97388466154d49b098c54cd591e9eb649a0459e9bb8"
+  },
+  "meshes": [
+    {
+      "name": "KAI_Base_Body",
+      "control_vertices": 1254,
+      "evaluated_viewport_triangles": 71744,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm brown skin",
+        "Kai / oral cavity"
+      ]
+    },
+    {
+      "name": "KAI_Base_Ear.L",
+      "control_vertices": 104,
+      "evaluated_viewport_triangles": 204,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm brown skin"
+      ]
+    },
+    {
+      "name": "KAI_Base_Ear.R",
+      "control_vertices": 104,
+      "evaluated_viewport_triangles": 204,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm brown skin"
+      ]
+    },
+    {
+      "name": "KAI_Base_Eye.L",
+      "control_vertices": 352,
+      "evaluated_viewport_triangles": 700,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Cute cartoon eye / CHR_Eye.L"
+      ]
+    },
+    {
+      "name": "KAI_Base_Eye.R",
+      "control_vertices": 352,
+      "evaluated_viewport_triangles": 700,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Cute cartoon eye / CHR_Eye.R"
+      ]
+    },
+    {
+      "name": "KAI_Base_Eyebrow.L",
+      "control_vertices": 360,
+      "evaluated_viewport_triangles": 2840,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Base_Eyebrow.R",
+      "control_vertices": 360,
+      "evaluated_viewport_triangles": 2840,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Behind ear sweep L",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Behind ear sweep R",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Boot interior lining L",
+      "control_vertices": 144,
+      "evaluated_viewport_triangles": 768,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Soft boot cuff lining"
+      ]
+    },
+    {
+      "name": "KAI_Boot interior lining R",
+      "control_vertices": 144,
+      "evaluated_viewport_triangles": 768,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Soft boot cuff lining"
+      ]
+    },
+    {
+      "name": "KAI_Boot tongue L",
+      "control_vertices": 182,
+      "evaluated_viewport_triangles": 10384,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Finished violet boot leather"
+      ]
+    },
+    {
+      "name": "KAI_Boot tongue R",
+      "control_vertices": 182,
+      "evaluated_viewport_triangles": 10384,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Finished violet boot leather"
+      ]
+    },
+    {
+      "name": "KAI_Cargo flap L",
+      "control_vertices": 91,
+      "evaluated_viewport_triangles": 4896,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Finished golden camo twill"
+      ]
+    },
+    {
+      "name": "KAI_Cargo flap R",
+      "control_vertices": 91,
+      "evaluated_viewport_triangles": 4896,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Finished golden camo twill"
+      ]
+    },
+    {
+      "name": "KAI_Cargo pocket L",
+      "control_vertices": 169,
+      "evaluated_viewport_triangles": 9600,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Finished golden camo twill"
+      ]
+    },
+    {
+      "name": "KAI_Cargo pocket R",
+      "control_vertices": 169,
+      "evaluated_viewport_triangles": 9600,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Finished golden camo twill"
+      ]
+    },
+    {
+      "name": "KAI_Cargo shorts / continuous pelvis",
+      "control_vertices": 369,
+      "evaluated_viewport_triangles": 22624,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Finished golden camo twill"
+      ]
+    },
+    {
+      "name": "KAI_Center part curl",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Cheek side curl L",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Cheek side curl R",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Cheek tip curl L",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Cheek tip curl R",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Clean flowing rear hair",
+      "control_vertices": 15747,
+      "evaluated_viewport_triangles": 249808,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Clean rear lock 00",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Clean rear lock 01",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Clean rear lock 02",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Clean rear lock 03",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Clean rear lock 04",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Clean rear lock 05",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Clean rear lock 06",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Clean rear lock 07",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Clean rear lock 08",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Connected cartoon lashes L",
+      "control_vertices": 2391,
+      "evaluated_viewport_triangles": 9560,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Matte cartoon eyelashes"
+      ]
+    },
+    {
+      "name": "KAI_Connected cartoon lashes R",
+      "control_vertices": 2391,
+      "evaluated_viewport_triangles": 9560,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Matte cartoon eyelashes"
+      ]
+    },
+    {
+      "name": "KAI_Cream sole with engraved teeth L",
+      "control_vertices": 7920,
+      "evaluated_viewport_triangles": 15836,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Smooth cream engraved rubber"
+      ]
+    },
+    {
+      "name": "KAI_Cream sole with engraved teeth R",
+      "control_vertices": 7920,
+      "evaluated_viewport_triangles": 15836,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Smooth cream engraved rubber"
+      ]
+    },
+    {
+      "name": "KAI_Cross lace L",
+      "control_vertices": 160,
+      "evaluated_viewport_triangles": 1240,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Cross lace L.001",
+      "control_vertices": 160,
+      "evaluated_viewport_triangles": 1240,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Cross lace L.002",
+      "control_vertices": 160,
+      "evaluated_viewport_triangles": 1240,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Cross lace L.003",
+      "control_vertices": 160,
+      "evaluated_viewport_triangles": 1240,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Cross lace L.004",
+      "control_vertices": 160,
+      "evaluated_viewport_triangles": 1240,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Cross lace L.005",
+      "control_vertices": 160,
+      "evaluated_viewport_triangles": 1240,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Cross lace L.006",
+      "control_vertices": 160,
+      "evaluated_viewport_triangles": 1240,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Cross lace L.007",
+      "control_vertices": 160,
+      "evaluated_viewport_triangles": 1240,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Cross lace L.008",
+      "control_vertices": 160,
+      "evaluated_viewport_triangles": 1240,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Cross lace L.009",
+      "control_vertices": 160,
+      "evaluated_viewport_triangles": 1240,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Cross lace R",
+      "control_vertices": 160,
+      "evaluated_viewport_triangles": 1240,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Cross lace R.001",
+      "control_vertices": 160,
+      "evaluated_viewport_triangles": 1240,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Cross lace R.002",
+      "control_vertices": 160,
+      "evaluated_viewport_triangles": 1240,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Cross lace R.003",
+      "control_vertices": 160,
+      "evaluated_viewport_triangles": 1240,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Cross lace R.004",
+      "control_vertices": 160,
+      "evaluated_viewport_triangles": 1240,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Cross lace R.005",
+      "control_vertices": 160,
+      "evaluated_viewport_triangles": 1240,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Cross lace R.006",
+      "control_vertices": 160,
+      "evaluated_viewport_triangles": 1240,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Cross lace R.007",
+      "control_vertices": 160,
+      "evaluated_viewport_triangles": 1240,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Cross lace R.008",
+      "control_vertices": 160,
+      "evaluated_viewport_triangles": 1240,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Cross lace R.009",
+      "control_vertices": 160,
+      "evaluated_viewport_triangles": 1240,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Elbow strap L",
+      "control_vertices": 576,
+      "evaluated_viewport_triangles": 8704,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Flat brown elbow fabric"
+      ]
+    },
+    {
+      "name": "KAI_Elbow strap R",
+      "control_vertices": 576,
+      "evaluated_viewport_triangles": 8704,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Flat brown elbow fabric"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet inset L",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet inset L.001",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet inset L.002",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet inset L.003",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet inset L.004",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet inset L.005",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet inset L.006",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet inset L.007",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet inset L.008",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet inset L.009",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet inset L.010",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet inset L.011",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet inset R",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet inset R.001",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet inset R.002",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet inset R.003",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet inset R.004",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet inset R.005",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet inset R.006",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet inset R.007",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet inset R.008",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet inset R.009",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet inset R.010",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet inset R.011",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet L",
+      "control_vertices": 224,
+      "evaluated_viewport_triangles": 448,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Gold details"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet L.001",
+      "control_vertices": 224,
+      "evaluated_viewport_triangles": 448,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Gold details"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet L.002",
+      "control_vertices": 224,
+      "evaluated_viewport_triangles": 448,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Gold details"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet L.003",
+      "control_vertices": 224,
+      "evaluated_viewport_triangles": 448,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Gold details"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet L.004",
+      "control_vertices": 224,
+      "evaluated_viewport_triangles": 448,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Gold details"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet L.005",
+      "control_vertices": 224,
+      "evaluated_viewport_triangles": 448,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Gold details"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet L.006",
+      "control_vertices": 224,
+      "evaluated_viewport_triangles": 448,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Gold details"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet L.007",
+      "control_vertices": 224,
+      "evaluated_viewport_triangles": 448,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Gold details"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet L.008",
+      "control_vertices": 224,
+      "evaluated_viewport_triangles": 448,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Gold details"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet L.009",
+      "control_vertices": 224,
+      "evaluated_viewport_triangles": 448,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Gold details"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet L.010",
+      "control_vertices": 224,
+      "evaluated_viewport_triangles": 448,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Gold details"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet L.011",
+      "control_vertices": 224,
+      "evaluated_viewport_triangles": 448,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Gold details"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet R",
+      "control_vertices": 224,
+      "evaluated_viewport_triangles": 448,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Gold details"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet R.001",
+      "control_vertices": 224,
+      "evaluated_viewport_triangles": 448,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Gold details"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet R.002",
+      "control_vertices": 224,
+      "evaluated_viewport_triangles": 448,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Gold details"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet R.003",
+      "control_vertices": 224,
+      "evaluated_viewport_triangles": 448,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Gold details"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet R.004",
+      "control_vertices": 224,
+      "evaluated_viewport_triangles": 448,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Gold details"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet R.005",
+      "control_vertices": 224,
+      "evaluated_viewport_triangles": 448,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Gold details"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet R.006",
+      "control_vertices": 224,
+      "evaluated_viewport_triangles": 448,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Gold details"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet R.007",
+      "control_vertices": 224,
+      "evaluated_viewport_triangles": 448,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Gold details"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet R.008",
+      "control_vertices": 224,
+      "evaluated_viewport_triangles": 448,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Gold details"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet R.009",
+      "control_vertices": 224,
+      "evaluated_viewport_triangles": 448,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Gold details"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet R.010",
+      "control_vertices": 224,
+      "evaluated_viewport_triangles": 448,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Gold details"
+      ]
+    },
+    {
+      "name": "KAI_Eyelet R.011",
+      "control_vertices": 224,
+      "evaluated_viewport_triangles": 448,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Gold details"
+      ]
+    },
+    {
+      "name": "KAI_Fine fringe left",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Fine lower rear 00",
+      "control_vertices": 800,
+      "evaluated_viewport_triangles": 6320,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Fine lower rear 03",
+      "control_vertices": 800,
+      "evaluated_viewport_triangles": 6320,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Fine lower rear 05",
+      "control_vertices": 800,
+      "evaluated_viewport_triangles": 6320,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Fine lower rear 08",
+      "control_vertices": 800,
+      "evaluated_viewport_triangles": 6320,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Finished boot cuff L",
+      "control_vertices": 336,
+      "evaluated_viewport_triangles": 2304,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Finished violet boot leather"
+      ]
+    },
+    {
+      "name": "KAI_Finished boot cuff R",
+      "control_vertices": 336,
+      "evaluated_viewport_triangles": 2304,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Finished violet boot leather"
+      ]
+    },
+    {
+      "name": "KAI_Flowing fringe 00",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Flowing fringe 01",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Flowing fringe 02",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Flowing fringe 03",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Flowing fringe 04",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Flowing fringe 05",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Flowing fringe 06",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Fly seam",
+      "control_vertices": 50,
+      "evaluated_viewport_triangles": 360,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ochre sewn seams"
+      ]
+    },
+    {
+      "name": "KAI_Hem stitching L",
+      "control_vertices": 970,
+      "evaluated_viewport_triangles": 1936,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ochre sewn seams"
+      ]
+    },
+    {
+      "name": "KAI_Hem stitching L.001",
+      "control_vertices": 970,
+      "evaluated_viewport_triangles": 1936,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ochre sewn seams"
+      ]
+    },
+    {
+      "name": "KAI_Hem stitching R",
+      "control_vertices": 970,
+      "evaluated_viewport_triangles": 1936,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ochre sewn seams"
+      ]
+    },
+    {
+      "name": "KAI_Hem stitching R.001",
+      "control_vertices": 970,
+      "evaluated_viewport_triangles": 1936,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ochre sewn seams"
+      ]
+    },
+    {
+      "name": "KAI_High top boot L",
+      "control_vertices": 528,
+      "evaluated_viewport_triangles": 15360,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Finished violet boot leather"
+      ]
+    },
+    {
+      "name": "KAI_High top boot R",
+      "control_vertices": 528,
+      "evaluated_viewport_triangles": 15360,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Finished violet boot leather"
+      ]
+    },
+    {
+      "name": "KAI_Jaw curl L",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Jaw curl R",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Jaw flick lower L",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Jaw flick lower R",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Jaw flick upper L",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Jaw flick upper R",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Lace aglet L",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Cream rubber and eyes"
+      ]
+    },
+    {
+      "name": "KAI_Lace aglet L.001",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Cream rubber and eyes"
+      ]
+    },
+    {
+      "name": "KAI_Lace aglet R",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Cream rubber and eyes"
+      ]
+    },
+    {
+      "name": "KAI_Lace aglet R.001",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Cream rubber and eyes"
+      ]
+    },
+    {
+      "name": "KAI_Lace end L",
+      "control_vertices": 220,
+      "evaluated_viewport_triangles": 1720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Lace end L.001",
+      "control_vertices": 220,
+      "evaluated_viewport_triangles": 1720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Lace end R",
+      "control_vertices": 220,
+      "evaluated_viewport_triangles": 1720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Lace end R.001",
+      "control_vertices": 220,
+      "evaluated_viewport_triangles": 1720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Lace knot L",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Lace knot R",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Monster cream eye L",
+      "control_vertices": 52,
+      "evaluated_viewport_triangles": 72,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Cream rubber and eyes"
+      ]
+    },
+    {
+      "name": "KAI_Monster cream eye L.001",
+      "control_vertices": 52,
+      "evaluated_viewport_triangles": 72,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Cream rubber and eyes"
+      ]
+    },
+    {
+      "name": "KAI_Monster cream eye R",
+      "control_vertices": 52,
+      "evaluated_viewport_triangles": 72,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Cream rubber and eyes"
+      ]
+    },
+    {
+      "name": "KAI_Monster cream eye R.001",
+      "control_vertices": 52,
+      "evaluated_viewport_triangles": 72,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Cream rubber and eyes"
+      ]
+    },
+    {
+      "name": "KAI_Monster dark eye L",
+      "control_vertices": 52,
+      "evaluated_viewport_triangles": 72,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Monster dark eye L.001",
+      "control_vertices": 52,
+      "evaluated_viewport_triangles": 72,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Monster dark eye R",
+      "control_vertices": 52,
+      "evaluated_viewport_triangles": 72,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Monster dark eye R.001",
+      "control_vertices": 52,
+      "evaluated_viewport_triangles": 72,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Monster slit pupil L",
+      "control_vertices": 52,
+      "evaluated_viewport_triangles": 72,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Monster slit pupil L.001",
+      "control_vertices": 52,
+      "evaluated_viewport_triangles": 72,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Monster slit pupil R",
+      "control_vertices": 52,
+      "evaluated_viewport_triangles": 72,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Monster slit pupil R.001",
+      "control_vertices": 52,
+      "evaluated_viewport_triangles": 72,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Warm dark contours"
+      ]
+    },
+    {
+      "name": "KAI_Nape feather 00",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Nape feather 01",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Nape feather 02",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Nape feather 03",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Nape feather 04",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Nape feather 05",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Nape feather 06",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Neck curl L",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Neck curl R",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Outer brow curl R",
+      "control_vertices": 320,
+      "evaluated_viewport_triangles": 2520,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Pad spot L",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pad spots"
+      ]
+    },
+    {
+      "name": "KAI_Pad spot L.001",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pad spots"
+      ]
+    },
+    {
+      "name": "KAI_Pad spot L.002",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pad spots"
+      ]
+    },
+    {
+      "name": "KAI_Pad spot L.003",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pad spots"
+      ]
+    },
+    {
+      "name": "KAI_Pad spot L.004",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pad spots"
+      ]
+    },
+    {
+      "name": "KAI_Pad spot R",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pad spots"
+      ]
+    },
+    {
+      "name": "KAI_Pad spot R.001",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pad spots"
+      ]
+    },
+    {
+      "name": "KAI_Pad spot R.002",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pad spots"
+      ]
+    },
+    {
+      "name": "KAI_Pad spot R.003",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pad spots"
+      ]
+    },
+    {
+      "name": "KAI_Pad spot R.004",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pad spots"
+      ]
+    },
+    {
+      "name": "KAI_Part wisp",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Pearl scalp cap",
+      "control_vertices": 1280,
+      "evaluated_viewport_triangles": 9728,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Pocket stitching L",
+      "control_vertices": 250,
+      "evaluated_viewport_triangles": 1960,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ochre sewn seams"
+      ]
+    },
+    {
+      "name": "KAI_Pocket stitching L.001",
+      "control_vertices": 250,
+      "evaluated_viewport_triangles": 1960,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ochre sewn seams"
+      ]
+    },
+    {
+      "name": "KAI_Pocket stitching R",
+      "control_vertices": 250,
+      "evaluated_viewport_triangles": 1960,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ochre sewn seams"
+      ]
+    },
+    {
+      "name": "KAI_Pocket stitching R.001",
+      "control_vertices": 250,
+      "evaluated_viewport_triangles": 1960,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ochre sewn seams"
+      ]
+    },
+    {
+      "name": "KAI_Slant pocket L",
+      "control_vertices": 310,
+      "evaluated_viewport_triangles": 2440,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ochre sewn seams"
+      ]
+    },
+    {
+      "name": "KAI_Slant pocket R",
+      "control_vertices": 310,
+      "evaluated_viewport_triangles": 2440,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ochre sewn seams"
+      ]
+    },
+    {
+      "name": "KAI_Sleeveless tank",
+      "control_vertices": 1714,
+      "evaluated_viewport_triangles": 105408,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Soft violet woven jersey"
+      ]
+    },
+    {
+      "name": "KAI_Small crown curl",
+      "control_vertices": 736,
+      "evaluated_viewport_triangles": 23296,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Tall triangular bow L",
+      "control_vertices": 290,
+      "evaluated_viewport_triangles": 2280,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Tall triangular bow L.001",
+      "control_vertices": 290,
+      "evaluated_viewport_triangles": 2280,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Tall triangular bow R",
+      "control_vertices": 290,
+      "evaluated_viewport_triangles": 2280,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "KAI_Tall triangular bow R.001",
+      "control_vertices": 290,
+      "evaluated_viewport_triangles": 2280,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Ivory cotton laces"
+      ]
+    },
+    {
+      "name": "Kai_Teeth",
+      "control_vertices": 63,
+      "evaluated_viewport_triangles": 80,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Teeth"
+      ]
+    },
+    {
+      "name": "KAI_Temple bridge L",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "KAI_Temple bridge R",
+      "control_vertices": 864,
+      "evaluated_viewport_triangles": 6816,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Pearl hair directional fibers"
+      ]
+    },
+    {
+      "name": "Kai_Tongue",
+      "control_vertices": 142,
+      "evaluated_viewport_triangles": 280,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Tongue"
+      ]
+    },
+    {
+      "name": "KAI_Violet elbow guard L",
+      "control_vertices": 624,
+      "evaluated_viewport_triangles": 4608,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Violet padded fabric"
+      ]
+    },
+    {
+      "name": "KAI_Violet elbow guard R",
+      "control_vertices": 624,
+      "evaluated_viewport_triangles": 4608,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Violet padded fabric"
+      ]
+    },
+    {
+      "name": "KAI_Waist button",
+      "control_vertices": 362,
+      "evaluated_viewport_triangles": 720,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Gold details"
+      ]
+    },
+    {
+      "name": "KAI_Waistband",
+      "control_vertices": 192,
+      "evaluated_viewport_triangles": 1152,
+      "unweighted_vertices": 0,
+      "nonunit_weights": 0,
+      "materials": [
+        "Kai / Finished golden camo twill"
+      ]
+    }
+  ],
+  "source_actions": [
+    "Correct",
+    "Explain",
+    "Fall",
+    "Idle",
+    "Jump",
+    "Point",
+    "React",
+    "Run",
+    "Shrug",
+    "Talk",
+    "VictorySign",
+    "Walk"
+  ],
+  "facial_shapes": [
+    "Basis",
+    "MouthOpen",
+    "MouthRound",
+    "Smile",
+    "Concern",
+    "BrowUp",
+    "BrowAsym",
+    "Blink",
+    "EyesWide",
+    "VisemeWide",
+    "VisemeU",
+    "LipPress",
+    "LipBite",
+    "Grin",
+    "Smirk",
+    "Sad",
+    "CheekRaise",
+    "Squint"
+  ],
+  "review_views": [
+    "front",
+    "three_quarter",
+    "side",
+    "back"
+  ],
+  "scope": "Editable rig, normalized clothing/joint paint, high-boot ankle limits, hinge elbows, flexible wrapped pads and facial shape keys. Godot runtime motion/cinematic checks are recorded separately; no platform performance certification."
+}

@@ -1,0 +1,29 @@
+{
+  "removed_intersecting_rear_lock_objects": 28,
+  "new_hair_objects": [
+    "KAI_Clean flowing rear hair",
+    "KAI_Clean rear lock 00",
+    "KAI_Clean rear lock 01",
+    "KAI_Clean rear lock 02",
+    "KAI_Clean rear lock 03",
+    "KAI_Clean rear lock 04",
+    "KAI_Clean rear lock 05",
+    "KAI_Clean rear lock 06",
+    "KAI_Clean rear lock 07",
+    "KAI_Clean rear lock 08",
+    "KAI_Temple bridge L",
+    "KAI_Behind ear sweep L",
+    "KAI_Jaw flick upper L",
+    "KAI_Jaw flick lower L",
+    "KAI_Temple bridge R",
+    "KAI_Behind ear sweep R",
+    "KAI_Jaw flick upper R",
+    "KAI_Jaw flick lower R",
+    "KAI_Center part curl",
+    "KAI_Small crown curl"
+  ],
+  "blended_nape_roots": 7,
+  "preserved_meshes": 126,
+  "rear_surface": "continuous radial quad shell with nine separated long locks",
+  "backup": "C:\\Users\\obran\\Historiando_Backups\\kai_work_2026-10-15\\kai_before_gap_fill_and_clean_rear.blend"
+}

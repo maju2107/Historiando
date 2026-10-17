@@ -1,0 +1,11 @@
+{
+	"facial_speech_and_reactions": true,
+	"failures": 0,
+	"full_opening": true,
+	"ground_sitting": true,
+	"pause_restores_pose_meshes_and_materials": true,
+	"real_fragment_pickups": 31,
+	"retry_restores_controls": true,
+	"skip_early_and_during_each_conversation": true,
+	"visible_kai_yara_dialogue": true
+}

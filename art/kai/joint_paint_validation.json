@@ -1,0 +1,10 @@
+{
+  "source": {
+    "boot_shaft": 24,
+    "elbow_blend": 1176
+  },
+  "runtime": {
+    "boot_shaft": 54,
+    "elbow_blend": 2466
+  }
+}

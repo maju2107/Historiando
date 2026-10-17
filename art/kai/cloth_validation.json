@@ -1,0 +1,53 @@
+{
+  "preserved_other_meshes": 148,
+  "shirt_control_vertices": 1714,
+  "cloth_modifier": "Soft cotton cloth physics",
+  "pinned_group": "Cloth anchors",
+  "cache_frames": [
+    1,
+    72
+  ],
+  "band_width_m": 0.045,
+  "band_thickness_m": 0.0014,
+  "pad_dimensions_m": [
+    0.078,
+    0.015,
+    0.074
+  ],
+  "backup": "C:\\Users\\obran\\Historiando_Backups\\kai_cloth_2026-10-16\\kai_before_cloth.blend",
+  "simulation_test": {
+    "passed": true,
+    "frames": 72,
+    "fps": 24,
+    "motion": "Torso lean and opposing upper-arm swing; QA-only animation",
+    "samples": {
+      "16": {
+        "max_vs_skinning_m": 0.003408684108149286,
+        "mean_vs_skinning_m": 0.0004388641576374008
+      },
+      "28": {
+        "max_vs_skinning_m": 0.006403211414198208,
+        "mean_vs_skinning_m": 0.0005795466365694919
+      },
+      "40": {
+        "max_vs_skinning_m": 0.006548026021937716,
+        "mean_vs_skinning_m": 0.0008861943002323609
+      },
+      "56": {
+        "max_vs_skinning_m": 0.004245490241492542,
+        "mean_vs_skinning_m": 0.0006288534575548765
+      },
+      "72": {
+        "max_vs_skinning_m": 0.004391272547047033,
+        "mean_vs_skinning_m": 0.0005120672345158906
+      }
+    },
+    "all_positions_finite": true
+  },
+  "neutral_settle": {
+    "frames": 32,
+    "max_displacement_m": 0.022051327719643844,
+    "mean_displacement_m": 0.005269646050327763,
+    "saved_rest_drape": true
+  }
+}

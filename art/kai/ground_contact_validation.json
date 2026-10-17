@@ -1,0 +1,56 @@
+{
+  "Correct": {
+    "frames": 73,
+    "height_axis": "Body local Y = world Z",
+    "original_forward_motion_restored": true,
+    "maximum_correction_m": 0.00774492245018482
+  },
+  "Explain": {
+    "frames": 73,
+    "height_axis": "Body local Y = world Z",
+    "original_forward_motion_restored": true,
+    "maximum_correction_m": 0.00774492245018482
+  },
+  "Idle": {
+    "frames": 61,
+    "height_axis": "Body local Y = world Z",
+    "original_forward_motion_restored": true,
+    "maximum_correction_m": 0.0366228047370911
+  },
+  "Point": {
+    "frames": 73,
+    "height_axis": "Body local Y = world Z",
+    "original_forward_motion_restored": true,
+    "maximum_correction_m": 0.00774492245018482
+  },
+  "React": {
+    "frames": 73,
+    "height_axis": "Body local Y = world Z",
+    "original_forward_motion_restored": true,
+    "maximum_correction_m": 0.00774492245018482
+  },
+  "Run": {
+    "frames": 19,
+    "height_axis": "Body local Y = world Z",
+    "original_forward_motion_restored": true,
+    "maximum_correction_m": 0.075644588804245
+  },
+  "Shrug": {
+    "frames": 73,
+    "height_axis": "Body local Y = world Z",
+    "original_forward_motion_restored": true,
+    "maximum_correction_m": 0.00774492245018482
+  },
+  "Talk": {
+    "frames": 73,
+    "height_axis": "Body local Y = world Z",
+    "original_forward_motion_restored": true,
+    "maximum_correction_m": 0.00774492245018482
+  },
+  "Walk": {
+    "frames": 25,
+    "height_axis": "Body local Y = world Z",
+    "original_forward_motion_restored": true,
+    "maximum_correction_m": 0.0778296772003174
+  }
+}

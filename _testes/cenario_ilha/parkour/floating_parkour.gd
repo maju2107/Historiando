@@ -92,7 +92,7 @@ func _register_landing(index: int) -> void:
 		hud.set_location("PLEISTOCENO","TRILHA DOS CÉUS")
 		if not _epoch_presented:
 			_epoch_presented = true
-			hud.show_epoch_intro()
+			# Kai introduces the epoch during the opening; do not repeat a popup.
 	if platform.checkpoint:
 		_checkpoint_index = index
 		_player.player_start_position = platform.surface_position() + Vector3(0, 0.08, 0)

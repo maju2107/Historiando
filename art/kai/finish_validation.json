@@ -1,0 +1,16 @@
+{
+  "source_checkpoint": "C:\\Users\\obran\\Historiando_Backups\\kai_finish_2026-10-16\\kai_before_finish.blend",
+  "right_eyebrow_preserved": true,
+  "left_right_brow_mirror_error_m": 0.0,
+  "thickened_lash_objects": [
+    "KAI_Relaxed upper eye contour L",
+    "KAI_Base_LowerLashline.L",
+    "KAI_Relaxed upper eye contour R",
+    "KAI_Base_LowerLashline.R"
+  ],
+  "collapsed_hem_vertices_removed": 120,
+  "preserved_other_meshes": 83,
+  "shorts_finish": "Rebuilt quad hems and turned edges; fitted soft cargo patches; projected seams; shared rest-space camouflage",
+  "boots_finish": "Folded cuffs, lining, shaped tongues, ring eyelets, flat laces and smooth recessed tooth grooves",
+  "cloth_physics_preserved": true
+}

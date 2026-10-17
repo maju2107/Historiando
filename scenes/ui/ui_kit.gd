@@ -62,3 +62,9 @@ static func brand(parent: Node, box: Rect2, symbol: bool = false) -> TextureRect
 	var item := texture(parent,"res://assets/ui/historiando/brand_symbol.svg" if symbol else "res://assets/ui/historiando/brand_group_28.svg",box)
 	item.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS
 	return item
+
+static func uses_touch_controls(tree: SceneTree) -> bool:
+	for player in tree.get_nodes_in_group("player"):
+		if "control_preset" in player:
+			return player.control_preset == 2
+	return OS.has_feature("mobile")

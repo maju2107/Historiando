@@ -1,0 +1,21 @@
+{
+  "added_strands": [
+    "KAI_Fine fringe left",
+    "KAI_Fine fringe right",
+    "KAI_Part wisp",
+    "KAI_Outer brow curl R",
+    "KAI_Cheek side curl L",
+    "KAI_Cheek tip curl L",
+    "KAI_Cheek side curl R",
+    "KAI_Cheek tip curl R",
+    "KAI_Fine lower rear 00",
+    "KAI_Fine lower rear 03",
+    "KAI_Fine lower rear 05",
+    "KAI_Fine lower rear 08"
+  ],
+  "integrated_lower_rear_tufts": 13,
+  "existing_hair_meshes_with_fiber_material": 39,
+  "non_hair_meshes_preserved": 114,
+  "backup": "C:\\Users\\obran\\Historiando_Backups\\kai_work_2026-10-15\\kai_before_finer_strands_and_paint.blend",
+  "material_detail": "UV aligned irregular fine color strokes, subtle bump and anisotropic highlights"
+}

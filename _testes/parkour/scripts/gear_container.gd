@@ -3,6 +3,7 @@ extends HBoxContainer
 @onready var gear_label: Label = $gear_label
 @onready var life_label: Label = $life_label
 var comic_hud: Control
+var _fragment_discovery_shown := false
 
 func _ready() -> void:
 	# Preserve this adapter's existing NodePath and API for both player scripts.
@@ -14,7 +15,9 @@ func update_gear(amount: int):
 	gear_label.text = "Itens: %d" % amount
 	if is_instance_valid(comic_hud):
 		comic_hud.set_collectibles(amount)
-		if comic_hud.is_node_ready(): comic_hud.notify("+1 FRAGMENTO  /  NOVA DESCOBERTA!")
+		if amount == 1 and not _fragment_discovery_shown and comic_hud.is_node_ready() and not comic_hud.fragments_complete:
+			_fragment_discovery_shown = true
+			comic_hud.notify("+1 FRAGMENTO  /  NOVA DESCOBERTA!")
 
 func update_life(health: int):
 	life_label.text = "Vidas: %d" % health

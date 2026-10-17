@@ -1,0 +1,21 @@
+[signal arg="kai_when"]
+kai: A pergunta não é onde... e sim [b]quando[/b].
+[signal arg="kai_epoch"]
+kai: E a resposta é: [b]Pleistoceno[/b].
+[signal arg="yara_console"]
+player: PlayStation?!
+[signal arg="kai_correct"]
+kai: Pleis-to-ce-no. Sem controle. Sem console.
+[signal arg="kai_explain"]
+kai: Uma época de mudanças no clima e de gigantes da megafauna. Bem antes dos videogames.
+[signal arg="yara_back"]
+player: Entendi... E cadê o botão de sair?
+[signal arg="kai_pieces"]
+kai: Tem saída. Só está... espalhada pela ilha.
+[signal arg="kai_mission"]
+kai: Reúna [b]todos os fragmentos[/b]. Eles vão abrir o caminho de volta para casa. Siga os cristais!
+[signal arg="yara_ready"]
+player: Tá bom. Se eu achar um controle, guardo para você!
+[signal arg="kai_goodbye"]
+kai: Combinado. Um passo de cada vez, viajante!
+[end_timeline]

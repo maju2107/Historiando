@@ -37,6 +37,8 @@ func _run() -> void:
 	_check(_player.gears == 0, "The spawn must not collect anything automatically")
 	var hud: Control = _player.gear_container.comic_hud
 	_check(hud != null and hud.collectibles == 0, "Fragments HUD should start at zero")
+	_check(hud.fragment_mission.visible and hud.fragment_goal == pickups.size(), "The side mission must show the island fragment goal")
+	_check(not hud.get("notification").visible, "No discovery popup should appear before collecting a fragment")
 	var space := _island.get_world_3d().direct_space_state
 	var capsule := CapsuleShape3D.new()
 	capsule.radius = .32
@@ -98,7 +100,17 @@ func _run() -> void:
 		expected += 1
 		_check(_player.gears == expected, "Physics pickup did not award exactly one fragment: " + collectible_name)
 		_check(hud.collectibles == expected, "HUD did not track collected fragments")
-		_check(hud.counter.text == "FRAGMENTOS      %02d" % expected, "Visible HUD counter did not update")
+		_check(hud.fragment_count.text.begins_with("Fragmentos  %02d / %02d" % [expected,pickups.size()]), "Visible side mission count did not update")
+		if expected == 1:
+			_check(hud.get("notification").visible and "NOVA DESCOBERTA" in hud.get("notification").text, "First fragment must show the discovery popup")
+			hud.notice_timer.stop()
+			hud.get("notification").hide()
+			_player.gear_container.update_gear(1)
+			_check(not hud.get("notification").visible, "Refreshing the first fragment count must not repeat discovery")
+		elif expected < pickups.size():
+			_check(not hud.get("notification").visible, "Later fragments must update the mission without another discovery popup")
+		else:
+			_check(hud.get("notification").visible and hud.get("notification").text == "TODOS OS FRAGMENTOS REUNIDOS!", "The final fragment must still show mission completion")
 		_check(not is_instance_valid(pickup), "Collected topaz should disappear")
 		await _settle()
 		_check(_player.gears == expected, "Remaining inside the pickup awarded another fragment")

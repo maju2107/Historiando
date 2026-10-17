@@ -4,10 +4,13 @@ extends Control
 const Kit = preload("res://scenes/ui/ui_kit.gd")
 var canvas: Control
 var hearts: Label
-var counter: Label
+var pause_button: Button
+var pause_prompt: TextureRect
 var location_label: Label
 var activity_label: Label
 var objective: Label
+var objective_summary: Label
+var journey_heading: Label
 var objective_panel: PanelContainer
 var interaction: Control
 var prompt: Label
@@ -16,6 +19,13 @@ var notice_timer: Timer
 var epoch_presentation: PanelContainer
 var health := 3
 var collectibles := 0
+var fragment_goal := 0
+var fragment_mission: VBoxContainer
+var fragment_count: Label
+var fragment_bar: ProgressBar
+var fragments_complete := false
+var _cinematic_visibility := {}
+var _objective_position := Vector2.ZERO
 
 func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -30,8 +40,12 @@ func _ready() -> void:
 	hearts = Kit.label(canvas,"",Rect2(148,76,220,48),34,Kit.CLAY,Kit.BOLD)
 	Kit.rect(canvas,Rect2(46,158,340,7),Kit.INK)
 	Kit.rect(canvas,Rect2(46,158,340,4),Kit.GOLD)
-	Kit.rect(canvas,Rect2(1200,48,352,62),Kit.INK)
-	counter = Kit.label(canvas,"",Rect2(1220,51,318,50),28,Kit.PAPER,Kit.BOLD)
+	pause_button = Kit.button(canvas,"II   PAUSA",Rect2(1360,48,192,64),_pause,Kit.PAPER,true)
+	pause_button.name = "PauseButton"
+	pause_button.focus_mode = Control.FOCUS_NONE
+	pause_button.tooltip_text = "Pausar (Y / Esc)"
+	pause_prompt = Kit.texture(pause_button,"res://assets/ui/historiando/controls/button_y.svg",Rect2(157,34,46,46))
+	pause_prompt.name = "PauseYPrompt"
 	location_label = Kit.label(canvas,"PLEISTOCENO",Rect2(665,42,300,26),21,Kit.PAPER,Kit.BOLD)
 	location_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	activity_label = Kit.label(canvas,"EXPLORAÇÃO",Rect2(665,68,300,24),16,Kit.PAPER)
@@ -54,10 +68,33 @@ func _ready() -> void:
 	var mission_content := VBoxContainer.new()
 	mission_content.add_theme_constant_override("separation",8)
 	objective_panel.add_child(mission_content)
-	Kit.label(mission_content,"SUA JORNADA",Rect2(),20,Kit.GOLD,Kit.BOLD)
+	journey_heading = Kit.label(mission_content,"SUA JORNADA",Rect2(),20,Kit.GOLD,Kit.BOLD)
 	objective = Kit.label(mission_content,"Explore os caminhos da ilha.",Rect2(),25)
 	objective.custom_minimum_size.x = 287
 	objective.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	objective_summary = Kit.label(mission_content,objective.text,Rect2(),25)
+	objective_summary.custom_minimum_size.x = 287
+	objective_summary.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+	objective_summary.clip_text = true
+	objective_summary.hide()
+	fragment_mission = VBoxContainer.new()
+	fragment_mission.name = "ReturnHomeMission"
+	fragment_mission.add_theme_constant_override("separation",7)
+	mission_content.add_child(fragment_mission)
+	fragment_mission.add_child(HSeparator.new())
+	Kit.label(fragment_mission,"DE VOLTA PARA CASA",Rect2(),18,Kit.GOLD,Kit.BOLD)
+	fragment_count = Kit.label(fragment_mission,"",Rect2(),23,Kit.PAPER,Kit.BOLD)
+	fragment_bar = ProgressBar.new()
+	fragment_bar.custom_minimum_size = Vector2(0,9)
+	fragment_bar.show_percentage = false
+	var track := StyleBoxFlat.new()
+	track.bg_color = Color("100019")
+	var fill := StyleBoxFlat.new()
+	fill.bg_color = Kit.GOLD
+	fragment_bar.add_theme_stylebox_override("background",track)
+	fragment_bar.add_theme_stylebox_override("fill",fill)
+	fragment_mission.add_child(fragment_bar)
+	fragment_mission.hide()
 	interaction = Control.new()
 	interaction.position = Vector2(585,720)
 	interaction.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -67,9 +104,6 @@ func _ready() -> void:
 	Kit.label(interaction,"E",Rect2(8,8,49,49),30,Kit.INK,Kit.BOLD).horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	prompt = Kit.label(interaction,"Interagir",Rect2(74,10,343,45),28)
 	interaction.hide()
-	Kit.rect(canvas,Rect2(45,819,385,40),Color("1a002ce8"))
-	Kit.label(canvas,"W A S D  Mover     ESPAÇO  Pular",Rect2(57,821,370,36),22)
-	Kit.button(canvas,"II   PAUSA",Rect2(1365,814,180,49),_pause,Kit.PAPER,true)
 	notification = Kit.label(canvas,"",Rect2(505,156,590,63),30,Kit.INK,Kit.BOLD)
 	notification.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	var bg := preload("res://scenes/ui/comic_panel.gd").new()
@@ -95,6 +129,20 @@ func _resize() -> void:
 	var factor := minf(viewport.x/1600.0,viewport.y/900.0)
 	canvas.scale = Vector2.ONE*factor
 	canvas.position = (viewport-Vector2(1600,900)*factor)/2
+	# Keep the pause target usable even on a short landscape phone screen.
+	var target_scale := maxf(1.0,48.0/(64.0*factor))
+	pause_button.scale = Vector2.ONE*target_scale
+	pause_button.position = Vector2((viewport.x-canvas.position.x)/factor-48-192*target_scale,48)
+	# On short phones the mission keeps its current step and fragment progress
+	# above the joystick; its complete instructions remain in the label/tooltip.
+	var compact_mission := viewport.y < 550 and viewport.x > viewport.y
+	journey_heading.visible = not compact_mission
+	objective.visible = not compact_mission
+	objective_summary.visible = compact_mission
+	objective_panel.reset_size()
+
+func _process(_delta: float) -> void:
+	pause_prompt.visible = not Kit.uses_touch_controls(get_tree())
 
 func set_health(value: int, maximum: int = 3) -> void:
 	health = clampi(value,0,maximum)
@@ -103,11 +151,47 @@ func set_health(value: int, maximum: int = 3) -> void:
 
 func set_collectibles(value: int) -> void:
 	collectibles = maxi(value,0)
-	if counter: counter.text = "FRAGMENTOS      %02d" % collectibles
+	_update_fragment_mission()
+
+func set_fragment_goal(total: int) -> void:
+	fragment_goal = maxi(total,0)
+	_update_fragment_mission()
+
+func _update_fragment_mission() -> void:
+	if fragment_mission == null: return
+	fragment_mission.visible = fragment_goal > 0
+	if fragment_goal <= 0: return
+	fragment_count.text = "Fragmentos  %02d / %02d" % [mini(collectibles,fragment_goal),fragment_goal]
+	fragment_bar.max_value = fragment_goal
+	fragment_bar.value = mini(collectibles,fragment_goal)
+	if collectibles >= fragment_goal and not fragments_complete:
+		fragments_complete = true
+		fragment_count.text += "  ✓"
+		notify("TODOS OS FRAGMENTOS REUNIDOS!")
+	elif fragments_complete:
+		fragment_count.text += "  ✓"
+	objective_panel.reset_size()
+
+func set_cinematic_mission_only(enabled: bool) -> void:
+	if enabled and _cinematic_visibility.is_empty():
+		_objective_position = objective_panel.position
+		for child in canvas.get_children():
+			if child is CanvasItem:
+				_cinematic_visibility[child] = child.visible
+				child.visible = child == objective_panel
+		objective_panel.position.y += 100
+	elif not enabled and not _cinematic_visibility.is_empty():
+		for child in _cinematic_visibility:
+			if is_instance_valid(child): child.visible = _cinematic_visibility[child]
+		_cinematic_visibility.clear()
+		objective_panel.position = _objective_position
 
 func set_objective(text: String) -> void:
 	if objective:
 		objective.text = text
+		objective.tooltip_text = text
+		objective_summary.text = text.get_slice("\n",0)
+		objective_summary.tooltip_text = text
 		# Containers grow with wrapped text and can shrink for a shorter mission.
 		objective_panel.reset_size()
 
