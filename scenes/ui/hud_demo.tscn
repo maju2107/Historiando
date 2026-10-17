@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene format=3 uid="uid://bpqj05ybyt7gk"]
 
-[ext_resource type="PackedScene" path="res://scenes/ui/interface.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://yrnaijw5qyh1" path="res://scenes/ui/interface.tscn" id="1"]
 
-[node name="HudDemo" instance=ExtResource("1")]
+[node name="HudDemo" unique_id=1076982833 instance=ExtResource("1")]
 initial_screen = "demo"

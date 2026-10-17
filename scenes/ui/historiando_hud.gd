@@ -26,7 +26,7 @@ func _ready() -> void:
 	Kit.rect(canvas, Rect2(43,43,350,103), Kit.INK)
 	Kit.rect(canvas, Rect2(48,48,340,93), Kit.PAPER)
 	Kit.brand(canvas, Rect2(58,53,78,78), true)
-	Kit.label(canvas,"VIAJANTE",Rect2(150,53,200,25),20,Kit.INK,Kit.BOLD)
+	Kit.label(canvas,"YARA",Rect2(150,53,200,25),20,Kit.INK,Kit.BOLD)
 	hearts = Kit.label(canvas,"",Rect2(148,76,220,48),34,Kit.CLAY,Kit.BOLD)
 	Kit.rect(canvas,Rect2(46,158,340,7),Kit.INK)
 	Kit.rect(canvas,Rect2(46,158,340,4),Kit.GOLD)
@@ -68,7 +68,7 @@ func _ready() -> void:
 	prompt = Kit.label(interaction,"Interagir",Rect2(74,10,343,45),28)
 	interaction.hide()
 	Kit.rect(canvas,Rect2(45,819,385,40),Color("1a002ce8"))
-	Kit.label(canvas,"W A S D  Mover     ESPAÇO  Pular",Rect2(57,821,370,36),22)
+	Kit.label(canvas,"W A S D - Mover     ESPAÇO - Pular",Rect2(57,821,370,36),22)
 	Kit.button(canvas,"II   PAUSA",Rect2(1365,814,180,49),_pause,Kit.PAPER,true)
 	notification = Kit.label(canvas,"",Rect2(505,156,590,63),30,Kit.INK,Kit.BOLD)
 	notification.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
