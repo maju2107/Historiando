@@ -1,0 +1,17 @@
+[signal arg="end_found"]
+player: Todos os fragmentos! Próxima parada: casa!
+[signal arg="end_portal"]
+kai: Portal aberto! Pode embarcar, viajante.
+[signal arg="end_luggage"]
+player: Esse portal aceita bagagem? Estou levando umas lembrancinhas...
+[signal arg="end_joke"]
+kai: Claro. Só não vale levar uma [b]preguiça-gigante[/b] de lembrança.
+[signal arg="end_thanks"]
+player: Tá bom... Vou cancelar a coleira tamanho família.
+[signal arg="end_remember"]
+kai: Você encarou o Pleistoceno, seguiu as pistas e reuniu cada pedaço. Leve essas descobertas com você.
+[signal arg="end_goodbye"]
+player: Vou guardar cada uma. Obrigada por tudo, Kai! Até a próxima!
+[signal arg="end_home"]
+kai: Até, Yara! Boa viagem de volta... e muitas histórias para contar!
+[end_timeline]

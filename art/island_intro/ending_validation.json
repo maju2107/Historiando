@@ -1,0 +1,19 @@
+{
+	"checks": [
+		"final real pickup only",
+		"once-only trigger",
+		"full dialogue and faces",
+		"grounded actors and clear portal",
+		"camera and portal pause",
+		"actual progress save",
+		"replay",
+		"return home",
+		"early and speech skip",
+		"reduced motion",
+		"mobile completion targets"
+	],
+	"failures": 0,
+	"fragment_goal": 31,
+	"timeline": "res://dialogo/linha_do_tempo/ilha_final.dtl",
+	"user_save_restored": true
+}

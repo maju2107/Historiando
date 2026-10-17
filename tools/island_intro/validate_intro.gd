@@ -11,6 +11,7 @@ var island: Node3D
 const Intro = preload("res://_testes/cenario_ilha/intro/island_intro.gd")
 
 func _initialize() -> void:
+	set_meta("skip_island_ending",true)
 	set_meta("intro_duration_scale",.08)
 	call_deferred("_run")
 

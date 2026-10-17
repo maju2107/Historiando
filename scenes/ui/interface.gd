@@ -10,7 +10,8 @@ const ComicPanel = preload("res://scenes/ui/comic_panel.gd")
 const Credits = preload("res://scenes/ui/credit_data.gd")
 const ISLAND_PATH := "res://_testes/cenario_ilha/CenarioIlha.tscn"
 const SETTINGS_PATH := "user://interface.cfg"
-@export_enum("home", "chapters", "pause", "demo", "retry") var initial_screen := "home"
+@export_enum("home", "chapters", "pause", "demo", "retry", "complete") var initial_screen := "home"
+var completion_fragments := 0
 var screen := ""
 var canvas: Control
 var content: Control
@@ -48,7 +49,7 @@ func _resize() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
-		if screen == "retry": return
+		if screen in ["retry","complete"]: return
 		elif screen == "pause": close_requested.emit()
 		elif screen == "settings" or screen == "about": show_screen(back_screen)
 		elif screen == "type": show_screen("about")
@@ -80,6 +81,7 @@ func show_screen(next: String) -> void:
 		"pause": _pause_menu()
 		"demo": _demo()
 		"retry": _retry_menu()
+		"complete": _complete_menu()
 		"type": _font_specimen()
 		"credits": _credits()
 	if first_button: first_button.grab_focus()
@@ -355,6 +357,17 @@ func _retry_menu() -> void:
 	first_button = Kit.button(content,"TENTAR NOVAMENTE    ›",Rect2(95,485,720,89),func(): restart_requested.emit())
 	Kit.button(content,"VOLTAR AO INÍCIO",Rect2(95,604,720,78),func(): _launch("res://scenes/telaInicial/TelaInicial.tscn"); close_requested.emit(),Kit.PAPER)
 	_footer("↑ ↓  NAVEGAR       ENTER - Selecionar")
+
+func _complete_menu() -> void:
+	_header("PLEISTOCENO CONCLUÍDO", "Toda descoberta deixa uma história.")
+	Kit.brand(content,Rect2(1080,285,360,340),true)
+	Kit.label(content,"CAMINHO DE VOLTA ENCONTRADO!",Rect2(96,294,950,65),40,Kit.GOLD,Kit.BOLD)
+	Kit.label(content,"%02d / %02d fragmentos reunidos" % [completion_fragments,completion_fragments],Rect2(99,375,880,50),34)
+	Kit.label(content,"Você voltou para casa com novas histórias para contar.",Rect2(99,433,940,48),28)
+	first_button = Kit.button(content,"JOGAR NOVAMENTE    ›",Rect2(95,510,720,120),func(): restart_requested.emit())
+	first_button.name = "ReplayPhase"
+	Kit.button(content,"VOLTAR AO INÍCIO",Rect2(95,662,720,120),func(): _launch("res://scenes/telaInicial/TelaInicial.tscn"); close_requested.emit(),Kit.PAPER).name = "ReturnHome"
+	_footer("PROGRESSO DA FASE SALVO       ↑ ↓  Navegar       ENTER - Selecionar")
 
 func _launch_chapter(number: int) -> void:
 	_launch(chapter_path(number))

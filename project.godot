@@ -64,6 +64,7 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "ilha_despertar": "res://dialogo/linha_do_tempo/ilha_despertar.dtl",
+"ilha_final": "res://dialogo/linha_do_tempo/ilha_final.dtl",
 "kai_encontro": "res://dialogo/linha_do_tempo/kai_encontro.dtl",
 "timeline": "res://dialogo/linha_do_tempo/timeline.dtl"
 }

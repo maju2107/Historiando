@@ -1,0 +1,59 @@
+{
+	"failures": 0,
+	"measurements": [
+		{
+			"font_size": 34,
+			"lines": 2,
+			"size": [
+				480.0,
+				220.0
+			],
+			"words": "TODOS OS FRAGMENTOS!"
+		},
+		{
+			"font_size": 39,
+			"lines": 1,
+			"size": [
+				480.0,
+				220.0
+			],
+			"words": "DE VOLTA PRA CASA!"
+		},
+		{
+			"font_size": 49,
+			"lines": 1,
+			"size": [
+				400.0,
+				170.0
+			],
+			"words": "PLEISTOCENO"
+		},
+		{
+			"font_size": 50,
+			"lines": 1,
+			"size": [
+				180.0,
+				160.0
+			],
+			"words": "?!"
+		},
+		{
+			"font_size": 53,
+			"lines": 1,
+			"size": [
+				185.0,
+				170.0
+			],
+			"words": "?!"
+		},
+		{
+			"font_size": 33,
+			"lines": 1,
+			"size": [
+				400.0,
+				170.0
+			],
+			"words": "DE VOLTA PRA CASA!"
+		}
+	]
+}

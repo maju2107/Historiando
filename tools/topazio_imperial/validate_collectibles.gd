@@ -6,6 +6,7 @@ var _island: Node3D
 var _player: CharacterBody3D
 
 func _initialize() -> void:
+	set_meta("skip_island_ending",true)
 	set_meta("skip_island_intro",true)
 	call_deferred("_run")
 

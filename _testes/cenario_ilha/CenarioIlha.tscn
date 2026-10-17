@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" path="res://_testes/cenario_ilha/parkour/FloatingParkour.tscn" id="20_parkour"]
 [ext_resource type="PackedScene" path="res://_testes/cenario_ilha/TopaziosIlha.tscn" id="22_topazios"]
 [ext_resource type="Script" uid="uid://dr7urjtmuwhv5" path="res://_testes/cenario_ilha/intro/island_intro.gd" id="23_intro"]
+[ext_resource type="Script" path="res://_testes/cenario_ilha/intro/island_ending.gd" id="24_ending"]
 
 [node name="CenarioIlha" type="Node3D" unique_id=280377929]
 
@@ -278,3 +279,6 @@ transform = Transform3D(0.9999847, -0.0046031117, 0.0030749773, 0.004594295, 0.9
 
 [node name="Opening" type="Node3D" parent="." unique_id=1325784733]
 script = ExtResource("23_intro")
+
+[node name="Ending" type="Node3D" parent="."]
+script = ExtResource("24_ending")

@@ -4,6 +4,7 @@ const Interface = preload("res://scenes/ui/interface.gd")
 var pause_screen: Control
 var previous_mouse_mode := Input.MOUSE_MODE_VISIBLE
 var game_over := false
+var level_complete := false
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -17,7 +18,7 @@ func _input(event: InputEvent) -> void:
 			pause_screen.dismiss_modal()
 			get_viewport().set_input_as_handled()
 			return
-		if game_over:
+		if game_over or level_complete:
 			get_viewport().set_input_as_handled()
 			return
 		if pause_screen.screen == "pause": toggle_pause()
@@ -33,6 +34,7 @@ func toggle_pause() -> void:
 		pause_screen = null
 		get_tree().paused = false
 		game_over = false
+		level_complete = false
 		Input.set_mouse_mode(previous_mouse_mode)
 		return
 	previous_mouse_mode = Input.get_mouse_mode()
@@ -48,6 +50,12 @@ func show_game_over() -> void:
 	if not is_instance_valid(pause_screen): toggle_pause()
 	game_over = true
 	pause_screen.show_screen("retry")
+
+func show_level_complete(total: int) -> void:
+	if not is_instance_valid(pause_screen): toggle_pause()
+	level_complete = true
+	pause_screen.completion_fragments = total
+	pause_screen.show_screen("complete")
 
 func _restart() -> void:
 	toggle_pause()

@@ -1,4 +1,5 @@
 extends Control
+signal fragments_completed
 ## Reusable HUD. Call set_health, set_collectibles, set_objective and
 ## set_interaction from the relevant gameplay systems.
 const Kit = preload("res://scenes/ui/ui_kit.gd")
@@ -106,6 +107,7 @@ func _ready() -> void:
 	interaction.hide()
 	notification = Kit.label(canvas,"",Rect2(505,156,590,63),30,Kit.INK,Kit.BOLD)
 	notification.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	notification.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	var bg := preload("res://scenes/ui/comic_panel.gd").new()
 	bg.fill = Kit.GOLD
 	bg.size = Vector2(620,69)
@@ -168,6 +170,7 @@ func _update_fragment_mission() -> void:
 		fragments_complete = true
 		fragment_count.text += "  ✓"
 		notify("TODOS OS FRAGMENTOS REUNIDOS!")
+		fragments_completed.emit()
 	elif fragments_complete:
 		fragment_count.text += "  ✓"
 	objective_panel.reset_size()
