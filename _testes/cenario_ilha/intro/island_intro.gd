@@ -327,7 +327,8 @@ func _build_overlay() -> void:
 	skip_button.offset_right = -16
 	skip_button.offset_top = 6
 	skip_button.offset_bottom = -6
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	skip_button.add_child(preload("res://scenes/ui/cutscene_skip_prompt.gd").new())
+	Input.set_mouse_mode(Kit.ui_mouse_mode(get_tree()))
 
 func _open_eyes(open_time: float,hold_time: float) -> void:
 	await _animate(_lids,"shader_parameter/openness",1.0,open_time)
@@ -397,7 +398,7 @@ func skip() -> void:
 	player.camera.make_current()
 	player.reset_physics_interpolation()
 	_course.set_physics_process(true)
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE if player.control_preset == 2 else Input.MOUSE_MODE_CAPTURED)
+	Input.set_mouse_mode(Kit.gameplay_mouse_mode(get_tree()))
 	_set_first_objective()
 	_stage("finished")
 	finished.emit()

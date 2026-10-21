@@ -22,8 +22,7 @@
 [ext_resource type="PackedScene" path="res://_testes/cenario_ilha/TopaziosIlha.tscn" id="22_topazios"]
 [ext_resource type="Script" uid="uid://dr7urjtmuwhv5" path="res://_testes/cenario_ilha/intro/island_intro.gd" id="23_intro"]
 [ext_resource type="Script" uid="uid://dqok14xesbom2" path="res://_testes/cenario_ilha/intro/island_ending.gd" id="24_ending"]
-
-[ext_resource type="Script" path="res://_testes/cenario_ilha/golden_hearts.gd" id="25_hearts"]
+[ext_resource type="Script" uid="uid://ddhiedef22tqw" path="res://_testes/cenario_ilha/golden_hearts.gd" id="25_hearts"]
 
 [node name="CenarioIlha" type="Node3D" unique_id=280377929]
 
@@ -42,6 +41,7 @@ walk_speed = 6.5
 run_speed = 2.0
 jump_velocity = 5.0
 fall_reset_height = -8.0
+control_preset = 1
 
 [node name="Terrain" type="Node3D" parent="." unique_id=180770518]
 
@@ -285,5 +285,5 @@ script = ExtResource("23_intro")
 [node name="Ending" type="Node3D" parent="." unique_id=425945618]
 script = ExtResource("24_ending")
 
-[node name="GoldenHearts" type="Node3D" parent="."]
+[node name="GoldenHearts" type="Node3D" parent="." unique_id=1561527330]
 script = ExtResource("25_hearts")

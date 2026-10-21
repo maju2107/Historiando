@@ -89,6 +89,7 @@ func _run() -> void:
 	check(menu.demo_hud.notification.visible,"Collection notification appears.")
 	await snapshot("04_hud")
 	var pause = root.get_node("BotaoGlobal")
+	var previous_cursor := Input.get_mouse_mode()
 	pause.toggle_pause()
 	await settle()
 	check(paused,"Pause stops the game tree.")
@@ -100,7 +101,7 @@ func _run() -> void:
 	pause.toggle_pause()
 	await process_frame
 	check(not paused,"Resume unpauses the game tree.")
-	check(Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE,"Resume restores previous cursor mode.")
+	check(Input.get_mouse_mode() == previous_cursor,"Resume restores previous cursor mode.")
 	menu._open_about("home")
 	await settle()
 	await snapshot("06_sobre")

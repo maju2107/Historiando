@@ -19,6 +19,7 @@ var _tracking_fall := false
 enum ControlPreset { TECLADO_E_CONTROLE, FLIPERAMA, MOBILE }
 
 const MobileControls = preload("res://scenes/ui/mobile_controls.gd")
+const Kit = preload("res://scenes/ui/ui_kit.gd")
 var mobile_controls: Control
 
 @export_category("Controles")
@@ -212,7 +213,7 @@ func _get_movement_input() -> Vector2:
 func _apply_control_preset() -> void:
 	if mobile_controls:
 		mobile_controls.set_mobile(control_preset == ControlPreset.MOBILE)
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE if control_preset == ControlPreset.MOBILE else Input.MOUSE_MODE_CAPTURED)
+	Input.set_mouse_mode(Kit.ui_mouse_mode(get_tree()) if get_tree().paused or not can_move else Kit.gameplay_mouse_mode(get_tree()))
 	camera_rotation = Vector2.ZERO
 	_stick_was_active = false
 	_previous_arcade_input = Vector2.ZERO
@@ -381,4 +382,4 @@ func _die() -> void:
 		await get_tree().create_timer(maxf(invulnerability_duration, 0.01)).timeout
 		is_invulnerable = false
 		return
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	Input.set_mouse_mode(Kit.ui_mouse_mode(get_tree()))

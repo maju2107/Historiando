@@ -132,3 +132,30 @@ A importação geral do repositório ainda relata falha em um asset preexistente
 `rock_m.fbx`; o carregamento das cenas testadas funcionou. O backend headless
 também pode emitir avisos de recursos ao encerrar; a verificação renderizada da
 interface e do gameplay encerrou sem esses erros.
+
+### Controles do fliperama
+
+O fliperama mantém o cursor oculto em menus, abertura, dicas de Kai e desfecho.
+Na tela de ajustes, cima/baixo percorre volume, interruptores, modo de controle e
+Voltar; esquerda/direita ajusta o volume. A confirma, B volta e Y pausa. X não
+aciona a pausa nem confirma botões. Os ajustes continuam salvos automaticamente.
+As entradas da manopla e dos diálogos aceitam qualquer índice de controle.
+
+Na tela inicial, esquerda/direita seleciona o botão vizinho da mesma linha;
+cima/baixo seleciona a linha seguinte mantendo a coluna. Botões bloqueados são
+ignorados. O mapeamento de `arcade_device_mapping.gd` reconhece o Arduino Leonardo
+também quando conectado durante o jogo: direções vêm dos eixos X/Y ou do hat,
+sem confundir os botões HID comuns com direções de um controle Xbox. Foi observado
+no Leonardo conectado que o mapeamento genérico mantinha `ui_up=1` em repouso;
+com o perfil específico, as quatro direções ficaram em zero.
+
+Verificação com eventos de controle enviados ao sistema de entrada do Godot
+(inclui o dropdown nativo e a restauração do cursor nas cenas reais):
+
+```powershell
+godot --path . --script res://scenes/ui/verify_arcade_controls.gd
+```
+
+Esse teste exige o backend de janela nativo para verificar o cursor e restaura
+as preferências originais ao terminar. O backend headless não representa os
+modos de cursor. Um controle físico não foi usado nesta verificação.

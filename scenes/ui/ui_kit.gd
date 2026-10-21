@@ -68,3 +68,18 @@ static func uses_touch_controls(tree: SceneTree) -> bool:
 		if "control_preset" in player:
 			return player.control_preset == 2
 	return OS.has_feature("mobile")
+
+static func control_preset(tree: SceneTree) -> int:
+	for player in tree.get_nodes_in_group("player"):
+		if "control_preset" in player:
+			return player.control_preset
+	var config := ConfigFile.new()
+	config.load("user://interface.cfg")
+	return int(config.get_value("controls","preset",0))
+
+static func ui_mouse_mode(tree: SceneTree) -> Input.MouseMode:
+	# Arcade cabinets navigate menus and dialogue without a pointer.
+	return Input.MOUSE_MODE_HIDDEN if control_preset(tree) == 1 else Input.MOUSE_MODE_VISIBLE
+
+static func gameplay_mouse_mode(tree: SceneTree) -> Input.MouseMode:
+	return Input.MOUSE_MODE_VISIBLE if control_preset(tree) == 2 else Input.MOUSE_MODE_CAPTURED

@@ -6,6 +6,7 @@ const Platform = preload("res://_testes/cenario_ilha/parkour/FloatingPlatform.ts
 const Sign = preload("res://_testes/cenario_ilha/parkour/answer_sign.gd")
 const Pair = preload("res://_testes/cenario_ilha/parkour/answer_pair.gd")
 const Bubble = preload("res://_testes/cenario_ilha/parkour/quiz_bubble.gd")
+const Kit = preload("res://scenes/ui/ui_kit.gd")
 @export var question_bank: Resource = preload("res://_testes/cenario_ilha/parkour/pleistocene_questions.tres")
 var questions: Array = []
 var solved: Array[bool] = []
@@ -29,7 +30,6 @@ var _kai_visible := false
 var _camera: Camera3D
 var _previous_physics := true
 var _controls_visible := false
-var _previous_mouse_mode := Input.MOUSE_MODE_CAPTURED
 var _previous_model_transform := Transform3D.IDENTITY
 var _camera_aspect := Camera3D.KEEP_HEIGHT
 var _camera_fov := 75.0
@@ -196,8 +196,7 @@ func _begin_hint(index: int) -> void:
 	for pair in signs: pair.dismiss()
 	_previous_physics = _player.is_physics_processing()
 	_controls_visible = _player.mobile_controls.visible
-	_previous_mouse_mode = Input.get_mouse_mode()
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	Input.set_mouse_mode(Kit.ui_mouse_mode(get_tree()))
 	_player.can_move = false
 	_player.set_physics_process(false)
 	_player.velocity = Vector3.ZERO
@@ -259,7 +258,7 @@ func _close_hint(restore: bool) -> void:
 	_player.can_move = true
 	_player.set_physics_process(_previous_physics)
 	_player.mobile_controls.visible = _controls_visible
-	Input.set_mouse_mode(_previous_mouse_mode)
+	Input.set_mouse_mode(Kit.gameplay_mouse_mode(get_tree()))
 	if current_question >= 0 and not solved[current_question]:
 		bubble.present(current_question,str(questions[current_question].question))
 		signs[current_question].present()

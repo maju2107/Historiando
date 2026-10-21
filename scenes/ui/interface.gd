@@ -33,7 +33,7 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	add_to_group("historiando_menu")
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	Input.set_mouse_mode(Kit.ui_mouse_mode(get_tree()))
 	canvas = Control.new()
 	canvas.size = Vector2(1600,900)
 	add_child(canvas)
@@ -57,6 +57,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 
 func show_screen(next: String) -> void:
+	Input.set_mouse_mode(Kit.ui_mouse_mode(get_tree()))
 	if is_instance_valid(modal): dismiss_modal()
 	if content:
 		canvas.remove_child(content)
@@ -84,6 +85,7 @@ func show_screen(next: String) -> void:
 		"complete": _complete_menu()
 		"type": _font_specimen()
 		"credits": _credits()
+	if next != "settings": _connect_menu_focus()
 	if first_button: first_button.grab_focus()
 	if not bool(load_settings().get_value("accessibility","reduce_motion",false)):
 		content.modulate.a = 0.0
@@ -91,8 +93,47 @@ func show_screen(next: String) -> void:
 
 func _footer(words: String = "↑ ↓  Navegar       ENTER - Selecionar       ESC - Voltar") -> void:
 	Kit.rect(content,Rect2(55,852,1490,1),Color("68516c"))
-	Kit.label(content,words,Rect2(60,863,1180,27),19,Kit.PAPER)
+	var hint := Kit.label(content,words,Rect2(60,863,1180,27),19,Kit.PAPER)
+	hint.name = "NavigationHint"
 	Kit.brand(content,Rect2(1305,856,235,39))
+
+func _connect_menu_focus() -> void:
+	var buttons: Array[BaseButton] = []
+	for child in content.get_children():
+		if child is BaseButton and not child.disabled and child.focus_mode == Control.FOCUS_ALL:
+			buttons.append(child)
+	for i in range(buttons.size()):
+		var button := buttons[i]
+		var before := button.get_path_to(buttons[posmod(i-1,buttons.size())])
+		var after := button.get_path_to(buttons[(i+1)%buttons.size()])
+		button.focus_previous = before
+		button.focus_next = after
+		for direction in [Vector2.LEFT,Vector2.RIGHT,Vector2.UP,Vector2.DOWN]:
+			var target: Control = button
+			var best := INF
+			var box := button.get_rect()
+			for candidate in buttons:
+				if candidate == button: continue
+				var other := candidate.get_rect()
+				var offset := other.get_center()-box.get_center()
+				if offset.dot(direction)<=1.0: continue
+				var score: float
+				if direction.x != 0:
+					# Left/right stay in the same visual row.
+					if absf(offset.y)>maxf(box.size.y,other.size.y)*.5: continue
+					score = absf(offset.x)+absf(offset.y)*4.0
+				else:
+					if absf(offset.y)<minf(box.size.y,other.size.y)*.5: continue
+					var gap := maxf(0.0,maxf(other.position.x-box.end.x,box.position.x-other.end.x))
+					score = absf(offset.y)+gap*4.0+absf(other.position.x-box.position.x)*.1
+				if score<best:
+					best = score
+					target = candidate
+			var path := button.get_path_to(target)
+			if direction==Vector2.LEFT: button.focus_neighbor_left = path
+			elif direction==Vector2.RIGHT: button.focus_neighbor_right = path
+			elif direction==Vector2.UP: button.focus_neighbor_top = path
+			else: button.focus_neighbor_bottom = path
 
 func _header(kicker: String, title: String) -> void:
 	Kit.brand(content,Rect2(60,39,55,55),true)
@@ -216,6 +257,8 @@ func _settings() -> void:
 	Kit.label(content,"SOM",Rect2(104,282,400,48),35,Kit.GOLD,Kit.BOLD)
 	Kit.label(content,"Volume geral",Rect2(105,351,400,45),29)
 	var slider := HSlider.new()
+	slider.name = "MasterVolume"
+	slider.focus_mode = Control.FOCUS_ALL
 	slider.position = Vector2(526,361)
 	slider.size = Vector2(740,35)
 	slider.max_value = 100
@@ -270,11 +313,14 @@ func _settings() -> void:
 		selector.add_theme_color_override(state,Kit.INK)
 	selector.get_popup().add_theme_font_override("font",Kit.BOLD)
 	selector.get_popup().add_theme_font_size_override("font_size",29)
+	selector.get_popup().about_to_popup.connect(func():
+		selector.get_popup().set_focused_item.call_deferred(selector.selected))
 	selector.item_selected.connect(_change_controls)
 	content.add_child(selector)
 	first_button = Kit.button(content,"‹   VOLTAR",Rect2(72,748,258,64),func(): show_screen(back_screen),Kit.PAPER,true)
 	Kit.label(content,"Os ajustes são salvos automaticamente.",Rect2(947,762,580,37),24)
-	_footer()
+	_footer("↑ ↓  Navegar       ← →  Ajustar volume       A - Confirmar       B / ESC - Voltar")
+	_connect_settings_focus()
 
 func _change_controls(index: int) -> void:
 	for player in get_tree().get_nodes_in_group("player"):
@@ -282,10 +328,29 @@ func _change_controls(index: int) -> void:
 		player.control_preset = index
 		var manager := get_node_or_null("/root/BotaoGlobal")
 		if manager and is_instance_valid(manager.pause_screen):
-			manager.previous_mouse_mode = Input.MOUSE_MODE_VISIBLE if index == 2 or not player.can_move else Input.MOUSE_MODE_CAPTURED
-	# Keep the settings cursor available after the live controller setter runs.
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			manager.previous_mouse_mode = Kit.ui_mouse_mode(get_tree()) if index == 2 or not player.can_move else Input.MOUSE_MODE_CAPTURED
 	_save("controls","preset",index)
+	Input.set_mouse_mode(Kit.ui_mouse_mode(get_tree()))
+
+func _connect_settings_focus() -> void:
+	# A single vertical route includes the slider, every switch, the dropdown
+	# and Back. Horizontal input remains available to native value controls.
+	var controls: Array[Control] = []
+	for child in content.get_children():
+		if child is BaseButton or child is Slider:
+			child.focus_mode = Control.FOCUS_ALL
+			controls.append(child)
+	for i in range(controls.size()):
+		var item := controls[i]
+		var before := item.get_path_to(controls[posmod(i-1,controls.size())])
+		var after := item.get_path_to(controls[(i+1)%controls.size()])
+		item.focus_neighbor_top = before
+		item.focus_previous = before
+		item.focus_neighbor_bottom = after
+		item.focus_next = after
+		if item is Slider or item is OptionButton:
+			item.focus_neighbor_left = NodePath(".")
+			item.focus_neighbor_right = NodePath(".")
 
 func _toggle(words: String, box: Rect2, value: bool, action: Callable) -> void:
 	var check := CheckButton.new()

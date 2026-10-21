@@ -48,6 +48,7 @@ func _ready() -> void:
 
 func _connect_mission() -> void:
 	await get_tree().process_frame
+	if not is_inside_tree(): return
 	if not enabled or get_tree().get_meta("skip_island_ending",false): return
 	_hud = player.gear_container.comic_hud
 	_hud.fragments_completed.connect(_queue_start)
@@ -83,7 +84,7 @@ func _start() -> void:
 	_hud_color = _hud.modulate
 	player.mobile_controls.hide()
 	get_parent().get_node("ParkourFlutuante").set_physics_process(false)
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	Input.set_mouse_mode(Kit.ui_mouse_mode(get_tree()))
 	kai = opening.kai
 	if not is_instance_valid(kai):
 		kai = KaiScene.instantiate()
@@ -263,6 +264,7 @@ func _build_overlay() -> void:
 	_skip_button.offset_right = -16
 	_skip_button.offset_top = 6
 	_skip_button.offset_bottom = -6
+	_skip_button.add_child(preload("res://scenes/ui/cutscene_skip_prompt.gd").new())
 	get_viewport().size_changed.connect(_layout_controls)
 	_layout_controls()
 	_fade_layer = CanvasLayer.new()

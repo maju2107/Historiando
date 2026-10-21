@@ -1,6 +1,7 @@
 extends CanvasLayer
 ## One global pause owner, including cursor restoration and persistent settings.
 const Interface = preload("res://scenes/ui/interface.gd")
+const Kit = preload("res://scenes/ui/ui_kit.gd")
 var pause_screen: Control
 var previous_mouse_mode := Input.MOUSE_MODE_VISIBLE
 var game_over := false
@@ -12,6 +13,8 @@ func _ready() -> void:
 	Interface.apply_settings()
 
 func _input(event: InputEvent) -> void:
+	# The cabinet's X button must never open pause through a UI action.
+	if event is InputEventJoypadButton and event.button_index != JOY_BUTTON_Y: return
 	if not event.is_action_pressed("menu") or event.is_echo(): return
 	if is_instance_valid(pause_screen):
 		if is_instance_valid(pause_screen.modal):
@@ -39,7 +42,7 @@ func toggle_pause() -> void:
 		return
 	previous_mouse_mode = Input.get_mouse_mode()
 	get_tree().paused = true
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	Input.set_mouse_mode(Kit.ui_mouse_mode(get_tree()))
 	pause_screen = Interface.new()
 	pause_screen.initial_screen = "pause"
 	add_child(pause_screen)
